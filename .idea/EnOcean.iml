@@ -5,6 +5,6 @@
     <content url="file://$MODULE_DIR$" />
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" name="src1" level="project" />
+    <orderEntry type="library" name="ENJ-Source" level="project" />
   </component>
 </module>
