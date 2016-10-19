@@ -38,11 +38,8 @@ User --|> Monteur
 
 
 User -> (Umgebung starten)
-User -> (Aufzeichnung starten) 
 User -> (Statistik aufrufen)
 
 Monteur -> (Aufzeichnung Vergleichen)
 
 @enduml
-
-
