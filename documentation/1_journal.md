@@ -60,6 +60,6 @@ Scope Definitionen erstellen
   - Presänzdarstellung der Komponenten
   - Netzerkennung
   - Resetfunktion
-
+- Enocean Hardware Emulator
 
 2. S
