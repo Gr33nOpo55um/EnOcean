@@ -28,4 +28,38 @@ Variante 1, hier sind die Möglichkeiten sehr gross und die Technologien die Ein
 
 
 
+
+
 $20 * 3*log(20^3) = 400$
+
+
+## 12. Okt. 2016
+
+Szenarions und Use Cases definieren.
+
+## 18. Okt. 2016
+
+Scope Definitionen erstellen
+
+## 19. Okt. 2016
+
+- Geschäftsmodell erstellen
+- Kostennutzen Rechnung
+- Use Cases fertig erstellen
+  - mit technischer/textlicher Beschreibung
+- Reset funktion
+  - Bei Power on neues Directory
+- Sequenzdiagramm für
+  - Benachrichtigung bei Batterie leer
+  - For loop für Schleifen
+- State Diagramm
+- Klassendiagramm
+- jedes telegramm aufzeichnen
+- Webinterface welches laufende Überwachung zeigt
+- Kompontensicht
+  - Presänzdarstellung der Komponenten
+  - Netzerkennung
+  - Resetfunktion
+
+
+2. S

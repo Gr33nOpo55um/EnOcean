@@ -48,3 +48,9 @@ In der Datenbank finden sich auch die Informationen welche Geräte technische Pr
 ### Qualität
 - Das System kann durch den Endanwender durch einfaches Doppelklicken einer Datei ausgeführt werden
 - Das System soll stabil sein und nicht durch Fehler in der Datensammlung unterbrochen werden.
+
+
+## Nicht-Ziele
+
+- Zeil dieser Lösung wird nur die automatische Datenerfassung und Darstellung sein. Wie die Daten interpretiert werden müssen, muss vom Monteur entschieden werden.
+- Es wird nicht möglich sein, Komponten zu steuern oder Ihnen Befehle zu senden. Der Fokus liegt in der Einfachheit der Anwendung.
