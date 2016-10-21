@@ -1,4 +1,5 @@
 # Fall 1, Monteur sicht
+```{puml}
 @startuml
 
 
@@ -12,9 +13,11 @@
 
 
 @enduml
+```
 
 
 # Fall 2, Endkunde Strommessung
+```{puml}
 @startuml
 
 
@@ -24,10 +27,10 @@
 
 
 
-
-
 @enduml
+```
 
+```{puml}
 @startuml
 :User:
 :Monteur:
@@ -43,3 +46,4 @@ User -> (Statistik aufrufen)
 Monteur -> (Aufzeichnung Vergleichen)
 
 @enduml
+```

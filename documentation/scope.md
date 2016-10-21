@@ -47,6 +47,7 @@ Das Projekt beinhaltet folgende Architektur Komponenten:
 # Ziele
 
 Mit dem zu erstellenden Enocean Analysetool soll es möglich sein die verschiedenen Geräte, welche mit dem Enocean Protokoll miteinander funken, zu katalogisieren und deren Signale zu deuten. Diese Daten können über einen beliebig langen Zeitraum erfasst werden. Das Tool schreibt diese in eine Datenbank, welche beim nächsten Besuch als Referenzwert dient. In der Datenbank finden sich auch die Informationen welche Geräte technische Probleme haben.
+Bei diesem Projekt liegt der Fokus ganz klar auf der Datenerfassung. Später in einem weiteren Nachfolgeprojekt ist nicht auszuschliessen, dass auch eine Datenanalyse Teil der Lösung sein wird.
 
 ## Wirtschaftlich
 
@@ -72,12 +73,17 @@ Mit dem zu erstellenden Enocean Analysetool soll es möglich sein die verschiede
 - Das System wird automatisch gestartet, sobald das Gerät am Strom angeschlossen wird.
 - Das System soll stabil sein und nicht durch Fehler in der Datensammlung unterbrochen werden.
 
+## Sicherheit
+- Da der Benutzer ebenfalls einen begrenzten Zugang zum System haben wird muss sichergestellt werden, dass er nur auch seine Daten Zugriff hat. Allfällige andere Daten von andere Kunden müssen daher in gesonderten und geschützten Verzeichnissen abgelegt werden.
+
 # Nicht-Ziele
 
 - Zeil dieser Lösung wird nur die automatische Datenerfassung und Darstellung sein. Wie die Daten interpretiert werden müssen, muss vom Monteur entschieden werden.
 - Es wird nicht möglich sein, Komponenten zu steuern oder Ihnen Befehle zu senden. Der Fokus liegt in der Einfachheit der Anwendung.
 
 # Systemkontext
-![enter image description here](http://www.plantuml.com/plantuml/img/ZOy_2y903CNtV8fmUmTrbmvrSFFVLcw8lIY5wvtaJa6atztGGv3YuF0WuVsIbm3KAPFa--0105KXEiON8BO7IZSMUU9kQs5Kor6cCoL6SzpxFhEPk4lqZWND9iIEAU29FL-5XbHiNTJedDLoL4sBsW_RyAFl61SMgsezIvn3ot-WrIz80x_xGfIZeERWzFat)
+
+![system context diagram](http://www.plantuml.com/plantuml/png/oyjFILLG2YZApqfDBb5IgEPIKCW32O4O2WhHGOd51Qb5HPKA0PwnO95QBYumdP9OafYKM0pK6noOarcI2j4AqfEMdvEIMgIWv9gNdvoQcASGafgJcbwKc5kCK08qs0Me7s8YI0_GL0W5P4J3DBgabcKcfoeOnYhewjgXEGLTaH4nYeonAG9QYEn9Y5rWrm40)
+
 
 Mehre Enocean Devices senden ihre Signale. Der Rasperry PI fängt diese Signale auf und speichert diese in eine SQL Datenbank. Von dort aus können die Daten dann ausgelesen werden.
