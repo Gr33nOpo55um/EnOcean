@@ -1,9 +1,0 @@
-<component name="libraryTable">
-  <library name="ENJ-Source">
-    <CLASSES />
-    <JAVADOC />
-    <SOURCES>
-      <root url="file://$PROJECT_DIR$/lib/enj-library-master/src" />
-    </SOURCES>
-  </library>
-</component>
