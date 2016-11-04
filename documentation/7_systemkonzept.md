@@ -7,53 +7,78 @@ Autor           | Silas Stegmüller
 Klassifizierung | Intern
 Status          | In Arbeit
 
-Änderungsverziechnis
-
-Datum | Version | Änderung | Autor
------ | ------- | -------- | -----
-      |         |          |
-
 Inhaltsverzeichnis
 
 <!-- toc orderedList:0 depthFrom:1 depthTo:6 -->
 
- - [Systemanforderungen](#systemanforderungen)
-
-  - [Grobanderdungen](#grobanderdungen)
-  - [Übersicht](#übersicht)
-
-    - [Technik: Funktionsbaum](#technik-funktionsbaum)
-    - [Technik: Use Case](#technik-use-case)
-
-      - [Use Case Diagramm](#use-case-diagramm)
-
-  - [Detailanforderungen](#detailanforderungen)
-
-    - [Anforderungen der Geschäftsorganisation](#anforderungen-der-geschäftsorganisation)
-    - [Funktionale Anforderungen](#funktionale-anforderungen)
-
-      - [Technik 1: Beschreibung mittels allgemeinem Formular](#technik-1-beschreibung-mittels-allgemeinem-formular)
-      - [Technik 2: Beschreibung mittels User-Story](#technik-2-beschreibung-mittels-user-story)
-      - [Technick 3: Beschreibung mittels Use-Case](#technick-3-beschreibung-mittels-use-case)
-
-    - [Qualitätsanforderungen](#qualitätsanforderungen)
-    - [Anforderungen Systemarchitektur](#anforderungen-systemarchitektur)
-
-  - [Übersicht und Struktur des Systems](#übersicht-und-struktur-des-systems)
-
-    - [Übersicht](#übersicht-1)
-    - [Subsysteme und Komponenten](#subsysteme-und-komponenten)
-    - [Architekturen / Modelle](#architekturen-modelle)
-
-  - [Schnittstellen und Abgrenzung](#schnittstellen-und-abgrenzung)
-  - [Machbarkeit](#machbarkeit)
-  - [Anforderungsabdeckung](#anforderungsabdeckung)
+- [Systemanforderungen](#systemanforderungen)
+	- [Grobanforderungen](#grobanforderungen)
+		- [Wirtschaftlich](#wirtschaftlich)
+		- [System](#system)
+		- [Personell](#personell)
+		- [Vorgehen](#vorgehen)
+		- [Qualität](#qualität)
+		- [Sicherheit](#sicherheit)
+		- [Nicht-Ziele](#nicht-ziele)
+	- [Übersicht](#übersicht)
+		- [Technik: Funktionsbaum](#technik-funktionsbaum)
+		- [Technik: Use Case](#technik-use-case)
+			- [Use Case Diagramm](#use-case-diagramm)
+	- [Detailanforderungen](#detailanforderungen)
+		- [Anforderungen der Geschäftsorganisation](#anforderungen-der-geschäftsorganisation)
+		- [Funktionale Anforderungen](#funktionale-anforderungen)
+			- [Technik 2: Beschreibung mittels User-Story](#technik-2-beschreibung-mittels-user-story)
+			- [Technick 3: Beschreibung mittels Use-Case](#technick-3-beschreibung-mittels-use-case)
+		- [Qualitätsanforderungen](#qualitätsanforderungen)
+		- [Anforderungen Systemarchitektur](#anforderungen-systemarchitektur)
+	- [Übersicht und Struktur des Systems](#übersicht-und-struktur-des-systems)
+		- [Übersicht](#übersicht-1)
+		- [Subsysteme und Komponenten](#subsysteme-und-komponenten)
+		- [Architekturen / Modelle](#architekturen-modelle)
+	- [Schnittstellen und Abgrenzung](#schnittstellen-und-abgrenzung)
+	- [Machbarkeit](#machbarkeit)
+	- [Anforderungsabdeckung](#anforderungsabdeckung)
 
 <!-- tocstop -->
 
- ## Grobanderdungen
+ ## Grobanforderungen
+
+ ### Wirtschaftlich
+
+ - Zeiteinsparung beim Analysieren der Geräte.
+ - Der Monteur muss nur noch eine kurze Zeit vor Ort sein.
+ - Das Gerät kostet mit geschätzten Materialkosten von ca. 100 Franken nur ein Bruchteil anderer kommerzieller Geräte.
+
+ ### System
+
+ - Das System unterstützt den Techniker bei installieren neuer Geräte.
+ - Das System stellt eine Datenbank für Auswertungen zur Verfügung.
+ ### Personell
+
+
+ - Personen welche bei installieren beteiligt sind können sich auf die Auswertung der gesammelten Daten konzentrieren.
+ ### Vorgehen
+
+
+ - Das System steht Technikern und Endanwendern zur Verfügung, eine Ablösung ist nicht nötig, da eine vorherige Lösung nicht existiert.
+
+ ### Qualität
+
+ - Das System wird automatisch gestartet, sobald das Gerät am Strom angeschlossen wird.
+ - Das System soll stabil sein und nicht durch Fehler in der Datensammlung unterbrochen werden.
+
+ ### Sicherheit
+
+ - Da der Benutzer ebenfalls einen begrenzten Zugang zum System haben wird muss sichergestellt werden, dass er nur auch seine Daten Zugriff hat. Allfällige andere Daten von andere Kunden müssen daher in gesonderten und geschützten Verzeichnissen abgelegt werden.
+
+ ### Nicht-Ziele
+
+ - Zeil dieser Lösung wird nur die automatische Datenerfassung und Darstellung sein. Wie die Daten interpretiert werden müssen, muss vom Monteur entschieden werden.
+ - Es wird nicht möglich sein, Komponenten zu steuern oder Ihnen Befehle zu senden. Der Fokus liegt in der Einfachheit der Anwendung.
 
 ## Übersicht
+
+
 
 ### Technik: Funktionsbaum
 
@@ -61,24 +86,30 @@ Inhaltsverzeichnis
 
 #### Use Case Diagramm
 
+```{puml}
+@startuml
+:User:
+:Monteur:
+:Endkunde:
+
+User --|> Endkunde
+User --|> Monteur
+
+
+User -> (Umgebung starten)
+User -> (Statistik aufrufen)
+
+Monteur -> (Aufzeichnung Vergleichen)
+
+@enduml
+```
+
 ## Detailanforderungen
 
 ### Anforderungen der Geschäftsorganisation
 
 ### Funktionale Anforderungen
 
-#### Technik 1: Beschreibung mittels allgemeinem Formular
-
-Grobanforderung: n             | Anforderung: n.nn    | Quelle:          | Autor:
-------------------------------- | -------------------- | ---------------- | ------
-Name                            |
-Funktionale Kurz-beschreibung   |
-Input                           | Aus DB
-Verarbeitungsschritte / -regeln | 1\. 2\. 3.
-Output                          |
-Abnahmekriterien                |
-Wichtigkeit (5-1):              | Dringlichkeit (5-1): | Abhängigkeit zu:
-Risiko/Kritikalität (5-1):      | Aufwandgrösse (5-1)  | Version Status
 
 #### Technik 2: Beschreibung mittels User-Story
 
@@ -86,29 +117,60 @@ Risiko/Kritikalität (5-1):      | Aufwandgrösse (5-1)  | Version Status
 
 ### Qualitätsanforderungen
 
-Grobanforderung: n        | Anforderung: n.nn    | Quelle:          | Autor:
--------------------------- | -------------------- | ---------------- | ------
-Name                       |
-Beschreibung               |
-Abnahmekriterien           |
-Wichtigkeit (5-1):         | Dringlichkeit (5-1): | Abhängigkeit zu:
-Risiko/Kritikalität (5-1): | Aufwandgrösse (5-1)  | Version          | Status
+Name                         | Einfachheit
+---------------------------- | --------------------------------------------------------------------------------------------------------------
+Beschreibung                 | Das System wird automatisch gestartet, sobald das Gerät am Strom angeschlossen wird.
+Abnahmekriterien             | Das Gerät startet, sobald es am Strom angeschlossen ist. Dazu ist keine zusätzliche Userinteraktion notwendig.
+Wichtigkeit (5-1): 4         | Dringlichkeit (5-1): 2                                                                                         |
+Risiko/Kritikalität (5-1): 2 | Aufwandgrösse (5-1): 2                                                                                         |
 
 ### Anforderungen Systemarchitektur
 
-Grobanforderung: n        | Anforderung: n.nn    | Quelle:          | Autor:
--------------------------- | -------------------- | ---------------- | ------
-Name                       |
-Beschreibung               |
-Abnahmekriterien           |
-Wichtigkeit (5-1):         | Dringlichkeit (5-1): | Abhängigkeit zu:
-Risiko/Kritikalität (5-1): | Aufwandgrösse (5-1)  | Version          | Status
+Name                         | Stabilität
+---------------------------- | --------------------------------------------------------------------------------------------
+Beschreibung                 | Das System soll stabil sein und nicht durch Fehler in der Datensammlung unterbrochen werden.
+Abnahmekriterien             | Das Produkt muss über einen Zeitraum von mindestens 3 Tagen unterbrochen Datensammeln.
+Wichtigkeit (5-1): 5         | Dringlichkeit (5-1): 4
+Risiko/Kritikalität (5-1): 3 | Aufwandgrösse (5-1): 4
+
+Name                       | Datenkonsistenz bei Stromunterbruch
+-------------------------- | ------------------------------------------------------------------------------------------------------------------------------------
+Beschreibung               | Das System soll im Falle eines Stromunterbruchs, keine Daten verlieren und selbstständig wieder mit dem Loggen von Daten beginnen.
+Abnahmekriterien           | Das Produkt wird 3 Stromunterbrüche im Zeitraum von 60 min erhalten und muss danach automatisch mit der Datenspeicherung fortfahren.
+Wichtigkeit (5-1):         | Dringlichkeit (5-1):
+Risiko/Kritikalität (5-1): | Aufwandgrösse (5-1):
 
 ## Übersicht und Struktur des Systems
 
 Übersichtsdiagramme gemäss den Methoden des Erstellers
 
 ### Übersicht
+
+```{puml}
+@startuml
+node "Project" {
+  node {
+    [Rasperry PI]
+    }
+
+
+    database "SQlite" {
+      folder "Enocean Telegrams" {
+        [Data]
+        }
+
+    }
+}
+
+[Enocean Device 1] --> [Rasperry PI]
+[Enocean Device 2] --> [Rasperry PI]
+[Enocean Device 3] --> [Rasperry PI]
+
+
+[Rasperry PI] --> [Data]
+
+@enduml
+```
 
 ### Subsysteme und Komponenten
 
@@ -130,6 +192,6 @@ Beurteilung der Machbarkeit, Hinweis auf Prototypingdokumentation
 
 Hinweis auf Systemanforderungen
 
-ID| Anforderung |Zuordnung zu Subsystem / Komponente |Beurteilung der Anforderungsabdeckung
---|--|--|--
-|||
+ID | Anforderung | Zuordnung zu Subsystem / Komponente | Beurteilung der Anforderungsabdeckung
+-- | ----------- | ----------------------------------- | --------------------------------------
+   |             |                                     |
