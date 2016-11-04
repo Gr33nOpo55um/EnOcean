@@ -53,7 +53,9 @@ Scope Definitionen erstellen
 - State Diagramm
 
 - Klassendiagramm
+
 - jedes telegramm aufzeichnen
+
 - Webinterface welches laufende Überwachung zeigt
 - Kompontensicht
 
@@ -62,3 +64,33 @@ Scope Definitionen erstellen
   - Resetfunktion
 
 - Enocean Hardware Emulator
+
+## 2\. Nov 2016
+
+der Investor möchte:
+
+- Risikokapital einschieben
+
+- Möglichkeit Gewinn zu erbringen
+
+Sensoren mit Geld freischalten
+
+Intern 100 Franken * Interne Stunden
+
+30% Overhead Projektmanagement, selbstkosten der software
+
+kostenstruktur und erlösmodel
+
+- Energieversorger
+- Unternehmen im Bereich Smart Home
+
+Projektrahmen ca. 50'000 Fr.
+
+- arbeitsorganisation
+- projektplanung
+- problemlösung
+- dokumentation
+- vortrag
+- code review
+
+Hermes Ziele einfügen

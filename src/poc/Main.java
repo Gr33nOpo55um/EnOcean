@@ -21,7 +21,7 @@ public class Main {
         parseTelegram("0x55000707017af6700022a1343001ffffffff2d0044");
 
 
-        connectDevice();
+        // connectDevice();
 
 
     }
@@ -61,33 +61,36 @@ public class Main {
          */
 
         int[] result = new int[8];
+        byte[] header = new byte[4];
 
-        result[0] =
-                Integer.parseInt(message.substring(2, 4), 16);
+        int latestPosition = 0;
+
+        result[0] = Integer.parseInt(message.substring(2, 4), 16);
 
         System.out.println(result[0]);
 
 
-        result[1] =
-                Integer.parseInt(message.substring(4, 8), 16);
+        result[1] = Integer.parseInt(message.substring(4, 8), 16);
+
+
+        //header data length
 
         System.out.println(result[1]);
-        result[2] =
-                Integer.parseInt(message.substring(8, 10), 16);
+        result[2] = Integer.parseInt(message.substring(8, 10), 16);
 
         System.out.println(result[2]);
-        result[3] =
-                Integer.parseInt(message.substring(10, 12), 16);
+        result[3] = Integer.parseInt(message.substring(10, 12), 16);
 
         System.out.println(result[3]);
 
         //checksumbit
 
-
-        Integer.parseInt(message.substring(10, 12), 16);
+        result[4] = Integer.parseInt(message.substring(10, 12), 16);
 
 
         System.out.println(result[4]);
+
+        result[5] = Integer.parseInt(message.substring(12, ))
 
 
         return result;

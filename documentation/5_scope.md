@@ -25,11 +25,9 @@ Die Firma Enoca AG ist spezialisiert auf Home Automationssysteme. Mit ihnen lass
 
 Momentan müssen bei Installationsarbeiten die Räume von Hand ausgemessen werden, dies erfordert eine hohe zeitliche Belastung der Techniker da Sie über einen längerem Zeitraum vor Ort sein müssen. Auch nach diesem Zeitraum ist nicht sichergestellt dass alles korrekt vermessen wurde und die Geräte immer genügend Funkkontakt haben, da dies auch durch das Wetter bestimmt wird. Im schlimmsten Fall sind für das Unternehmen kostenintensive Nachbesserungen nötig, welche nur mit Unverständnis auf den Kunden abgewälzt werden könnten.
 
-
 # Situation danach
 
-Aus diesem Grund will die Enoca AG ein Gerät entwickeln welches dieses Problem löst.
-Der Monteur soll mit mehren RasperryPi's zum Kunden gehen können, welche mit Enocean Hardware bestückt sind. Sobald die Geräte am Strom sind, startet ein Analyse Tool. Die erhaltenen Informationen werden in eine Datenbank gespeichert. Nach ca. 1 Woche holt der Monteur die Geräte wieder ab und wertet die Daten aus. Er kann nun sicher sein, wo die Repeater installiert werden müssen, um die gesamte Installation ohne Störungen betreiben zu können.
+Aus diesem Grund will die Enoca AG ein Gerät entwickeln welches dieses Problem löst. Der Monteur soll mit mehren RasperryPi's zum Kunden gehen können, welche mit Enocean Hardware bestückt sind. Sobald die Geräte am Strom sind, startet ein Analyse Tool. Die erhaltenen Informationen werden in eine Datenbank gespeichert. Nach ca. 1 Woche holt der Monteur die Geräte wieder ab und wertet die Daten aus. Er kann nun sicher sein, wo die Repeater installiert werden müssen, um die gesamte Installation ohne Störungen betreiben zu können.
 
 ![enter image description here](http://www.plantuml.com/plantuml/img/JOwn3i8m34HtVqL66Fe36QfqO6H2PG_42L5R8oNsKl7no6ahsCxtxavsI46M6S1LzeLLsh5YiM2lRs8KLHSAar102w3CTDsdDuVvP-qDE6AzEOrBmeTGCcqUwVn3D_QSA-V9U8b5eaBO9rfWaBXYVhv8-tSiQTQhnTpszXS0)
 
@@ -47,8 +45,7 @@ Das Projekt beinhaltet folgende Architektur Komponenten:
 
 # Ziele
 
-Mit dem zu erstellenden Enocean Analysetool soll es möglich sein die verschiedenen Geräte, welche mit dem Enocean Protokoll miteinander funken, zu katalogisieren und deren Signale zu deuten. Diese Daten können über einen beliebig langen Zeitraum erfasst werden. Das Tool schreibt diese in eine Datenbank, welche beim nächsten Besuch als Referenzwert dient. In der Datenbank finden sich auch die Informationen welche Geräte technische Probleme haben.
-Bei diesem Projekt liegt der Fokus ganz klar auf der Datenerfassung. Später in einem weiteren Nachfolgeprojekt ist nicht auszuschliessen, dass auch eine Datenanalyse Teil der Lösung sein wird.
+Mit dem zu erstellenden Enocean Analysetool soll es möglich sein die verschiedenen Geräte, welche mit dem Enocean Protokoll miteinander funken, zu katalogisieren und deren Signale zu deuten. Diese Daten können über einen beliebig langen Zeitraum erfasst werden. Das Tool schreibt diese in eine Datenbank, welche beim nächsten Besuch als Referenzwert dient. In der Datenbank finden sich auch die Informationen welche Geräte technische Probleme haben. Bei diesem Projekt liegt der Fokus ganz klar auf der Datenerfassung. Später in einem weiteren Nachfolgeprojekt ist nicht auszuschliessen, dass auch eine Datenanalyse Teil der Lösung sein wird.
 
 ## Wirtschaftlich
 
@@ -75,6 +72,7 @@ Bei diesem Projekt liegt der Fokus ganz klar auf der Datenerfassung. Später in 
 - Das System soll stabil sein und nicht durch Fehler in der Datensammlung unterbrochen werden.
 
 ## Sicherheit
+
 - Da der Benutzer ebenfalls einen begrenzten Zugang zum System haben wird muss sichergestellt werden, dass er nur auch seine Daten Zugriff hat. Allfällige andere Daten von andere Kunden müssen daher in gesonderten und geschützten Verzeichnissen abgelegt werden.
 
 # Nicht-Ziele
@@ -86,5 +84,6 @@ Bei diesem Projekt liegt der Fokus ganz klar auf der Datenerfassung. Später in 
 
 ![system context diagram](http://www.plantuml.com/plantuml/png/oyjFILLG2YZApqfDBb5IgEPIKCW32O4O2WhHGOd51Qb5HPKA0PwnO95QBYumdP9OafYKM0pK6noOarcI2j4AqfEMdvEIMgIWv9gNdvoQcASGafgJcbwKc5kCK08qs0Me7s8YI0_GL0W5P4J3DBgabcKcfoeOnYhewjgXEGLTaH4nYeonAG9QYEn9Y5rWrm40)
 
+//Abschnitt gerneralisieren, aktuell noch zu spezifisch, dafür etwas detailierter.
 
 Mehre Enocean Devices senden ihre Signale. Der Rasperry PI fängt diese Signale auf und speichert diese in eine SQL Datenbank. Von dort aus können die Daten dann ausgelesen werden.
