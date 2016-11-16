@@ -1,3 +1,5 @@
+# Kosten - Nutzen Rechnung
+
 Aufraggeber     | Enoca AG
 --------------- | ----------------
 Projektleiter   | Louis Siegrist
@@ -13,7 +15,6 @@ Inhaltsverzeichnis
 	- [Verkaufsmodel](#verkaufsmodel)
 
 <!-- tocstop -->
-# Kosten - Nutzen Rechnung
 
 Kosten | Betrag in CHF
 ------ | --
@@ -22,4 +23,4 @@ Etwicklungskosten | 6000
 Nutzen | -
 
 ## Verkaufsmodel
-Die Monitoringlösung sollte de Elektrickern
+Die Monitoringlösung sollte de Elektrikern... blabla
