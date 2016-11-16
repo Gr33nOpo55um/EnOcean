@@ -10,11 +10,16 @@ Inhaltsverzeichnis
 <!-- toc orderedList:0 depthFrom:1 depthTo:6 -->
 
 - [Kosten - Nutzen Rechnung](#kosten-nutzen-rechnung)
-	- [Kosten](#kosten)
-	- [Nutzen](#nutzen)
+	- [Verkaufsmodel](#verkaufsmodel)
 
 <!-- tocstop -->
 # Kosten - Nutzen Rechnung
-## Kosten
 
-## Nutzen
+Kosten | Betrag in CHF
+------ | --
+Hardware | 120
+Etwicklungskosten | 6000
+Nutzen | -
+
+## Verkaufsmodel
+Die Monitoringlösung sollte de Elektrickern

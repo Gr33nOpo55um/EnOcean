@@ -22,9 +22,13 @@ Inhaltsverzeichnis
  ### Rollen
  Rolle | Teammitglied
  ----- | ---------
+ Auftraggeber | Michael Röthlin
  Projektleiter | Louis Siegrist
- .|.
- .|.
+ IT-Architekt | Silas Stegmüller
+ Entwickler | Silas Stegmüller & Louis Siegrist
+ Betriebsverantwortlicher | Silas Stegmüller
+ Testverantwortlicher | Louis Siegrist
+
 
  ## Dokumenten Organisation
- Alle Dokumente und Programmelemente werden im GitHub Repository gespeichert. Für Dokumente wird bvorzugt Mardown verwenden. Die Aufgabenverwaltung erfolgt in GitHub im Projekt "EnOcean". Grundsätzlich arbeiten wir nach Hermes für eine agile Systementwiklung.
+ Alle Dokumente und Programmelemente werden im GitHub Repository gespeichert. Für Dokumente wird bvorzugt Mardown verwenden. Die Aufgabenverwaltung erfolgt in GitHub im Projekt "BFH Modul Projekt1". Grundsätzlich arbeiten wir nach Hermes für eine agile IT Individualentwicklung.
