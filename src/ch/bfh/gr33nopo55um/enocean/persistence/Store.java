@@ -1,4 +1,4 @@
-package ch.bfh.gr33nopo55um.enocean;
+package ch.bfh.gr33nopo55um.enocean.persistence;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
@@ -12,7 +12,7 @@ public class Store {
 
 
     public static class Main {
-        private static final String PERSISTENCE_UNIT_NAME = "todos";
+        private static final String PERSISTENCE_UNIT_NAME = "todo";
         private static EntityManagerFactory factory;
 
         public static void main(String[] args) {
