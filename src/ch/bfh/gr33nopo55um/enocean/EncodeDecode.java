@@ -17,7 +17,7 @@ public interface EncodeDecode {
     /**
      * decodeTelegram splits telegram in parts
      *
-     * @param hexTelegram
+     * @param hexTelegram EnOcean Telegram
      */
     void decodeTelegram(String hexTelegram);
 }
