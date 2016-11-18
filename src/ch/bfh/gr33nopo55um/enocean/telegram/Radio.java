@@ -1,19 +1,18 @@
-package ch.bfh.gr33nopo55um.enocean;
+package ch.bfh.gr33nopo55um.enocean.telegram;
 
 /**
  * Created by silas on 18.11.16.
  */
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
+
 import javax.persistence.Table;
 
 
 @Table
-public class Radiomessage extends TelegramHeader  {
-    private String destinationID;
-    private String sourceID;
-    private int dbm;
+public class Radio extends TelegramHeader {
+
+
+    private int rssi;
 
     /**
      * encodeTelegram provides an example telegram hex for this packet type.
