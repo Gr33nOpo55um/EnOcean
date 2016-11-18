@@ -28,9 +28,10 @@ Inhaltsverzeichnis
 		- [Anforderungen der Geschäftsorganisation](#anforderungen-der-geschäftsorganisation)
 		- [Funktionale Anforderungen](#funktionale-anforderungen)
 			- [Technik 2: Beschreibung mittels User-Story](#technik-2-beschreibung-mittels-user-story)
-			- [Technick 3: Beschreibung mittels Use-Case](#technick-3-beschreibung-mittels-use-case)
+			- [Technik 3: Beschreibung mittels Use-Case](#technik-3-beschreibung-mittels-use-case)
 		- [Qualitätsanforderungen](#qualitätsanforderungen)
 		- [Anforderungen Systemarchitektur](#anforderungen-systemarchitektur)
+- [Systemarchitektur](#systemarchitektur)
 	- [Übersicht und Struktur des Systems](#übersicht-und-struktur-des-systems)
 		- [Übersicht](#übersicht-1)
 		- [Architekturen / Modelle](#architekturen-modelle)
@@ -116,7 +117,7 @@ Monteur -> (Aufzeichnung Vergleichen)
 
 - Ich möchte Abläufe wie die Ausmessung der Enocean Abdeckung automatisieren.
 
-#### Technick 3: Beschreibung mittels Use-Case
+#### Technik 3: Beschreibung mittels Use-Case
 
 ```{puml}
 @startuml
@@ -157,10 +158,11 @@ Risiko/Kritikalität (5-1): 3 | Aufwandgrösse (5-1): 4
 Name                       | Datenkonsistenz bei Stromunterbruch
 -------------------------- | ------------------------------------------------------------------------------------------------------------------------------------
 Beschreibung               | Das System soll im Falle eines Stromunterbruchs, keine Daten verlieren und selbstständig wieder mit dem Loggen von Daten beginnen.
-Abnahmekriterien           | Das Produkt wird 3 Stromunterbrüche im Zeitraum von 60 min erhalten und muss danach automatisch mit der Datenspeicherung fortfahren.
+Abnahmekriterien           | Das Produkt wird 3 Stromunterbrüche im Zeitraum von 60 min erhalten und muss danach automatisch mit der Datenspeicherung fortfahren. Dabei wird auf die Bestehende DB ohne Datenverlust geschrieben.
 Wichtigkeit (5-1):         | Dringlichkeit (5-1):
 Risiko/Kritikalität (5-1): | Aufwandgrösse (5-1):
 
+# Systemarchitektur
 ## Übersicht und Struktur des Systems
 
 Übersichtsdiagramme gemäss den Methoden des Erstellers

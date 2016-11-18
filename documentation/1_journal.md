@@ -57,6 +57,7 @@ Scope Definitionen erstellen
 - jedes telegramm aufzeichnen
 
 - Webinterface welches laufende Überwachung zeigt
+
 - Kompontensicht
 
   - Presänzdarstellung der Komponenten
@@ -94,3 +95,12 @@ Projektrahmen ca. 50'000 Fr.
 - code review
 
 Hermes Ziele einfügen
+
+## 16\. Nov 2016
+
+Zweck des Dokuments hinzufügen.
+
+- Bei diversen Dokumenten die erstellt wurden fehlt der Zweck des Dokuments.
+
+Hardware und Software Sicht teilen
+RRDtools anschauen
