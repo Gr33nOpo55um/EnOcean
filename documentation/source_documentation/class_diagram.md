@@ -11,7 +11,7 @@ private String syncByte;
 private int dataLength;
 private int optionalLenght;
 private String crcHeader;
-private String crdData
+private String crdData;
 }
 
 class RadioERP1{
@@ -76,8 +76,8 @@ private int dbm;
 }
 
 class RadioERP2{
-private String int subTelNum;
-private String int dbm;
+private int subTelNum;
+private int dbm;
 
 }
 

@@ -5,8 +5,15 @@ import java.util.Date;
 /**
  * Created by silas on 18.11.16.
  */
-public class RadioSubTel {
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+
+@Table
+public class RadioSubTel extends TelegramHeader{
+private int id;
     private int subTelNum;
     private String destinationID;
     private int dbm;
@@ -15,4 +22,24 @@ public class RadioSubTel {
     private int tickSubTel;
     private int dbmSubTel;
     private String statusSubTel;
+
+    /**
+     * encodeTelegram provides an example telegram hex for this packet type.
+     *
+     * @return telegram hex
+     */
+    @Override
+    public String encodeTelegram() {
+        return null;
+    }
+
+    /**
+     * decodeTelegram splits telegram in parts
+     *
+     * @param hexTelegram
+     */
+    @Override
+    public void decodeTelegram(String hexTelegram) {
+
+    }
 }
