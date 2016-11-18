@@ -1,3 +1,5 @@
+package ch.bfh.gr33nopo55um.enocean;
+
 /**
  * This interface provides basic encode and decode methods for EnOcean telegrams. Including description.
  *
