@@ -21,11 +21,14 @@
     </build>
     <dependencies>
         <dependency>
-            <groupId>org.kevoree.extra</groupId>
-            <artifactId>org.kevoree.extra.osgi.rxtx</artifactId>
-            <version>2.2.0</version>
+            <groupId>javax.persistence</groupId>
+            <artifactId>persistence-api</artifactId>
+            <version>1.0.2</version>
+        </dependency>
+        <dependency>
+            <groupId>org.eclipse.persistence</groupId>
+            <artifactId>eclipselink</artifactId>
+            <version>2.6.4</version>
         </dependency>
     </dependencies>
-
-
 </project>

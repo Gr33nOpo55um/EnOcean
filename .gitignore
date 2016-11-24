@@ -13,3 +13,6 @@ hs_err_pid*
 
 .idea/*
 target/
+
+# EnOcean library - no changes should be made there
+/src/it/polito/elite/enocean/

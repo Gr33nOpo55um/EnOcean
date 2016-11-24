@@ -28,12 +28,12 @@ Inhaltsverzeichnis
 		- [Anforderungen der Geschäftsorganisation](#anforderungen-der-geschäftsorganisation)
 		- [Funktionale Anforderungen](#funktionale-anforderungen)
 			- [Technik 2: Beschreibung mittels User-Story](#technik-2-beschreibung-mittels-user-story)
-			- [Technick 3: Beschreibung mittels Use-Case](#technick-3-beschreibung-mittels-use-case)
+			- [Technik 3: Beschreibung mittels Use-Case](#technik-3-beschreibung-mittels-use-case)
 		- [Qualitätsanforderungen](#qualitätsanforderungen)
 		- [Anforderungen Systemarchitektur](#anforderungen-systemarchitektur)
+- [Systemarchitektur](#systemarchitektur)
 	- [Übersicht und Struktur des Systems](#übersicht-und-struktur-des-systems)
 		- [Übersicht](#übersicht-1)
-		- [Subsysteme und Komponenten](#subsysteme-und-komponenten)
 		- [Architekturen / Modelle](#architekturen-modelle)
 	- [Schnittstellen und Abgrenzung](#schnittstellen-und-abgrenzung)
 	- [Machbarkeit](#machbarkeit)
@@ -43,42 +43,43 @@ Inhaltsverzeichnis
 
  ## Grobanforderungen
 
- ### Wirtschaftlich
+### Wirtschaftlich
 
- - Zeiteinsparung beim Analysieren der Geräte.
- - Der Monteur muss nur noch eine kurze Zeit vor Ort sein.
- - Das Gerät kostet mit geschätzten Materialkosten von ca. 100 Franken nur ein Bruchteil anderer kommerzieller Geräte.
+- Zeiteinsparung beim Analysieren der Geräte.
+- Der Monteur muss nur noch eine kurze Zeit vor Ort sein.
+- Das Gerät kostet mit geschätzten Materialkosten von ca. 100 Franken nur ein Bruchteil anderer kommerzieller Geräte.
 
- ### System
+  ### System
 
- - Das System unterstützt den Techniker bei installieren neuer Geräte.
- - Das System stellt eine Datenbank für Auswertungen zur Verfügung.
- ### Personell
+- Das System unterstützt den Techniker bei installieren neuer Geräte.
 
+- Das System stellt eine Datenbank für Auswertungen zur Verfügung.
 
- - Personen welche bei installieren beteiligt sind können sich auf die Auswertung der gesammelten Daten konzentrieren.
- ### Vorgehen
+  ### Personell
 
+- Personen welche bei installieren beteiligt sind können sich auf die Auswertung der gesammelten Daten konzentrieren.
 
- - Das System steht Technikern und Endanwendern zur Verfügung, eine Ablösung ist nicht nötig, da eine vorherige Lösung nicht existiert.
+  ### Vorgehen
 
- ### Qualität
+- Das System steht Technikern und Endanwendern zur Verfügung, eine Ablösung ist nicht nötig, da eine vorherige Lösung nicht existiert.
 
- - Das System wird automatisch gestartet, sobald das Gerät am Strom angeschlossen wird.
- - Das System soll stabil sein und nicht durch Fehler in der Datensammlung unterbrochen werden.
+  ### Qualität
 
- ### Sicherheit
+- Das System wird automatisch gestartet, sobald das Gerät am Strom angeschlossen wird.
 
- - Da der Benutzer ebenfalls einen begrenzten Zugang zum System haben wird muss sichergestellt werden, dass er nur auch seine Daten Zugriff hat. Allfällige andere Daten von andere Kunden müssen daher in gesonderten und geschützten Verzeichnissen abgelegt werden.
+- Das System soll stabil sein und nicht durch Fehler in der Datensammlung unterbrochen werden.
 
- ### Nicht-Ziele
+  ### Sicherheit
 
- - Zeil dieser Lösung wird nur die automatische Datenerfassung und Darstellung sein. Wie die Daten interpretiert werden müssen, muss vom Monteur entschieden werden.
- - Es wird nicht möglich sein, Komponenten zu steuern oder Ihnen Befehle zu senden. Der Fokus liegt in der Einfachheit der Anwendung.
+- Da der Benutzer ebenfalls einen begrenzten Zugang zum System haben wird muss sichergestellt werden, dass er nur auch seine Daten Zugriff hat. Allfällige andere Daten von andere Kunden müssen daher in gesonderten und geschützten Verzeichnissen abgelegt werden.
+
+  ### Nicht-Ziele
+
+- Zeil dieser Lösung wird nur die automatische Datenerfassung und Darstellung sein. Wie die Daten interpretiert werden müssen, muss vom Monteur entschieden werden.
+
+- Es wird nicht möglich sein, Komponenten zu steuern oder Ihnen Befehle zu senden. Der Fokus liegt in der Einfachheit der Anwendung.
 
 ## Übersicht
-
-
 
 ### Technik: Funktionsbaum
 
@@ -110,10 +111,31 @@ Monteur -> (Aufzeichnung Vergleichen)
 
 ### Funktionale Anforderungen
 
-
 #### Technik 2: Beschreibung mittels User-Story
 
-#### Technick 3: Beschreibung mittels Use-Case
+- Als Monteur möchte ich die Zeit welche ich beim Kunden verbringe so eiffzient wie möglich einsezen.
+
+- Ich möchte Abläufe wie die Ausmessung der Enocean Abdeckung automatisieren.
+
+#### Technik 3: Beschreibung mittels Use-Case
+
+```{puml}
+@startuml
+:User:
+:Monteur:
+:Endkunde:
+
+User --|> Endkunde
+User --|> Monteur
+
+
+User -> (Umgebung starten)
+User -> (Statistik aufrufen)
+
+Monteur -> (Aufzeichnung Vergleichen)
+
+@enduml
+```
 
 ### Qualitätsanforderungen
 
@@ -136,10 +158,11 @@ Risiko/Kritikalität (5-1): 3 | Aufwandgrösse (5-1): 4
 Name                       | Datenkonsistenz bei Stromunterbruch
 -------------------------- | ------------------------------------------------------------------------------------------------------------------------------------
 Beschreibung               | Das System soll im Falle eines Stromunterbruchs, keine Daten verlieren und selbstständig wieder mit dem Loggen von Daten beginnen.
-Abnahmekriterien           | Das Produkt wird 3 Stromunterbrüche im Zeitraum von 60 min erhalten und muss danach automatisch mit der Datenspeicherung fortfahren.
+Abnahmekriterien           | Das Produkt wird 3 Stromunterbrüche im Zeitraum von 60 min erhalten und muss danach automatisch mit der Datenspeicherung fortfahren. Dabei wird auf die Bestehende DB ohne Datenverlust geschrieben.
 Wichtigkeit (5-1):         | Dringlichkeit (5-1):
 Risiko/Kritikalität (5-1): | Aufwandgrösse (5-1):
 
+# Systemarchitektur
 ## Übersicht und Struktur des Systems
 
 Übersichtsdiagramme gemäss den Methoden des Erstellers
@@ -172,9 +195,7 @@ node "Project" {
 @enduml
 ```
 
-### Subsysteme und Komponenten
 
-Darstellung der Struktur des Systems gemäss den Methoden des Erstellers
 
 ### Architekturen / Modelle
 
@@ -182,16 +203,30 @@ Hinweis auf Detailstudien Abhängig vom Projektergebnis. Beispielsweise Geschäf
 
 ## Schnittstellen und Abgrenzung
 
-Schnittstellen zu Umsystemen Hinweis auf Integrationskonzept
+```{puml}
+@startuml
+
+[Enocean Device 1] --> [Enocean Stick]
+[Enocean Device 2] --> [Enocean Stick]
+[Enocean Device 3] --> [Enocean Stick]
+
+
+[Enocean Stick] --> [Java Applikation]
+
+[Java Applikation] --> [MariaDB]
+[Java Applikation] --> [Linux]
+[Linux] --> [MariaDB]
+[Linux] --> [File System (SD Card)]
+[MariaDB] --> [File System (SD Card)]
+[Rasperry PI] --> [Data]
+
+@enduml
+```
 
 ## Machbarkeit
 
-Beurteilung der Machbarkeit, Hinweis auf Prototypingdokumentation
+Die Techniken welche vorgehesehen sind, werden bereits heute gebraucht.
+
+Zudem wurde bereits ein POC mit der Enocean Java library durchgeführt. Dieser POC hat gezeigt, dass ohne weiteres Telegramme gelesen und weiterverarbeitet werden.
 
 ## Anforderungsabdeckung
-
-Hinweis auf Systemanforderungen
-
-ID | Anforderung | Zuordnung zu Subsystem / Komponente | Beurteilung der Anforderungsabdeckung
--- | ----------- | ----------------------------------- | --------------------------------------
-   |             |                                     |
