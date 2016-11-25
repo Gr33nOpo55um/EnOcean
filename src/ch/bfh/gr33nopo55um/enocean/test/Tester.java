@@ -1,4 +1,4 @@
-package ch.bfh.gr33nopo55um.enocean.helper;
+package ch.bfh.gr33nopo55um.enocean.test;
 
 import ch.bfh.gr33nopo55um.enocean.telegram.RadioERP1;
 
@@ -9,9 +9,16 @@ public class Tester {
 
 
     public static void main(String args[]) {
+
+
+        Tester.erp1_tester("0x55000707017af6000022a1342001ffffffff3a0035");
+    }
+
+    public static void erp1_tester(String telegram) {
+
         RadioERP1 radioERP1 = new RadioERP1();
 
-        radioERP1.decodeTelegram("0x55000707017af6000022a1342001ffffffff3a0035");
+        radioERP1.decodeTelegram(telegram);
 
 
         System.out.println("Sync Byte:" + radioERP1.getSyncByte());
@@ -30,7 +37,5 @@ public class Tester {
         System.out.println("dbm:" + radioERP1.getDbm());
         System.out.println("securityLevel:" + radioERP1.getSecurityLevel());
         System.out.println("crcData:" + radioERP1.getData());
-
-
     }
 }
