@@ -11,6 +11,17 @@ import javax.persistence.Query;
 public class Store {
 
 
+    private static Store instance;
+    private EntityManager entityManager = null;
+    private String jpaStoreId = "store";
+
+    public static EntityManager getInstance() {
+
+
+        return null;
+
+    }
+
     public static class Main {
         private static final String PERSISTENCE_UNIT_NAME = "todo";
         private static EntityManagerFactory factory;

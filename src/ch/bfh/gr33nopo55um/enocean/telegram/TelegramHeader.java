@@ -4,8 +4,6 @@ package ch.bfh.gr33nopo55um.enocean.telegram;
  * Created by silas on 18.11.16.
  */
 
-import ch.bfh.gr33nopo55um.enocean.EncodeDecode;
-
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -21,7 +19,16 @@ public abstract class TelegramHeader implements EncodeDecode {
     public int dataLength;
     public int optionalLenght;
     public String crcHeader;
-    public String crdData;
+    public String crcData;
+    public String packageType;
+
+    public String getPackageType() {
+        return packageType;
+    }
+
+    public void setPackageType(String packageType) {
+        this.packageType = packageType;
+    }
 
     public int getId() {
         return id;
@@ -79,11 +86,11 @@ public abstract class TelegramHeader implements EncodeDecode {
         this.crcHeader = crcHeader;
     }
 
-    public String getCrdData() {
-        return crdData;
+    public String getCrcData() {
+        return crcData;
     }
 
-    public void setCrdData(String crdData) {
-        this.crdData = crdData;
+    public void setCrcData(String crcData) {
+        this.crcData = crcData;
     }
 }
