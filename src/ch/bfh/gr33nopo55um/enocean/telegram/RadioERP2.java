@@ -26,22 +26,14 @@ public class RadioERP2 extends TelegramHeader {
     }
 
     /**
-     * decodeTelegram splits telegram in parts
+     * decodeTelegramData splits telegram in parts
      *
      * @param hexTelegram
      */
     @Override
-    public void decodeTelegram(String hexTelegram) {
+    public void decodeTelegramData(String hexTelegram) {
 
-        syncByte = hexTelegram.substring(2, 4); //55
 
-        dataLength = Integer.parseInt(hexTelegram.substring(4, 8)); //7
-
-        optionalLenght = Integer.parseInt(hexTelegram.substring(8, 10)); //7
-
-        packageType = hexTelegram.substring(10, 12); //01 for radio
-
-        crcData = hexTelegram.substring(12, 14); //
 
 
         rawData = hexTelegram.substring(14, 26);
@@ -52,7 +44,7 @@ public class RadioERP2 extends TelegramHeader {
         dbm = Integer.parseInt(hexTelegram.substring(28, 30), 16);
 
 
-        crcData = hexTelegram.substring(30, 32);
+        crcData = Integer.parseInt(hexTelegram.substring(30, 32),16);
 
 
     }

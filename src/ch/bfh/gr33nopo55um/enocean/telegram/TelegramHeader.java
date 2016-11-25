@@ -10,25 +10,17 @@ import javax.persistence.Id;
 
 public abstract class TelegramHeader implements EncodeDecode {
 
+    int telegram;
+    int data;
+    int syncByte;
+    int dataLength;
+    int optionalLenght;
+    int crcHeader;
+    int crcData;
+    int packageType;
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    public int id;
-    public String data;
-    public String telegram;
-    public String syncByte;
-    public int dataLength;
-    public int optionalLenght;
-    public String crcHeader;
-    public String crcData;
-    public String packageType;
-
-    public String getPackageType() {
-        return packageType;
-    }
-
-    public void setPackageType(String packageType) {
-        this.packageType = packageType;
-    }
+    private int id;
 
     public int getId() {
         return id;
@@ -38,27 +30,27 @@ public abstract class TelegramHeader implements EncodeDecode {
         this.id = id;
     }
 
-    public String getData() {
+    public int getData() {
         return data;
     }
 
-    public void setData(String data) {
+    public void setData(int data) {
         this.data = data;
     }
 
-    public String getTelegram() {
+    public int getTelegram() {
         return telegram;
     }
 
-    public void setTelegram(String telegram) {
+    public void setTelegram(int telegram) {
         this.telegram = telegram;
     }
 
-    public String getSyncByte() {
+    public int getSyncByte() {
         return syncByte;
     }
 
-    public void setSyncByte(String syncByte) {
+    public void setSyncByte(int syncByte) {
         this.syncByte = syncByte;
     }
 
@@ -78,19 +70,41 @@ public abstract class TelegramHeader implements EncodeDecode {
         this.optionalLenght = optionalLenght;
     }
 
-    public String getCrcHeader() {
+    public int getCrcHeader() {
         return crcHeader;
     }
 
-    public void setCrcHeader(String crcHeader) {
+    public void setCrcHeader(int crcHeader) {
         this.crcHeader = crcHeader;
     }
 
-    public String getCrcData() {
+    public int getCrcData() {
         return crcData;
     }
 
-    public void setCrcData(String crcData) {
+    public void setCrcData(int crcData) {
         this.crcData = crcData;
+    }
+
+    public int getPackageType() {
+        return packageType;
+    }
+
+    public void setPackageType(int packageType) {
+        this.packageType = packageType;
+    }
+
+    public void decodeTelegramHeader(String hexTelegram) {
+
+        syncByte = Integer.parseInt(hexTelegram.substring(2, 4), 16); //55
+
+        dataLength = Integer.parseInt(hexTelegram.substring(4, 8)); //7
+
+        optionalLenght = Integer.parseInt(hexTelegram.substring(8, 10)); //7
+
+        packageType = Integer.parseInt(hexTelegram.substring(10, 12), 16); //01 for radio
+
+        crcHeader = Integer.parseInt(hexTelegram.substring(12, 14), 16); //
+
     }
 }

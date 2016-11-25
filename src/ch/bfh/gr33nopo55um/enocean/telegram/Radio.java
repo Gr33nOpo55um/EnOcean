@@ -11,8 +11,14 @@ import javax.persistence.Table;
 @Table
 public class Radio extends TelegramHeader {
 
+    private int messageRorg;
+    private int messageData;
 
-    private int rssi;
+    private int destinationId;
+
+    private int sourceId;
+    private int dbm;
+
 
     /**
      * encodeTelegram provides an example telegram hex for this packet type.
@@ -25,21 +31,25 @@ public class Radio extends TelegramHeader {
     }
 
     /**
-     * decodeTelegram splits telegram in parts
+     * decodeTelegramData splits telegram in parts
      *
      * @param hexTelegram
      */
     @Override
-    public void decodeTelegram(String hexTelegram) {
-        syncByte = hexTelegram.substring(2, 4); //55
+    public void decodeTelegramData(String hexTelegram) {
 
-        dataLength = Integer.parseInt(hexTelegram.substring(4, 8)); //7
 
-        optionalLenght = Integer.parseInt(hexTelegram.substring(8, 10)); //7
+        messageRorg = Integer.parseInt(hexTelegram.substring(14, 16), 16);
+        messageData = Integer.parseInt(hexTelegram.substring(16, 16 + dataLength), 16);
 
-        packageType = hexTelegram.substring(10, 12); //01 for radio
+        destinationId = Integer.parseInt(hexTelegram.substring(dataLength + 16, dataLength + 24), 16);
 
-        crcData = hexTelegram.substring(12, 14); //
+        sourceId = Integer.parseInt(hexTelegram.substring(dataLength + 24, dataLength + 32), 16);
+
+        dbm = Integer.parseInt(hexTelegram.substring(dataLength + 32, dataLength + 34), 16);
+
+        crcData = Integer.parseInt(hexTelegram.substring(dataLength + 34, dataLength + 36), 16);
+
 
     }
 }

@@ -11,7 +11,7 @@ import javax.persistence.Table;
 public class Event extends TelegramHeader {
 
     private int eventCode;
-    private String EventData;
+    private int EventData;
 
     /**
      * encodeTelegram provides an example telegram hex for this packet type.
@@ -24,12 +24,12 @@ public class Event extends TelegramHeader {
     }
 
     /**
-     * decodeTelegram splits telegram in parts
+     * decodeTelegramData splits telegram in parts
      *
      * @param hexTelegram
      */
     @Override
-    public void decodeTelegram(String hexTelegram) {
+    public void decodeTelegramData(String hexTelegram) {
 
         syncByte = hexTelegram.substring(2, 4); //55
 

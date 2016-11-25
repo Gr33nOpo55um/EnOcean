@@ -1,11 +1,11 @@
 package ch.bfh.gr33nopo55um.enocean.telegram;
 
 /**
- * This interface provides basic encodeTelegram and decodeTelegram methods for EnOcean telegrams. Including description.
+ * This interface provides basic encodeTelegram and decodeTelegramData methods for EnOcean telegrams. Including description.
  *
  * @author louisjustussiegrist
  */
-public interface EncodeDecode {
+interface EncodeDecode {
 
     /**
      * encodeTelegram provides an example telegram hex for this packet type.
@@ -15,9 +15,16 @@ public interface EncodeDecode {
     String encodeTelegram();
 
     /**
-     * decodeTelegram splits telegram in parts
+     * decodeTelegramData splits telegram in parts
      *
      * @param hexTelegram EnOcean Telegram
      */
-    void decodeTelegram(String hexTelegram);
+    void decodeTelegramData(String hexTelegram);
+
+    /**
+     * decodeHeaderTelegram splits telegram in parts
+     *
+     * @param hexTelegram EnOcean Telegram
+     */
+    void decodeTelegramHeader(String hexTelegram);
 }

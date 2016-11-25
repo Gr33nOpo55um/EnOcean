@@ -6,7 +6,7 @@ package ch.bfh.gr33nopo55um.enocean.telegram;
 public class CommonCommand extends TelegramHeader {
 
     private int ccCode;
-    private String ccData;
+    private int ccData;
 
     @Override
     public String encodeTelegram() {
@@ -14,23 +14,25 @@ public class CommonCommand extends TelegramHeader {
     }
 
     @Override
-    public void decodeTelegram(String hexTelegram) {
+    public void decodeTelegramData(String hexTelegram) {
 
-        syncByte = hexTelegram.substring(2, 4); //55
 
-        dataLength = Integer.parseInt(hexTelegram.substring(4, 8)); //7
-
-        optionalLenght = Integer.parseInt(hexTelegram.substring(8, 10)); //7
-
-        packageType = hexTelegram.substring(10, 12); //01 for radio
-
-        crcHeader = hexTelegram.substring(12, 14); //
 
 
         ccCode = Integer.parseInt(hexTelegram.substring(14, 16), 16);
-        ccData = hexTelegram.substring(16, 24);
+        ccData = Integer.parseInt(hexTelegram.substring(16, 24),16);
 
-        crcData = hexTelegram.substring(24, 26);
+        crcData = Integer.parseInt(hexTelegram.substring(24, 26),16);
+
+    }
+
+    /**
+     * decodeHeaderTelegram splits telegram in parts
+     *
+     * @param hexTelegram EnOcean Telegram
+     */
+    @Override
+    public void decodeTelegramHeader(String hexTelegram) {
 
     }
 }

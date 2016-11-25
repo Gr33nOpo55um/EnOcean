@@ -59,30 +59,18 @@ public class RadioERP1 extends TelegramHeader {
     }
 
     /**
-     * decodeTelegram splits telegram in parts
+     * decodeTelegramData splits telegram in parts
      *
      * @param hexTelegram
      */
     @Override
-    public void decodeTelegram(String hexTelegram) {
+    public void decodeTelegramData(String hexTelegram) {
 
-
-        syncByte = hexTelegram.substring(2, 4); //55
-
-        dataLength = Integer.parseInt(hexTelegram.substring(4, 8), 16); //7
-
-        optionalLenght = Integer.parseInt(hexTelegram.substring(8, 10), 16); //7
-
-        packageType = hexTelegram.substring(10, 12); //01 for radio
-
-        crcHeader = hexTelegram.substring(12, 14); //
-
-        //end of header
 
         //start of data
         int endOfDataLength = 14 + dataLength;
 
-        data = hexTelegram.substring(14, endOfDataLength); //
+        data = Integer.parseInt(hexTelegram.substring(14, endOfDataLength), 16); //
 
         subTelNum = Integer.parseInt(hexTelegram.substring(endOfDataLength, endOfDataLength + 2), 16);
 
@@ -94,7 +82,7 @@ public class RadioERP1 extends TelegramHeader {
 
         securityLevel = Integer.parseInt(hexTelegram.substring(endOfDataLength + 12, endOfDataLength + 14), 16);
 
-        crcData = hexTelegram.substring(endOfDataLength + 14, endOfDataLength + 16);
+        crcData = Integer.parseInt(hexTelegram.substring(endOfDataLength + 14, endOfDataLength + 16), 16);
 
 
     }

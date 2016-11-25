@@ -18,7 +18,7 @@ public class Tester {
 
         RadioERP1 radioERP1 = new RadioERP1();
 
-        radioERP1.decodeTelegram(telegram);
+        radioERP1.decodeTelegramData(telegram);
 
 
         System.out.println("Sync Byte:" + radioERP1.getSyncByte());

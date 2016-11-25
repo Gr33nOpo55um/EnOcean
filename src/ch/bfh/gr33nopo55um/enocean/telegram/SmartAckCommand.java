@@ -11,7 +11,7 @@ import javax.persistence.Table;
 @Table
 public class SmartAckCommand extends TelegramHeader {
     private int smartAckCommandNr;
-    private String smartAckCommandData;
+    private int smartAckCommandData;
 
     /**
      * encodeTelegram provides an example telegram hex for this packet type.
@@ -24,22 +24,22 @@ public class SmartAckCommand extends TelegramHeader {
     }
 
     /**
-     * decodeTelegram splits telegram in parts
+     * decodeTelegramData splits telegram in parts
      *
      * @param hexTelegram
      */
     @Override
-    public void decodeTelegram(String hexTelegram) {
+    public void decodeTelegramData(String hexTelegram) {
 
-        syncByte = hexTelegram.substring(2, 4); //55
+        syncByte = Integer.parseInt(hexTelegram.substring(2, 4), 16); //55
 
-        dataLength = Integer.parseInt(hexTelegram.substring(4, 8)); //7
+        dataLength = Integer.parseInt(hexTelegram.substring(4, 8), 16); //7
 
-        optionalLenght = Integer.parseInt(hexTelegram.substring(8, 10)); //7
+        optionalLenght = Integer.parseInt(hexTelegram.substring(8, 10), 16); //7
 
-        packageType = hexTelegram.substring(10, 12); //01 for radio
+        packageType = Integer.parseInt(hexTelegram.substring(10, 12), 16); //01 for radio
 
-        crcData = hexTelegram.substring(12, 14); //
+        crcData = Integer.parseInt(hexTelegram.substring(12, 14), 16); //
 
 
     }

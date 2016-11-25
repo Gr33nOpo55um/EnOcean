@@ -30,25 +30,16 @@ public class RadioSubTel extends TelegramHeader {
     }
 
     /**
-     * decodeTelegram splits telegram in parts
+     * decodeTelegramData splits telegram in parts
      *
      * @param hexTelegram
      */
     @Override
-    public void decodeTelegram(String hexTelegram) {
-        syncByte = hexTelegram.substring(2, 4);
-
-        dataLength = Integer.parseInt(hexTelegram.substring(4, 8));
-
-        optionalLenght = Integer.parseInt(hexTelegram.substring(8, 10));
-
-        packageType = hexTelegram.substring(10, 12); //01 for radio
+    public void decodeTelegramData(String hexTelegram) {
 
 
-        crcHeader = hexTelegram.substring(12, 14); //
 
-
-        data = hexTelegram.substring(14, 14 + dataLength);
+        data = Integer.parseInt(hexTelegram.substring(14, 14 + dataLength),16);
 
         subTelNum = Integer.parseInt(hexTelegram.substring(dataLength + 14, dataLength + 16), 16);
 
@@ -68,7 +59,7 @@ public class RadioSubTel extends TelegramHeader {
         statusSubTel = hexTelegram.substring(dataLength + 36, dataLength + 38);
 
 
-        crcData = hexTelegram.substring(dataLength + 38, dataLength + 40); //
+        crcData = Integer.parseInt(hexTelegram.substring(dataLength + 38, dataLength + 40),16); //
 
     }
 }
