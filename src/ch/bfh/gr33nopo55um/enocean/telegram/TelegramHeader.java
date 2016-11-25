@@ -96,15 +96,15 @@ public abstract class TelegramHeader implements EncodeDecode {
 
     public void decodeTelegramHeader(String hexTelegram) {
 
-        syncByte = Integer.parseInt(hexTelegram.substring(2, 4), 16); //55
+        syncByte = Integer.parseInt(hexTelegram.substring(2, 4), 16);
 
-        dataLength = Integer.parseInt(hexTelegram.substring(4, 8)); //7
+        dataLength = Integer.parseInt(hexTelegram.substring(4, 8));
 
-        optionalLenght = Integer.parseInt(hexTelegram.substring(8, 10)); //7
+        optionalLenght = Integer.parseInt(hexTelegram.substring(8, 10));
 
-        packageType = Integer.parseInt(hexTelegram.substring(10, 12), 16); //01 for radio
+        packageType = Integer.parseInt(hexTelegram.substring(10, 12), 16);
 
-        crcHeader = Integer.parseInt(hexTelegram.substring(12, 14), 16); //
+        crcHeader = Integer.parseInt(hexTelegram.substring(12, 14), 16);
 
     }
 }

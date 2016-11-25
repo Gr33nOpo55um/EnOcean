@@ -70,6 +70,8 @@ public class RadioERP1 extends TelegramHeader {
         //start of data
         int endOfDataLength = 14 + dataLength;
 
+        System.out.print(dataLength);
+
         data = Integer.parseInt(hexTelegram.substring(14, endOfDataLength), 16); //
 
         subTelNum = Integer.parseInt(hexTelegram.substring(endOfDataLength, endOfDataLength + 2), 16);
