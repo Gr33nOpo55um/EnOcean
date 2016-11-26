@@ -1,15 +1,21 @@
 package ch.bfh.gr33nopo55um.enocean.telegram;
 
-import javax.persistence.Table;
+import javax.persistence.*;
 
 /**
  * Created by silas on 18.11.16.
  */
 
 
-@Table
+@Entity
 public class RadioSubTel extends TelegramHeader {
-    private int id;
+
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Long id;
+
+
     private int subTelNum;
     private String destinationID;
     private int dbm;

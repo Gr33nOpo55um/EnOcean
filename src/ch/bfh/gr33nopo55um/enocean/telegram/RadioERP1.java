@@ -4,17 +4,24 @@ package ch.bfh.gr33nopo55um.enocean.telegram;
  * Created by silas on 18.11.16.
  */
 
-import javax.persistence.Table;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 
-
-@Table
-public class RadioERP1 extends TelegramHeader {
+@Entity
+public class RadioERP1
+        extends TelegramHeader {
 
 
     private int subTelNum;
     private String destinationID;
     private int dbm;
     private int securityLevel;
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Long id;
 
     /**
      * encodeTelegram provides an example telegram hex for this packet type.
@@ -87,5 +94,14 @@ public class RadioERP1 extends TelegramHeader {
         crcData = Integer.parseInt(hexTelegram.substring(endOfDataLength + 14, endOfDataLength + 16), 16);
 
 
+    }
+
+    @Id
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 }

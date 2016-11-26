@@ -1,41 +1,47 @@
 package ch.bfh.gr33nopo55um.enocean.persistence;
 
+import ch.bfh.gr33nopo55um.enocean.helper.SeedDB;
+
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 import javax.persistence.Query;
 
+
 /**
  * Created by silas on 18.11.16.
  */
 public class Store {
-
-
     private static Store instance;
     private EntityManager entityManager = null;
     private String jpaStoreId = "store";
 
-    public static EntityManager getInstance() {
+    public static Store getInstance() {
+        if (instance == null) {
+            instance = new Store();
 
-
-        return null;
-
-    }
-
-    public static class Main {
-        private static final String PERSISTENCE_UNIT_NAME = "todo";
-        private static EntityManagerFactory factory;
-
-        public static void main(String[] args) {
-            factory = Persistence.createEntityManagerFactory(PERSISTENCE_UNIT_NAME);
-            EntityManager em = factory.createEntityManager();
-            // read the existing entries and write to console
-            Query q = em.createQuery("select t from Radio t");
-            em.persist(q);
-            em.getTransaction().commit();
-
-            em.close();
+            SeedDB.getInstance().seedDB();
         }
-
+        return instance;
     }
+
+    public Query createQuery(String query) {
+        EntityManager manager = this.getEntityManager();
+        Query userQuery = manager.createQuery(query);
+        return userQuery;
+    }
+
+
+    public EntityManager getEntityManager() {
+        if (entityManager == null) {
+            EntityManagerFactory emfactory = Persistence.createEntityManagerFactory("store");
+            entityManager = emfactory.createEntityManager();
+        }
+        return entityManager;
+    }
+
+
+
+
+
 }

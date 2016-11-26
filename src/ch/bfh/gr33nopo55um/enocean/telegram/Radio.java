@@ -5,10 +5,10 @@ package ch.bfh.gr33nopo55um.enocean.telegram;
  */
 
 
-import javax.persistence.Table;
+import javax.persistence.*;
 
 
-@Table
+@Entity
 public class Radio extends TelegramHeader {
 
     private int messageRorg;
@@ -18,6 +18,9 @@ public class Radio extends TelegramHeader {
 
     private int sourceId;
     private int dbm;
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Long id;
 
 
     /**

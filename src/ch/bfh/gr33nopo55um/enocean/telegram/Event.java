@@ -4,14 +4,19 @@ package ch.bfh.gr33nopo55um.enocean.telegram;
  * Created by silas on 18.11.16.
  */
 
-import javax.persistence.Table;
+import javax.persistence.*;
 
 
-@Table
+@Entity
 public class Event extends TelegramHeader {
 
     private int eventCode;
     private int EventData;
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Long id;
+
 
     /**
      * encodeTelegram provides an example telegram hex for this packet type.

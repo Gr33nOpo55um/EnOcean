@@ -4,11 +4,20 @@ package ch.bfh.gr33nopo55um.enocean.telegram;
  * Created by silas on 18.11.16.
  */
 
-import javax.persistence.Table;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 
 
-@Table
+@Entity
 public class RadioERP2 extends TelegramHeader {
+
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Long id;
+
 
     private int subTelNum;
     private int dbm;

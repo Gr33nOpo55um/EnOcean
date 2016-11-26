@@ -1,9 +1,5 @@
 package ch.bfh.gr33nopo55um.enocean.helper;
 
-import ch.bfh.gr33nopo55um.enocean.persistence.Store;
-
-import javax.persistence.Query;
-
 /**
  * Created by silas on 25.11.16.
  */
@@ -17,14 +13,6 @@ public class SeedDB {
         seedDB();
     }
 
-    private void seedDB() {
-
-
-        Query query = Store.getInstance().createQuery("Select * from dual");
-
-
-    }
-
     public static SeedDB getInstance() {
         if (instance == null) {
             instance = new SeedDB();
@@ -32,13 +20,17 @@ public class SeedDB {
         return instance;
     }
 
+    public void seedDB() {
+
+
+//        Query query = Store.getInstance().createQuery("Select * from dual");
+
+
+    }
+
     public boolean seedStatus() {
         return seedDone;
     }
-
-
-
-
 
 
 }

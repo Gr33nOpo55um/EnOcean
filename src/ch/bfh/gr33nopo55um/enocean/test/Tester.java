@@ -1,5 +1,7 @@
 package ch.bfh.gr33nopo55um.enocean.test;
 
+import ch.bfh.gr33nopo55um.enocean.persistence.Store;
+import ch.bfh.gr33nopo55um.enocean.telegram.Radio;
 import ch.bfh.gr33nopo55um.enocean.telegram.RadioERP1;
 import ch.bfh.gr33nopo55um.enocean.telegram.RadioERP2;
 
@@ -64,5 +66,9 @@ public class Tester {
         System.out.println("subTelNum:" + radioERP2.getSubTelNum());
         System.out.println("dbm:" + radioERP2.getDbm());
         System.out.println("crcData:" + radioERP2.getCrcData());
+
+
+
+        Store.getInstance().getEntityManager().persist(radioERP2);
     }
 }

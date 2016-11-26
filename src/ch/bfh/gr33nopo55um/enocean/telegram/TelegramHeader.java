@@ -4,10 +4,6 @@ package ch.bfh.gr33nopo55um.enocean.telegram;
  * Created by silas on 18.11.16.
  */
 
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-
 public abstract class TelegramHeader implements EncodeDecode {
 
     int telegram;
@@ -18,17 +14,7 @@ public abstract class TelegramHeader implements EncodeDecode {
     int crcHeader;
     int crcData;
     int packageType;
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private int id;
 
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
 
     public int getData() {
         return data;

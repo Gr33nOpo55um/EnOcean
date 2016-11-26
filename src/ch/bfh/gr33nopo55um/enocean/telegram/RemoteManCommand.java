@@ -4,11 +4,19 @@ package ch.bfh.gr33nopo55um.enocean.telegram;
  * Created by silas on 18.11.16.
  */
 
-import javax.persistence.Table;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 
 
-@Table
+@Entity
 public class RemoteManCommand extends TelegramHeader {
+
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Long id;
 
     private String destinationID;
     private String sourceID;
@@ -34,8 +42,6 @@ public class RemoteManCommand extends TelegramHeader {
     public void decodeTelegramData(String hexTelegram) {
 
 
-
-
         destinationID = hexTelegram.substring(14, 22);
 
         sourceID = hexTelegram.substring(22, 30);
@@ -44,7 +50,7 @@ public class RemoteManCommand extends TelegramHeader {
 
         sendDelay = Integer.parseInt(hexTelegram.substring(32, 34), 16);
 
-        crcData = Integer.parseInt(hexTelegram.substring(34, 36),16);
+        crcData = Integer.parseInt(hexTelegram.substring(34, 36), 16);
 
 
     }
