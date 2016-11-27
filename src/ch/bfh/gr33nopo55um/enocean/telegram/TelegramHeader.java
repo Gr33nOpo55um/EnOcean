@@ -1,10 +1,15 @@
 package ch.bfh.gr33nopo55um.enocean.telegram;
 
+import javax.persistence.MappedSuperclass;
+
 /**
  * Created by silas on 18.11.16.
  */
 
+
+@MappedSuperclass
 public abstract class TelegramHeader implements EncodeDecode {
+
 
     int telegram;
     int data;
@@ -14,6 +19,8 @@ public abstract class TelegramHeader implements EncodeDecode {
     int crcHeader;
     int crcData;
     int packageType;
+
+    String fullTelegram;
 
 
     public int getData() {
@@ -81,6 +88,8 @@ public abstract class TelegramHeader implements EncodeDecode {
     }
 
     public void decodeTelegramHeader(String hexTelegram) {
+        fullTelegram = hexTelegram;
+
 
         syncByte = Integer.parseInt(hexTelegram.substring(2, 4), 16);
 

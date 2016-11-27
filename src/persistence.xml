@@ -5,10 +5,15 @@
     <persistence-unit name="todos" transaction-type="RESOURCE_LOCAL">
         <class>ch.bfh.gr33nopo55um.enocean.persistence.Store</class>
         <properties>
+
+
             <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>
             <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/enocean"/>
             <property name="javax.persistence.jdbc.user" value="enocean"/>
             <property name="javax.persistence.jdbc.password" value="NGLThBb7sfQrh6p0vBzA"/>
+
+            <property name="eclipselink.target-database" value="Auto"/>
+
 
             <!-- EclipseLink should create the database schema automatically -->
             <property name="eclipselink.ddl-generation" value="create-tables"/>

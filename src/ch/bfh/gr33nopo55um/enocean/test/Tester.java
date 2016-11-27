@@ -1,7 +1,6 @@
 package ch.bfh.gr33nopo55um.enocean.test;
 
 import ch.bfh.gr33nopo55um.enocean.persistence.Store;
-import ch.bfh.gr33nopo55um.enocean.telegram.Radio;
 import ch.bfh.gr33nopo55um.enocean.telegram.RadioERP1;
 import ch.bfh.gr33nopo55um.enocean.telegram.RadioERP2;
 
@@ -17,6 +16,7 @@ public class Tester {
         tester.erp1_tester("0x55000707017af6000022a1342001ffffffff3a0035");
 
         tester.erp2_tester("0x55000707017af6000022a1342001ffffffff3a0035");
+
 
     }
 
@@ -43,6 +43,10 @@ public class Tester {
         System.out.println("dbm:" + radioERP1.getDbm());
         System.out.println("securityLevel:" + radioERP1.getSecurityLevel());
         System.out.println("crcData:" + radioERP1.getData());
+
+        Store.getInstance().getEntityManager().getTransaction().begin();
+        Store.getInstance().getEntityManager().persist(radioERP1);
+        Store.getInstance().getEntityManager().getTransaction().commit();
     }
 
     private void erp2_tester(String telegram) {
@@ -68,7 +72,10 @@ public class Tester {
         System.out.println("crcData:" + radioERP2.getCrcData());
 
 
-
+        Store.getInstance().getEntityManager().getTransaction().begin();
         Store.getInstance().getEntityManager().persist(radioERP2);
+        Store.getInstance().getEntityManager().getTransaction().commit();
+
+
     }
 }

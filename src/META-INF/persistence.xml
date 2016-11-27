@@ -10,8 +10,9 @@
     <persistence-unit name="store" transaction-type="RESOURCE_LOCAL">
 
 
-    <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+        <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
 
+        <class>ch.bfh.gr33nopo55um.enocean.telegram.TelegramHeader</class>
         <class>ch.bfh.gr33nopo55um.enocean.telegram.RadioERP1</class>
         <class>ch.bfh.gr33nopo55um.enocean.telegram.RadioERP2</class>
         <class>ch.bfh.gr33nopo55um.enocean.telegram.Radio</class>
