@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Java Persistence API object/relational mapping file schema -->
+<persistence
+        xmlns="http://java.sun.com/xml/ns/persistence"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="
+        http://java.sun.com/xml/ns/persistence
+        http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd"
+        version="2.0">
+    <persistence-unit name="store" transaction-type="RESOURCE_LOCAL">
+
+
+        <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+
+        <class>ch.bfh.gr33nopo55um.enocean.telegram.TelegramHeader</class>
+        <class>ch.bfh.gr33nopo55um.enocean.telegram.RadioERP1</class>
+        <class>ch.bfh.gr33nopo55um.enocean.telegram.RadioERP2</class>
+        <class>ch.bfh.gr33nopo55um.enocean.telegram.Radio</class>
+        <class>ch.bfh.gr33nopo55um.enocean.telegram.Radiomessage</class>
+        <class>ch.bfh.gr33nopo55um.enocean.telegram.Response</class>
+        <class>ch.bfh.gr33nopo55um.enocean.telegram.SmartAckCommand</class>
+        <class>ch.bfh.gr33nopo55um.enocean.telegram.RemoteManCommand</class>
+        <class>ch.bfh.gr33nopo55um.enocean.telegram.RadioSubTel</class>
+        <class>ch.bfh.gr33nopo55um.enocean.telegram.Event</class>
+
+        <properties>
+            <property name="javax.persistence.jdbc.driver" value="org.sqlite.JDBC"/>
+            <property name="javax.persistence.jdbc.url" value="jdbc:sqlite:enocean.db"/>
+            <property name="eclipselink.ddl-generation" value="create-tables"/>
+            <property name="eclipselink.ddl-generation.output-mode" value="database"/>
+        </properties>
+
+
+        <!--Properties for production:
+        <properties>
+            <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver" />
+            <property name="javax.persistence.jdbc.url"    value="jdbc:mysql://localhost/test" />
+            <property name="javax.persistence.jdbc.user" value="username" />
+            <property name="javax.persistence.jdbc.password" value="password" />
+            <property name="eclipselink.ddl-generation" value="create-tables" />
+            <property name="eclipselink.ddl-generation.output-mode" value="database" />
+        </properties>
+        -->
+
+    </persistence-unit>
+</persistence>

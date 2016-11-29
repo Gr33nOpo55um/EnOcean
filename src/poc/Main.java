@@ -90,7 +90,7 @@ public class Main {
 
         System.out.println(result[4]);
 
-        result[5] = Integer.parseInt(message.substring(12, ));
+        result[5] = Integer.parseInt(message.substring(12, 12));
 
 
         return result;

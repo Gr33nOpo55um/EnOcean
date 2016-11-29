@@ -4,14 +4,22 @@ package ch.bfh.gr33nopo55um.enocean.telegram;
  * Created by silas on 18.11.16.
  */
 
-import javax.persistence.Table;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 
 
-@Table
-public class Radiomessage extends TelegramHeader  {
+@Entity
+public class Radiomessage extends TelegramHeader {
     private String destinationID;
     private String sourceID;
     private int dbm;
+
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Long id;
 
     /**
      * encodeTelegram provides an example telegram hex for this packet type.
@@ -24,12 +32,22 @@ public class Radiomessage extends TelegramHeader  {
     }
 
     /**
-     * decodeTelegram splits telegram in parts
+     * decodeTelegramData splits telegram in parts
      *
      * @param hexTelegram
      */
     @Override
-    public void decodeTelegram(String hexTelegram) {
+    public void decodeTelegramData(String hexTelegram) {
+
+        destinationID = hexTelegram.substring(14, 22);
+
+        sourceID = hexTelegram.substring(22, 30);
+
+        dbm = Integer.parseInt(hexTelegram.substring(30, 32), 16);
+
+
+        crcData = Integer.parseInt(hexTelegram.substring(32, 34), 16);
+
 
     }
 }

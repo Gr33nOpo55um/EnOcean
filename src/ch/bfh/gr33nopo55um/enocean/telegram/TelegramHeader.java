@@ -1,57 +1,49 @@
 package ch.bfh.gr33nopo55um.enocean.telegram;
 
+import javax.persistence.MappedSuperclass;
+
 /**
  * Created by silas on 18.11.16.
  */
 
-import ch.bfh.gr33nopo55um.enocean.EncodeDecode;
 
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-
+@MappedSuperclass
 public abstract class TelegramHeader implements EncodeDecode {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    public int id;
-    public String data;
-    public String telegram;
-    public String syncByte;
-    public int dataLength;
-    public int optionalLenght;
-    public String crcHeader;
-    public String crdData;
 
-    public int getId() {
-        return id;
-    }
+    int telegram;
+    int data;
+    int syncByte;
+    int dataLength;
+    int optionalLenght;
+    int crcHeader;
+    int crcData;
+    int packageType;
 
-    public void setId(int id) {
-        this.id = id;
-    }
+    String fullTelegram;
 
-    public String getData() {
+
+    public int getData() {
         return data;
     }
 
-    public void setData(String data) {
+    public void setData(int data) {
         this.data = data;
     }
 
-    public String getTelegram() {
+    public int getTelegram() {
         return telegram;
     }
 
-    public void setTelegram(String telegram) {
+    public void setTelegram(int telegram) {
         this.telegram = telegram;
     }
 
-    public String getSyncByte() {
+    public int getSyncByte() {
         return syncByte;
     }
 
-    public void setSyncByte(String syncByte) {
+    public void setSyncByte(int syncByte) {
         this.syncByte = syncByte;
     }
 
@@ -71,19 +63,43 @@ public abstract class TelegramHeader implements EncodeDecode {
         this.optionalLenght = optionalLenght;
     }
 
-    public String getCrcHeader() {
+    public int getCrcHeader() {
         return crcHeader;
     }
 
-    public void setCrcHeader(String crcHeader) {
+    public void setCrcHeader(int crcHeader) {
         this.crcHeader = crcHeader;
     }
 
-    public String getCrdData() {
-        return crdData;
+    public int getCrcData() {
+        return crcData;
     }
 
-    public void setCrdData(String crdData) {
-        this.crdData = crdData;
+    public void setCrcData(int crcData) {
+        this.crcData = crcData;
+    }
+
+    public int getPackageType() {
+        return packageType;
+    }
+
+    public void setPackageType(int packageType) {
+        this.packageType = packageType;
+    }
+
+    public void decodeTelegramHeader(String hexTelegram) {
+        fullTelegram = hexTelegram;
+
+
+        syncByte = Integer.parseInt(hexTelegram.substring(2, 4), 16);
+
+        dataLength = Integer.parseInt(hexTelegram.substring(4, 8));
+
+        optionalLenght = Integer.parseInt(hexTelegram.substring(8, 10));
+
+        packageType = Integer.parseInt(hexTelegram.substring(10, 12), 16);
+
+        crcHeader = Integer.parseInt(hexTelegram.substring(12, 14), 16);
+
     }
 }
