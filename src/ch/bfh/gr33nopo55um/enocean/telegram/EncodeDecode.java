@@ -27,4 +27,35 @@ interface EncodeDecode {
      * @param hexTelegram EnOcean Telegram
      */
     void decodeTelegramHeader(String hexTelegram);
+
+
+    /**
+     * decodeTelegram splits telegram in parts
+     *
+     */
+    void decodeTelegram(String hextelegram);
+
+    /**
+     * dumpHeader Print Header, useful for logs and testiing
+     * <p>
+     * EnOcean Telegram
+     */
+    void dumpHeader();
+
+    /**
+     * dumpData Print Data, useful for logs and testiing
+     * <p>
+     * EnOcean Telegram
+     */
+    void dumpData();
+
+
+    void dump();
+
+    /**
+     * persist saves object to database
+     */
+    void persist();
+
+
 }

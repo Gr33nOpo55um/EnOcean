@@ -4,6 +4,7 @@ package ch.bfh.gr33nopo55um.enocean.telegram;
  * Created by silas on 18.11.16.
  */
 
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -47,6 +48,17 @@ public class Response extends TelegramHeader {
         crcData = Integer.parseInt(hexTelegram.substring(14, 16), 16);
 
     }
+
+    /**
+     * dumpData Print Data, useful for logs and testiing
+     * <p>
+     * EnOcean Telegram
+     */
+    @Override
+    public void dumpData() {
+
+    }
+
 
 }
 

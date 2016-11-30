@@ -16,10 +16,8 @@ public class CommonCommand extends TelegramHeader {
     @Override
     public void decodeTelegramData(String hexTelegram) {
 
-
         ccCode = Integer.parseInt(hexTelegram.substring(14, 16), 16);
         ccData = Integer.parseInt(hexTelegram.substring(16, 24), 16);
-
         crcData = Integer.parseInt(hexTelegram.substring(24, 26), 16);
 
     }
@@ -33,4 +31,15 @@ public class CommonCommand extends TelegramHeader {
     public void decodeTelegramHeader(String hexTelegram) {
 
     }
+
+    /**
+     * dumpData Print Data, useful for logs and testing
+     * <p>
+     * EnOcean Telegram
+     */
+    @Override
+    public void dumpData() {
+
+    }
+
 }

@@ -1,6 +1,5 @@
 package ch.bfh.gr33nopo55um.enocean.test;
 
-import ch.bfh.gr33nopo55um.enocean.persistence.Store;
 import ch.bfh.gr33nopo55um.enocean.telegram.*;
 
 /**
@@ -11,14 +10,20 @@ public class Tester {
 
     public static void main(String args[]) {
 
+
         Tester tester = new Tester();
+        //  tester.telegramRouter("0x55000707017af6000022a1342001ffffffff3a0035");
+
+        //tester.erp2_test_decode("0x55000707017af6000022a1342001ffffffff3a0035");
+        //   tester.telegramRouter("0x55000707017af6000022a1342001ffffffff3a0035");
+
+
         tester.erp1_test_decode("0x55000707017af6000022a1342001ffffffff3a0035");
 
-        tester.erp2_test_decode("0x55000707017af6000022a1342001ffffffff3a0035");
+
     }
 
     private void telegramRouter(String hexTelegram) {
-
 
 
             /*
@@ -39,30 +44,51 @@ public class Tester {
     18 - 127    Reserved for EnOcean
     128...255   available MSC and messages
      */
+        TelegramHeader telegram = null;
+
         int packageType = 0;
         packageType = Integer.parseInt(hexTelegram.substring(10, 12), 16);
 
         if (packageType == 1) {
-            RadioERP1 telegram = new RadioERP1();
+            telegram = new RadioERP1();
+
+
         } else if (packageType == 2) {
-            Response telegram = new Response();
+            telegram = new Response();
+
+
         } else if (packageType == 3) {
-            Radio telegram = new Radio();
+            telegram = new Radio();
+
+
         } else if (packageType == 4) {
-            Event telegram = new Event();
+            telegram = new Event();
+
+
         } else if (packageType == 5) {
-            CommonCommand telegram = new CommonCommand();
+            telegram = new CommonCommand();
+
+
         } else if (packageType == 6) {
-            SmartAckCommand telegram = new SmartAckCommand();
+            telegram = new SmartAckCommand();
+
 
         } else if (packageType == 7) {
-            SmartAckCommand telegram = new SmartAckCommand();
+            telegram = new SmartAckCommand();
+
+
         } else if (packageType == 8) {
-            SmartAckCommand telegram = new SmartAckCommand();
+            //Reserved for Enocean
+
+
         } else if (packageType == 9) {
-            SmartAckCommand telegram = new SmartAckCommand();
+            telegram = new Radio();
+
+
         } else if (packageType == 10) {
-            SmartAckCommand telegram = new SmartAckCommand();
+            telegram = new RadioERP2();
+
+
         } else if ((packageType >= 11) || (packageType <= 15)) {
             //Reserved for Enocean
         } else if (packageType == 16) {
@@ -76,41 +102,27 @@ public class Tester {
 
 
         } else {
-
-            RadioSubTel telegram = new RadioSubTel();
+            System.err.println("No Telegram type found");
         }
 
-
+        telegram.decodeTelegramHeader(hexTelegram);
+        telegram.decodeTelegramData(hexTelegram);
+        telegram.persist();
     }
 
 
     private void erp1_test_decode(String telegram) {
 
         RadioERP1 radioERP1 = new RadioERP1();
-        radioERP1.decodeTelegramHeader(telegram);
-        radioERP1.decodeTelegramData(telegram);
+
+        radioERP1.decodeTelegram(telegram);
 
 
-        System.out.println("Sync Byte:" + radioERP1.getSyncByte());
-        System.out.println("Data Length:" + radioERP1.getDataLength());
-        System.out.println("Optional Length:" + radioERP1.getOptionalLenght());
-        System.out.println("Package Type:" + radioERP1.getPackageType());
-        System.out.println("Header:" + radioERP1.getCrcHeader());
-        System.out.println("Data:" + radioERP1.getData());
-
-        System.out.println("SubTelNum:" + radioERP1.getSubTelNum());
+        radioERP1.dump();
 
 
-        System.out.println("Destination" + radioERP1.getDestinationID());
-
-
-        System.out.println("dbm:" + radioERP1.getDbm());
-        System.out.println("securityLevel:" + radioERP1.getSecurityLevel());
-        System.out.println("crcData:" + radioERP1.getData());
-
-        Store.getInstance().getEntityManager().getTransaction().begin();
-        Store.getInstance().getEntityManager().persist(radioERP1);
-        Store.getInstance().getEntityManager().getTransaction().commit();
+        radioERP1.toString();
+        radioERP1.persist();
     }
 
     private void erp2_test_decode(String telegram) {
@@ -119,27 +131,13 @@ public class Tester {
         System.out.println("");
         System.out.println("Echo: erp2 telegram");
         RadioERP2 radioERP2 = new RadioERP2();
-        radioERP2.decodeTelegramHeader(telegram);
-        radioERP2.decodeTelegramData(telegram);
+
+        radioERP2.decodeTelegram(telegram);
+
+        radioERP2.dump();
 
 
-        System.out.println("Sync Byte:" + radioERP2.getSyncByte());
-        System.out.println("Data Length:" + radioERP2.getDataLength());
-        System.out.println("Optional Length:" + radioERP2.getOptionalLenght());
-        System.out.println("Package Type:" + radioERP2.getPackageType());
-        System.out.println("Header:" + radioERP2.getCrcHeader());
-        System.out.println("RawData:" + radioERP2.getRawData());
-
-
-        System.out.println("subTelNum:" + radioERP2.getSubTelNum());
-        System.out.println("dbm:" + radioERP2.getDbm());
-        System.out.println("crcData:" + radioERP2.getCrcData());
-
-
-        Store.getInstance().getEntityManager().getTransaction().begin();
-        Store.getInstance().getEntityManager().persist(radioERP2);
-        Store.getInstance().getEntityManager().getTransaction().commit();
-
+        radioERP2.persist();
 
     }
 }

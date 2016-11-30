@@ -53,4 +53,14 @@ public class SmartAckCommand extends TelegramHeader {
 
 
     }
+
+    /**
+     * dumpData Print Data, useful for logs and testiing
+     * <p>
+     * EnOcean Telegram
+     */
+    @Override
+    public void dumpData() {
+
+    }
 }

@@ -42,15 +42,9 @@ public class RadioERP2 extends TelegramHeader {
     @Override
     public void decodeTelegramData(String hexTelegram) {
 
-
         rawData = hexTelegram.substring(14, 26);
-
         subTelNum = Integer.parseInt(hexTelegram.substring(26, 28), 16);
-
-
         dbm = Integer.parseInt(hexTelegram.substring(28, 30), 16);
-
-
         crcData = Integer.parseInt(hexTelegram.substring(30, 32), 16);
 
 
@@ -78,5 +72,14 @@ public class RadioERP2 extends TelegramHeader {
 
     public void setRawData(String rawData) {
         this.rawData = rawData;
+    }
+
+    @Override
+    public void dumpData() {
+        System.out.println("RawData:" + this.getRawData());
+        System.out.println("subTelNum:" + this.getSubTelNum());
+        System.out.println("dbm:" + this.getDbm());
+        System.out.println("crcData:" + this.getCrcData());
+
     }
 }
