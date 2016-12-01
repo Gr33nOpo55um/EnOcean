@@ -11,11 +11,10 @@ import javax.persistence.Id;
 
 
 @Entity
-public class Radiomessage extends TelegramHeader {
+public class RadioMessage extends TelegramHeader {
     private String destinationID;
     private String sourceID;
     private int dbm;
-
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -58,6 +57,48 @@ public class Radiomessage extends TelegramHeader {
      */
     @Override
     public void dumpData() {
+        System.out.println(this.toString()
+        );
+    }
 
+    public String getDestinationID() {
+        return destinationID;
+    }
+
+    public void setDestinationID(String destinationID) {
+        this.destinationID = destinationID;
+    }
+
+    public String getSourceID() {
+        return sourceID;
+    }
+
+    public void setSourceID(String sourceID) {
+        this.sourceID = sourceID;
+    }
+
+    public int getDbm() {
+        return dbm;
+    }
+
+    public void setDbm(int dbm) {
+        this.dbm = dbm;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    @Override
+    public String toString() {
+        return "RadioMessage{" +
+                "destinationID='" + destinationID + '\'' +
+                ", sourceID='" + sourceID + '\'' +
+                ", dbm=" + dbm +
+                '}';
     }
 }
