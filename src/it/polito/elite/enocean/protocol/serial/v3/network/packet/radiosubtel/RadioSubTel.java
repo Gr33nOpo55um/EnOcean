@@ -3,7 +3,7 @@ package it.polito.elite.enocean.protocol.serial.v3.network.packet.radiosubtel;
 import it.polito.elite.enocean.protocol.serial.v3.network.packet.ESP3Packet;
 
 /**
- * Packet type 3 : Radio Sub Tel
+ * Packet type 3 : Radio802 Sub Tel
  * 
  * @author Andrea Biasi <biasiandrea04@gmail.com>
  *

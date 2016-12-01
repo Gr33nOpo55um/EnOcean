@@ -1,6 +1,9 @@
 package ch.bfh.gr33nopo55um.enocean.telegram;
 
-import javax.persistence.*;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 
 /**
  * Created by silas on 18.11.16.
@@ -11,7 +14,86 @@ import javax.persistence.*;
 public class RadioSubTel extends TelegramHeader {
 
 
+    @Override
+    public String toString() {
+        return "RadioSubTel{" +
+                "subTelNum=" + subTelNum +
+                ", destinationID='" + destinationID + '\'' +
+                ", dbm=" + dbm +
+                ", securityLevel=" + securityLevel +
+                ", timeStamp='" + timeStamp + '\'' +
+                ", tickSubTel='" + tickSubTel + '\'' +
+                ", dbmSubTel='" + dbmSubTel + '\'' +
+                ", statusSubTel='" + statusSubTel + '\'' +
+                '}';
+    }
+
+    public int getSubTelNum() {
+        return subTelNum;
+    }
+
+    public void setSubTelNum(int subTelNum) {
+        this.subTelNum = subTelNum;
+    }
+
+    public String getDestinationID() {
+        return destinationID;
+    }
+
+    public void setDestinationID(String destinationID) {
+        this.destinationID = destinationID;
+    }
+
+    public int getDbm() {
+        return dbm;
+    }
+
+    public void setDbm(int dbm) {
+        this.dbm = dbm;
+    }
+
+    public int getSecurityLevel() {
+        return securityLevel;
+    }
+
+    public void setSecurityLevel(int securityLevel) {
+        this.securityLevel = securityLevel;
+    }
+
+    public String getTimeStamp() {
+        return timeStamp;
+    }
+
+    public void setTimeStamp(String timeStamp) {
+        this.timeStamp = timeStamp;
+    }
+
+    public String getTickSubTel() {
+        return tickSubTel;
+    }
+
+    public void setTickSubTel(String tickSubTel) {
+        this.tickSubTel = tickSubTel;
+    }
+
+    public String getDbmSubTel() {
+        return dbmSubTel;
+    }
+
+    public void setDbmSubTel(String dbmSubTel) {
+        this.dbmSubTel = dbmSubTel;
+    }
+
+    public String getStatusSubTel() {
+        return statusSubTel;
+    }
+
+    public void setStatusSubTel(String statusSubTel) {
+        this.statusSubTel = statusSubTel;
+    }
+
     @Id
+
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
@@ -34,6 +116,8 @@ public class RadioSubTel extends TelegramHeader {
         return null;
     }
 
+
+
     /**
      * decodeTelegramData splits telegram in parts
      *
@@ -43,7 +127,7 @@ public class RadioSubTel extends TelegramHeader {
     public void decodeTelegramData(String hexTelegram) {
 
 
-        data = Integer.parseInt(hexTelegram.substring(14, 14 + dataLength),16);
+        data = Integer.parseInt(hexTelegram.substring(14, 14 + dataLength), 16);
 
         subTelNum = Integer.parseInt(hexTelegram.substring(dataLength + 14, dataLength + 16), 16);
 
@@ -61,7 +145,7 @@ public class RadioSubTel extends TelegramHeader {
 
         statusSubTel = hexTelegram.substring(dataLength + 36, dataLength + 38);
 
-        crcData = Integer.parseInt(hexTelegram.substring(dataLength + 38, dataLength + 40),16); //
+        crcData = Integer.parseInt(hexTelegram.substring(dataLength + 38, dataLength + 40), 16); //
 
     }
 
@@ -72,6 +156,6 @@ public class RadioSubTel extends TelegramHeader {
      */
     @Override
     public void dumpData() {
-
+        System.out.println(this.toString());
     }
 }

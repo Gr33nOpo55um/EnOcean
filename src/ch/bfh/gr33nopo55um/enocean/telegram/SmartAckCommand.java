@@ -47,7 +47,6 @@ public class SmartAckCommand extends TelegramHeader {
 
         optionalLenght = Integer.parseInt(hexTelegram.substring(8, 10), 16); //7
 
-        packageType = Integer.parseInt(hexTelegram.substring(10, 12), 16); //01 for radio
 
         crcData = Integer.parseInt(hexTelegram.substring(12, 14), 16); //
 
@@ -61,6 +60,30 @@ public class SmartAckCommand extends TelegramHeader {
      */
     @Override
     public void dumpData() {
+        System.out.println(this.toString());
+    }
 
+    @Override
+    public String toString() {
+        return "SmartAckCommand{" +
+                "smartAckCommandNr=" + smartAckCommandNr +
+                ", smartAckCommandData=" + smartAckCommandData +
+                '}';
+    }
+
+    public int getSmartAckCommandNr() {
+        return smartAckCommandNr;
+    }
+
+    public void setSmartAckCommandNr(int smartAckCommandNr) {
+        this.smartAckCommandNr = smartAckCommandNr;
+    }
+
+    public int getSmartAckCommandData() {
+        return smartAckCommandData;
+    }
+
+    public void setSmartAckCommandData(int smartAckCommandData) {
+        this.smartAckCommandData = smartAckCommandData;
     }
 }

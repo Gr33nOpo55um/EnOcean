@@ -56,9 +56,23 @@ public class Response extends TelegramHeader {
      */
     @Override
     public void dumpData() {
-
+        System.out.println(this.toString());
     }
 
 
+    @Override
+    public String toString() {
+        return "Response{" +
+                "returnCode=" + returnCode +
+                '}';
+    }
+
+    public int getReturnCode() {
+        return returnCode;
+    }
+
+    public void setReturnCode(int returnCode) {
+        this.returnCode = returnCode;
+    }
 }
 

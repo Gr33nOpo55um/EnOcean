@@ -76,10 +76,25 @@ public class RadioERP2 extends TelegramHeader {
 
     @Override
     public void dumpData() {
-        System.out.println("RawData:" + this.getRawData());
-        System.out.println("subTelNum:" + this.getSubTelNum());
-        System.out.println("dbm:" + this.getDbm());
-        System.out.println("crcData:" + this.getCrcData());
+        System.out.println(this.toString());
 
+
+    }
+
+    @Override
+    public String toString() {
+        return "RadioERP2{" +
+                "subTelNum=" + subTelNum +
+                ", dbm=" + dbm +
+                ", rawData='" + rawData + '\'' +
+                '}';
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 }

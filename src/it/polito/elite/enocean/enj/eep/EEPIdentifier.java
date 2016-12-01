@@ -26,7 +26,7 @@ public class EEPIdentifier implements Serializable
 		this.type = type;
 	}
 
-	// Identify the Radio-Telegram organization
+	// Identify the Radio802-Telegram organization
 	Rorg rorg;
 
 	// Funcion of the device

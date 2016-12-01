@@ -31,7 +31,7 @@ public class Radio extends ESP3Packet
 	 *            : 0 = telegram unencrypted n = type of encryption (not
 	 *            supported any more)
 	 */
-	// public Radio(byte data[], byte subTelNum, int destinationId , byte dBm,
+	// public Radio802(byte data[], byte subTelNum, int destinationId , byte dBm,
 	// byte securityLevel){
 	public Radio(byte data[], byte subTelNum, byte[] destinationId, byte dBm,
 			byte securityLevel)
@@ -92,7 +92,7 @@ public class Radio extends ESP3Packet
 	}
 
 	/**
-	 * Gets a Radio packet to be sent to the transceiver, and then to the device
+	 * Gets a Radio802 packet to be sent to the transceiver, and then to the device
 	 * with the given address
 	 * 
 	 * @param address
@@ -104,7 +104,7 @@ public class Radio extends ESP3Packet
 		// prepare the radio packet
 		Radio pkt = null;
 
-		// public Radio(byte data[], byte subTelNum, byte[] destinationId , byte
+		// public Radio802(byte data[], byte subTelNum, byte[] destinationId , byte
 		// dBm, byte securityLevel)
 		// subtel number is set to 0x3 when sending
 		// dBm is set to (0xFF) in communications between the EnJApi and the

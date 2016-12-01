@@ -62,6 +62,49 @@ public class RemoteManCommand extends TelegramHeader {
      */
     @Override
     public void dumpData() {
+        System.out.println(this.toString());
 
+    }
+
+    @Override
+    public String toString() {
+        return "RemoteManCommand{" +
+                "destinationID='" + destinationID + '\'' +
+                ", sourceID='" + sourceID + '\'' +
+                ", dbm=" + dbm +
+                ", sendDelay=" + sendDelay +
+                '}';
+    }
+
+    public String getDestinationID() {
+        return destinationID;
+    }
+
+    public void setDestinationID(String destinationID) {
+        this.destinationID = destinationID;
+    }
+
+    public String getSourceID() {
+        return sourceID;
+    }
+
+    public void setSourceID(String sourceID) {
+        this.sourceID = sourceID;
+    }
+
+    public int getDbm() {
+        return dbm;
+    }
+
+    public void setDbm(int dbm) {
+        this.dbm = dbm;
+    }
+
+    public int getSendDelay() {
+        return sendDelay;
+    }
+
+    public void setSendDelay(int sendDelay) {
+        this.sendDelay = sendDelay;
     }
 }

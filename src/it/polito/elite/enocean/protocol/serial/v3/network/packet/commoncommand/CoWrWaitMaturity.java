@@ -10,7 +10,7 @@ import it.polito.elite.enocean.protocol.serial.v3.network.packet.ESP3Packet;
 
 public class CoWrWaitMaturity extends ESP3Packet {
 	/**
-	 * @param waitEndMaturity : 0: Radio telegrams are send immediately 1: Radio telegrams are send after the maturity time is elapsed
+	 * @param waitEndMaturity : 0: Radio802 telegrams are send immediately 1: Radio802 telegrams are send after the maturity time is elapsed
 	 */
 	public CoWrWaitMaturity(byte waitEndMaturity) {
 		super();

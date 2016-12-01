@@ -28,15 +28,15 @@ public class Tester {
 
             /*
     0           Reserved
-    1           RADIO_ERP1 Radio telegram
+    1           RADIO_ERP1 Radio802 telegram
     2           Response to any packet
-    3           Radio subtelegram
+    3           Radio802 subtelegram
     4           Event message
     5           Common command
     6           Smart Ack command
     7           Remote management command
     8           Reserved for EnOcean
-    9           Radio message
+    9           Radio802 message
     10          ERP2 protocol radio telegram
     11-15       Reserved for EnOcean
     16          802_15_4_RAW Packet
@@ -46,7 +46,7 @@ public class Tester {
      */
         TelegramHeader telegram = null;
 
-        int packageType = 0;
+        int packageType;
         packageType = Integer.parseInt(hexTelegram.substring(10, 12), 16);
 
         if (packageType == 1) {
@@ -58,7 +58,7 @@ public class Tester {
 
 
         } else if (packageType == 3) {
-            telegram = new Radio();
+            telegram = new Radio802();
 
 
         } else if (packageType == 4) {
@@ -79,32 +79,45 @@ public class Tester {
 
         } else if (packageType == 8) {
             //Reserved for Enocean
+            System.err.println("No Telegram type found");
 
 
         } else if (packageType == 9) {
-            telegram = new Radio();
+            telegram = new Radio802();
+            System.err.println("No Telegram type found");
 
 
         } else if (packageType == 10) {
             telegram = new RadioERP2();
+            System.err.println("No Telegram type found");
 
 
         } else if ((packageType >= 11) || (packageType <= 15)) {
             //Reserved for Enocean
+            System.err.println("No Telegram type found");
+
         } else if (packageType == 16) {
             // 802_15_4_RAW Packet
+            System.err.println("No Telegram type found");
+
         } else if (packageType == 17) {
             //2.4 GHz Command
+            System.err.println("No Telegram type found");
+
         } else if ((packageType >= 18) || (packageType <= 127)) {
             //Reserved for Enocean
+            System.err.println("No Telegram type found");
+
         } else if ((packageType >= 128) || (packageType <= 255)) {
             //available MSC and messages
+            System.err.println("No Telegram type found");
 
 
         } else {
             System.err.println("No Telegram type found");
         }
 
+        assert telegram != null;
         telegram.decodeTelegramHeader(hexTelegram);
         telegram.decodeTelegramData(hexTelegram);
         telegram.persist();
@@ -116,28 +129,20 @@ public class Tester {
         RadioERP1 radioERP1 = new RadioERP1();
 
         radioERP1.decodeTelegram(telegram);
-
-
         radioERP1.dump();
-
-
-        radioERP1.toString();
         radioERP1.persist();
     }
 
     private void erp2_test_decode(String telegram) {
 
 
-        System.out.println("");
-        System.out.println("Echo: erp2 telegram");
         RadioERP2 radioERP2 = new RadioERP2();
 
         radioERP2.decodeTelegram(telegram);
-
         radioERP2.dump();
-
-
         radioERP2.persist();
 
     }
+
+
 }

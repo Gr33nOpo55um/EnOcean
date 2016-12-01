@@ -15,8 +15,8 @@
         <class>ch.bfh.gr33nopo55um.enocean.telegram.TelegramHeader</class>
         <class>ch.bfh.gr33nopo55um.enocean.telegram.RadioERP1</class>
         <class>ch.bfh.gr33nopo55um.enocean.telegram.RadioERP2</class>
-        <class>ch.bfh.gr33nopo55um.enocean.telegram.Radio</class>
-        <class>ch.bfh.gr33nopo55um.enocean.telegram.Radiomessage</class>
+        <class>ch.bfh.gr33nopo55um.enocean.telegram.Radio802</class>
+        <class>ch.bfh.gr33nopo55um.enocean.telegram.RadioMessage</class>
         <class>ch.bfh.gr33nopo55um.enocean.telegram.Response</class>
         <class>ch.bfh.gr33nopo55um.enocean.telegram.SmartAckCommand</class>
         <class>ch.bfh.gr33nopo55um.enocean.telegram.RemoteManCommand</class>

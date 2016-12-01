@@ -27,8 +27,7 @@ public class Store {
 
     public Query createQuery(String query) {
         EntityManager manager = this.getEntityManager();
-        Query userQuery = manager.createQuery(query);
-        return userQuery;
+        return manager.createQuery(query);
     }
 
 

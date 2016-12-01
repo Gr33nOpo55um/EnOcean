@@ -99,17 +99,20 @@ public class RadioERP1
 
     public void dumpData() {
 
-        System.out.println("Data:" + this.getData());
-        System.out.println("SubTelNum:" + this.getSubTelNum());
-        System.out.println("Destination" + this.getDestinationID());
+        System.out.println(this.toString());
 
-
-        System.out.println("dbm:" + this.getDbm());
-        System.out.println("securityLevel:" + this.getSecurityLevel());
-        System.out.println("crcData:" + this.getData());
 
     }
 
+    @Override
+    public String toString() {
+        return "RadioERP1{" +
+                "subTelNum=" + subTelNum +
+                ", destinationID='" + destinationID + '\'' +
+                ", dbm=" + dbm +
+                ", securityLevel=" + securityLevel +
+                '}';
+    }
 
     @Id
     public Long getId() {

@@ -47,6 +47,31 @@ public class Event extends TelegramHeader {
 
     }
 
+
+    public int getEventCode() {
+        return eventCode;
+    }
+
+    public void setEventCode(int eventCode) {
+        this.eventCode = eventCode;
+    }
+
+    public int getEventData() {
+        return EventData;
+    }
+
+    public void setEventData(int eventData) {
+        EventData = eventData;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
     /**
      * dumpData Print Data, useful for logs and testiing
      * <p>
@@ -54,6 +79,15 @@ public class Event extends TelegramHeader {
      */
     @Override
     public void dumpData() {
+        System.out.println(this.toString());
 
+    }
+
+    @Override
+    public String toString() {
+        return "Event{" +
+                "eventCode=" + eventCode +
+                ", EventData=" + EventData +
+                '}';
     }
 }

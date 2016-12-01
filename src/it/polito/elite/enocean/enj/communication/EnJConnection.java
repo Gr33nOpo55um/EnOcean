@@ -378,7 +378,7 @@ public class EnJConnection implements PacketListener
 	}
 
 	/**
-	 * Sends the given payload encapsulated into a Radio message, automatically
+	 * Sends the given payload encapsulated into a Radio802 message, automatically
 	 * adds sender address and status to the payload, thus completing the actual
 	 * payload being sent. By default the gateway address is fixed at 0x00ffffff
 	 * and the status byte at 0x00.

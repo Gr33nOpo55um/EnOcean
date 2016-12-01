@@ -6,7 +6,6 @@ package ch.bfh.gr33nopo55um.enocean.helper;
 public class SeedDB {
 
     private static SeedDB instance;
-    private boolean seedDone = false;
 
     private SeedDB() {
         // singelton
@@ -29,6 +28,7 @@ public class SeedDB {
     }
 
     public boolean seedStatus() {
+        boolean seedDone = false;
         return seedDone;
     }
 
