@@ -17,6 +17,8 @@ target/
 # EnOcean library - no changes should be made there
 /src/it/polito/elite/enocean/
 
+*.iml
 
 # Ignore DB files
 *.db
+
