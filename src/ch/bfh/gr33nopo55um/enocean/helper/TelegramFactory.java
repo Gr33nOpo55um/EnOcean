@@ -5,6 +5,7 @@ import ch.bfh.gr33nopo55um.enocean.telegram.*;
 /**
  * Created by silas on 02.12.16.
  */
+@SuppressWarnings("ALL")
 public class TelegramFactory {
 
 
@@ -60,10 +61,6 @@ public class TelegramFactory {
 
             case 7:
                 telegram = new SmartAckCommand();
-
-                break;
-            case 8:            //Reserved for Enocean
-                System.err.println("No Telegram type found");
 
                 break;
             case 9:

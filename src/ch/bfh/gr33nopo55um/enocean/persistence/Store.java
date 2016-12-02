@@ -11,6 +11,7 @@ import javax.persistence.Query;
 /**
  * Created by silas on 18.11.16.
  */
+@SuppressWarnings("ALL")
 public class Store {
     private static Store instance;
     private EntityManager entityManager = null;

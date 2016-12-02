@@ -10,6 +10,7 @@ import javax.persistence.Id;
  */
 
 
+@SuppressWarnings("ALL")
 @Entity
 public class RadioSubTel extends TelegramHeader {
 

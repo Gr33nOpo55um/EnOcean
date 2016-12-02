@@ -1,5 +1,4 @@
 package ch.bfh.gr33nopo55um.enocean.telegram;
-
 import ch.bfh.gr33nopo55um.enocean.persistence.Store;
 
 import javax.persistence.MappedSuperclass;
@@ -114,7 +113,7 @@ public abstract class TelegramHeader implements EncodeDecode {
 
     public void persist() {
 
-        Store.getInstance().getEntityManager().getTransaction().begin();
+
         Store.getInstance().getEntityManager().persist(this);
         Store.getInstance().getEntityManager().getTransaction().commit();
 
