@@ -3,6 +3,7 @@ package ch.bfh.gr33nopo55um.enocean.helper;
 /**
  * Created by silas on 25.11.16.
  */
+@SuppressWarnings("ALL")
 public class SeedDB {
 
     private static SeedDB instance;
@@ -22,14 +23,14 @@ public class SeedDB {
     public void seedDB() {
 
 
+
 //        Query query = Store.getInstance().createQuery("Select * from dual");
 
 
     }
 
     public boolean seedStatus() {
-        boolean seedDone = false;
-        return seedDone;
+        return false;
     }
 
 

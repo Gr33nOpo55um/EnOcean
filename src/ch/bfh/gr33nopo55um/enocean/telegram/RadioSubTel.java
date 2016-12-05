@@ -10,9 +10,23 @@ import javax.persistence.Id;
  */
 
 
+@SuppressWarnings("ALL")
 @Entity
 public class RadioSubTel extends TelegramHeader {
 
+
+    @Id
+
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Long id;
+    private int subTelNum;
+    private String destinationID;
+    private int dbm;
+    private int securityLevel;
+    private String timeStamp;
+    private String tickSubTel;
+    private String dbmSubTel;
+    private String statusSubTel;
 
     @Override
     public String toString() {
@@ -92,20 +106,6 @@ public class RadioSubTel extends TelegramHeader {
         this.statusSubTel = statusSubTel;
     }
 
-    @Id
-
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id;
-
-    private int subTelNum;
-    private String destinationID;
-    private int dbm;
-    private int securityLevel;
-    private String timeStamp;
-    private String tickSubTel;
-    private String dbmSubTel;
-    private String statusSubTel;
-
     /**
      * encodeTelegram provides an example telegram hex for this packet type.
      *
@@ -115,7 +115,6 @@ public class RadioSubTel extends TelegramHeader {
     public String encodeTelegram() {
         return null;
     }
-
 
 
     /**
