@@ -40,12 +40,8 @@ public class Response extends TelegramHeader {
     @Override
     public void decodeTelegramData(String hexTelegram) {
 
-
-        //data
-
-
-        returnCode = Integer.parseInt(hexTelegram.substring(14, 4), 16);
-        crcData = Integer.parseInt(hexTelegram.substring(14, 16), 16);
+        this.setReturnCode(Integer.parseInt(hexTelegram.substring(14, 4), 16));
+        this.setCrcData(Integer.parseInt(hexTelegram.substring(14, 16), 16));
 
     }
 

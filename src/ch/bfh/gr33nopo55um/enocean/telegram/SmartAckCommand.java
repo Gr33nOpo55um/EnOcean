@@ -41,14 +41,11 @@ public class SmartAckCommand extends TelegramHeader {
     @Override
     public void decodeTelegramData(String hexTelegram) {
 
-        syncByte = Integer.parseInt(hexTelegram.substring(2, 4), 16); //55
+        this.setSyncByte(Integer.parseInt(hexTelegram.substring(2, 4), 16));
+        this.setDataLength(Integer.parseInt(hexTelegram.substring(4, 8), 16));
 
-        dataLength = Integer.parseInt(hexTelegram.substring(4, 8), 16); //7
-
-        optionalLenght = Integer.parseInt(hexTelegram.substring(8, 10), 16); //7
-
-
-        crcData = Integer.parseInt(hexTelegram.substring(12, 14), 16); //
+        this.setOptionalLenght(Integer.parseInt(hexTelegram.substring(8, 10), 16));
+        this.setCrcData(Integer.parseInt(hexTelegram.substring(12, 14), 16));
 
 
     }

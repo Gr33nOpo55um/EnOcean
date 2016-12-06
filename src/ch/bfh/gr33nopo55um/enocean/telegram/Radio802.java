@@ -44,17 +44,12 @@ public class Radio802 extends TelegramHeader {
     @Override
     public void decodeTelegramData(String hexTelegram) {
 
-
-        messageRorg = Integer.parseInt(hexTelegram.substring(14, 16), 16);
-        messageData = Integer.parseInt(hexTelegram.substring(16, 16 + dataLength), 16);
-
-        destinationId = Integer.parseInt(hexTelegram.substring(dataLength + 16, dataLength + 24), 16);
-
-        sourceId = Integer.parseInt(hexTelegram.substring(dataLength + 24, dataLength + 32), 16);
-
-        dbm = Integer.parseInt(hexTelegram.substring(dataLength + 32, dataLength + 34), 16);
-
-        crcData = Integer.parseInt(hexTelegram.substring(dataLength + 34, dataLength + 36), 16);
+        this.setMessageRorg(Integer.parseInt(hexTelegram.substring(14, 16), 16));
+        this.setMessageData(Integer.parseInt(hexTelegram.substring(16, 16 + dataLength), 16));
+        this.setDestinationId(Integer.parseInt(hexTelegram.substring(dataLength + 16, dataLength + 24), 16));
+        this.setSourceId(Integer.parseInt(hexTelegram.substring(dataLength + 24, dataLength + 32), 16));
+        this.setDbm(Integer.parseInt(hexTelegram.substring(dataLength + 32, dataLength + 34), 16));
+        this.setCrcData(Integer.parseInt(hexTelegram.substring(dataLength + 34, dataLength + 36), 16));
 
 
     }

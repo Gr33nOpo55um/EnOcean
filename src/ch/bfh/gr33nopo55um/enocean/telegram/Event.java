@@ -39,10 +39,8 @@ public class Event extends TelegramHeader {
     @Override
     public void decodeTelegramData(String hexTelegram) {
 
-
-        eventCode = Integer.parseInt(hexTelegram.substring(14, 16), 16);
-
-        crcData = Integer.parseInt(hexTelegram.substring(16, 18), 16);
+        this.setEventCode(Integer.parseInt(hexTelegram.substring(14, 16), 16));
+        this.setCrcData(Integer.parseInt(hexTelegram.substring(16, 18), 16));
 
 
     }

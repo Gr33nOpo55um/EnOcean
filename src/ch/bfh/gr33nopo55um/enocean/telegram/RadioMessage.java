@@ -38,16 +38,10 @@ public class RadioMessage extends TelegramHeader {
     @Override
     public void decodeTelegramData(String hexTelegram) {
 
-        destinationID = hexTelegram.substring(14, 22);
-
-        sourceID = hexTelegram.substring(22, 30);
-
-        dbm = Integer.parseInt(hexTelegram.substring(30, 32), 16);
-
-
-        crcData = Integer.parseInt(hexTelegram.substring(32, 34), 16);
-
-
+        this.setDestinationID(hexTelegram.substring(14, 22));
+        this.setSourceID(hexTelegram.substring(22, 30));
+        this.setDbm(Integer.parseInt(hexTelegram.substring(30, 32), 16));
+        this.setCrcData(Integer.parseInt(hexTelegram.substring(32, 34), 16));
     }
 
     /**

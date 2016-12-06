@@ -78,21 +78,13 @@ public class RadioERP1
         //start of data
         int endOfDataLength = 14 + dataLength;
 
-        System.out.print(dataLength);
 
-        data = Integer.parseInt(hexTelegram.substring(14, endOfDataLength), 16); //
-
-        subTelNum = Integer.parseInt(hexTelegram.substring(endOfDataLength, endOfDataLength + 2), 16);
-
-
-        destinationID = hexTelegram.substring(endOfDataLength + 2, endOfDataLength + 10);
-
-        dbm = Integer.parseInt(hexTelegram.substring(endOfDataLength + 10, endOfDataLength + 12), 16);
-
-
-        securityLevel = Integer.parseInt(hexTelegram.substring(endOfDataLength + 12, endOfDataLength + 14), 16);
-
-        crcData = Integer.parseInt(hexTelegram.substring(endOfDataLength + 14, endOfDataLength + 16), 16);
+        this.setData(Integer.parseInt(hexTelegram.substring(14, endOfDataLength), 16));
+        this.setSubTelNum(Integer.parseInt(hexTelegram.substring(endOfDataLength, endOfDataLength + 2), 16));
+        this.setDestinationID(hexTelegram.substring(endOfDataLength + 2, endOfDataLength + 10));
+        this.setDbm(Integer.parseInt(hexTelegram.substring(endOfDataLength + 10, endOfDataLength + 12), 16));
+        this.setSecurityLevel(Integer.parseInt(hexTelegram.substring(endOfDataLength + 12, endOfDataLength + 14), 16));
+        this.setCrcData(Integer.parseInt(hexTelegram.substring(endOfDataLength + 14, endOfDataLength + 16), 16));
 
 
     }
@@ -100,7 +92,6 @@ public class RadioERP1
     public void dumpData() {
 
         System.out.println(this.toString());
-
 
     }
 

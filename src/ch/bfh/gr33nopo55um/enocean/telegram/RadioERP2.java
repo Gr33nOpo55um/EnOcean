@@ -42,11 +42,10 @@ public class RadioERP2 extends TelegramHeader {
     @Override
     public void decodeTelegramData(String hexTelegram) {
 
-        rawData = hexTelegram.substring(14, 26);
-        subTelNum = Integer.parseInt(hexTelegram.substring(26, 28), 16);
-        dbm = Integer.parseInt(hexTelegram.substring(28, 30), 16);
-        crcData = Integer.parseInt(hexTelegram.substring(30, 32), 16);
-
+        this.setRawData(hexTelegram.substring(14, 26));
+        this.setSubTelNum(Integer.parseInt(hexTelegram.substring(26, 28), 16));
+        this.setDbm(Integer.parseInt(hexTelegram.substring(28, 30), 16));
+        this.setCrcData(Integer.parseInt(hexTelegram.substring(30, 32), 16));
 
     }
 

@@ -126,25 +126,25 @@ public class RadioSubTel extends TelegramHeader {
     public void decodeTelegramData(String hexTelegram) {
 
 
-        data = Integer.parseInt(hexTelegram.substring(14, 14 + dataLength), 16);
+        this.setData(Integer.parseInt(hexTelegram.substring(14, 14 + dataLength), 16));
 
-        subTelNum = Integer.parseInt(hexTelegram.substring(dataLength + 14, dataLength + 16), 16);
+        this.setSubTelNum(Integer.parseInt(hexTelegram.substring(dataLength + 14, dataLength + 16), 16));
 
-        destinationID = hexTelegram.substring(dataLength + 16, dataLength + 24);
+        this.setDestinationID(hexTelegram.substring(dataLength + 16, dataLength + 24));
 
-        dbm = Integer.parseInt(hexTelegram.substring(dataLength + 24, dataLength + 26), 16);
+        this.setDbm(Integer.parseInt(hexTelegram.substring(dataLength + 24, dataLength + 26), 16));
 
-        securityLevel = Integer.parseInt(hexTelegram.substring(dataLength + 26, dataLength + 28), 16);
+        this.setSecurityLevel(securityLevel = Integer.parseInt(hexTelegram.substring(dataLength + 26, dataLength + 28), 16));
 
-        timeStamp = hexTelegram.substring(dataLength + 28, dataLength + 32);
+        this.setTimeStamp(timeStamp = hexTelegram.substring(dataLength + 28, dataLength + 32));
 
-        tickSubTel = hexTelegram.substring(dataLength + 32, dataLength + 34);
+        this.setTickSubTel(tickSubTel = hexTelegram.substring(dataLength + 32, dataLength + 34));
 
-        dbmSubTel = hexTelegram.substring(dataLength + 34, dataLength + 36);
+        this.setDbmSubTel(dbmSubTel = hexTelegram.substring(dataLength + 34, dataLength + 36));
 
-        statusSubTel = hexTelegram.substring(dataLength + 36, dataLength + 38);
+        this.setStatusSubTel(statusSubTel = hexTelegram.substring(dataLength + 36, dataLength + 38));
 
-        crcData = Integer.parseInt(hexTelegram.substring(dataLength + 38, dataLength + 40), 16); //
+        this.setCrcData(crcData = Integer.parseInt(hexTelegram.substring(dataLength + 38, dataLength + 40), 16));
 
     }
 

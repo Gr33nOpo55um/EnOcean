@@ -16,6 +16,7 @@ public class Dumy extends TelegramHeader {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
+
     @Override
     public String encodeTelegram() {
         return null;
