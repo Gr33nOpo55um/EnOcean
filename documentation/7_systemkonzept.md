@@ -11,48 +11,32 @@ Inhaltsverzeichnis
 
 <!-- toc orderedList:0 depthFrom:1 depthTo:6 -->
 
- - [Systemanforderungen](#systemanforderungen)
-
-  - [Grobanforderungen](#grobanforderungen)
-
-    - [Wirtschaftlich](#wirtschaftlich)
-    - [System](#system)
-    - [Personell](#personell)
-    - [Vorgehen](#vorgehen)
-    - [Qualität](#qualität)
-    - [Sicherheit](#sicherheit)
-    - [Nicht-Ziele](#nicht-ziele)
-
-  - [Übersicht](#übersicht)
-
-    - [Technik: Funktionsbaum](#technik-funktionsbaum)
-    - [Technik: Use Case](#technik-use-case)
-
-      - [Use Case Diagramm](#use-case-diagramm)
-
-  - [Detailanforderungen](#detailanforderungen)
-
-    - [Anforderungen der Geschäftsorganisation](#anforderungen-der-geschäftsorganisation)
-    - [Funktionale Anforderungen](#funktionale-anforderungen)
-
-      - [Technik 2: Beschreibung mittels User-Story](#technik-2-beschreibung-mittels-user-story)
-      - [Technik 3: Beschreibung mittels Use-Case](#technik-3-beschreibung-mittels-use-case)
-
-    - [Qualitätsanforderungen](#qualitätsanforderungen)
-
-    - [Anforderungen Systemarchitektur](#anforderungen-systemarchitektur)
-
+- [Systemanforderungen](#systemanforderungen)
+	- [Grobanforderungen](#grobanforderungen)
+		- [Wirtschaftlich](#wirtschaftlich)
+		- [System](#system)
+		- [Personell](#personell)
+		- [Vorgehen](#vorgehen)
+		- [Qualität](#qualität)
+		- [Sicherheit](#sicherheit)
+		- [Nicht-Ziele](#nicht-ziele)
+	- [Übersicht](#übersicht)
+		- [Technik: Use Case](#technik-use-case)
+			- [Use Case Diagramm](#use-case-diagramm)
+	- [Detailanforderungen](#detailanforderungen)
+		- [Anforderungen der Geschäftsorganisation](#anforderungen-der-geschäftsorganisation)
+		- [Funktionale Anforderungen](#funktionale-anforderungen)
+			- [Technik 2: Beschreibung mittels User-Story](#technik-2-beschreibung-mittels-user-story)
+			- [Technik 3: Beschreibung mittels Use-Case](#technik-3-beschreibung-mittels-use-case)
+		- [Qualitätsanforderungen](#qualitätsanforderungen)
+		- [Anforderungen Systemarchitektur](#anforderungen-systemarchitektur)
 - [Systemarchitektur](#systemarchitektur)
-
-  - [Übersicht und Struktur des Systems](#übersicht-und-struktur-des-systems)
-
-    - [Übersicht](#übersicht-1)
-    - [Architekturen / Modelle](#architekturen-modelle)
-
-  - [Schnittstellen und Abgrenzung](#schnittstellen-und-abgrenzung)
-
-  - [Machbarkeit](#machbarkeit)
-  - [Anforderungsabdeckung](#anforderungsabdeckung)
+	- [Übersicht und Struktur des Systems](#übersicht-und-struktur-des-systems)
+		- [Übersicht](#übersicht-1)
+		- [Architekturen / Modelle](#architekturen-modelle)
+	- [Schnittstellen und Abgrenzung](#schnittstellen-und-abgrenzung)
+	- [Machbarkeit](#machbarkeit)
+	- [Anforderungsabdeckung](#anforderungsabdeckung)
 
 <!-- tocstop -->
 

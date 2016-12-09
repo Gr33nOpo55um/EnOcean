@@ -7,11 +7,12 @@ Autor           | Silas Stegmüller
 Klassifizierung | Intern
 Status          | In Arbeit
 
-Inhaltsverzeichnis
+# Inhaltsverzeichnis
 
 <!-- toc orderedList:0 depthFrom:1 depthTo:6 -->
 
 - [Systemanforderungen](#systemanforderungen)
+- [Inhaltsverzeichnis](#inhaltsverzeichnis)
 - [Aktuelle Situation](#aktuelle-situation)
 - [Situation danach](#situation-danach)
 - [Ziel](#ziel)
@@ -56,9 +57,12 @@ Momentan müssen bei Installationsarbeiten die Räume von Hand ausgemessen werde
 
 Aus diesem Grund will die Enoca AG ein Gerät entwickeln welches dieses Problem löst. Der Monteur soll mit mehren RasperryPi's zum Kunden gehen können, welche mit Enocean Hardware bestückt sind. Sobald die Geräte am Strom sind, startet ein Analyse Tool. Die erhaltenen Informationen werden in eine Datenbank gespeichert. Nach ca. 1 Woche holt der Monteur die Geräte wieder ab und wertet die Daten aus. Er kann nun sicher sein, wo die Repeater installiert werden müssen, um die gesamte Installation ohne Störungen betreiben zu können.
 
-# Ziel
+# Ziele
 
-Mit dem zu erstellenden Enocean Analysetool soll es möglich sein die verschiedenen Geräte, welche mit dem Enocean Protokoll miteinander funken, zu katalogisieren und deren Signale zu deuten. Diese Daten können über einen beliebig langen Zeitraum erfasst werden. Das Tool schreibt diese in eine Datenbank, welche beim nächsten Besuch als Referenzwert dient. In der Datenbank finden sich auch die Informationen welche Geräte technische Probleme haben. Bei diesem Projekt liegt der Fokus ganz klar auf der Datenerfassung. Später in einem weiteren Nachfolgeprojekt ist nicht auszuschliessen, dass auch eine Datenanalyse Teil der Lösung sein wird.
+Mit dem zu erstellenden Enocean Analysetool soll es möglich sein die verschiedenen Geräte, welche mit dem Enocean Protokoll 3.0 miteinander funken, zu katalogisieren und deren Signale zu deuten. Diese Daten können über einen beliebig langen Zeitraum erfasst werden (Bis der Speicherplatz des Gerätes erschöpft ist). Das Tool schreibt diese in eine Datenbank, welche beim nächsten Besuch als Referenzwert dient. In der Datenbank finden sich auch die Informationen welche Gerätetechnische Probleme haben. Bei diesem Projekt liegt der Fokus ganz klar auf der Datenerfassung.
+Später in einem weiteren Nachfolgeprojekt ist nicht auszuschliessen, dass auch eine Datenanalyse Teil der Lösung sein wird.
+
+
 
 
 # Systemkontext
@@ -133,13 +137,13 @@ Monteur -> (Aufzeichnung Vergleichen)
 
 ### Funktionale Anforderungen
 
-#### Technik 2: Beschreibung mittels User-Story
+#### Technik 1: Beschreibung mittels User-Story
 
 - Als Monteur möchte ich die Zeit welche ich beim Kunden verbringe so eiffzient wie möglich einsezen.
 
 - Ich möchte Abläufe wie die Ausmessung der Enocean Abdeckung automatisieren.
 
-#### Technik 3: Beschreibung mittels Use-Case
+#### Technik 2: Beschreibung mittels Use-Case
 
 ```{puml}
 @startuml
@@ -162,14 +166,13 @@ Monteur -> (Aufzeichnung Vergleichen)
 ### Wirtschaftlichkeit
 
 ### System
-!!!!!!!!!!!!!
 
 Name                         | Simplicy
 ---------------------------- | --------------------------------------------------------------------------------------------------------------
 Beschreibung                 | Die Anwender sollen die Box nur einstecken können und es soll keine zusätzliche Konfiguration notwendig sein. Der Start der Datenaufnahme soll auch durch unqualifiziertes Personal möglich sein.
 Abnahmekriterien             | Das Gerät muss nach dem einstecken in eine Stromquelle automatisch seinen Dienst verrichten.
-Wichtigkeit (5-1): 4         | Dringlichkeit (5-1): 2                                                                                         |
-Risiko/Kritikalität (5-1): 2 | Aufwandgrösse (5-1): 2                                                                                         |
+Wichtigkeit (5-1): 4         | Dringlichkeit (5-1): 5                                                                                         |
+Risiko/Kritikalität (5-1): 2 | Aufwandgrösse (5-1): 3                                                                                         |
 
 
 Name                         | Datastore
@@ -197,15 +200,14 @@ Risiko/Kritikalität (5-1): 2 | Aufwandgrösse (5-1): 2                         
 
 ### Sicherheit
 
-!!!!!!!!!!!!
 
 
 Name                         | Security
 ---------------------------- | --------------------------------------------------------------------------------------------------------------
 Beschreibung                 | Da der Benutzer ebenfalls einen begrenzten Zugang zum System haben wird muss sichergestellt werden, dass er nur auch seine Daten Zugriff hat. Allfällige andere Daten von andere Kunden müssen daher in gesonderten  Verzeichnissen abgelegt werden. Da die Daten aber keine Rückschlüsse auf einzelene Personen ermöglichen ist keine Verschlüsselung notwendig.
 Abnahmekriterien             | Sobald das System vom Strom getrennt wird, wird ein neues Verzeichnis angelegt, mit einem neuen Datastore, damit hat der Kunde keine Möglichkeit auf die Daten anderer Kunden zuzugreifen.
-Wichtigkeit (5-1): 4         | Dringlichkeit (5-1): 2                                                                                         |
-Risiko/Kritikalität (5-1): 2 | Aufwandgrösse (5-1): 2                                                                                         |
+Wichtigkeit (5-1): 4         | Dringlichkeit (5-1): 4                                                                                         |
+Risiko/Kritikalität (5-1): 2 | Aufwandgrösse (5-1): 4                                                                                         |
 
 
 
