@@ -11,33 +11,48 @@ Inhaltsverzeichnis
 
 <!-- toc orderedList:0 depthFrom:1 depthTo:6 -->
 
-- [Systemanforderungen](#systemanforderungen)
-	- [Grobanforderungen](#grobanforderungen)
-		- [Wirtschaftlich](#wirtschaftlich)
-		- [System](#system)
-		- [Personell](#personell)
-		- [Vorgehen](#vorgehen)
-		- [Qualität](#qualität)
-		- [Sicherheit](#sicherheit)
-		- [Nicht-Ziele](#nicht-ziele)
-	- [Übersicht](#übersicht)
-		- [Technik: Funktionsbaum](#technik-funktionsbaum)
-		- [Technik: Use Case](#technik-use-case)
-			- [Use Case Diagramm](#use-case-diagramm)
-	- [Detailanforderungen](#detailanforderungen)
-		- [Anforderungen der Geschäftsorganisation](#anforderungen-der-geschäftsorganisation)
-		- [Funktionale Anforderungen](#funktionale-anforderungen)
-			- [Technik 2: Beschreibung mittels User-Story](#technik-2-beschreibung-mittels-user-story)
-			- [Technik 3: Beschreibung mittels Use-Case](#technik-3-beschreibung-mittels-use-case)
-		- [Qualitätsanforderungen](#qualitätsanforderungen)
-		- [Anforderungen Systemarchitektur](#anforderungen-systemarchitektur)
+ - [Systemanforderungen](#systemanforderungen)
+
+  - [Grobanforderungen](#grobanforderungen)
+
+    - [Wirtschaftlich](#wirtschaftlich)
+    - [System](#system)
+    - [Personell](#personell)
+    - [Vorgehen](#vorgehen)
+    - [Qualität](#qualität)
+    - [Sicherheit](#sicherheit)
+    - [Nicht-Ziele](#nicht-ziele)
+
+  - [Übersicht](#übersicht)
+
+    - [Technik: Funktionsbaum](#technik-funktionsbaum)
+    - [Technik: Use Case](#technik-use-case)
+
+      - [Use Case Diagramm](#use-case-diagramm)
+
+  - [Detailanforderungen](#detailanforderungen)
+
+    - [Anforderungen der Geschäftsorganisation](#anforderungen-der-geschäftsorganisation)
+    - [Funktionale Anforderungen](#funktionale-anforderungen)
+
+      - [Technik 2: Beschreibung mittels User-Story](#technik-2-beschreibung-mittels-user-story)
+      - [Technik 3: Beschreibung mittels Use-Case](#technik-3-beschreibung-mittels-use-case)
+
+    - [Qualitätsanforderungen](#qualitätsanforderungen)
+
+    - [Anforderungen Systemarchitektur](#anforderungen-systemarchitektur)
+
 - [Systemarchitektur](#systemarchitektur)
-	- [Übersicht und Struktur des Systems](#übersicht-und-struktur-des-systems)
-		- [Übersicht](#übersicht-1)
-		- [Architekturen / Modelle](#architekturen-modelle)
-	- [Schnittstellen und Abgrenzung](#schnittstellen-und-abgrenzung)
-	- [Machbarkeit](#machbarkeit)
-	- [Anforderungsabdeckung](#anforderungsabdeckung)
+
+  - [Übersicht und Struktur des Systems](#übersicht-und-struktur-des-systems)
+
+    - [Übersicht](#übersicht-1)
+    - [Architekturen / Modelle](#architekturen-modelle)
+
+  - [Schnittstellen und Abgrenzung](#schnittstellen-und-abgrenzung)
+
+  - [Machbarkeit](#machbarkeit)
+  - [Anforderungsabdeckung](#anforderungsabdeckung)
 
 <!-- tocstop -->
 
@@ -80,8 +95,6 @@ Inhaltsverzeichnis
 - Es wird nicht möglich sein, Komponenten zu steuern oder Ihnen Befehle zu senden. Der Fokus liegt in der Einfachheit der Anwendung.
 
 ## Übersicht
-
-### Technik: Funktionsbaum
 
 ### Technik: Use Case
 
@@ -156,13 +169,14 @@ Wichtigkeit (5-1): 5         | Dringlichkeit (5-1): 4
 Risiko/Kritikalität (5-1): 3 | Aufwandgrösse (5-1): 4
 
 Name                       | Datenkonsistenz bei Stromunterbruch
--------------------------- | ------------------------------------------------------------------------------------------------------------------------------------
+-------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Beschreibung               | Das System soll im Falle eines Stromunterbruchs, keine Daten verlieren und selbstständig wieder mit dem Loggen von Daten beginnen.
 Abnahmekriterien           | Das Produkt wird 3 Stromunterbrüche im Zeitraum von 60 min erhalten und muss danach automatisch mit der Datenspeicherung fortfahren. Dabei wird auf die Bestehende DB ohne Datenverlust geschrieben.
 Wichtigkeit (5-1):         | Dringlichkeit (5-1):
 Risiko/Kritikalität (5-1): | Aufwandgrösse (5-1):
 
 # Systemarchitektur
+
 ## Übersicht und Struktur des Systems
 
 Übersichtsdiagramme gemäss den Methoden des Erstellers
@@ -194,8 +208,6 @@ node "Project" {
 
 @enduml
 ```
-
-
 
 ### Architekturen / Modelle
 
