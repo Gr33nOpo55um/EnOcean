@@ -15,10 +15,11 @@ Status          | In Arbeit
 - [Inhaltsverzeichnis](#inhaltsverzeichnis)
 - [Aktuelle Situation](#aktuelle-situation)
 - [Situation danach](#situation-danach)
-- [Ziel](#ziel)
+- [Ziele](#ziele)
 - [Systemkontext](#systemkontext)
 	- [Grobanforderungen](#grobanforderungen)
 		- [Wirtschaftlichkeit](#wirtschaftlichkeit)
+		- [Einsparungen für den Monteur](#einsparungen-für-den-monteur)
 		- [System](#system)
 		- [Personell](#personell)
 		- [Qualität](#qualität)
@@ -30,8 +31,8 @@ Status          | In Arbeit
 	- [Detailanforderungen](#detailanforderungen)
 		- [Anforderungen der Geschäftsorganisation](#anforderungen-der-geschäftsorganisation)
 		- [Funktionale Anforderungen](#funktionale-anforderungen)
-			- [Technik 2: Beschreibung mittels User-Story](#technik-2-beschreibung-mittels-user-story)
-			- [Technik 3: Beschreibung mittels Use-Case](#technik-3-beschreibung-mittels-use-case)
+			- [Technik 1: Beschreibung mittels User-Story](#technik-1-beschreibung-mittels-user-story)
+			- [Technik 2: Beschreibung mittels Use-Case](#technik-2-beschreibung-mittels-use-case)
 		- [Wirtschaftlichkeit](#wirtschaftlichkeit-1)
 		- [System](#system-1)
 		- [Qualität](#qualität-1)
@@ -74,6 +75,20 @@ Mehre Enocean Funkgeräte senden ihre Signale. Diese werden dann von einem Einpl
 ## Grobanforderungen
 
 ### Wirtschaftlichkeit
+
+Die Monitoringlösung sollte Elektrikern und Elektroinstallateuren die mit EnOcean Komponenten vor Ort Installationsarbeiten durchführen die Arbeit vereinfachen und so eine zu einer massiven Zeiteinsparung führen. So kann wetvolle Zeit sowohl beim Kunden wie auch beim Monteur eingespart werden. Diese Zeiteinsparung soll den finanziellen Aufwand für die Anschaffung des Produktes aufwiegen. Ebenfalls soll dem Kunden durch die Datenerhebung einen Mehrwert geboten werden.
+
+### Einsparungen für den Monteur
+
+Der Monteur der die Installationsarbeiten der EnOcean Komponenten vor Ort durchführt, muss nach der Installation die reibungslose Funktion testen, dazu muss er die Funktion aller Komponenten manuell durch gehen. Wenn eine Komponente nicht einwandfrei funktioniert, gestalltet sich die Fehlersuche äuserst Zeitaufwändig. Gerade bei einer unstabilen Funkverbindung können viele Faktoren mitspielen. Der Monteur muss mit einem Notebook und einem Funkempfänger die Wohnung abschreiten und manuell Messungen zur Signalqualität durchführen.
+
+##
+
+Kosten | Betrag in CHF
+------ | --
+Hardware | 120
+Etwicklungskosten | 6000
+Nutzen | -
 
 - Zeiteinsparung beim Analysieren der Geräte.
 - Der Monteur muss nur noch eine kurze Zeit vor Ort sein.
