@@ -14,47 +14,38 @@ Status          | In Arbeit
 
 <!-- toc orderedList:0 depthFrom:1 depthTo:6 -->
 
- - [Systemanforderungen](#systemanforderungen)
+- [Systemanforderungen](#systemanforderungen)
 - [Inhaltsverzeichnis](#inhaltsverzeichnis)
 - [Aktuelle Situation](#aktuelle-situation)
 - [Situation danach](#situation-danach)
 - [Ziele](#ziele)
 - [Systemkontext](#systemkontext)
-
-  - [Grobanforderungen](#grobanforderungen)
-
-    - [Wirtschaftlichkeit](#wirtschaftlichkeit)
-    - [Einsparungen für den Monteur](#einsparungen-für-den-monteur)
-    - [System](#system)
-    - [Personell](#personell)
-    - [Qualität](#qualität)
-    - [Sicherheit](#sicherheit)
-    - [Nicht-Ziele](#nicht-ziele)
-
-  - [Übersicht](#übersicht)
-  - [Detailanforderungen](#detailanforderungen)
-
-    - [Anforderungen der Geschäftsorganisation](#anforderungen-der-geschäftsorganisation)
-    - [Funktionale Anforderungen](#funktionale-anforderungen)
-
-      - [Technik 1: Beschreibung mittels User-Story](#technik-1-beschreibung-mittels-user-story)
-      - [Technik 2: Beschreibung mittels Use-Case](#technik-2-beschreibung-mittels-use-case)
-
-    - [Wirtschaftlichkeit](#wirtschaftlichkeit-1)
-    - [System](#system-1)
-    - [Qualität](#qualität-1)
-    - [Sicherheit](#sicherheit-1)
-    - [Anforderungen Systemarchitektur](#anforderungen-systemarchitektur)
-
+	- [Grobanforderungen](#grobanforderungen)
+		- [Wirtschaftlichkeit](#wirtschaftlichkeit)
+		- [Einsparungen für den Monteur](#einsparungen-für-den-monteur)
+		- [Kostenrechnung](#kostenrechnung)
+		- [System](#system)
+		- [Personell](#personell)
+		- [Qualität](#qualität)
+		- [Sicherheit](#sicherheit)
+		- [Nicht-Ziele](#nicht-ziele)
+	- [Übersicht](#übersicht)
+	- [Detailanforderungen](#detailanforderungen)
+		- [Anforderungen der Geschäftsorganisation](#anforderungen-der-geschäftsorganisation)
+		- [Funktionale Anforderungen](#funktionale-anforderungen)
+			- [Technik 1: Beschreibung mittels User-Story](#technik-1-beschreibung-mittels-user-story)
+			- [Technik 2: Beschreibung mittels Use-Case](#technik-2-beschreibung-mittels-use-case)
+		- [Wirtschaftlichkeit](#wirtschaftlichkeit-1)
+		- [System](#system-1)
+		- [Qualität](#qualität-1)
+		- [Sicherheit](#sicherheit-1)
+		- [Anforderungen Systemarchitektur](#anforderungen-systemarchitektur)
 - [Systemarchitektur](#systemarchitektur)
-
-  - [Übersicht und Struktur des Systems](#übersicht-und-struktur-des-systems)
-
-    - [Übersicht](#übersicht-1)
-    - [Architekturen / Modelle](#architekturen-modelle)
-
-  - [Schnittstellen und Abgrenzung](#schnittstellen-und-abgrenzung)
-  - [Machbarkeit](#machbarkeit)
+	- [Übersicht und Struktur des Systems](#übersicht-und-struktur-des-systems)
+		- [Übersicht](#übersicht-1)
+		- [Architekturen / Modelle](#architekturen-modelle)
+	- [Schnittstellen und Abgrenzung](#schnittstellen-und-abgrenzung)
+	- [Machbarkeit](#machbarkeit)
 
 <!-- tocstop -->
 
@@ -97,23 +88,27 @@ Die Monitoringlösung sollte Elektrikern und Elektroinstallateuren die mit EnOce
 
 Der Monteur der die Installationsarbeiten der EnOcean Komponenten vor Ort durchführt, muss nach der Installation die reibungslose Funktion testen, dazu muss er die Funktion aller Komponenten manuell durch gehen. Wenn eine Komponente nicht einwandfrei funktioniert, gestaltet sich die Fehlersuche äuserst Zeitaufwändig. Gerade bei einer instabilen Funkverbindung können viele Faktoren mitspielen. Der Monteur muss mit einem Notebook und einem Funkempfänger die Wohnung abschreiten und manuell Messungen zur Signalqualität durchführen.
 
-Kosten            | Betrag in CHF
------------------ | -------------
-Hardware          | 120
-Entwicklungskosten | 6000
-Nutzen            | -
-
 - Zeiteinsparung beim Analysieren der Geräte.
 - Der Monteur muss nur noch eine kurze Zeit vor Ort sein.
 - Das Gerät kostet mit geschätzten Materialkosten von ca. 100 Franken nur ein Bruchteil anderer kommerzieller Geräte.
 
-  ### System
+### Kostenrechnung
+
+Kosten | Betrag in CHF
+------ | --
+Hardware (pro Gerät) | 120
+Etwicklungskosten | 34'000
+Verwaltung / Projektmangement | 16'000
+
+Ein vergleichbares Gerät auf dem Markt kostet ca. 700 Franken. Somit ist ein finanzieller Vorteil ab 87 Geräten gegeben. Dazu kommt der Mehrwert für den Kunden welcher finanziell nicht messbar ist.
+
+### System
 
 - Das System unterstützt den Techniker bei installieren neuer Geräte.
 
 - Das System stellt eine Datenbank für Auswertungen zur Verfügung.
 
-  ### Personell
+### Personell
 
 - Personen welche bei installieren beteiligt sind können sich auf die Auswertung der gesammelten Daten konzentrieren.
 
@@ -123,11 +118,11 @@ Nutzen            | -
 
 - Das System soll stabil sein und nicht durch Fehler in der Datensammlung unterbrochen werden.
 
-  ### Sicherheit
+### Sicherheit
 
 - Da der Benutzer ebenfalls einen begrenzten Zugang zum System haben wird muss sichergestellt werden, dass er nur auch seine Daten Zugriff hat. Allfällige andere Daten von andere Kunden müssen daher in gesonderten und geschützten Verzeichnissen abgelegt werden.
 
-  ### Nicht-Ziele
+### Nicht-Ziele
 
 - Ziel dieser Lösung wird nur die automatische Datenerfassung und Darstellung sein. Wie die Daten interpretiert werden müssen, muss vom Monteur entschieden werden.
 
