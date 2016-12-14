@@ -1,6 +1,6 @@
 # Systemanforderungen
 
-Auftraggeber     | Enoca AG
+Auftraggeber    | Enoca AG
 --------------- | ----------------
 Projektleiter   | Louis Siegrist
 Autor           | Silas Stegmüller
@@ -60,23 +60,23 @@ Momentan müssen bei Installationsarbeiten die Räume von Hand ausgemessen werde
 
 # Situation danach
 
-Aus diesem Grund will die Enoca AG ein Gerät entwickeln welches dieses Problem löst. Der Monteur soll mit mehren RasperryPi's zum Kunden gehen können, welche mit Enocean Hardware bestückt sind. Sobald die Geräte am Strom sind, startet ein Analyse Tool. Die erhaltenen Informationen werden in eine Datenbank gespeichert. Nach ca. 1 Woche holt der Monteur die Geräte wieder ab und wertet die Daten aus. Er kann nun sicher sein, wo die Repeater installiert werden müssen, um die gesamte Installation ohne Störungen betreiben zu können.
+Aus diesem Grund will die Enoca AG ein Gerät entwickeln welches dieses Problem löst. Der Monteur soll mit mehren RasperryPi's zum Kunden gehen können, welche mit EnOcean Hardware bestückt sind. Sobald die Geräte am Strom sind, startet ein Analyse Tool. Die erhaltenen Informationen werden in eine Datenbank gespeichert. Nach ca. 1 Woche holt der Monteur die Geräte wieder ab und wertet die Daten aus. Er kann nun sicher sein, wo die Repeater installiert werden müssen, um die gesamte Installation ohne Störungen betreiben zu können.
 
 <div style="page-break-after: always;">
 </div>
 
 # Ziele
 
-Mit dem zu erstellenden Enocean Analysetool soll es möglich sein die verschiedenen Geräte, welche mit dem Enocean Protokoll 3.0 miteinander funken, zu katalogisieren und deren Signale zu deuten. Diese Daten können über einen beliebig langen Zeitraum erfasst werden (Bis der Speicherplatz des Gerätes erschöpft ist). Das Tool schreibt diese in eine Datenbank, welche beim nächsten Besuch als Referenzwert dient. In der Datenbank finden sich auch die Informationen welche Gerätetechnische Probleme haben. Bei diesem Projekt liegt der Fokus ganz klar auf der Datenerfassung. Später in einem weiteren Nachfolgeprojekt ist nicht auszuschliessen, dass auch eine Datenanalyse Teil der Lösung sein wird.
+Mit dem zu erstellenden EnOcean Analysetool soll es möglich sein die verschiedenen Geräte, welche mit dem EnOcean Protokoll 3.0 miteinander funken, zu katalogisieren und deren Signale zu deuten. Diese Daten können über einen beliebig langen Zeitraum erfasst werden (Bis der Speicherplatz des Gerätes erschöpft ist). Das Tool schreibt diese in eine Datenbank, welche beim nächsten Besuch als Referenzwert dient. In der Datenbank finden sich auch die Informationen welche Gerätetechnische Probleme haben. Bei diesem Projekt liegt der Fokus ganz klar auf der Datenerfassung. Später in einem weiteren Nachfolgeprojekt ist nicht auszuschliessen, dass auch eine Datenanalyse Teil der Lösung sein wird.
 
 # Systemkontext
 
 ![system context diagram](http://www.plantuml.com/plantuml/png/oyjFILLG2YZApqfDBb5IgEPIKCW32O4O2WhHGOd51Qb5HPKA0PwnO95QBYumdP9OafYKM0pK6noOarcI2j4AqfEMdvEIMgIWv9gNdvoQcASGafgJcbwKc5kCK08qs0Me7s8YI0_GL0W5P4J3DBgabcKcfoeOnYhewjgXEGLTaH4nYeonAG9QYEn9Y5rWrm40)
 
-Mehre Enocean Funkgeräte senden ihre Signale. Diese werden dann von einem Einplatinenrechner mit USB Dongle empfangen. Der Einplatinenrechner wertet diese Informationen dann aus und speichert sie in eine Datenbank. Von dort aus können die Daten weiter ausgelesen werden. Sei dies für eine Webseite oder eine Analyseapplikation.
+Mehre EnOcean Funkgeräte senden ihre Signale. Diese werden dann von einem Einplatinenrechner mit USB Dongle empfangen. Der Einplatinenrechner wertet diese Informationen dann aus und speichert sie in eine Datenbank. Von dort aus können die Daten weiter ausgelesen werden. Sei dies für eine Webseite oder eine Analyseapplikation.
 
 <div style="page-break-after: always;">
-</div>
+
 
 ## Grobanforderungen
 
@@ -94,10 +94,10 @@ Der Monteur der die Installationsarbeiten der EnOcean Komponenten vor Ort durchf
 
 ### Kostenrechnung
 
-Kosten | Betrag in CHF
------- | --
-Hardware (pro Gerät) | 120
-Etwicklungskosten | 34'000
+Kosten                        | Betrag in CHF
+----------------------------- | -------------
+Hardware (pro Gerät)          | 120
+Entwicklungskosten            | 34'000
 Verwaltung / Projektmangement | 16'000
 
 Ein vergleichbares Gerät auf dem Markt kostet ca. 700 Franken. Somit ist ein finanzieller Vorteil ab 87 Geräten gegeben. Dazu kommt der Mehrwert für den Kunden welcher finanziell nicht messbar ist.
@@ -128,6 +128,9 @@ Ein vergleichbares Gerät auf dem Markt kostet ca. 700 Franken. Somit ist ein fi
 
 - Es wird nicht möglich sein, Komponenten zu steuern oder Ihnen Befehle zu senden. Der Fokus liegt in der Einfachheit der Anwendung.
 
+<div style="page-break-after: always;">
+
+
 ## Übersicht
 
 ## Detailanforderungen
@@ -140,7 +143,7 @@ Ein vergleichbares Gerät auf dem Markt kostet ca. 700 Franken. Somit ist ein fi
 
 - Als Monteur möchte ich die Zeit welche ich beim Kunden verbringe so effizient wie möglich einsetzen.
 
-- Ich möchte Abläufe wie die Ausmessung der Enocean Abdeckung automatisieren.
+- Ich möchte Abläufe wie die Ausmessung der EnOcean Abdeckung automatisieren.
 
 #### Technik 2: Beschreibung mittels Use-Case
 
@@ -172,7 +175,7 @@ Beschreibung                 | Die Anwender sollen die Box nur einstecken könne
 Abnahmekriterien             | Das Gerät muss nach dem einstecken in eine Stromquelle automatisch seinen Dienst verrichten.
 Wichtigkeit (5-1): 4         | Dringlichkeit (5-1): 5                                                                                                                                                                            |
 Risiko/Kritikalität (5-1): 2 | Aufwandgrösse (5-1): 3                                                                                                                                                                            |
-
+</br>
 Name                         | Datastore
 ---------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Beschreibung                 | Alle Daten von Encocean Geräten welche dem Protokoll 3.0 entsprechen und der USB Dongle empfängt werden in die Datenbank gespeichert. Dies betrifft auch fehlerhafte Telegramme, sei es durch defekte Geräte.
@@ -183,20 +186,20 @@ Risiko/Kritikalität (5-1): 2 | Aufwandgrösse (5-1): 2                         
 ### Qualität
 
 Name                         | Einfachheit
----------------------------- | --------------------------------------------------------------------------------------------------------------
+---------------------------- | ------------------------------------------------------------------------------------------------------------------
 Beschreibung                 | Das System wird automatisch gestartet, sobald das Gerät am Strom angeschlossen wird.
 Abnahmekriterien             | Das Gerät startet, sobald es am Strom angeschlossen ist. Dazu sind keine zusätzliche User-Interaktionen notwendig.
-Wichtigkeit (5-1): 4         | Dringlichkeit (5-1): 2                                                                                         |
-Risiko/Kritikalität (5-1): 2 | Aufwandgrösse (5-1): 2                                                                                         |
+Wichtigkeit (5-1): 4         | Dringlichkeit (5-1): 2                                                                                             |
+Risiko/Kritikalität (5-1): 2 | Aufwandgrösse (5-1): 2                                                                                             |
 
 ### Sicherheit
 
 Name                         | Security
----------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+---------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Beschreibung                 | Da der Benutzer ebenfalls einen begrenzten Zugang zum System haben wird muss sichergestellt werden, dass er nur auch seine Daten Zugriff hat. Allfällige andere Daten von andere Kunden müssen daher in gesonderten Verzeichnissen abgelegt werden. Da die Daten aber keine Rückschlüsse auf einzelne Personen ermöglichen ist keine Verschlüsselung notwendig.
 Abnahmekriterien             | Sobald das System vom Strom getrennt wird, wird ein neues Verzeichnis angelegt, mit einem neuen Datastore, damit hat der Kunde keine Möglichkeit auf die Daten anderer Kunden zuzugreifen.
-Wichtigkeit (5-1): 4         | Dringlichkeit (5-1): 4                                                                                                                                                                                                                                                                                                                                           |
-Risiko/Kritikalität (5-1): 2 | Aufwandgrösse (5-1): 4                                                                                                                                                                                                                                                                                                                                           |
+Wichtigkeit (5-1): 4         | Dringlichkeit (5-1): 4                                                                                                                                                                                                                                                                                                                                          |
+Risiko/Kritikalität (5-1): 2 | Aufwandgrösse (5-1): 4                                                                                                                                                                                                                                                                                                                                          |
 
 ### Anforderungen Systemarchitektur
 
@@ -207,12 +210,19 @@ Abnahmekriterien             | Das Produkt muss über einen Zeitraum von mindest
 Wichtigkeit (5-1): 5         | Dringlichkeit (5-1): 4
 Risiko/Kritikalität (5-1): 3 | Aufwandgrösse (5-1): 4
 
+</br>
+
 Name                       | Datenkonsistenz bei Stromunterbruch
 -------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Beschreibung               | Das System soll im Falle eines Stromunterbruchs, keine Daten verlieren und selbstständig wieder mit dem Loggen von Daten beginnen.
 Abnahmekriterien           | Das Produkt wird 3 Stromunterbrüche im Zeitraum von 60 min erhalten und muss danach automatisch mit der Datenspeicherung fortfahren. Dabei wird auf die Bestehende DB ohne Datenverlust geschrieben.
 Wichtigkeit (5-1):         | Dringlichkeit (5-1):
 Risiko/Kritikalität (5-1): | Aufwandgrösse (5-1):
+
+<div style="page-break-after: always;">
+</div>
+
+
 
 # Systemarchitektur
 
@@ -231,16 +241,16 @@ node "Project" {
 
 
     database "SQlite" {
-      folder "Enocean Telegrams" {
+      folder "EnOcean Telegrams" {
         [Data]
         }
 
     }
 }
 
-[Enocean Device 1] --> [Rasperry PI]
-[Enocean Device 2] --> [Rasperry PI]
-[Enocean Device 3] --> [Rasperry PI]
+[EnOcean Device 1] --> [Rasperry PI]
+[EnOcean Device 2] --> [Rasperry PI]
+[EnOcean Device 3] --> [Rasperry PI]
 
 
 [Rasperry PI] --> [Data]
@@ -257,12 +267,12 @@ Hinweis auf Detailstudien Abhängig vom Projektergebnis. Beispielsweise Geschäf
 ```{puml}
 @startuml
 
-[Enocean Device 1] --> [Enocean Stick]
-[Enocean Device 2] --> [Enocean Stick]
-[Enocean Device 3] --> [Enocean Stick]
+[EnOcean Device 1] --> [EnOcean Stick]
+[EnOcean Device 2] --> [EnOcean Stick]
+[EnOcean Device 3] --> [EnOcean Stick]
 
 
-[Enocean Stick] --> [Java Applikation]
+[EnOcean Stick] --> [Java Applikation]
 
 [Java Applikation] --> [MariaDB]
 [Java Applikation] --> [Linux]
@@ -278,4 +288,6 @@ Hinweis auf Detailstudien Abhängig vom Projektergebnis. Beispielsweise Geschäf
 
 Die Techniken welche vorgesehen sind, werden bereits heute gebraucht.
 
-Zudem wurde bereits ein POC mit der Enocean Java Library durchgeführt. Dieser POC hat gezeigt, dass ohne weiteres Telegramme gelesen und weiterverarbeitet werden.
+Zudem wurde bereits ein POC mit der EnOcean Java Library durchgeführt. Dieser POC hat gezeigt, dass ohne weiteres Telegramme gelesen und weiterverarbeitet werden.
+
+Somit ist eine Realiserung in besagten Rahmen realistisch.
