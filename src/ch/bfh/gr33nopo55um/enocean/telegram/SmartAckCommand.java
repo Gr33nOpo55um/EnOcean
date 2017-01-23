@@ -59,7 +59,7 @@ public class SmartAckCommand extends TelegramHeader {
     }
 
     /**
-     * dumpData Print Data, useful for logs and testiing
+     * dumpData Print Data, useful for logs and testing
      * <p>
      * EnOcean Telegram
      */
