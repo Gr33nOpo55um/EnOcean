@@ -1,18 +1,17 @@
 package ch.bfh.gr33nopo55um.enocean.telegram;
 
-/*
-  Created by silas on 18.11.16.
- */
-
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
+/**
+ * ToDo description
+ *
+ * @author silas & louis
+ */
 @Entity
-
-public class RadioERP1
-        extends TelegramHeader {
+public class RadioERP1 extends TelegramHeader {
 
 
     private int subTelNum;
@@ -31,6 +30,16 @@ public class RadioERP1
      */
     @Override
     public String encodeTelegram() {
+        return null;
+    }
+
+    /**
+     * encodeTelegramData provides an example data hex for this packet type.
+     *
+     * @return String hexTelegramData EnOcean Telegram
+     */
+    @Override
+    public String encodeTelegramData() {
         return null;
     }
 

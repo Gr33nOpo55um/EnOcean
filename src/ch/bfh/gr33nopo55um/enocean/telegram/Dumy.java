@@ -6,9 +6,10 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 /**
- * Created by stegmuellerp on 05.12.2016.
+ * ToDo description
+ *
+ * @author silas & louis
  */
-
 @Entity
 public class Dumy extends TelegramHeader {
 
@@ -19,6 +20,16 @@ public class Dumy extends TelegramHeader {
 
     @Override
     public String encodeTelegram() {
+        return null;
+    }
+
+    /**
+     * encodeTelegramData provides an example data hex for this packet type.
+     *
+     * @return String hexTelegramData EnOcean Telegram
+     */
+    @Override
+    public String encodeTelegramData() {
         return null;
     }
 

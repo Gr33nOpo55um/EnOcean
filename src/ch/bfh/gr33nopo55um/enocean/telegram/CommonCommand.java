@@ -1,7 +1,9 @@
 package ch.bfh.gr33nopo55um.enocean.telegram;
 
 /**
- * Created by silas on 18.11.16.
+ * ToDo description
+ *
+ * @author silas & louis
  */
 @SuppressWarnings("ALL")
 public class CommonCommand extends TelegramHeader {
@@ -11,6 +13,16 @@ public class CommonCommand extends TelegramHeader {
 
     @Override
     public String encodeTelegram() {
+        return null;
+    }
+
+    /**
+     * encodeTelegramData provides an example data hex for this packet type.
+     *
+     * @return String hexTelegramData EnOcean Telegram
+     */
+    @Override
+    public String encodeTelegramData() {
         return null;
     }
 
