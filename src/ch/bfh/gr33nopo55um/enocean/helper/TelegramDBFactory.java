@@ -6,7 +6,7 @@ import ch.bfh.gr33nopo55um.enocean.telegram.*;
  * Created by silas on 02.12.16.
  */
 @SuppressWarnings("ALL")
-public class TelegramFactory {
+public class TelegramDBFactory {
 
 
     public TelegramHeader telegramRouter(String hexTelegram) {
@@ -31,6 +31,8 @@ public class TelegramFactory {
     128...255   available MSC and messages
      */
         TelegramHeader telegram = null;
+
+
 
 
         if (Integer.parseInt(hexTelegram.substring(2, 4), 16) == 85) {

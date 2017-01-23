@@ -146,6 +146,7 @@ public class EnJLink
 
 			// start packet delivery
 			packetDeliveryThread.start();
+
 		}
 	}
 
@@ -247,4 +248,8 @@ public class EnJLink
 		// return the read packet or null;
 		return pkt;
 	}
+
+
+
+
 }

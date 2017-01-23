@@ -2,6 +2,7 @@ package ch.bfh.gr33nopo55um.enocean.telegram;
 
 import ch.bfh.gr33nopo55um.enocean.persistence.Store;
 
+import javax.persistence.Column;
 import javax.persistence.MappedSuperclass;
 import java.sql.Timestamp;
 
@@ -19,6 +20,8 @@ public abstract class TelegramHeader implements EncodeDecode {
     int optionalLenght;
     int crcData;
     private int crcHeader;
+
+    @Column(name="creationDate")
     private Timestamp creationDate;
 
     public Timestamp getCreationDate() {
