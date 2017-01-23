@@ -1,18 +1,16 @@
 package ch.bfh.gr33nopo55um.enocean.telegram;
 
-/*
-  Created by silas on 18.11.16.
- */
-
-
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
-
+/**
+ * ToDo description
+ *
+ * @author silas & louis
+ */
 @Entity
-
 public class SmartAckCommand extends TelegramHeader {
 
 
@@ -34,6 +32,16 @@ public class SmartAckCommand extends TelegramHeader {
     }
 
     /**
+     * encodeTelegramData provides an example data hex for this packet type.
+     *
+     * @return String hexTelegramData EnOcean Telegram
+     */
+    @Override
+    public String encodeTelegramData() {
+        return null;
+    }
+
+    /**
      * decodeTelegramData splits telegram in parts
      *
      * @param hexTelegram
@@ -51,7 +59,7 @@ public class SmartAckCommand extends TelegramHeader {
     }
 
     /**
-     * dumpData Print Data, useful for logs and testiing
+     * dumpData Print Data, useful for logs and testing
      * <p>
      * EnOcean Telegram
      */

@@ -7,8 +7,7 @@ package ch.bfh.gr33nopo55um.enocean.telegram;
 import javax.persistence.*;
 
 @Entity
-public class RadioERP1
-        extends TelegramHeader {
+public class RadioERP1 extends TelegramHeader {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -27,6 +26,16 @@ public class RadioERP1
      */
     @Override
     public String encodeTelegram() {
+        return null;
+    }
+
+    /**
+     * encodeTelegramData provides an example data hex for this packet type.
+     *
+     * @return String hexTelegramData EnOcean Telegram
+     */
+    @Override
+    public String encodeTelegramData() {
         return null;
     }
 
@@ -61,7 +70,6 @@ public class RadioERP1
     public void setSecurityLevel(int securityLevel) {
         this.securityLevel = securityLevel;
     }
-
 
     /**
      * decodeTelegramData splits telegram in parts

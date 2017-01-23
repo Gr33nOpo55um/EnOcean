@@ -1,15 +1,15 @@
 package ch.bfh.gr33nopo55um.enocean.telegram;
 
-/*
-  Created by silas on 18.11.16.
- */
-
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
-
+/**
+ * ToDo description
+ *
+ * @author silas & louis
+ */
 @Entity
 public class Event extends TelegramHeader {
 
@@ -28,6 +28,16 @@ public class Event extends TelegramHeader {
      */
     @Override
     public String encodeTelegram() {
+        return null;
+    }
+
+    /**
+     * encodeTelegramData provides an example data hex for this packet type.
+     *
+     * @return String hexTelegramData EnOcean Telegram
+     */
+    @Override
+    public String encodeTelegramData() {
         return null;
     }
 
@@ -71,7 +81,7 @@ public class Event extends TelegramHeader {
     }
 
     /**
-     * dumpData Print Data, useful for logs and testiing
+     * dumpData Print Data, useful for logs and testing
      * <p>
      * EnOcean Telegram
      */

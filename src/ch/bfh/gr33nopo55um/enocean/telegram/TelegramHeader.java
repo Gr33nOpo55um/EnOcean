@@ -7,9 +7,10 @@ import javax.persistence.MappedSuperclass;
 import java.sql.Timestamp;
 
 /**
- * Created by silas on 18.11.16.
+ * ToDo description
+ *
+ * @author silas & louis
  */
-
 @MappedSuperclass
 public abstract class TelegramHeader implements EncodeDecode {
 
@@ -17,12 +18,13 @@ public abstract class TelegramHeader implements EncodeDecode {
     int data;
     int syncByte;
     int dataLength;
-    int optionalLenght;
     int crcData;
+    private int optionalLenght;
     private int crcHeader;
 
     @Column(name="creationDate")
     private Timestamp creationDate;
+    private String fullTelegram;
 
     public Timestamp getCreationDate() {
         return creationDate;
@@ -32,8 +34,18 @@ public abstract class TelegramHeader implements EncodeDecode {
         this.creationDate = creationDate;
     }
 
-    private String fullTelegram;
+    public String encodeTelegram() {
+        return encodeTelegramHeader() + encodeTelegramData();
+    }
 
+    public String encodeTelegramHeader() {
+        return null;
+    }
+
+    public void decodeTelegram(String hexTelegram) {
+        decodeTelegramHeader(hexTelegram);
+        decodeTelegramData(hexTelegram);
+    }
 
     public void decodeTelegramHeader(String hexTelegram) {
         Timestamp timestamp = new Timestamp(System.currentTimeMillis());
@@ -43,10 +55,7 @@ public abstract class TelegramHeader implements EncodeDecode {
         this.setDataLength(Integer.parseInt(hexTelegram.substring(4, 8)));
         this.setOptionalLenght(Integer.parseInt(hexTelegram.substring(8, 10)));
         this.setCrcHeader(Integer.parseInt(hexTelegram.substring(12, 14), 16));
-
-
     }
-
 
     public String getFullTelegram() {
         return fullTelegram;
@@ -131,12 +140,6 @@ public abstract class TelegramHeader implements EncodeDecode {
 
     }
 
-    public void decodeTelegram(String hexTelegram) {
-
-        decodeTelegramHeader(hexTelegram);
-        decodeTelegramData(hexTelegram);
-    }
-
     public void dump() {
 
         System.out.println("Echo: " + this.getClass().toString() + "telegram");
@@ -144,6 +147,5 @@ public abstract class TelegramHeader implements EncodeDecode {
         dumpHeader();
         dumpData();
     }
-
 
 }
