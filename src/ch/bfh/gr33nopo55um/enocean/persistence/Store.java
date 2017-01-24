@@ -23,7 +23,7 @@ public class Store {
         if (instance == null) {
             instance = new Store();
 
-            SeedDB.getInstance().seedDB();
+            SeedDB.getInstance().insertCoreData();
         }
         return instance;
     }

@@ -22,6 +22,8 @@
       <sourceFolder url="file://$MODULE_DIR$/src/test/java" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/lib" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/resources" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/ch/bfh/gr33nopo55um/enocean/test" isTestSource="true" />
       <excludeFolder url="file://$MODULE_DIR$/documentation" />
       <excludeFolder url="file://$MODULE_DIR$/target" />
     </content>

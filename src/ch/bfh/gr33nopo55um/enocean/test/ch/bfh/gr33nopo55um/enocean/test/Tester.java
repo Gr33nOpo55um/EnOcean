@@ -1,6 +1,9 @@
 package ch.bfh.gr33nopo55um.enocean.test;
 
+import ch.bfh.gr33nopo55um.enocean.helper.ReadConfig;
 import ch.bfh.gr33nopo55um.enocean.helper.TelegramDBFactory;
+
+import java.io.IOException;
 
 /**
  * Used for Testing telegrams
@@ -19,6 +22,15 @@ public class Tester {
         // telegramDBFactory.telegramRouter("0x55023456743af6000022a1342001ffffffff3a0035");
 
         telegramDBFactory.telegramRouter("0x55000a0701eba50000000c019134fc0001ffffffff3d002f");
+
+
+        ReadConfig readConfig = new ReadConfig();
+        try {
+            System.out.println( readConfig.readPropertyValue("serialPort"));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
 
 
     }

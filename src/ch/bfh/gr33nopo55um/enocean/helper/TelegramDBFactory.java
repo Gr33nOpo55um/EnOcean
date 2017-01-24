@@ -9,7 +9,10 @@ import ch.bfh.gr33nopo55um.enocean.telegram.*;
  **/
 public class TelegramDBFactory {
 
-
+    /**
+     * @param hexTelegram
+     * @return TelegramObject
+     */
     public TelegramHeader telegramRouter(String hexTelegram) {
 
 
@@ -34,7 +37,6 @@ public class TelegramDBFactory {
 
 
         TelegramHeader telegram = null;
-
 
         if (Integer.parseInt(hexTelegram.substring(2, 4), 16) == 85) {
 
@@ -93,6 +95,7 @@ public class TelegramDBFactory {
 
             return telegram;
         } else {
+            //No known telegram type found.
             System.err.println("Wrong Telegram Sync byte! Taking dumy instead");
             telegram = new Dumy();
 
