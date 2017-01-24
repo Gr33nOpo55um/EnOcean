@@ -6,7 +6,8 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 /**
- * ToDo description
+ * SMART_ACK_COMMAND (carries no
+ * Optional Data), for further informations check EnoceanSerialProtocol v3
  *
  * @author silas & louis
  */

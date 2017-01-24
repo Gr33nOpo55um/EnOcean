@@ -6,7 +6,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 /**
- * ToDo description
+ * ERP2 radio protocol telegram, for further informations check EnoceanSerialProtocol v3
  *
  * @author silas & louis
  */

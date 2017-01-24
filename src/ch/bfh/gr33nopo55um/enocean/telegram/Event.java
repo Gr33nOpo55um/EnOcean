@@ -6,7 +6,8 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 /**
- * ToDo description
+ * An EVENT is primarily a confirmation for processes and procedures, incl. specific data
+ * content. For further informations check EnoceanSerialProtocol v3
  *
  * @author silas & louis
  */

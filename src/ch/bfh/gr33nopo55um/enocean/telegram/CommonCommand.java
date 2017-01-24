@@ -1,7 +1,7 @@
 package ch.bfh.gr33nopo55um.enocean.telegram;
 
 /**
- * ToDo description
+ * Serveral Commands, for further informations check EnoceanSerialProtocol v3
  *
  * @author silas & louis
  */

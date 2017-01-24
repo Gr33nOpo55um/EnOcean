@@ -6,7 +6,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 /**
- * ToDo description
+ * Physical Raw Packet, for further informations check EnoceanSerialProtocol v3
  *
  * @author silas & louis
  */

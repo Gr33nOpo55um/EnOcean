@@ -6,7 +6,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 /**
- * ToDo description
+ * When sending a telegram, a RESPOND has to be expected. In this case, the following RESPONSE message gives the return codes: 00 RET_OK 02 RET_NOT_SUPPORTED 03 RET_WRONG_PARAM, for further informations check EnoceanSerialProtocol v3
  *
  * @author silas & louis
  */

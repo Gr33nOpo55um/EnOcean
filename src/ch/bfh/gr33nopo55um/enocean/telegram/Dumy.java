@@ -6,7 +6,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 /**
- * ToDo description
+ * All Telegramm which cannot parsed into other tables.
  *
  * @author silas & louis
  */

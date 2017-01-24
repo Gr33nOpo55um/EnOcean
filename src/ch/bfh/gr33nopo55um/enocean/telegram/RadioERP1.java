@@ -1,10 +1,15 @@
 package ch.bfh.gr33nopo55um.enocean.telegram;
 
-/*
-  Created by silas on 18.11.16.
- */
+/**
+ * ERP1 radio telegram, for further informations check EnoceanSerialProtocol v3
+ *
+ * @author silas
+ **/
 
-import javax.persistence.*;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 
 @Entity
 public class RadioERP1 extends TelegramHeader {

@@ -6,7 +6,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 /**
- * ToDo description
+ * remote management command structure. This structure is applied for the send as well as the receive case, for further informations check EnoceanSerialProtocol v3
  *
  * @author silas & louis
  */

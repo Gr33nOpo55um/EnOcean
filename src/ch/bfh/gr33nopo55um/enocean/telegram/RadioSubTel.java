@@ -6,7 +6,9 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 /**
- * ToDo description
+ * diagnosis or statistics. The packet design corresponds to the type RADIO_ERP1.
+ * The content of the OPTIONAL_DATA is altered slightly,
+ * for further informations check EnoceanSerialProtocol v3
  *
  * @author silas & louis
  */
