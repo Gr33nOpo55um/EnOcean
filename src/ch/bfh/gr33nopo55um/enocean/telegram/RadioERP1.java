@@ -4,25 +4,20 @@ package ch.bfh.gr33nopo55um.enocean.telegram;
   Created by silas on 18.11.16.
  */
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
+public class RadioERP1 extends TelegramHeader {
 
-public class RadioERP1
-        extends TelegramHeader {
-
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Long id;
 
     private int subTelNum;
     private String destinationID;
     private int dbm;
     private int securityLevel;
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id;
 
     /**
      * encodeTelegram provides an example telegram hex for this packet type.
@@ -31,6 +26,16 @@ public class RadioERP1
      */
     @Override
     public String encodeTelegram() {
+        return null;
+    }
+
+    /**
+     * encodeTelegramData provides an example data hex for this packet type.
+     *
+     * @return String hexTelegramData EnOcean Telegram
+     */
+    @Override
+    public String encodeTelegramData() {
         return null;
     }
 
@@ -79,7 +84,7 @@ public class RadioERP1
         int endOfDataLength = 14 + dataLength;
 
 
-        this.setData(Integer.parseInt(hexTelegram.substring(14, endOfDataLength), 16));
+        this.setData(Long.parseLong(hexTelegram.substring(14, endOfDataLength), 16));
         this.setSubTelNum(Integer.parseInt(hexTelegram.substring(endOfDataLength, endOfDataLength + 2), 16));
         this.setDestinationID(hexTelegram.substring(endOfDataLength + 2, endOfDataLength + 10));
         this.setDbm(Integer.parseInt(hexTelegram.substring(endOfDataLength + 10, endOfDataLength + 12), 16));

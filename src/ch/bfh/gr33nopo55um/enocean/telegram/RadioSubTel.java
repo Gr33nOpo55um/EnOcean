@@ -6,10 +6,10 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 /**
- * Created by silas on 18.11.16.
+ * ToDo description
+ *
+ * @author silas & louis
  */
-
-
 @SuppressWarnings("ALL")
 @Entity
 public class RadioSubTel extends TelegramHeader {
@@ -116,6 +116,16 @@ public class RadioSubTel extends TelegramHeader {
         return null;
     }
 
+    /**
+     * encodeTelegramData provides an example data hex for this packet type.
+     *
+     * @return String hexTelegramData EnOcean Telegram
+     */
+    @Override
+    public String encodeTelegramData() {
+        return null;
+    }
+
 
     /**
      * decodeTelegramData splits telegram in parts
@@ -126,7 +136,7 @@ public class RadioSubTel extends TelegramHeader {
     public void decodeTelegramData(String hexTelegram) {
 
 
-        this.setData(Integer.parseInt(hexTelegram.substring(14, 14 + dataLength), 16));
+        this.setData(Long.parseLong(hexTelegram.substring(14, 14 + dataLength), 16));
 
         this.setSubTelNum(Integer.parseInt(hexTelegram.substring(dataLength + 14, dataLength + 16), 16));
 

@@ -1,10 +1,6 @@
 package poc;
 
 
-import it.polito.elite.enocean.enj.communication.EnJConnection;
-import it.polito.elite.enocean.enj.link.EnJLink;
-import it.polito.elite.enocean.examples.SimpleDeviceListener;
-
 /**
  * Created by silas on 07.10.16.
  */
@@ -26,24 +22,6 @@ public class Main {
 
     }
 
-    public static void connectDevice() {
-        EnJLink linkLayer = null;
-        try {
-            linkLayer = new EnJLink("/dev/ttyUSB0");
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-
-        EnJConnection connection = new EnJConnection(linkLayer, null); //null persistent storage
-
-        SimpleDeviceListener listener = new SimpleDeviceListener();
-
-        // add the listener to the connection layer
-        connection.addEnJDeviceListener(listener);
-
-        // connect the link to the physical network
-        linkLayer.connect();
-    }
 
     public static int[] parseTelegram(String message) {
         /*
