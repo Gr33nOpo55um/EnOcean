@@ -21,7 +21,6 @@ Inhaltsverzeichnis
 		- [Sicherheit](#sicherheit)
 		- [Nicht-Ziele](#nicht-ziele)
 	- [Übersicht](#übersicht)
-		- [Technik: Funktionsbaum](#technik-funktionsbaum)
 		- [Technik: Use Case](#technik-use-case)
 			- [Use Case Diagramm](#use-case-diagramm)
 	- [Detailanforderungen](#detailanforderungen)
@@ -80,8 +79,6 @@ Inhaltsverzeichnis
 - Es wird nicht möglich sein, Komponenten zu steuern oder Ihnen Befehle zu senden. Der Fokus liegt in der Einfachheit der Anwendung.
 
 ## Übersicht
-
-### Technik: Funktionsbaum
 
 ### Technik: Use Case
 
@@ -156,13 +153,14 @@ Wichtigkeit (5-1): 5         | Dringlichkeit (5-1): 4
 Risiko/Kritikalität (5-1): 3 | Aufwandgrösse (5-1): 4
 
 Name                       | Datenkonsistenz bei Stromunterbruch
--------------------------- | ------------------------------------------------------------------------------------------------------------------------------------
+-------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Beschreibung               | Das System soll im Falle eines Stromunterbruchs, keine Daten verlieren und selbstständig wieder mit dem Loggen von Daten beginnen.
 Abnahmekriterien           | Das Produkt wird 3 Stromunterbrüche im Zeitraum von 60 min erhalten und muss danach automatisch mit der Datenspeicherung fortfahren. Dabei wird auf die Bestehende DB ohne Datenverlust geschrieben.
 Wichtigkeit (5-1):         | Dringlichkeit (5-1):
 Risiko/Kritikalität (5-1): | Aufwandgrösse (5-1):
 
 # Systemarchitektur
+
 ## Übersicht und Struktur des Systems
 
 Übersichtsdiagramme gemäss den Methoden des Erstellers
@@ -194,8 +192,6 @@ node "Project" {
 
 @enduml
 ```
-
-
 
 ### Architekturen / Modelle
 

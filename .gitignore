@@ -10,12 +10,19 @@
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
 
+
+
 .idea/*
 target/
 
 # EnOcean library - no changes should be made there
-/src/it/polito/elite/enocean/
 
 # Ignore DB files
 *.db
 
+Würde .xml löschen
+Würde documentation/abgabe_projektmanagement.html löschen
+Würde documentation/abgabe_projektmanagement.pdf löschen
+
+
+.idea/EnOcean.iml
