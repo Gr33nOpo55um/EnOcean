@@ -9,7 +9,9 @@ import javax.persistence.Query;
 
 
 /**
- * Created by silas on 18.11.16.
+ * Used for persisitency. Store class is implementet in telegram header.
+ *
+ * @author silas
  */
 @SuppressWarnings("ALL")
 public class Store {

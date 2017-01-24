@@ -23,7 +23,6 @@ public class SeedDB {
     public void seedDB() {
 
 
-
 //        Query query = Store.getInstance().createQuery("Select * from dual");
 
 
