@@ -1,0 +1,8 @@
+[Unit]
+Description=EnocaLogger
+[Service]
+ExecStart=/home/prus/dev/Blah-4.1/Server/runServer.sh
+Type=simple
+User=prus
+[Install]
+WantedBy=multi-user.target
