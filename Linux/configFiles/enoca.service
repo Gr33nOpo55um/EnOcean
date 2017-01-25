@@ -1,8 +1,13 @@
 [Unit]
 Description=EnocaLogger
 [Service]
-ExecStart=/home/prus/dev/Blah-4.1/Server/runServer.sh
+ExecStart=/opt/enoca/enoca.sh
+ExecReload=ExecReload=/bin/kill -s HUP $MAINPID
+
+TimeoutStartSec=0
+
+
 Type=simple
-User=prus
+User=alarm
 [Install]
 WantedBy=multi-user.target

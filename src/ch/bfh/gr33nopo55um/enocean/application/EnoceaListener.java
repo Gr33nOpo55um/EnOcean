@@ -49,7 +49,6 @@ public class EnoceaListener {
          */
         connection.addEnJDeviceListener(listener);
 
-
         /*
         connect the link to the physical network
          */
