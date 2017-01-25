@@ -19,8 +19,8 @@ else
   pacman -Sy --noconfirm yaourt sudo vim
 
 
-  echo "%wheel      ALL=(ALL) ALL" >> /etc/sudoers
-  echo 'Defaults:alarm      \!authenticate' >> /etc/sudoers
+  echo '%wheel      ALL=(ALL) ALL' >> /etc/sudoers
+  echo 'Defaults:alarm      !authenticate' >> /etc/sudoers
 
   gpasswd --add alarm wheel
 
@@ -29,7 +29,7 @@ else
 
   chmod u+x /opt/enoca/enoca.sh
 
-  cp configFiles/enoca.service  /usr/lib/systemd/system/
+  cp configFiles/enoca.service  /usr/lib/systemd/system/enoca.service
 
   systemctl daemon-reload
   systemctl start enoca.service
