@@ -1,0 +1,53 @@
+\hypertarget{classit_1_1polito_1_1elite_1_1enocean_1_1protocol_1_1serial_1_1v3_1_1network_1_1packet_1_1remoteb098a23adcfeb391a74cc6bc10c55d47}{}\section{it.\+polito.\+elite.\+enocean.\+protocol.\+serial.\+v3.\+network.\+packet.\+remotemancommand.\+Remote\+Man\+Command Class Reference}
+\label{classit_1_1polito_1_1elite_1_1enocean_1_1protocol_1_1serial_1_1v3_1_1network_1_1packet_1_1remoteb098a23adcfeb391a74cc6bc10c55d47}\index{it.\+polito.\+elite.\+enocean.\+protocol.\+serial.\+v3.\+network.\+packet.\+remotemancommand.\+Remote\+Man\+Command@{it.\+polito.\+elite.\+enocean.\+protocol.\+serial.\+v3.\+network.\+packet.\+remotemancommand.\+Remote\+Man\+Command}}
+Inheritance diagram for it.\+polito.\+elite.\+enocean.\+protocol.\+serial.\+v3.\+network.\+packet.\+remotemancommand.\+Remote\+Man\+Command\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.947826cm]{classit_1_1polito_1_1elite_1_1enocean_1_1protocol_1_1serial_1_1v3_1_1network_1_1packet_1_1remoteb098a23adcfeb391a74cc6bc10c55d47}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classit_1_1polito_1_1elite_1_1enocean_1_1protocol_1_1serial_1_1v3_1_1network_1_1packet_1_1remoteb098a23adcfeb391a74cc6bc10c55d47_a46d391537cafd566c87dc1a21cbe616c}{Remote\+Man\+Command} (int function\+Number, int manufacturer\+Id, byte mex\+Data\mbox{[}$\,$\mbox{]}, int destination\+Id, int source\+Id, byte d\+Bm, byte send\+With\+Delay)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Remote management send or receive message
+
+\begin{DoxyAuthor}{Author}
+Andrea Biasi \href{mailto:biasiandrea04@gmail.com}{\tt biasiandrea04@gmail.\+com} 
+\end{DoxyAuthor}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classit_1_1polito_1_1elite_1_1enocean_1_1protocol_1_1serial_1_1v3_1_1network_1_1packet_1_1remoteb098a23adcfeb391a74cc6bc10c55d47_a46d391537cafd566c87dc1a21cbe616c}{}\label{classit_1_1polito_1_1elite_1_1enocean_1_1protocol_1_1serial_1_1v3_1_1network_1_1packet_1_1remoteb098a23adcfeb391a74cc6bc10c55d47_a46d391537cafd566c87dc1a21cbe616c} 
+\index{it\+::polito\+::elite\+::enocean\+::protocol\+::serial\+::v3\+::network\+::packet\+::remotemancommand\+::\+Remote\+Man\+Command@{it\+::polito\+::elite\+::enocean\+::protocol\+::serial\+::v3\+::network\+::packet\+::remotemancommand\+::\+Remote\+Man\+Command}!Remote\+Man\+Command@{Remote\+Man\+Command}}
+\index{Remote\+Man\+Command@{Remote\+Man\+Command}!it\+::polito\+::elite\+::enocean\+::protocol\+::serial\+::v3\+::network\+::packet\+::remotemancommand\+::\+Remote\+Man\+Command@{it\+::polito\+::elite\+::enocean\+::protocol\+::serial\+::v3\+::network\+::packet\+::remotemancommand\+::\+Remote\+Man\+Command}}
+\subsubsection{\texorpdfstring{Remote\+Man\+Command()}{RemoteManCommand()}}
+{\footnotesize\ttfamily it.\+polito.\+elite.\+enocean.\+protocol.\+serial.\+v3.\+network.\+packet.\+remotemancommand.\+Remote\+Man\+Command.\+Remote\+Man\+Command (\begin{DoxyParamCaption}\item[{int}]{function\+Number,  }\item[{int}]{manufacturer\+Id,  }\item[{byte}]{mex\+Data\mbox{[}$\,$\mbox{]},  }\item[{int}]{destination\+Id,  }\item[{int}]{source\+Id,  }\item[{byte}]{d\+Bm,  }\item[{byte}]{send\+With\+Delay }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em function\+Number} & \+: Range\+: 0x0000 ... 0x0\+F\+FF \\
+\hline
+{\em manufacturer\+Id} & \+: Range\+: 0x0000 ... 0x07\+FF \\
+\hline
+{\em mex\+Data} & \+: 0 ... 511 bytes \\
+\hline
+{\em destination\+Id} & \+: Destination ID Broadcast ID\+: FF FF FF FF \\
+\hline
+{\em source\+Id} & \+: Receive case\+: Source ID of the sender Send case\+: 0x00000000 \\
+\hline
+{\em d\+Bm} & \+: Send case\+: 0x\+FF Receive case\+: Best R\+S\+SI value of all received sub telegrams (value decimal without minus) \\
+\hline
+{\em send\+With\+Delay} & \+: 1\+: if the first message has to be sent with random delay. When answering to broadcast message this has to be 1, otherwise 0. Default\+: 0 \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/it/polito/elite/enocean/protocol/serial/v3/network/packet/remotemancommand/\hyperlink{it_2polito_2elite_2enocean_2protocol_2serial_2v3_2network_2packet_2remotemancommand_2_remote_man_command_8java}{Remote\+Man\+Command.\+java}\end{DoxyCompactItemize}

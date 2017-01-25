@@ -1,0 +1,45 @@
+\hypertarget{classit_1_1polito_1_1elite_1_1enocean_1_1protocol_1_1serial_1_1v3_1_1network_1_1packet_1_1radioadvanced_1_1_radio_advanced}{}\section{it.\+polito.\+elite.\+enocean.\+protocol.\+serial.\+v3.\+network.\+packet.\+radioadvanced.\+Radio\+Advanced Class Reference}
+\label{classit_1_1polito_1_1elite_1_1enocean_1_1protocol_1_1serial_1_1v3_1_1network_1_1packet_1_1radioadvanced_1_1_radio_advanced}\index{it.\+polito.\+elite.\+enocean.\+protocol.\+serial.\+v3.\+network.\+packet.\+radioadvanced.\+Radio\+Advanced@{it.\+polito.\+elite.\+enocean.\+protocol.\+serial.\+v3.\+network.\+packet.\+radioadvanced.\+Radio\+Advanced}}
+Inheritance diagram for it.\+polito.\+elite.\+enocean.\+protocol.\+serial.\+v3.\+network.\+packet.\+radioadvanced.\+Radio\+Advanced\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classit_1_1polito_1_1elite_1_1enocean_1_1protocol_1_1serial_1_1v3_1_1network_1_1packet_1_1radioadvanced_1_1_radio_advanced}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classit_1_1polito_1_1elite_1_1enocean_1_1protocol_1_1serial_1_1v3_1_1network_1_1packet_1_1radioadvanced_1_1_radio_advanced_a3b14ce73b1c274e99f738383c2462112}{Radio\+Advanced} (byte raw\+Data\mbox{[}$\,$\mbox{]}, byte sub\+Tel\+Num, byte d\+Bm)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+The advanced radio protocol telegram (raw data without L\+EN and C\+RC) is embedded into the E\+S\+P3 packet
+
+\begin{DoxyAuthor}{Author}
+Andrea Biasi \href{mailto:biasiandrea04@gmail.com}{\tt biasiandrea04@gmail.\+com} 
+\end{DoxyAuthor}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classit_1_1polito_1_1elite_1_1enocean_1_1protocol_1_1serial_1_1v3_1_1network_1_1packet_1_1radioadvanced_1_1_radio_advanced_a3b14ce73b1c274e99f738383c2462112}{}\label{classit_1_1polito_1_1elite_1_1enocean_1_1protocol_1_1serial_1_1v3_1_1network_1_1packet_1_1radioadvanced_1_1_radio_advanced_a3b14ce73b1c274e99f738383c2462112} 
+\index{it\+::polito\+::elite\+::enocean\+::protocol\+::serial\+::v3\+::network\+::packet\+::radioadvanced\+::\+Radio\+Advanced@{it\+::polito\+::elite\+::enocean\+::protocol\+::serial\+::v3\+::network\+::packet\+::radioadvanced\+::\+Radio\+Advanced}!Radio\+Advanced@{Radio\+Advanced}}
+\index{Radio\+Advanced@{Radio\+Advanced}!it\+::polito\+::elite\+::enocean\+::protocol\+::serial\+::v3\+::network\+::packet\+::radioadvanced\+::\+Radio\+Advanced@{it\+::polito\+::elite\+::enocean\+::protocol\+::serial\+::v3\+::network\+::packet\+::radioadvanced\+::\+Radio\+Advanced}}
+\subsubsection{\texorpdfstring{Radio\+Advanced()}{RadioAdvanced()}}
+{\footnotesize\ttfamily it.\+polito.\+elite.\+enocean.\+protocol.\+serial.\+v3.\+network.\+packet.\+radioadvanced.\+Radio\+Advanced.\+Radio\+Advanced (\begin{DoxyParamCaption}\item[{byte}]{raw\+Data\mbox{[}$\,$\mbox{]},  }\item[{byte}]{sub\+Tel\+Num,  }\item[{byte}]{d\+Bm }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em raw\+Data} & \+: Advanced radio protocol telegram without the first Length byte. For sending the advanced protocol C\+R\+C8 byte can be set to any value. x = Data Length \\
+\hline
+{\em sub\+Tel\+Num} & \+: Number of sub telegram; Send\+: 3 / receive\+: 1 ... y \\
+\hline
+{\em d\+Bm} & \+: Send case\+: FF Receive case\+: best R\+S\+SI value of all received sub telegrams (value decimal without minus) \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/it/polito/elite/enocean/protocol/serial/v3/network/packet/radioadvanced/\hyperlink{_radio_advanced_8java}{Radio\+Advanced.\+java}\end{DoxyCompactItemize}

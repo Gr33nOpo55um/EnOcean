@@ -1,0 +1,134 @@
+\hypertarget{classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1_event}{}\section{ch.\+bfh.\+gr33nopo55um.\+enocean.\+telegram.\+Event Class Reference}
+\label{classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1_event}\index{ch.\+bfh.\+gr33nopo55um.\+enocean.\+telegram.\+Event@{ch.\+bfh.\+gr33nopo55um.\+enocean.\+telegram.\+Event}}
+Inheritance diagram for ch.\+bfh.\+gr33nopo55um.\+enocean.\+telegram.\+Event\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1_event}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+String \hyperlink{classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1_event_ab69f08367e723db4711c44242a8324ee}{encode\+Telegram} ()
+\item 
+String \hyperlink{classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1_event_a1a3451a87a9cac07d0e3640be8541fbe}{encode\+Telegram\+Data} ()
+\item 
+void \hyperlink{classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1_event_a9bada0cdd98d25a854a7d7382b60405f}{decode\+Telegram\+Data} (String hex\+Telegram)
+\item 
+int \hyperlink{classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1_event_abaf053d6cd3ba20c9597b8d4d8d3bd78}{get\+Event\+Code} ()
+\item 
+void \hyperlink{classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1_event_ae9266459daef3c1a73f1f17bc3180602}{set\+Event\+Code} (int event\+Code)
+\item 
+int \hyperlink{classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1_event_aa145ed83ad720660f878f890944642c8}{get\+Event\+Data} ()
+\item 
+void \hyperlink{classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1_event_a2999ad9b1f3f92b8896abdcb8ca72617}{set\+Event\+Data} (int event\+Data)
+\item 
+Long \hyperlink{classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1_event_a85b52f65804df97846946fc872aefa3e}{get\+Id} ()
+\item 
+void \hyperlink{classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1_event_a55da00c4e15b94edb99b290cfb485681}{set\+Id} (Long id)
+\item 
+void \hyperlink{classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1_event_a80e90c4fa91b58ad64af318551b9b7a0}{dump\+Data} ()
+\item 
+String \hyperlink{classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1_event_a1fcbbe38ef10bdea233d4c6886add169}{to\+String} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+An E\+V\+E\+NT is primarily a confirmation for processes and procedures, incl. specific data content. For further informations check Enocean\+Serial\+Protocol v3
+
+\begin{DoxyAuthor}{Author}
+silas \& louis 
+\end{DoxyAuthor}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1_event_a9bada0cdd98d25a854a7d7382b60405f}{}\label{classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1_event_a9bada0cdd98d25a854a7d7382b60405f} 
+\index{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Event@{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Event}!decode\+Telegram\+Data@{decode\+Telegram\+Data}}
+\index{decode\+Telegram\+Data@{decode\+Telegram\+Data}!ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Event@{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Event}}
+\subsubsection{\texorpdfstring{decode\+Telegram\+Data()}{decodeTelegramData()}}
+{\footnotesize\ttfamily void ch.\+bfh.\+gr33nopo55um.\+enocean.\+telegram.\+Event.\+decode\+Telegram\+Data (\begin{DoxyParamCaption}\item[{String}]{hex\+Telegram }\end{DoxyParamCaption})}
+
+decode\+Telegram\+Data splits telegram in parts
+
+
+\begin{DoxyParams}{Parameters}
+{\em hex\+Telegram} & \\
+\hline
+\end{DoxyParams}
+\hypertarget{classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1_event_a80e90c4fa91b58ad64af318551b9b7a0}{}\label{classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1_event_a80e90c4fa91b58ad64af318551b9b7a0} 
+\index{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Event@{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Event}!dump\+Data@{dump\+Data}}
+\index{dump\+Data@{dump\+Data}!ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Event@{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Event}}
+\subsubsection{\texorpdfstring{dump\+Data()}{dumpData()}}
+{\footnotesize\ttfamily void ch.\+bfh.\+gr33nopo55um.\+enocean.\+telegram.\+Event.\+dump\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+dump\+Data Print Data, useful for logs and testing 
+
+En\+Ocean Telegram \hypertarget{classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1_event_ab69f08367e723db4711c44242a8324ee}{}\label{classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1_event_ab69f08367e723db4711c44242a8324ee} 
+\index{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Event@{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Event}!encode\+Telegram@{encode\+Telegram}}
+\index{encode\+Telegram@{encode\+Telegram}!ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Event@{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Event}}
+\subsubsection{\texorpdfstring{encode\+Telegram()}{encodeTelegram()}}
+{\footnotesize\ttfamily String ch.\+bfh.\+gr33nopo55um.\+enocean.\+telegram.\+Event.\+encode\+Telegram (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+encode\+Telegram provides an example telegram hex for this packet type.
+
+\begin{DoxyReturn}{Returns}
+telegram hex 
+\end{DoxyReturn}
+\hypertarget{classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1_event_a1a3451a87a9cac07d0e3640be8541fbe}{}\label{classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1_event_a1a3451a87a9cac07d0e3640be8541fbe} 
+\index{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Event@{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Event}!encode\+Telegram\+Data@{encode\+Telegram\+Data}}
+\index{encode\+Telegram\+Data@{encode\+Telegram\+Data}!ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Event@{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Event}}
+\subsubsection{\texorpdfstring{encode\+Telegram\+Data()}{encodeTelegramData()}}
+{\footnotesize\ttfamily String ch.\+bfh.\+gr33nopo55um.\+enocean.\+telegram.\+Event.\+encode\+Telegram\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+encode\+Telegram\+Data provides an example data hex for this packet type.
+
+\begin{DoxyReturn}{Returns}
+String hex\+Telegram\+Data En\+Ocean Telegram 
+\end{DoxyReturn}
+\hypertarget{classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1_event_abaf053d6cd3ba20c9597b8d4d8d3bd78}{}\label{classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1_event_abaf053d6cd3ba20c9597b8d4d8d3bd78} 
+\index{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Event@{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Event}!get\+Event\+Code@{get\+Event\+Code}}
+\index{get\+Event\+Code@{get\+Event\+Code}!ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Event@{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Event}}
+\subsubsection{\texorpdfstring{get\+Event\+Code()}{getEventCode()}}
+{\footnotesize\ttfamily int ch.\+bfh.\+gr33nopo55um.\+enocean.\+telegram.\+Event.\+get\+Event\+Code (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\hypertarget{classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1_event_aa145ed83ad720660f878f890944642c8}{}\label{classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1_event_aa145ed83ad720660f878f890944642c8} 
+\index{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Event@{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Event}!get\+Event\+Data@{get\+Event\+Data}}
+\index{get\+Event\+Data@{get\+Event\+Data}!ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Event@{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Event}}
+\subsubsection{\texorpdfstring{get\+Event\+Data()}{getEventData()}}
+{\footnotesize\ttfamily int ch.\+bfh.\+gr33nopo55um.\+enocean.\+telegram.\+Event.\+get\+Event\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\hypertarget{classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1_event_a85b52f65804df97846946fc872aefa3e}{}\label{classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1_event_a85b52f65804df97846946fc872aefa3e} 
+\index{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Event@{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Event}!get\+Id@{get\+Id}}
+\index{get\+Id@{get\+Id}!ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Event@{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Event}}
+\subsubsection{\texorpdfstring{get\+Id()}{getId()}}
+{\footnotesize\ttfamily Long ch.\+bfh.\+gr33nopo55um.\+enocean.\+telegram.\+Event.\+get\+Id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\hypertarget{classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1_event_ae9266459daef3c1a73f1f17bc3180602}{}\label{classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1_event_ae9266459daef3c1a73f1f17bc3180602} 
+\index{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Event@{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Event}!set\+Event\+Code@{set\+Event\+Code}}
+\index{set\+Event\+Code@{set\+Event\+Code}!ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Event@{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Event}}
+\subsubsection{\texorpdfstring{set\+Event\+Code()}{setEventCode()}}
+{\footnotesize\ttfamily void ch.\+bfh.\+gr33nopo55um.\+enocean.\+telegram.\+Event.\+set\+Event\+Code (\begin{DoxyParamCaption}\item[{int}]{event\+Code }\end{DoxyParamCaption})}
+
+\hypertarget{classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1_event_a2999ad9b1f3f92b8896abdcb8ca72617}{}\label{classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1_event_a2999ad9b1f3f92b8896abdcb8ca72617} 
+\index{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Event@{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Event}!set\+Event\+Data@{set\+Event\+Data}}
+\index{set\+Event\+Data@{set\+Event\+Data}!ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Event@{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Event}}
+\subsubsection{\texorpdfstring{set\+Event\+Data()}{setEventData()}}
+{\footnotesize\ttfamily void ch.\+bfh.\+gr33nopo55um.\+enocean.\+telegram.\+Event.\+set\+Event\+Data (\begin{DoxyParamCaption}\item[{int}]{event\+Data }\end{DoxyParamCaption})}
+
+\hypertarget{classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1_event_a55da00c4e15b94edb99b290cfb485681}{}\label{classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1_event_a55da00c4e15b94edb99b290cfb485681} 
+\index{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Event@{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Event}!set\+Id@{set\+Id}}
+\index{set\+Id@{set\+Id}!ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Event@{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Event}}
+\subsubsection{\texorpdfstring{set\+Id()}{setId()}}
+{\footnotesize\ttfamily void ch.\+bfh.\+gr33nopo55um.\+enocean.\+telegram.\+Event.\+set\+Id (\begin{DoxyParamCaption}\item[{Long}]{id }\end{DoxyParamCaption})}
+
+\hypertarget{classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1_event_a1fcbbe38ef10bdea233d4c6886add169}{}\label{classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1_event_a1fcbbe38ef10bdea233d4c6886add169} 
+\index{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Event@{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Event}!to\+String@{to\+String}}
+\index{to\+String@{to\+String}!ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Event@{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Event}}
+\subsubsection{\texorpdfstring{to\+String()}{toString()}}
+{\footnotesize\ttfamily String ch.\+bfh.\+gr33nopo55um.\+enocean.\+telegram.\+Event.\+to\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/ch/bfh/gr33nopo55um/enocean/telegram/\hyperlink{ch_2bfh_2gr33nopo55um_2enocean_2telegram_2_event_8java}{Event.\+java}\end{DoxyCompactItemize}

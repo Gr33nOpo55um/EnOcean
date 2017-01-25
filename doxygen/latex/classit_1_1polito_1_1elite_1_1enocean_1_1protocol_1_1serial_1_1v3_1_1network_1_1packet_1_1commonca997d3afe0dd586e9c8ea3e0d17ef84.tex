@@ -1,0 +1,49 @@
+\hypertarget{classit_1_1polito_1_1elite_1_1enocean_1_1protocol_1_1serial_1_1v3_1_1network_1_1packet_1_1commonca997d3afe0dd586e9c8ea3e0d17ef84}{}\section{it.\+polito.\+elite.\+enocean.\+protocol.\+serial.\+v3.\+network.\+packet.\+commoncommand.\+Co\+Wr\+Secureservice\+Add Class Reference}
+\label{classit_1_1polito_1_1elite_1_1enocean_1_1protocol_1_1serial_1_1v3_1_1network_1_1packet_1_1commonca997d3afe0dd586e9c8ea3e0d17ef84}\index{it.\+polito.\+elite.\+enocean.\+protocol.\+serial.\+v3.\+network.\+packet.\+commoncommand.\+Co\+Wr\+Secureservice\+Add@{it.\+polito.\+elite.\+enocean.\+protocol.\+serial.\+v3.\+network.\+packet.\+commoncommand.\+Co\+Wr\+Secureservice\+Add}}
+Inheritance diagram for it.\+polito.\+elite.\+enocean.\+protocol.\+serial.\+v3.\+network.\+packet.\+commoncommand.\+Co\+Wr\+Secureservice\+Add\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.941074cm]{classit_1_1polito_1_1elite_1_1enocean_1_1protocol_1_1serial_1_1v3_1_1network_1_1packet_1_1commonca997d3afe0dd586e9c8ea3e0d17ef84}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classit_1_1polito_1_1elite_1_1enocean_1_1protocol_1_1serial_1_1v3_1_1network_1_1packet_1_1commonca997d3afe0dd586e9c8ea3e0d17ef84_ae65e8af1b5cc6598b9e71a4d651b17bc}{Co\+Wr\+Secureservice\+Add} (byte slf, int id, byte\mbox{[}$\,$\mbox{]} private\+Key, int rolling\+Code, byte direction)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Add secure device to coltroller. It is possible to add ony one or more rocker with this function
+
+\begin{DoxyAuthor}{Author}
+Andrea Biasi \href{mailto:biasiandrea04@gmail.com}{\tt biasiandrea04@gmail.\+com} 
+\end{DoxyAuthor}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classit_1_1polito_1_1elite_1_1enocean_1_1protocol_1_1serial_1_1v3_1_1network_1_1packet_1_1commonca997d3afe0dd586e9c8ea3e0d17ef84_ae65e8af1b5cc6598b9e71a4d651b17bc}{}\label{classit_1_1polito_1_1elite_1_1enocean_1_1protocol_1_1serial_1_1v3_1_1network_1_1packet_1_1commonca997d3afe0dd586e9c8ea3e0d17ef84_ae65e8af1b5cc6598b9e71a4d651b17bc} 
+\index{it\+::polito\+::elite\+::enocean\+::protocol\+::serial\+::v3\+::network\+::packet\+::commoncommand\+::\+Co\+Wr\+Secureservice\+Add@{it\+::polito\+::elite\+::enocean\+::protocol\+::serial\+::v3\+::network\+::packet\+::commoncommand\+::\+Co\+Wr\+Secureservice\+Add}!Co\+Wr\+Secureservice\+Add@{Co\+Wr\+Secureservice\+Add}}
+\index{Co\+Wr\+Secureservice\+Add@{Co\+Wr\+Secureservice\+Add}!it\+::polito\+::elite\+::enocean\+::protocol\+::serial\+::v3\+::network\+::packet\+::commoncommand\+::\+Co\+Wr\+Secureservice\+Add@{it\+::polito\+::elite\+::enocean\+::protocol\+::serial\+::v3\+::network\+::packet\+::commoncommand\+::\+Co\+Wr\+Secureservice\+Add}}
+\subsubsection{\texorpdfstring{Co\+Wr\+Secureservice\+Add()}{CoWrSecureserviceAdd()}}
+{\footnotesize\ttfamily it.\+polito.\+elite.\+enocean.\+protocol.\+serial.\+v3.\+network.\+packet.\+commoncommand.\+Co\+Wr\+Secureservice\+Add.\+Co\+Wr\+Secureservice\+Add (\begin{DoxyParamCaption}\item[{byte}]{slf,  }\item[{int}]{id,  }\item[{byte \mbox{[}$\,$\mbox{]}}]{private\+Key,  }\item[{int}]{rolling\+Code,  }\item[{byte}]{direction }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em slf} & \+: Security Level Format \\
+\hline
+{\em id} & \+: Device ID \\
+\hline
+{\em private\+Key} & \+: 16 bytes private key of the device \\
+\hline
+{\em rolling\+Code} & \+: If a 16 bit rolling code is defined in S\+LF, the M\+SB is undefined \\
+\hline
+{\em direction} & \+: Add device security information to\+: 0x00 = Inbound table (default) 0x01 = Outbound table ID = Device ID 0x02 = Outbound table broadcast ID = Gateway Source\+ID which can be Chip\+ID or one of Base\+I\+Ds 0x02..0x\+FF = not used \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/it/polito/elite/enocean/protocol/serial/v3/network/packet/commoncommand/\hyperlink{_co_wr_secureservice_add_8java}{Co\+Wr\+Secureservice\+Add.\+java}\end{DoxyCompactItemize}

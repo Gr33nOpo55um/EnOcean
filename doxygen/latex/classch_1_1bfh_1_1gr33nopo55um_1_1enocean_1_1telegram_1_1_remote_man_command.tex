@@ -1,0 +1,150 @@
+\hypertarget{classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1_remote_man_command}{}\section{ch.\+bfh.\+gr33nopo55um.\+enocean.\+telegram.\+Remote\+Man\+Command Class Reference}
+\label{classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1_remote_man_command}\index{ch.\+bfh.\+gr33nopo55um.\+enocean.\+telegram.\+Remote\+Man\+Command@{ch.\+bfh.\+gr33nopo55um.\+enocean.\+telegram.\+Remote\+Man\+Command}}
+Inheritance diagram for ch.\+bfh.\+gr33nopo55um.\+enocean.\+telegram.\+Remote\+Man\+Command\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1_remote_man_command}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+String \hyperlink{classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1_remote_man_command_aee8b38ab2203e839c8887386739a4f6b}{encode\+Telegram} ()
+\item 
+String \hyperlink{classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1_remote_man_command_adeb42a288935b022f0af305fb53a2d9a}{encode\+Telegram\+Data} ()
+\item 
+void \hyperlink{classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1_remote_man_command_a111c14179b713ad21ad3788f71b88740}{decode\+Telegram\+Data} (String hex\+Telegram)
+\item 
+void \hyperlink{classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1_remote_man_command_aa1b0cdd23d15c1712683defdb00a08e3}{dump\+Data} ()
+\item 
+String \hyperlink{classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1_remote_man_command_a2679db1bbc80a2f014121612e97e8fde}{to\+String} ()
+\item 
+String \hyperlink{classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1_remote_man_command_ad7a6d78d341a325b40a2754aadb6ff26}{get\+Destination\+ID} ()
+\item 
+void \hyperlink{classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1_remote_man_command_ae98150ec6ac51e8922baaca923a6353e}{set\+Destination\+ID} (String destination\+ID)
+\item 
+String \hyperlink{classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1_remote_man_command_af43e6a3480cfa9bf4720b7504621e33c}{get\+Source\+ID} ()
+\item 
+void \hyperlink{classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1_remote_man_command_a5c7238fc8509de7415fe9b38cfd43e17}{set\+Source\+ID} (String source\+ID)
+\item 
+int \hyperlink{classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1_remote_man_command_af87090957175a82debea309582f4eaf0}{get\+Dbm} ()
+\item 
+void \hyperlink{classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1_remote_man_command_afbc945f039505ebed7e6b0540b85dbad}{set\+Dbm} (int dbm)
+\item 
+int \hyperlink{classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1_remote_man_command_a836bf08225e3992cec6a2a77f3571493}{get\+Send\+Delay} ()
+\item 
+void \hyperlink{classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1_remote_man_command_a9c8d0617c4eb4c4c9c2433d7cec43b64}{set\+Send\+Delay} (int send\+Delay)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+remote management command structure. This structure is applied for the send as well as the receive case, for further informations check Enocean\+Serial\+Protocol v3
+
+\begin{DoxyAuthor}{Author}
+silas \& louis 
+\end{DoxyAuthor}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1_remote_man_command_a111c14179b713ad21ad3788f71b88740}{}\label{classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1_remote_man_command_a111c14179b713ad21ad3788f71b88740} 
+\index{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Remote\+Man\+Command@{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Remote\+Man\+Command}!decode\+Telegram\+Data@{decode\+Telegram\+Data}}
+\index{decode\+Telegram\+Data@{decode\+Telegram\+Data}!ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Remote\+Man\+Command@{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Remote\+Man\+Command}}
+\subsubsection{\texorpdfstring{decode\+Telegram\+Data()}{decodeTelegramData()}}
+{\footnotesize\ttfamily void ch.\+bfh.\+gr33nopo55um.\+enocean.\+telegram.\+Remote\+Man\+Command.\+decode\+Telegram\+Data (\begin{DoxyParamCaption}\item[{String}]{hex\+Telegram }\end{DoxyParamCaption})}
+
+decode\+Telegram\+Data splits telegram in parts
+
+
+\begin{DoxyParams}{Parameters}
+{\em hex\+Telegram} & \\
+\hline
+\end{DoxyParams}
+\hypertarget{classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1_remote_man_command_aa1b0cdd23d15c1712683defdb00a08e3}{}\label{classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1_remote_man_command_aa1b0cdd23d15c1712683defdb00a08e3} 
+\index{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Remote\+Man\+Command@{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Remote\+Man\+Command}!dump\+Data@{dump\+Data}}
+\index{dump\+Data@{dump\+Data}!ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Remote\+Man\+Command@{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Remote\+Man\+Command}}
+\subsubsection{\texorpdfstring{dump\+Data()}{dumpData()}}
+{\footnotesize\ttfamily void ch.\+bfh.\+gr33nopo55um.\+enocean.\+telegram.\+Remote\+Man\+Command.\+dump\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+dump\+Data Print Data, useful for logs and testiing 
+
+En\+Ocean Telegram \hypertarget{classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1_remote_man_command_aee8b38ab2203e839c8887386739a4f6b}{}\label{classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1_remote_man_command_aee8b38ab2203e839c8887386739a4f6b} 
+\index{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Remote\+Man\+Command@{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Remote\+Man\+Command}!encode\+Telegram@{encode\+Telegram}}
+\index{encode\+Telegram@{encode\+Telegram}!ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Remote\+Man\+Command@{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Remote\+Man\+Command}}
+\subsubsection{\texorpdfstring{encode\+Telegram()}{encodeTelegram()}}
+{\footnotesize\ttfamily String ch.\+bfh.\+gr33nopo55um.\+enocean.\+telegram.\+Remote\+Man\+Command.\+encode\+Telegram (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+encode\+Telegram provides an example telegram hex for this packet type.
+
+\begin{DoxyReturn}{Returns}
+telegram hex 
+\end{DoxyReturn}
+\hypertarget{classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1_remote_man_command_adeb42a288935b022f0af305fb53a2d9a}{}\label{classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1_remote_man_command_adeb42a288935b022f0af305fb53a2d9a} 
+\index{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Remote\+Man\+Command@{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Remote\+Man\+Command}!encode\+Telegram\+Data@{encode\+Telegram\+Data}}
+\index{encode\+Telegram\+Data@{encode\+Telegram\+Data}!ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Remote\+Man\+Command@{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Remote\+Man\+Command}}
+\subsubsection{\texorpdfstring{encode\+Telegram\+Data()}{encodeTelegramData()}}
+{\footnotesize\ttfamily String ch.\+bfh.\+gr33nopo55um.\+enocean.\+telegram.\+Remote\+Man\+Command.\+encode\+Telegram\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+encode\+Telegram\+Data provides an example data hex for this packet type.
+
+\begin{DoxyReturn}{Returns}
+String hex\+Telegram\+Data En\+Ocean Telegram 
+\end{DoxyReturn}
+\hypertarget{classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1_remote_man_command_af87090957175a82debea309582f4eaf0}{}\label{classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1_remote_man_command_af87090957175a82debea309582f4eaf0} 
+\index{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Remote\+Man\+Command@{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Remote\+Man\+Command}!get\+Dbm@{get\+Dbm}}
+\index{get\+Dbm@{get\+Dbm}!ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Remote\+Man\+Command@{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Remote\+Man\+Command}}
+\subsubsection{\texorpdfstring{get\+Dbm()}{getDbm()}}
+{\footnotesize\ttfamily int ch.\+bfh.\+gr33nopo55um.\+enocean.\+telegram.\+Remote\+Man\+Command.\+get\+Dbm (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\hypertarget{classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1_remote_man_command_ad7a6d78d341a325b40a2754aadb6ff26}{}\label{classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1_remote_man_command_ad7a6d78d341a325b40a2754aadb6ff26} 
+\index{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Remote\+Man\+Command@{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Remote\+Man\+Command}!get\+Destination\+ID@{get\+Destination\+ID}}
+\index{get\+Destination\+ID@{get\+Destination\+ID}!ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Remote\+Man\+Command@{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Remote\+Man\+Command}}
+\subsubsection{\texorpdfstring{get\+Destination\+I\+D()}{getDestinationID()}}
+{\footnotesize\ttfamily String ch.\+bfh.\+gr33nopo55um.\+enocean.\+telegram.\+Remote\+Man\+Command.\+get\+Destination\+ID (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\hypertarget{classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1_remote_man_command_a836bf08225e3992cec6a2a77f3571493}{}\label{classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1_remote_man_command_a836bf08225e3992cec6a2a77f3571493} 
+\index{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Remote\+Man\+Command@{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Remote\+Man\+Command}!get\+Send\+Delay@{get\+Send\+Delay}}
+\index{get\+Send\+Delay@{get\+Send\+Delay}!ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Remote\+Man\+Command@{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Remote\+Man\+Command}}
+\subsubsection{\texorpdfstring{get\+Send\+Delay()}{getSendDelay()}}
+{\footnotesize\ttfamily int ch.\+bfh.\+gr33nopo55um.\+enocean.\+telegram.\+Remote\+Man\+Command.\+get\+Send\+Delay (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\hypertarget{classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1_remote_man_command_af43e6a3480cfa9bf4720b7504621e33c}{}\label{classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1_remote_man_command_af43e6a3480cfa9bf4720b7504621e33c} 
+\index{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Remote\+Man\+Command@{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Remote\+Man\+Command}!get\+Source\+ID@{get\+Source\+ID}}
+\index{get\+Source\+ID@{get\+Source\+ID}!ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Remote\+Man\+Command@{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Remote\+Man\+Command}}
+\subsubsection{\texorpdfstring{get\+Source\+I\+D()}{getSourceID()}}
+{\footnotesize\ttfamily String ch.\+bfh.\+gr33nopo55um.\+enocean.\+telegram.\+Remote\+Man\+Command.\+get\+Source\+ID (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\hypertarget{classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1_remote_man_command_afbc945f039505ebed7e6b0540b85dbad}{}\label{classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1_remote_man_command_afbc945f039505ebed7e6b0540b85dbad} 
+\index{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Remote\+Man\+Command@{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Remote\+Man\+Command}!set\+Dbm@{set\+Dbm}}
+\index{set\+Dbm@{set\+Dbm}!ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Remote\+Man\+Command@{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Remote\+Man\+Command}}
+\subsubsection{\texorpdfstring{set\+Dbm()}{setDbm()}}
+{\footnotesize\ttfamily void ch.\+bfh.\+gr33nopo55um.\+enocean.\+telegram.\+Remote\+Man\+Command.\+set\+Dbm (\begin{DoxyParamCaption}\item[{int}]{dbm }\end{DoxyParamCaption})}
+
+\hypertarget{classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1_remote_man_command_ae98150ec6ac51e8922baaca923a6353e}{}\label{classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1_remote_man_command_ae98150ec6ac51e8922baaca923a6353e} 
+\index{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Remote\+Man\+Command@{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Remote\+Man\+Command}!set\+Destination\+ID@{set\+Destination\+ID}}
+\index{set\+Destination\+ID@{set\+Destination\+ID}!ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Remote\+Man\+Command@{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Remote\+Man\+Command}}
+\subsubsection{\texorpdfstring{set\+Destination\+I\+D()}{setDestinationID()}}
+{\footnotesize\ttfamily void ch.\+bfh.\+gr33nopo55um.\+enocean.\+telegram.\+Remote\+Man\+Command.\+set\+Destination\+ID (\begin{DoxyParamCaption}\item[{String}]{destination\+ID }\end{DoxyParamCaption})}
+
+\hypertarget{classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1_remote_man_command_a9c8d0617c4eb4c4c9c2433d7cec43b64}{}\label{classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1_remote_man_command_a9c8d0617c4eb4c4c9c2433d7cec43b64} 
+\index{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Remote\+Man\+Command@{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Remote\+Man\+Command}!set\+Send\+Delay@{set\+Send\+Delay}}
+\index{set\+Send\+Delay@{set\+Send\+Delay}!ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Remote\+Man\+Command@{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Remote\+Man\+Command}}
+\subsubsection{\texorpdfstring{set\+Send\+Delay()}{setSendDelay()}}
+{\footnotesize\ttfamily void ch.\+bfh.\+gr33nopo55um.\+enocean.\+telegram.\+Remote\+Man\+Command.\+set\+Send\+Delay (\begin{DoxyParamCaption}\item[{int}]{send\+Delay }\end{DoxyParamCaption})}
+
+\hypertarget{classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1_remote_man_command_a5c7238fc8509de7415fe9b38cfd43e17}{}\label{classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1_remote_man_command_a5c7238fc8509de7415fe9b38cfd43e17} 
+\index{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Remote\+Man\+Command@{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Remote\+Man\+Command}!set\+Source\+ID@{set\+Source\+ID}}
+\index{set\+Source\+ID@{set\+Source\+ID}!ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Remote\+Man\+Command@{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Remote\+Man\+Command}}
+\subsubsection{\texorpdfstring{set\+Source\+I\+D()}{setSourceID()}}
+{\footnotesize\ttfamily void ch.\+bfh.\+gr33nopo55um.\+enocean.\+telegram.\+Remote\+Man\+Command.\+set\+Source\+ID (\begin{DoxyParamCaption}\item[{String}]{source\+ID }\end{DoxyParamCaption})}
+
+\hypertarget{classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1_remote_man_command_a2679db1bbc80a2f014121612e97e8fde}{}\label{classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1_remote_man_command_a2679db1bbc80a2f014121612e97e8fde} 
+\index{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Remote\+Man\+Command@{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Remote\+Man\+Command}!to\+String@{to\+String}}
+\index{to\+String@{to\+String}!ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Remote\+Man\+Command@{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Remote\+Man\+Command}}
+\subsubsection{\texorpdfstring{to\+String()}{toString()}}
+{\footnotesize\ttfamily String ch.\+bfh.\+gr33nopo55um.\+enocean.\+telegram.\+Remote\+Man\+Command.\+to\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/ch/bfh/gr33nopo55um/enocean/telegram/\hyperlink{ch_2bfh_2gr33nopo55um_2enocean_2telegram_2_remote_man_command_8java}{Remote\+Man\+Command.\+java}\end{DoxyCompactItemize}

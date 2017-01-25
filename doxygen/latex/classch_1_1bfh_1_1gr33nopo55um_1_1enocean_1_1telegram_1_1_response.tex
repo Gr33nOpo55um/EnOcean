@@ -1,0 +1,102 @@
+\hypertarget{classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1_response}{}\section{ch.\+bfh.\+gr33nopo55um.\+enocean.\+telegram.\+Response Class Reference}
+\label{classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1_response}\index{ch.\+bfh.\+gr33nopo55um.\+enocean.\+telegram.\+Response@{ch.\+bfh.\+gr33nopo55um.\+enocean.\+telegram.\+Response}}
+Inheritance diagram for ch.\+bfh.\+gr33nopo55um.\+enocean.\+telegram.\+Response\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1_response}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+String \hyperlink{classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1_response_a988abdfe7c98ef8d8dedd603b665a4d8}{encode\+Telegram} ()
+\item 
+String \hyperlink{classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1_response_ac4f9682e55795ebf981ec273ea09dfd0}{encode\+Telegram\+Data} ()
+\item 
+void \hyperlink{classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1_response_ad39af2286654f5e0892ff9abe01eb1e2}{decode\+Telegram\+Data} (String hex\+Telegram)
+\item 
+void \hyperlink{classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1_response_ad20303a12d6ff415c78a853b2eda2526}{dump\+Data} ()
+\item 
+String \hyperlink{classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1_response_a7e5e88df8312bf7a07f665670ff2fad1}{to\+String} ()
+\item 
+int \hyperlink{classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1_response_a3d0ad42e8295de5a7d862f9dc798f853}{get\+Return\+Code} ()
+\item 
+void \hyperlink{classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1_response_af89c0749d63b470e612d74596a210486}{set\+Return\+Code} (int return\+Code)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+When sending a telegram, a R\+E\+S\+P\+O\+ND has to be expected. In this case, the following R\+E\+S\+P\+O\+N\+SE message gives the return codes\+: 00 R\+E\+T\+\_\+\+OK 02 R\+E\+T\+\_\+\+N\+O\+T\+\_\+\+S\+U\+P\+P\+O\+R\+T\+ED 03 R\+E\+T\+\_\+\+W\+R\+O\+N\+G\+\_\+\+P\+A\+R\+AM, for further informations check Enocean\+Serial\+Protocol v3
+
+\begin{DoxyAuthor}{Author}
+silas \& louis 
+\end{DoxyAuthor}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1_response_ad39af2286654f5e0892ff9abe01eb1e2}{}\label{classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1_response_ad39af2286654f5e0892ff9abe01eb1e2} 
+\index{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Response@{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Response}!decode\+Telegram\+Data@{decode\+Telegram\+Data}}
+\index{decode\+Telegram\+Data@{decode\+Telegram\+Data}!ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Response@{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Response}}
+\subsubsection{\texorpdfstring{decode\+Telegram\+Data()}{decodeTelegramData()}}
+{\footnotesize\ttfamily void ch.\+bfh.\+gr33nopo55um.\+enocean.\+telegram.\+Response.\+decode\+Telegram\+Data (\begin{DoxyParamCaption}\item[{String}]{hex\+Telegram }\end{DoxyParamCaption})}
+
+decode\+Telegram\+Data splits telegram in parts
+
+
+\begin{DoxyParams}{Parameters}
+{\em hex\+Telegram} & \\
+\hline
+\end{DoxyParams}
+\hypertarget{classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1_response_ad20303a12d6ff415c78a853b2eda2526}{}\label{classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1_response_ad20303a12d6ff415c78a853b2eda2526} 
+\index{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Response@{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Response}!dump\+Data@{dump\+Data}}
+\index{dump\+Data@{dump\+Data}!ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Response@{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Response}}
+\subsubsection{\texorpdfstring{dump\+Data()}{dumpData()}}
+{\footnotesize\ttfamily void ch.\+bfh.\+gr33nopo55um.\+enocean.\+telegram.\+Response.\+dump\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+dump\+Data Print Data, useful for logs and testiing 
+
+En\+Ocean Telegram \hypertarget{classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1_response_a988abdfe7c98ef8d8dedd603b665a4d8}{}\label{classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1_response_a988abdfe7c98ef8d8dedd603b665a4d8} 
+\index{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Response@{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Response}!encode\+Telegram@{encode\+Telegram}}
+\index{encode\+Telegram@{encode\+Telegram}!ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Response@{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Response}}
+\subsubsection{\texorpdfstring{encode\+Telegram()}{encodeTelegram()}}
+{\footnotesize\ttfamily String ch.\+bfh.\+gr33nopo55um.\+enocean.\+telegram.\+Response.\+encode\+Telegram (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+encode\+Telegram provides an example telegram hex for this packet type.
+
+\begin{DoxyReturn}{Returns}
+telegram hex 
+\end{DoxyReturn}
+\hypertarget{classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1_response_ac4f9682e55795ebf981ec273ea09dfd0}{}\label{classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1_response_ac4f9682e55795ebf981ec273ea09dfd0} 
+\index{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Response@{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Response}!encode\+Telegram\+Data@{encode\+Telegram\+Data}}
+\index{encode\+Telegram\+Data@{encode\+Telegram\+Data}!ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Response@{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Response}}
+\subsubsection{\texorpdfstring{encode\+Telegram\+Data()}{encodeTelegramData()}}
+{\footnotesize\ttfamily String ch.\+bfh.\+gr33nopo55um.\+enocean.\+telegram.\+Response.\+encode\+Telegram\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+encode\+Telegram\+Data provides an example data hex for this packet type.
+
+\begin{DoxyReturn}{Returns}
+String hex\+Telegram\+Data En\+Ocean Telegram 
+\end{DoxyReturn}
+\hypertarget{classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1_response_a3d0ad42e8295de5a7d862f9dc798f853}{}\label{classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1_response_a3d0ad42e8295de5a7d862f9dc798f853} 
+\index{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Response@{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Response}!get\+Return\+Code@{get\+Return\+Code}}
+\index{get\+Return\+Code@{get\+Return\+Code}!ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Response@{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Response}}
+\subsubsection{\texorpdfstring{get\+Return\+Code()}{getReturnCode()}}
+{\footnotesize\ttfamily int ch.\+bfh.\+gr33nopo55um.\+enocean.\+telegram.\+Response.\+get\+Return\+Code (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\hypertarget{classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1_response_af89c0749d63b470e612d74596a210486}{}\label{classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1_response_af89c0749d63b470e612d74596a210486} 
+\index{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Response@{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Response}!set\+Return\+Code@{set\+Return\+Code}}
+\index{set\+Return\+Code@{set\+Return\+Code}!ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Response@{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Response}}
+\subsubsection{\texorpdfstring{set\+Return\+Code()}{setReturnCode()}}
+{\footnotesize\ttfamily void ch.\+bfh.\+gr33nopo55um.\+enocean.\+telegram.\+Response.\+set\+Return\+Code (\begin{DoxyParamCaption}\item[{int}]{return\+Code }\end{DoxyParamCaption})}
+
+\hypertarget{classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1_response_a7e5e88df8312bf7a07f665670ff2fad1}{}\label{classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1_response_a7e5e88df8312bf7a07f665670ff2fad1} 
+\index{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Response@{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Response}!to\+String@{to\+String}}
+\index{to\+String@{to\+String}!ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Response@{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Response}}
+\subsubsection{\texorpdfstring{to\+String()}{toString()}}
+{\footnotesize\ttfamily String ch.\+bfh.\+gr33nopo55um.\+enocean.\+telegram.\+Response.\+to\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/ch/bfh/gr33nopo55um/enocean/telegram/\hyperlink{ch_2bfh_2gr33nopo55um_2enocean_2telegram_2_response_8java}{Response.\+java}\end{DoxyCompactItemize}

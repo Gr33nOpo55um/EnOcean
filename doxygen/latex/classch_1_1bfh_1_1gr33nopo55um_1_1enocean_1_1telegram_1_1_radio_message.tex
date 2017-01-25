@@ -1,0 +1,150 @@
+\hypertarget{classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1_radio_message}{}\section{ch.\+bfh.\+gr33nopo55um.\+enocean.\+telegram.\+Radio\+Message Class Reference}
+\label{classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1_radio_message}\index{ch.\+bfh.\+gr33nopo55um.\+enocean.\+telegram.\+Radio\+Message@{ch.\+bfh.\+gr33nopo55um.\+enocean.\+telegram.\+Radio\+Message}}
+Inheritance diagram for ch.\+bfh.\+gr33nopo55um.\+enocean.\+telegram.\+Radio\+Message\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1_radio_message}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+String \hyperlink{classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1_radio_message_ac1d3f61c4242953828f132de6c7595f3}{encode\+Telegram} ()
+\item 
+String \hyperlink{classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1_radio_message_af0c883d403a7500296a6f2e8f720308d}{encode\+Telegram\+Data} ()
+\item 
+void \hyperlink{classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1_radio_message_a452e81a42c7eae0906b27881e3034b83}{decode\+Telegram\+Data} (String hex\+Telegram)
+\item 
+void \hyperlink{classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1_radio_message_aaddde18bd4e2f9243346bb3482fb5643}{dump\+Data} ()
+\item 
+String \hyperlink{classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1_radio_message_a677622fcad169f2139dd34a83ddce8ec}{get\+Destination\+ID} ()
+\item 
+void \hyperlink{classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1_radio_message_a5ef09eb0c1963fe42cfd3605aca570ba}{set\+Destination\+ID} (String destination\+ID)
+\item 
+String \hyperlink{classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1_radio_message_a36317b316621f8eed3345674f1dd84c0}{get\+Source\+ID} ()
+\item 
+void \hyperlink{classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1_radio_message_a9f14973ca97eecf23d30f8e63d4ae83f}{set\+Source\+ID} (String source\+ID)
+\item 
+int \hyperlink{classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1_radio_message_a017f82807dd2b9218b500992396d0429}{get\+Dbm} ()
+\item 
+void \hyperlink{classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1_radio_message_a7df7761cd18025a842c4796e0fbaea02}{set\+Dbm} (int dbm)
+\item 
+Long \hyperlink{classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1_radio_message_a4d3e0c50ad97b6628092c1cb1ce78be6}{get\+Id} ()
+\item 
+void \hyperlink{classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1_radio_message_a52fe9b52ec3414770a89f1f82c3bdf81}{set\+Id} (Long id)
+\item 
+String \hyperlink{classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1_radio_message_af8e045ec1e5c0abe833d31b807977fed}{to\+String} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Radio message (payload data without any radio telegram contents, for further informations check Enocean\+Serial\+Protocol v3
+
+\begin{DoxyAuthor}{Author}
+silas \& louis 
+\end{DoxyAuthor}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1_radio_message_a452e81a42c7eae0906b27881e3034b83}{}\label{classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1_radio_message_a452e81a42c7eae0906b27881e3034b83} 
+\index{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Radio\+Message@{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Radio\+Message}!decode\+Telegram\+Data@{decode\+Telegram\+Data}}
+\index{decode\+Telegram\+Data@{decode\+Telegram\+Data}!ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Radio\+Message@{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Radio\+Message}}
+\subsubsection{\texorpdfstring{decode\+Telegram\+Data()}{decodeTelegramData()}}
+{\footnotesize\ttfamily void ch.\+bfh.\+gr33nopo55um.\+enocean.\+telegram.\+Radio\+Message.\+decode\+Telegram\+Data (\begin{DoxyParamCaption}\item[{String}]{hex\+Telegram }\end{DoxyParamCaption})}
+
+decode\+Telegram\+Data splits telegram in parts
+
+
+\begin{DoxyParams}{Parameters}
+{\em hex\+Telegram} & \\
+\hline
+\end{DoxyParams}
+\hypertarget{classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1_radio_message_aaddde18bd4e2f9243346bb3482fb5643}{}\label{classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1_radio_message_aaddde18bd4e2f9243346bb3482fb5643} 
+\index{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Radio\+Message@{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Radio\+Message}!dump\+Data@{dump\+Data}}
+\index{dump\+Data@{dump\+Data}!ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Radio\+Message@{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Radio\+Message}}
+\subsubsection{\texorpdfstring{dump\+Data()}{dumpData()}}
+{\footnotesize\ttfamily void ch.\+bfh.\+gr33nopo55um.\+enocean.\+telegram.\+Radio\+Message.\+dump\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+dump\+Data Print Data, useful for logs and testiing 
+
+En\+Ocean Telegram \hypertarget{classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1_radio_message_ac1d3f61c4242953828f132de6c7595f3}{}\label{classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1_radio_message_ac1d3f61c4242953828f132de6c7595f3} 
+\index{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Radio\+Message@{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Radio\+Message}!encode\+Telegram@{encode\+Telegram}}
+\index{encode\+Telegram@{encode\+Telegram}!ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Radio\+Message@{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Radio\+Message}}
+\subsubsection{\texorpdfstring{encode\+Telegram()}{encodeTelegram()}}
+{\footnotesize\ttfamily String ch.\+bfh.\+gr33nopo55um.\+enocean.\+telegram.\+Radio\+Message.\+encode\+Telegram (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+encode\+Telegram provides an example telegram hex for this packet type.
+
+\begin{DoxyReturn}{Returns}
+telegram hex 
+\end{DoxyReturn}
+\hypertarget{classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1_radio_message_af0c883d403a7500296a6f2e8f720308d}{}\label{classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1_radio_message_af0c883d403a7500296a6f2e8f720308d} 
+\index{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Radio\+Message@{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Radio\+Message}!encode\+Telegram\+Data@{encode\+Telegram\+Data}}
+\index{encode\+Telegram\+Data@{encode\+Telegram\+Data}!ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Radio\+Message@{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Radio\+Message}}
+\subsubsection{\texorpdfstring{encode\+Telegram\+Data()}{encodeTelegramData()}}
+{\footnotesize\ttfamily String ch.\+bfh.\+gr33nopo55um.\+enocean.\+telegram.\+Radio\+Message.\+encode\+Telegram\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+encode\+Telegram\+Data provides an example data hex for this packet type.
+
+\begin{DoxyReturn}{Returns}
+String hex\+Telegram\+Data En\+Ocean Telegram 
+\end{DoxyReturn}
+\hypertarget{classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1_radio_message_a017f82807dd2b9218b500992396d0429}{}\label{classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1_radio_message_a017f82807dd2b9218b500992396d0429} 
+\index{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Radio\+Message@{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Radio\+Message}!get\+Dbm@{get\+Dbm}}
+\index{get\+Dbm@{get\+Dbm}!ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Radio\+Message@{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Radio\+Message}}
+\subsubsection{\texorpdfstring{get\+Dbm()}{getDbm()}}
+{\footnotesize\ttfamily int ch.\+bfh.\+gr33nopo55um.\+enocean.\+telegram.\+Radio\+Message.\+get\+Dbm (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\hypertarget{classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1_radio_message_a677622fcad169f2139dd34a83ddce8ec}{}\label{classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1_radio_message_a677622fcad169f2139dd34a83ddce8ec} 
+\index{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Radio\+Message@{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Radio\+Message}!get\+Destination\+ID@{get\+Destination\+ID}}
+\index{get\+Destination\+ID@{get\+Destination\+ID}!ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Radio\+Message@{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Radio\+Message}}
+\subsubsection{\texorpdfstring{get\+Destination\+I\+D()}{getDestinationID()}}
+{\footnotesize\ttfamily String ch.\+bfh.\+gr33nopo55um.\+enocean.\+telegram.\+Radio\+Message.\+get\+Destination\+ID (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\hypertarget{classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1_radio_message_a4d3e0c50ad97b6628092c1cb1ce78be6}{}\label{classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1_radio_message_a4d3e0c50ad97b6628092c1cb1ce78be6} 
+\index{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Radio\+Message@{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Radio\+Message}!get\+Id@{get\+Id}}
+\index{get\+Id@{get\+Id}!ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Radio\+Message@{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Radio\+Message}}
+\subsubsection{\texorpdfstring{get\+Id()}{getId()}}
+{\footnotesize\ttfamily Long ch.\+bfh.\+gr33nopo55um.\+enocean.\+telegram.\+Radio\+Message.\+get\+Id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\hypertarget{classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1_radio_message_a36317b316621f8eed3345674f1dd84c0}{}\label{classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1_radio_message_a36317b316621f8eed3345674f1dd84c0} 
+\index{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Radio\+Message@{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Radio\+Message}!get\+Source\+ID@{get\+Source\+ID}}
+\index{get\+Source\+ID@{get\+Source\+ID}!ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Radio\+Message@{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Radio\+Message}}
+\subsubsection{\texorpdfstring{get\+Source\+I\+D()}{getSourceID()}}
+{\footnotesize\ttfamily String ch.\+bfh.\+gr33nopo55um.\+enocean.\+telegram.\+Radio\+Message.\+get\+Source\+ID (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\hypertarget{classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1_radio_message_a7df7761cd18025a842c4796e0fbaea02}{}\label{classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1_radio_message_a7df7761cd18025a842c4796e0fbaea02} 
+\index{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Radio\+Message@{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Radio\+Message}!set\+Dbm@{set\+Dbm}}
+\index{set\+Dbm@{set\+Dbm}!ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Radio\+Message@{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Radio\+Message}}
+\subsubsection{\texorpdfstring{set\+Dbm()}{setDbm()}}
+{\footnotesize\ttfamily void ch.\+bfh.\+gr33nopo55um.\+enocean.\+telegram.\+Radio\+Message.\+set\+Dbm (\begin{DoxyParamCaption}\item[{int}]{dbm }\end{DoxyParamCaption})}
+
+\hypertarget{classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1_radio_message_a5ef09eb0c1963fe42cfd3605aca570ba}{}\label{classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1_radio_message_a5ef09eb0c1963fe42cfd3605aca570ba} 
+\index{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Radio\+Message@{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Radio\+Message}!set\+Destination\+ID@{set\+Destination\+ID}}
+\index{set\+Destination\+ID@{set\+Destination\+ID}!ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Radio\+Message@{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Radio\+Message}}
+\subsubsection{\texorpdfstring{set\+Destination\+I\+D()}{setDestinationID()}}
+{\footnotesize\ttfamily void ch.\+bfh.\+gr33nopo55um.\+enocean.\+telegram.\+Radio\+Message.\+set\+Destination\+ID (\begin{DoxyParamCaption}\item[{String}]{destination\+ID }\end{DoxyParamCaption})}
+
+\hypertarget{classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1_radio_message_a52fe9b52ec3414770a89f1f82c3bdf81}{}\label{classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1_radio_message_a52fe9b52ec3414770a89f1f82c3bdf81} 
+\index{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Radio\+Message@{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Radio\+Message}!set\+Id@{set\+Id}}
+\index{set\+Id@{set\+Id}!ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Radio\+Message@{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Radio\+Message}}
+\subsubsection{\texorpdfstring{set\+Id()}{setId()}}
+{\footnotesize\ttfamily void ch.\+bfh.\+gr33nopo55um.\+enocean.\+telegram.\+Radio\+Message.\+set\+Id (\begin{DoxyParamCaption}\item[{Long}]{id }\end{DoxyParamCaption})}
+
+\hypertarget{classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1_radio_message_a9f14973ca97eecf23d30f8e63d4ae83f}{}\label{classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1_radio_message_a9f14973ca97eecf23d30f8e63d4ae83f} 
+\index{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Radio\+Message@{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Radio\+Message}!set\+Source\+ID@{set\+Source\+ID}}
+\index{set\+Source\+ID@{set\+Source\+ID}!ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Radio\+Message@{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Radio\+Message}}
+\subsubsection{\texorpdfstring{set\+Source\+I\+D()}{setSourceID()}}
+{\footnotesize\ttfamily void ch.\+bfh.\+gr33nopo55um.\+enocean.\+telegram.\+Radio\+Message.\+set\+Source\+ID (\begin{DoxyParamCaption}\item[{String}]{source\+ID }\end{DoxyParamCaption})}
+
+\hypertarget{classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1_radio_message_af8e045ec1e5c0abe833d31b807977fed}{}\label{classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1_radio_message_af8e045ec1e5c0abe833d31b807977fed} 
+\index{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Radio\+Message@{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Radio\+Message}!to\+String@{to\+String}}
+\index{to\+String@{to\+String}!ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Radio\+Message@{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Radio\+Message}}
+\subsubsection{\texorpdfstring{to\+String()}{toString()}}
+{\footnotesize\ttfamily String ch.\+bfh.\+gr33nopo55um.\+enocean.\+telegram.\+Radio\+Message.\+to\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/ch/bfh/gr33nopo55um/enocean/telegram/\hyperlink{ch_2bfh_2gr33nopo55um_2enocean_2telegram_2_radio_message_8java}{Radio\+Message.\+java}\end{DoxyCompactItemize}

@@ -1,0 +1,325 @@
+\hypertarget{classit_1_1polito_1_1elite_1_1enocean_1_1enj_1_1communication_1_1_en_j_connection}{}\section{it.\+polito.\+elite.\+enocean.\+enj.\+communication.\+En\+J\+Connection Class Reference}
+\label{classit_1_1polito_1_1elite_1_1enocean_1_1enj_1_1communication_1_1_en_j_connection}\index{it.\+polito.\+elite.\+enocean.\+enj.\+communication.\+En\+J\+Connection@{it.\+polito.\+elite.\+enocean.\+enj.\+communication.\+En\+J\+Connection}}
+Inheritance diagram for it.\+polito.\+elite.\+enocean.\+enj.\+communication.\+En\+J\+Connection\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classit_1_1polito_1_1elite_1_1enocean_1_1enj_1_1communication_1_1_en_j_connection}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classit_1_1polito_1_1elite_1_1enocean_1_1enj_1_1communication_1_1_en_j_connection_a1d4409206c2eb68c50d5314df51a535d}{En\+J\+Connection} (\hyperlink{classit_1_1polito_1_1elite_1_1enocean_1_1enj_1_1link_1_1_en_j_link}{En\+J\+Link} link\+Layer, String peristent\+Device\+Storage\+Filename)
+\item 
+\hyperlink{classit_1_1polito_1_1elite_1_1enocean_1_1enj_1_1communication_1_1_en_j_connection_a02d2c16708da5b40dea825a96e8d21e6}{En\+J\+Connection} (\hyperlink{classit_1_1polito_1_1elite_1_1enocean_1_1enj_1_1link_1_1_en_j_link}{En\+J\+Link} link\+Layer, String peristent\+Device\+Storage\+Filename, \hyperlink{interfaceit_1_1polito_1_1elite_1_1enocean_1_1enj_1_1communication_1_1_en_j_device_listener}{En\+J\+Device\+Listener} listener)
+\item 
+void \hyperlink{classit_1_1polito_1_1elite_1_1enocean_1_1enj_1_1communication_1_1_en_j_connection_a367e344745b5e78c8abfd5814551df40}{add\+En\+J\+Device\+Listener} (\hyperlink{interfaceit_1_1polito_1_1elite_1_1enocean_1_1enj_1_1communication_1_1_en_j_device_listener}{En\+J\+Device\+Listener} listener)
+\item 
+boolean \hyperlink{classit_1_1polito_1_1elite_1_1enocean_1_1enj_1_1communication_1_1_en_j_connection_afdd6f3068dab1cd68d0e4b6d3ad980cf}{remove\+En\+J\+Device\+Listener} (\hyperlink{interfaceit_1_1polito_1_1elite_1_1enocean_1_1enj_1_1communication_1_1_en_j_device_listener}{En\+J\+Device\+Listener} listener)
+\item 
+void \hyperlink{classit_1_1polito_1_1elite_1_1enocean_1_1enj_1_1communication_1_1_en_j_connection_a01fd31c05d9a0e262746116086ff2f4a}{add\+En\+J\+Teach\+In\+Listener} (\hyperlink{interfaceit_1_1polito_1_1elite_1_1enocean_1_1enj_1_1communication_1_1_en_j_teach_in_listener}{En\+J\+Teach\+In\+Listener} listener)
+\item 
+boolean \hyperlink{classit_1_1polito_1_1elite_1_1enocean_1_1enj_1_1communication_1_1_en_j_connection_a52a60ea9eea1b5e6992e553ccc436dc5}{remove\+En\+J\+Device\+Listener} (\hyperlink{interfaceit_1_1polito_1_1elite_1_1enocean_1_1enj_1_1communication_1_1_en_j_teach_in_listener}{En\+J\+Teach\+In\+Listener} listener)
+\item 
+void \hyperlink{classit_1_1polito_1_1elite_1_1enocean_1_1enj_1_1communication_1_1_en_j_connection_a6b7c48b7500c28ec6afbf1840031b3ee}{enable\+Teach\+In} ()
+\item 
+void \hyperlink{classit_1_1polito_1_1elite_1_1enocean_1_1enj_1_1communication_1_1_en_j_connection_af3248db04c2dfd43b068b10513f32e8b}{enable\+Teach\+In} (String hex\+Device\+Address, String eep\+Identifier\+As\+String)
+\item 
+void \hyperlink{classit_1_1polito_1_1elite_1_1enocean_1_1enj_1_1communication_1_1_en_j_connection_acbb95c1e5e75cd5abdbe569400667a2a}{enable\+Teach\+In} (String hex\+Device\+Address, String eep\+Identifier\+As\+String, int time)
+\item 
+void \hyperlink{classit_1_1polito_1_1elite_1_1enocean_1_1enj_1_1communication_1_1_en_j_connection_a2d2c099a22e34a75ad6fa5123280f90f}{enable\+Teach\+In} (int teach\+In\+Time)
+\item 
+boolean \hyperlink{classit_1_1polito_1_1elite_1_1enocean_1_1enj_1_1communication_1_1_en_j_connection_a479da123130eaeba3b2acb0d1081f1d6}{is\+Teach\+In\+Enabled} ()
+\item 
+synchronized void \hyperlink{classit_1_1polito_1_1elite_1_1enocean_1_1enj_1_1communication_1_1_en_j_connection_a59ed84d534b7cd0bd03466fdc54b5585}{disable\+Teach\+In} ()
+\item 
+void \hyperlink{classit_1_1polito_1_1elite_1_1enocean_1_1enj_1_1communication_1_1_en_j_connection_a60a333560c00fb3d77744ccb356481f9}{send\+Radio\+Command} (byte\mbox{[}$\,$\mbox{]} address, byte\mbox{[}$\,$\mbox{]} payload)
+\item 
+boolean \hyperlink{classit_1_1polito_1_1elite_1_1enocean_1_1enj_1_1communication_1_1_en_j_connection_a3564e56e836696faed055d05a5f50292}{is\+Smart\+Teach\+In\+Enabled} ()
+\item 
+void \hyperlink{classit_1_1polito_1_1elite_1_1enocean_1_1enj_1_1communication_1_1_en_j_connection_ac654fdac8366447066255d0b6e397941}{set\+Smart\+Teach\+In} (boolean smart\+Teach\+In)
+\item 
+void \hyperlink{classit_1_1polito_1_1elite_1_1enocean_1_1enj_1_1communication_1_1_en_j_connection_a97719e77975bdc3502ccfff320b3642e}{add\+New\+Device} (String hex\+Device\+Address, String eep\+Identifier)
+\item 
+Collection$<$ \hyperlink{classit_1_1polito_1_1elite_1_1enocean_1_1enj_1_1model_1_1_en_ocean_device}{En\+Ocean\+Device} $>$ \hyperlink{classit_1_1polito_1_1elite_1_1enocean_1_1enj_1_1communication_1_1_en_j_connection_a95fb186c70d14dc35c629322763d12d3}{get\+Known\+Devices} ()
+\item 
+\hyperlink{classit_1_1polito_1_1elite_1_1enocean_1_1enj_1_1model_1_1_en_ocean_device}{En\+Ocean\+Device} \hyperlink{classit_1_1polito_1_1elite_1_1enocean_1_1enj_1_1communication_1_1_en_j_connection_a257b906ded59609018f129d6d62926c4}{get\+Device} (int device\+U\+ID)
+\item 
+void \hyperlink{classit_1_1polito_1_1elite_1_1enocean_1_1enj_1_1communication_1_1_en_j_connection_ad182a8d74dda136f692a69c86d29cb09}{handle\+Packet} (\hyperlink{classit_1_1polito_1_1elite_1_1enocean_1_1protocol_1_1serial_1_1v3_1_1network_1_1packet_1_1_e_s_p3_packet}{E\+S\+P3\+Packet} pkt)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static final int \hyperlink{classit_1_1polito_1_1elite_1_1enocean_1_1enj_1_1communication_1_1_en_j_connection_a1584089c4459a927b1cd99c8d2249773}{T\+E\+A\+C\+H\+\_\+\+I\+N\+\_\+\+T\+I\+ME} = 20000
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The En\+Ocean for Java (EnJ) connection layer. It decouples link-\/level communication and protocol management issues from the application logic. Defines standard and \char`\"{}easy to use\char`\"{} methods for writing / reading data from an En\+Ocean network. 
+
+It is typically built on top of an En\+J\+Link instance, e.\+g.\+: 
+
+
+\begin{DoxyPre}
+String serialId = "/dev/tty0";\end{DoxyPre}
+
+
+
+\begin{DoxyPre}EnJLink link = new EnJLink(serialId);\end{DoxyPre}
+
+
+
+\begin{DoxyPre}\hyperlink{classit_1_1polito_1_1elite_1_1enocean_1_1enj_1_1communication_1_1_en_j_connection}{EnJConnection} connection = new EnJConnection(link);
+\end{DoxyPre}
+
+
+\begin{DoxyAuthor}{Author}
+\href{mailto:dario.bonino@gmail.com}{\tt Dario Bonino}  \href{mailto:biasiandrea04@gmail.com}{\tt Andrea Biasi } 
+\end{DoxyAuthor}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classit_1_1polito_1_1elite_1_1enocean_1_1enj_1_1communication_1_1_en_j_connection_a1d4409206c2eb68c50d5314df51a535d}{}\label{classit_1_1polito_1_1elite_1_1enocean_1_1enj_1_1communication_1_1_en_j_connection_a1d4409206c2eb68c50d5314df51a535d} 
+\index{it\+::polito\+::elite\+::enocean\+::enj\+::communication\+::\+En\+J\+Connection@{it\+::polito\+::elite\+::enocean\+::enj\+::communication\+::\+En\+J\+Connection}!En\+J\+Connection@{En\+J\+Connection}}
+\index{En\+J\+Connection@{En\+J\+Connection}!it\+::polito\+::elite\+::enocean\+::enj\+::communication\+::\+En\+J\+Connection@{it\+::polito\+::elite\+::enocean\+::enj\+::communication\+::\+En\+J\+Connection}}
+\subsubsection{\texorpdfstring{En\+J\+Connection()}{EnJConnection()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily it.\+polito.\+elite.\+enocean.\+enj.\+communication.\+En\+J\+Connection.\+En\+J\+Connection (\begin{DoxyParamCaption}\item[{\hyperlink{classit_1_1polito_1_1elite_1_1enocean_1_1enj_1_1link_1_1_en_j_link}{En\+J\+Link}}]{link\+Layer,  }\item[{String}]{peristent\+Device\+Storage\+Filename }\end{DoxyParamCaption})}
+
+Build a connection layer instance on top of the given link layer instance.
+
+
+\begin{DoxyParams}{Parameters}
+{\em link\+Layer} & The \hyperlink{}{En\+J\+Link} instance upon which basing the connection layer. \\
+\hline
+{\em peristent\+Device\+Storage\+Filename} & The name of the persistent storage to use (path on the file system), can be null for in-\/memory storage. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classit_1_1polito_1_1elite_1_1enocean_1_1enj_1_1communication_1_1_en_j_connection_a02d2c16708da5b40dea825a96e8d21e6}{}\label{classit_1_1polito_1_1elite_1_1enocean_1_1enj_1_1communication_1_1_en_j_connection_a02d2c16708da5b40dea825a96e8d21e6} 
+\index{it\+::polito\+::elite\+::enocean\+::enj\+::communication\+::\+En\+J\+Connection@{it\+::polito\+::elite\+::enocean\+::enj\+::communication\+::\+En\+J\+Connection}!En\+J\+Connection@{En\+J\+Connection}}
+\index{En\+J\+Connection@{En\+J\+Connection}!it\+::polito\+::elite\+::enocean\+::enj\+::communication\+::\+En\+J\+Connection@{it\+::polito\+::elite\+::enocean\+::enj\+::communication\+::\+En\+J\+Connection}}
+\subsubsection{\texorpdfstring{En\+J\+Connection()}{EnJConnection()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily it.\+polito.\+elite.\+enocean.\+enj.\+communication.\+En\+J\+Connection.\+En\+J\+Connection (\begin{DoxyParamCaption}\item[{\hyperlink{classit_1_1polito_1_1elite_1_1enocean_1_1enj_1_1link_1_1_en_j_link}{En\+J\+Link}}]{link\+Layer,  }\item[{String}]{peristent\+Device\+Storage\+Filename,  }\item[{\hyperlink{interfaceit_1_1polito_1_1elite_1_1enocean_1_1enj_1_1communication_1_1_en_j_device_listener}{En\+J\+Device\+Listener}}]{listener }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em link\+Layer} & The \hyperlink{}{En\+J\+Link} instance upon which basing the connection layer. \\
+\hline
+{\em peristent\+Device\+Storage\+Filename} & The name of the persistent storage to use (path on the file system), can be null for in-\/memory storage. \\
+\hline
+{\em listener} & The device listener to notify when devices are added, modified, removed. This is the only listener \char`\"{}able\char`\"{} to listen to device notifications stemming from the restoring of a peristent storage. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classit_1_1polito_1_1elite_1_1enocean_1_1enj_1_1communication_1_1_en_j_connection_a367e344745b5e78c8abfd5814551df40}{}\label{classit_1_1polito_1_1elite_1_1enocean_1_1enj_1_1communication_1_1_en_j_connection_a367e344745b5e78c8abfd5814551df40} 
+\index{it\+::polito\+::elite\+::enocean\+::enj\+::communication\+::\+En\+J\+Connection@{it\+::polito\+::elite\+::enocean\+::enj\+::communication\+::\+En\+J\+Connection}!add\+En\+J\+Device\+Listener@{add\+En\+J\+Device\+Listener}}
+\index{add\+En\+J\+Device\+Listener@{add\+En\+J\+Device\+Listener}!it\+::polito\+::elite\+::enocean\+::enj\+::communication\+::\+En\+J\+Connection@{it\+::polito\+::elite\+::enocean\+::enj\+::communication\+::\+En\+J\+Connection}}
+\subsubsection{\texorpdfstring{add\+En\+J\+Device\+Listener()}{addEnJDeviceListener()}}
+{\footnotesize\ttfamily void it.\+polito.\+elite.\+enocean.\+enj.\+communication.\+En\+J\+Connection.\+add\+En\+J\+Device\+Listener (\begin{DoxyParamCaption}\item[{\hyperlink{interfaceit_1_1polito_1_1elite_1_1enocean_1_1enj_1_1communication_1_1_en_j_device_listener}{En\+J\+Device\+Listener}}]{listener }\end{DoxyParamCaption})}
+
+Adds a device listener to the set of listeners to be notified about device events\+: creation, modification, deletion.
+
+
+\begin{DoxyParams}{Parameters}
+{\em listener} & filename $\ast$ The \hyperlink{interfaceit_1_1polito_1_1elite_1_1enocean_1_1enj_1_1communication_1_1_en_j_device_listener}{En\+J\+Device\+Listener} to notify to. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classit_1_1polito_1_1elite_1_1enocean_1_1enj_1_1communication_1_1_en_j_connection_a01fd31c05d9a0e262746116086ff2f4a}{}\label{classit_1_1polito_1_1elite_1_1enocean_1_1enj_1_1communication_1_1_en_j_connection_a01fd31c05d9a0e262746116086ff2f4a} 
+\index{it\+::polito\+::elite\+::enocean\+::enj\+::communication\+::\+En\+J\+Connection@{it\+::polito\+::elite\+::enocean\+::enj\+::communication\+::\+En\+J\+Connection}!add\+En\+J\+Teach\+In\+Listener@{add\+En\+J\+Teach\+In\+Listener}}
+\index{add\+En\+J\+Teach\+In\+Listener@{add\+En\+J\+Teach\+In\+Listener}!it\+::polito\+::elite\+::enocean\+::enj\+::communication\+::\+En\+J\+Connection@{it\+::polito\+::elite\+::enocean\+::enj\+::communication\+::\+En\+J\+Connection}}
+\subsubsection{\texorpdfstring{add\+En\+J\+Teach\+In\+Listener()}{addEnJTeachInListener()}}
+{\footnotesize\ttfamily void it.\+polito.\+elite.\+enocean.\+enj.\+communication.\+En\+J\+Connection.\+add\+En\+J\+Teach\+In\+Listener (\begin{DoxyParamCaption}\item[{\hyperlink{interfaceit_1_1polito_1_1elite_1_1enocean_1_1enj_1_1communication_1_1_en_j_teach_in_listener}{En\+J\+Teach\+In\+Listener}}]{listener }\end{DoxyParamCaption})}
+
+Adds a teach in listener to the set of listeners to be notified about teach-\/in status
+
+
+\begin{DoxyParams}{Parameters}
+{\em listener} & filename $\ast$ The \hyperlink{interfaceit_1_1polito_1_1elite_1_1enocean_1_1enj_1_1communication_1_1_en_j_device_listener}{En\+J\+Device\+Listener} to notify to. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classit_1_1polito_1_1elite_1_1enocean_1_1enj_1_1communication_1_1_en_j_connection_a97719e77975bdc3502ccfff320b3642e}{}\label{classit_1_1polito_1_1elite_1_1enocean_1_1enj_1_1communication_1_1_en_j_connection_a97719e77975bdc3502ccfff320b3642e} 
+\index{it\+::polito\+::elite\+::enocean\+::enj\+::communication\+::\+En\+J\+Connection@{it\+::polito\+::elite\+::enocean\+::enj\+::communication\+::\+En\+J\+Connection}!add\+New\+Device@{add\+New\+Device}}
+\index{add\+New\+Device@{add\+New\+Device}!it\+::polito\+::elite\+::enocean\+::enj\+::communication\+::\+En\+J\+Connection@{it\+::polito\+::elite\+::enocean\+::enj\+::communication\+::\+En\+J\+Connection}}
+\subsubsection{\texorpdfstring{add\+New\+Device()}{addNewDevice()}}
+{\footnotesize\ttfamily void it.\+polito.\+elite.\+enocean.\+enj.\+communication.\+En\+J\+Connection.\+add\+New\+Device (\begin{DoxyParamCaption}\item[{String}]{hex\+Device\+Address,  }\item[{String}]{eep\+Identifier }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em hex\+Device\+Address} & \\
+\hline
+{\em eep\+Identifier} & \\
+\hline
+\end{DoxyParams}
+\hypertarget{classit_1_1polito_1_1elite_1_1enocean_1_1enj_1_1communication_1_1_en_j_connection_a59ed84d534b7cd0bd03466fdc54b5585}{}\label{classit_1_1polito_1_1elite_1_1enocean_1_1enj_1_1communication_1_1_en_j_connection_a59ed84d534b7cd0bd03466fdc54b5585} 
+\index{it\+::polito\+::elite\+::enocean\+::enj\+::communication\+::\+En\+J\+Connection@{it\+::polito\+::elite\+::enocean\+::enj\+::communication\+::\+En\+J\+Connection}!disable\+Teach\+In@{disable\+Teach\+In}}
+\index{disable\+Teach\+In@{disable\+Teach\+In}!it\+::polito\+::elite\+::enocean\+::enj\+::communication\+::\+En\+J\+Connection@{it\+::polito\+::elite\+::enocean\+::enj\+::communication\+::\+En\+J\+Connection}}
+\subsubsection{\texorpdfstring{disable\+Teach\+In()}{disableTeachIn()}}
+{\footnotesize\ttfamily synchronized void it.\+polito.\+elite.\+enocean.\+enj.\+communication.\+En\+J\+Connection.\+disable\+Teach\+In (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Disables the teach mode on the connection layer. Teach-\/in requests are handle\+Packet $\ast$ ignored. \hypertarget{classit_1_1polito_1_1elite_1_1enocean_1_1enj_1_1communication_1_1_en_j_connection_a6b7c48b7500c28ec6afbf1840031b3ee}{}\label{classit_1_1polito_1_1elite_1_1enocean_1_1enj_1_1communication_1_1_en_j_connection_a6b7c48b7500c28ec6afbf1840031b3ee} 
+\index{it\+::polito\+::elite\+::enocean\+::enj\+::communication\+::\+En\+J\+Connection@{it\+::polito\+::elite\+::enocean\+::enj\+::communication\+::\+En\+J\+Connection}!enable\+Teach\+In@{enable\+Teach\+In}}
+\index{enable\+Teach\+In@{enable\+Teach\+In}!it\+::polito\+::elite\+::enocean\+::enj\+::communication\+::\+En\+J\+Connection@{it\+::polito\+::elite\+::enocean\+::enj\+::communication\+::\+En\+J\+Connection}}
+\subsubsection{\texorpdfstring{enable\+Teach\+In()}{enableTeachIn()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily void it.\+polito.\+elite.\+enocean.\+enj.\+communication.\+En\+J\+Connection.\+enable\+Teach\+In (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Enables the teach in procedure, it forces the connection layer to listen for teach-\/in requests coming from the physical network. whenever a new teach-\/in request is detected, a device recognition process is started enabling access to the newly discovered device. 
+
+New devices are transfered to the next layer by means of a listener mechanism. 
+
+The teach in procedure lasts for a time equal to the default {\ttfamily \hyperlink{classit_1_1polito_1_1elite_1_1enocean_1_1enj_1_1communication_1_1_en_j_connection_a1584089c4459a927b1cd99c8d2249773}{En\+J\+Connection.\+T\+E\+A\+C\+H\+\_\+\+I\+N\+\_\+\+T\+I\+ME}} \hypertarget{classit_1_1polito_1_1elite_1_1enocean_1_1enj_1_1communication_1_1_en_j_connection_af3248db04c2dfd43b068b10513f32e8b}{}\label{classit_1_1polito_1_1elite_1_1enocean_1_1enj_1_1communication_1_1_en_j_connection_af3248db04c2dfd43b068b10513f32e8b} 
+\index{it\+::polito\+::elite\+::enocean\+::enj\+::communication\+::\+En\+J\+Connection@{it\+::polito\+::elite\+::enocean\+::enj\+::communication\+::\+En\+J\+Connection}!enable\+Teach\+In@{enable\+Teach\+In}}
+\index{enable\+Teach\+In@{enable\+Teach\+In}!it\+::polito\+::elite\+::enocean\+::enj\+::communication\+::\+En\+J\+Connection@{it\+::polito\+::elite\+::enocean\+::enj\+::communication\+::\+En\+J\+Connection}}
+\subsubsection{\texorpdfstring{enable\+Teach\+In()}{enableTeachIn()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily void it.\+polito.\+elite.\+enocean.\+enj.\+communication.\+En\+J\+Connection.\+enable\+Teach\+In (\begin{DoxyParamCaption}\item[{String}]{hex\+Device\+Address,  }\item[{String}]{eep\+Identifier\+As\+String }\end{DoxyParamCaption})}
+
+\hypertarget{classit_1_1polito_1_1elite_1_1enocean_1_1enj_1_1communication_1_1_en_j_connection_acbb95c1e5e75cd5abdbe569400667a2a}{}\label{classit_1_1polito_1_1elite_1_1enocean_1_1enj_1_1communication_1_1_en_j_connection_acbb95c1e5e75cd5abdbe569400667a2a} 
+\index{it\+::polito\+::elite\+::enocean\+::enj\+::communication\+::\+En\+J\+Connection@{it\+::polito\+::elite\+::enocean\+::enj\+::communication\+::\+En\+J\+Connection}!enable\+Teach\+In@{enable\+Teach\+In}}
+\index{enable\+Teach\+In@{enable\+Teach\+In}!it\+::polito\+::elite\+::enocean\+::enj\+::communication\+::\+En\+J\+Connection@{it\+::polito\+::elite\+::enocean\+::enj\+::communication\+::\+En\+J\+Connection}}
+\subsubsection{\texorpdfstring{enable\+Teach\+In()}{enableTeachIn()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily void it.\+polito.\+elite.\+enocean.\+enj.\+communication.\+En\+J\+Connection.\+enable\+Teach\+In (\begin{DoxyParamCaption}\item[{String}]{hex\+Device\+Address,  }\item[{String}]{eep\+Identifier\+As\+String,  }\item[{int}]{time }\end{DoxyParamCaption})}
+
+\hypertarget{classit_1_1polito_1_1elite_1_1enocean_1_1enj_1_1communication_1_1_en_j_connection_a2d2c099a22e34a75ad6fa5123280f90f}{}\label{classit_1_1polito_1_1elite_1_1enocean_1_1enj_1_1communication_1_1_en_j_connection_a2d2c099a22e34a75ad6fa5123280f90f} 
+\index{it\+::polito\+::elite\+::enocean\+::enj\+::communication\+::\+En\+J\+Connection@{it\+::polito\+::elite\+::enocean\+::enj\+::communication\+::\+En\+J\+Connection}!enable\+Teach\+In@{enable\+Teach\+In}}
+\index{enable\+Teach\+In@{enable\+Teach\+In}!it\+::polito\+::elite\+::enocean\+::enj\+::communication\+::\+En\+J\+Connection@{it\+::polito\+::elite\+::enocean\+::enj\+::communication\+::\+En\+J\+Connection}}
+\subsubsection{\texorpdfstring{enable\+Teach\+In()}{enableTeachIn()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily void it.\+polito.\+elite.\+enocean.\+enj.\+communication.\+En\+J\+Connection.\+enable\+Teach\+In (\begin{DoxyParamCaption}\item[{int}]{teach\+In\+Time }\end{DoxyParamCaption})}
+
+Enables the teach in procedure, it forces the connection layer to listen for teach-\/in requests coming from the physical network. whenever a new teach-\/in request is detected, a device recognition process is started enabling access to the newly discovered device. 
+
+New devices are transfered to the next layer by means of a listener mechanism.
+
+
+\begin{DoxyParams}{Parameters}
+{\em teach\+In\+Time} & the maximum time for which the connection layer will accept teach in requests. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classit_1_1polito_1_1elite_1_1enocean_1_1enj_1_1communication_1_1_en_j_connection_a257b906ded59609018f129d6d62926c4}{}\label{classit_1_1polito_1_1elite_1_1enocean_1_1enj_1_1communication_1_1_en_j_connection_a257b906ded59609018f129d6d62926c4} 
+\index{it\+::polito\+::elite\+::enocean\+::enj\+::communication\+::\+En\+J\+Connection@{it\+::polito\+::elite\+::enocean\+::enj\+::communication\+::\+En\+J\+Connection}!get\+Device@{get\+Device}}
+\index{get\+Device@{get\+Device}!it\+::polito\+::elite\+::enocean\+::enj\+::communication\+::\+En\+J\+Connection@{it\+::polito\+::elite\+::enocean\+::enj\+::communication\+::\+En\+J\+Connection}}
+\subsubsection{\texorpdfstring{get\+Device()}{getDevice()}}
+{\footnotesize\ttfamily \hyperlink{classit_1_1polito_1_1elite_1_1enocean_1_1enj_1_1model_1_1_en_ocean_device}{En\+Ocean\+Device} it.\+polito.\+elite.\+enocean.\+enj.\+communication.\+En\+J\+Connection.\+get\+Device (\begin{DoxyParamCaption}\item[{int}]{device\+U\+ID }\end{DoxyParamCaption})}
+
+adds sender address and status to the given payload, thus completing the Returns the En\+Ocean device having the given U\+ID
+
+
+\begin{DoxyParams}{Parameters}
+{\em device\+U\+ID} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\hypertarget{classit_1_1polito_1_1elite_1_1enocean_1_1enj_1_1communication_1_1_en_j_connection_a95fb186c70d14dc35c629322763d12d3}{}\label{classit_1_1polito_1_1elite_1_1enocean_1_1enj_1_1communication_1_1_en_j_connection_a95fb186c70d14dc35c629322763d12d3} 
+\index{it\+::polito\+::elite\+::enocean\+::enj\+::communication\+::\+En\+J\+Connection@{it\+::polito\+::elite\+::enocean\+::enj\+::communication\+::\+En\+J\+Connection}!get\+Known\+Devices@{get\+Known\+Devices}}
+\index{get\+Known\+Devices@{get\+Known\+Devices}!it\+::polito\+::elite\+::enocean\+::enj\+::communication\+::\+En\+J\+Connection@{it\+::polito\+::elite\+::enocean\+::enj\+::communication\+::\+En\+J\+Connection}}
+\subsubsection{\texorpdfstring{get\+Known\+Devices()}{getKnownDevices()}}
+{\footnotesize\ttfamily Collection$<$\hyperlink{classit_1_1polito_1_1elite_1_1enocean_1_1enj_1_1model_1_1_en_ocean_device}{En\+Ocean\+Device}$>$ it.\+polito.\+elite.\+enocean.\+enj.\+communication.\+En\+J\+Connection.\+get\+Known\+Devices (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Returns the set of currently known devices
+
+\begin{DoxyReturn}{Returns}
+the known\+Devices 
+\end{DoxyReturn}
+\hypertarget{classit_1_1polito_1_1elite_1_1enocean_1_1enj_1_1communication_1_1_en_j_connection_ad182a8d74dda136f692a69c86d29cb09}{}\label{classit_1_1polito_1_1elite_1_1enocean_1_1enj_1_1communication_1_1_en_j_connection_ad182a8d74dda136f692a69c86d29cb09} 
+\index{it\+::polito\+::elite\+::enocean\+::enj\+::communication\+::\+En\+J\+Connection@{it\+::polito\+::elite\+::enocean\+::enj\+::communication\+::\+En\+J\+Connection}!handle\+Packet@{handle\+Packet}}
+\index{handle\+Packet@{handle\+Packet}!it\+::polito\+::elite\+::enocean\+::enj\+::communication\+::\+En\+J\+Connection@{it\+::polito\+::elite\+::enocean\+::enj\+::communication\+::\+En\+J\+Connection}}
+\subsubsection{\texorpdfstring{handle\+Packet()}{handlePacket()}}
+{\footnotesize\ttfamily void it.\+polito.\+elite.\+enocean.\+enj.\+communication.\+En\+J\+Connection.\+handle\+Packet (\begin{DoxyParamCaption}\item[{\hyperlink{classit_1_1polito_1_1elite_1_1enocean_1_1protocol_1_1serial_1_1v3_1_1network_1_1packet_1_1_e_s_p3_packet}{E\+S\+P3\+Packet}}]{pkt }\end{DoxyParamCaption})}
+
+Handles packets received at the link layer 
+
+Implements \hyperlink{interfaceit_1_1polito_1_1elite_1_1enocean_1_1enj_1_1link_1_1_packet_listener_a30b8942feaad919c75fc4cdf4d76dea6}{it.\+polito.\+elite.\+enocean.\+enj.\+link.\+Packet\+Listener}.
+
+\hypertarget{classit_1_1polito_1_1elite_1_1enocean_1_1enj_1_1communication_1_1_en_j_connection_a3564e56e836696faed055d05a5f50292}{}\label{classit_1_1polito_1_1elite_1_1enocean_1_1enj_1_1communication_1_1_en_j_connection_a3564e56e836696faed055d05a5f50292} 
+\index{it\+::polito\+::elite\+::enocean\+::enj\+::communication\+::\+En\+J\+Connection@{it\+::polito\+::elite\+::enocean\+::enj\+::communication\+::\+En\+J\+Connection}!is\+Smart\+Teach\+In\+Enabled@{is\+Smart\+Teach\+In\+Enabled}}
+\index{is\+Smart\+Teach\+In\+Enabled@{is\+Smart\+Teach\+In\+Enabled}!it\+::polito\+::elite\+::enocean\+::enj\+::communication\+::\+En\+J\+Connection@{it\+::polito\+::elite\+::enocean\+::enj\+::communication\+::\+En\+J\+Connection}}
+\subsubsection{\texorpdfstring{is\+Smart\+Teach\+In\+Enabled()}{isSmartTeachInEnabled()}}
+{\footnotesize\ttfamily boolean it.\+polito.\+elite.\+enocean.\+enj.\+communication.\+En\+J\+Connection.\+is\+Smart\+Teach\+In\+Enabled (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+the smart\+Teach\+In 
+\end{DoxyReturn}
+\hypertarget{classit_1_1polito_1_1elite_1_1enocean_1_1enj_1_1communication_1_1_en_j_connection_a479da123130eaeba3b2acb0d1081f1d6}{}\label{classit_1_1polito_1_1elite_1_1enocean_1_1enj_1_1communication_1_1_en_j_connection_a479da123130eaeba3b2acb0d1081f1d6} 
+\index{it\+::polito\+::elite\+::enocean\+::enj\+::communication\+::\+En\+J\+Connection@{it\+::polito\+::elite\+::enocean\+::enj\+::communication\+::\+En\+J\+Connection}!is\+Teach\+In\+Enabled@{is\+Teach\+In\+Enabled}}
+\index{is\+Teach\+In\+Enabled@{is\+Teach\+In\+Enabled}!it\+::polito\+::elite\+::enocean\+::enj\+::communication\+::\+En\+J\+Connection@{it\+::polito\+::elite\+::enocean\+::enj\+::communication\+::\+En\+J\+Connection}}
+\subsubsection{\texorpdfstring{is\+Teach\+In\+Enabled()}{isTeachInEnabled()}}
+{\footnotesize\ttfamily boolean it.\+polito.\+elite.\+enocean.\+enj.\+communication.\+En\+J\+Connection.\+is\+Teach\+In\+Enabled (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Checks if the connection layer is currently accepting teach-\/in requests or not
+
+\begin{DoxyReturn}{Returns}
+the teach\+In true if the connection layer is accepting teach-\/in requests, false otherwise. 
+\end{DoxyReturn}
+\hypertarget{classit_1_1polito_1_1elite_1_1enocean_1_1enj_1_1communication_1_1_en_j_connection_afdd6f3068dab1cd68d0e4b6d3ad980cf}{}\label{classit_1_1polito_1_1elite_1_1enocean_1_1enj_1_1communication_1_1_en_j_connection_afdd6f3068dab1cd68d0e4b6d3ad980cf} 
+\index{it\+::polito\+::elite\+::enocean\+::enj\+::communication\+::\+En\+J\+Connection@{it\+::polito\+::elite\+::enocean\+::enj\+::communication\+::\+En\+J\+Connection}!remove\+En\+J\+Device\+Listener@{remove\+En\+J\+Device\+Listener}}
+\index{remove\+En\+J\+Device\+Listener@{remove\+En\+J\+Device\+Listener}!it\+::polito\+::elite\+::enocean\+::enj\+::communication\+::\+En\+J\+Connection@{it\+::polito\+::elite\+::enocean\+::enj\+::communication\+::\+En\+J\+Connection}}
+\subsubsection{\texorpdfstring{remove\+En\+J\+Device\+Listener()}{removeEnJDeviceListener()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily boolean it.\+polito.\+elite.\+enocean.\+enj.\+communication.\+En\+J\+Connection.\+remove\+En\+J\+Device\+Listener (\begin{DoxyParamCaption}\item[{\hyperlink{interfaceit_1_1polito_1_1elite_1_1enocean_1_1enj_1_1communication_1_1_en_j_device_listener}{En\+J\+Device\+Listener}}]{listener }\end{DoxyParamCaption})}
+
+Removes a device listener from the ste of listeners to be notified about filename $\ast$ device events.
+
+
+\begin{DoxyParams}{Parameters}
+{\em listener} & The \hyperlink{interfaceit_1_1polito_1_1elite_1_1enocean_1_1enj_1_1communication_1_1_en_j_device_listener}{En\+J\+Device\+Listener} to remove. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if removal was successful, false, otherwise. 
+\end{DoxyReturn}
+\hypertarget{classit_1_1polito_1_1elite_1_1enocean_1_1enj_1_1communication_1_1_en_j_connection_a52a60ea9eea1b5e6992e553ccc436dc5}{}\label{classit_1_1polito_1_1elite_1_1enocean_1_1enj_1_1communication_1_1_en_j_connection_a52a60ea9eea1b5e6992e553ccc436dc5} 
+\index{it\+::polito\+::elite\+::enocean\+::enj\+::communication\+::\+En\+J\+Connection@{it\+::polito\+::elite\+::enocean\+::enj\+::communication\+::\+En\+J\+Connection}!remove\+En\+J\+Device\+Listener@{remove\+En\+J\+Device\+Listener}}
+\index{remove\+En\+J\+Device\+Listener@{remove\+En\+J\+Device\+Listener}!it\+::polito\+::elite\+::enocean\+::enj\+::communication\+::\+En\+J\+Connection@{it\+::polito\+::elite\+::enocean\+::enj\+::communication\+::\+En\+J\+Connection}}
+\subsubsection{\texorpdfstring{remove\+En\+J\+Device\+Listener()}{removeEnJDeviceListener()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily boolean it.\+polito.\+elite.\+enocean.\+enj.\+communication.\+En\+J\+Connection.\+remove\+En\+J\+Device\+Listener (\begin{DoxyParamCaption}\item[{\hyperlink{interfaceit_1_1polito_1_1elite_1_1enocean_1_1enj_1_1communication_1_1_en_j_teach_in_listener}{En\+J\+Teach\+In\+Listener}}]{listener }\end{DoxyParamCaption})}
+
+Removes a teach-\/in listener from the set of listeners to be notified about teach-\/in events.
+
+
+\begin{DoxyParams}{Parameters}
+{\em listener} & The \hyperlink{interfaceit_1_1polito_1_1elite_1_1enocean_1_1enj_1_1communication_1_1_en_j_device_listener}{En\+J\+Device\+Listener} to remove. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if removal was successful, false, otherwise. 
+\end{DoxyReturn}
+\hypertarget{classit_1_1polito_1_1elite_1_1enocean_1_1enj_1_1communication_1_1_en_j_connection_a60a333560c00fb3d77744ccb356481f9}{}\label{classit_1_1polito_1_1elite_1_1enocean_1_1enj_1_1communication_1_1_en_j_connection_a60a333560c00fb3d77744ccb356481f9} 
+\index{it\+::polito\+::elite\+::enocean\+::enj\+::communication\+::\+En\+J\+Connection@{it\+::polito\+::elite\+::enocean\+::enj\+::communication\+::\+En\+J\+Connection}!send\+Radio\+Command@{send\+Radio\+Command}}
+\index{send\+Radio\+Command@{send\+Radio\+Command}!it\+::polito\+::elite\+::enocean\+::enj\+::communication\+::\+En\+J\+Connection@{it\+::polito\+::elite\+::enocean\+::enj\+::communication\+::\+En\+J\+Connection}}
+\subsubsection{\texorpdfstring{send\+Radio\+Command()}{sendRadioCommand()}}
+{\footnotesize\ttfamily void it.\+polito.\+elite.\+enocean.\+enj.\+communication.\+En\+J\+Connection.\+send\+Radio\+Command (\begin{DoxyParamCaption}\item[{byte \mbox{[}$\,$\mbox{]}}]{address,  }\item[{byte \mbox{[}$\,$\mbox{]}}]{payload }\end{DoxyParamCaption})}
+
+Sends the given payload encapsulated into a Radio802 message, automatically adds sender address and status to the payload, thus completing the actual payload being sent. By default the gateway address is fixed at 0x00ffffff and the status byte at 0x00.
+
+
+\begin{DoxyParams}{Parameters}
+{\em address} & \\
+\hline
+{\em payload} & \\
+\hline
+\end{DoxyParams}
+\hypertarget{classit_1_1polito_1_1elite_1_1enocean_1_1enj_1_1communication_1_1_en_j_connection_ac654fdac8366447066255d0b6e397941}{}\label{classit_1_1polito_1_1elite_1_1enocean_1_1enj_1_1communication_1_1_en_j_connection_ac654fdac8366447066255d0b6e397941} 
+\index{it\+::polito\+::elite\+::enocean\+::enj\+::communication\+::\+En\+J\+Connection@{it\+::polito\+::elite\+::enocean\+::enj\+::communication\+::\+En\+J\+Connection}!set\+Smart\+Teach\+In@{set\+Smart\+Teach\+In}}
+\index{set\+Smart\+Teach\+In@{set\+Smart\+Teach\+In}!it\+::polito\+::elite\+::enocean\+::enj\+::communication\+::\+En\+J\+Connection@{it\+::polito\+::elite\+::enocean\+::enj\+::communication\+::\+En\+J\+Connection}}
+\subsubsection{\texorpdfstring{set\+Smart\+Teach\+In()}{setSmartTeachIn()}}
+{\footnotesize\ttfamily void it.\+polito.\+elite.\+enocean.\+enj.\+communication.\+En\+J\+Connection.\+set\+Smart\+Teach\+In (\begin{DoxyParamCaption}\item[{boolean}]{smart\+Teach\+In }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em smart\+Teach\+In} & the smart\+Teach\+In to set \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classit_1_1polito_1_1elite_1_1enocean_1_1enj_1_1communication_1_1_en_j_connection_a1584089c4459a927b1cd99c8d2249773}{}\label{classit_1_1polito_1_1elite_1_1enocean_1_1enj_1_1communication_1_1_en_j_connection_a1584089c4459a927b1cd99c8d2249773} 
+\index{it\+::polito\+::elite\+::enocean\+::enj\+::communication\+::\+En\+J\+Connection@{it\+::polito\+::elite\+::enocean\+::enj\+::communication\+::\+En\+J\+Connection}!T\+E\+A\+C\+H\+\_\+\+I\+N\+\_\+\+T\+I\+ME@{T\+E\+A\+C\+H\+\_\+\+I\+N\+\_\+\+T\+I\+ME}}
+\index{T\+E\+A\+C\+H\+\_\+\+I\+N\+\_\+\+T\+I\+ME@{T\+E\+A\+C\+H\+\_\+\+I\+N\+\_\+\+T\+I\+ME}!it\+::polito\+::elite\+::enocean\+::enj\+::communication\+::\+En\+J\+Connection@{it\+::polito\+::elite\+::enocean\+::enj\+::communication\+::\+En\+J\+Connection}}
+\subsubsection{\texorpdfstring{T\+E\+A\+C\+H\+\_\+\+I\+N\+\_\+\+T\+I\+ME}{TEACH\_IN\_TIME}}
+{\footnotesize\ttfamily final int it.\+polito.\+elite.\+enocean.\+enj.\+communication.\+En\+J\+Connection.\+T\+E\+A\+C\+H\+\_\+\+I\+N\+\_\+\+T\+I\+ME = 20000\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/it/polito/elite/enocean/enj/communication/\hyperlink{_en_j_connection_8java}{En\+J\+Connection.\+java}\end{DoxyCompactItemize}

@@ -1,0 +1,49 @@
+\hypertarget{classit_1_1polito_1_1elite_1_1enocean_1_1protocol_1_1serial_1_1v3_1_1network_1_1packet_1_1radiomessage_1_1_radio_message}{}\section{it.\+polito.\+elite.\+enocean.\+protocol.\+serial.\+v3.\+network.\+packet.\+radiomessage.\+Radio\+Message Class Reference}
+\label{classit_1_1polito_1_1elite_1_1enocean_1_1protocol_1_1serial_1_1v3_1_1network_1_1packet_1_1radiomessage_1_1_radio_message}\index{it.\+polito.\+elite.\+enocean.\+protocol.\+serial.\+v3.\+network.\+packet.\+radiomessage.\+Radio\+Message@{it.\+polito.\+elite.\+enocean.\+protocol.\+serial.\+v3.\+network.\+packet.\+radiomessage.\+Radio\+Message}}
+Inheritance diagram for it.\+polito.\+elite.\+enocean.\+protocol.\+serial.\+v3.\+network.\+packet.\+radiomessage.\+Radio\+Message\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classit_1_1polito_1_1elite_1_1enocean_1_1protocol_1_1serial_1_1v3_1_1network_1_1packet_1_1radiomessage_1_1_radio_message}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classit_1_1polito_1_1elite_1_1enocean_1_1protocol_1_1serial_1_1v3_1_1network_1_1packet_1_1radiomessage_1_1_radio_message_a094ff2aa926bb7fa2be5a0b36e9c87ea}{Radio\+Message} (byte message\+Rorg, byte mex\+Data\mbox{[}$\,$\mbox{]}, byte\mbox{[}$\,$\mbox{]} destination\+Id, byte\mbox{[}$\,$\mbox{]} source\+Id, byte d\+Bm)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+The radio message (payload data without any radio telegram contents) is embedded into the E\+S\+P3 packet
+
+\begin{DoxyAuthor}{Author}
+Andrea Biasi \href{mailto:biasiandrea04@gmail.com}{\tt biasiandrea04@gmail.\+com} 
+\end{DoxyAuthor}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classit_1_1polito_1_1elite_1_1enocean_1_1protocol_1_1serial_1_1v3_1_1network_1_1packet_1_1radiomessage_1_1_radio_message_a094ff2aa926bb7fa2be5a0b36e9c87ea}{}\label{classit_1_1polito_1_1elite_1_1enocean_1_1protocol_1_1serial_1_1v3_1_1network_1_1packet_1_1radiomessage_1_1_radio_message_a094ff2aa926bb7fa2be5a0b36e9c87ea} 
+\index{it\+::polito\+::elite\+::enocean\+::protocol\+::serial\+::v3\+::network\+::packet\+::radiomessage\+::\+Radio\+Message@{it\+::polito\+::elite\+::enocean\+::protocol\+::serial\+::v3\+::network\+::packet\+::radiomessage\+::\+Radio\+Message}!Radio\+Message@{Radio\+Message}}
+\index{Radio\+Message@{Radio\+Message}!it\+::polito\+::elite\+::enocean\+::protocol\+::serial\+::v3\+::network\+::packet\+::radiomessage\+::\+Radio\+Message@{it\+::polito\+::elite\+::enocean\+::protocol\+::serial\+::v3\+::network\+::packet\+::radiomessage\+::\+Radio\+Message}}
+\subsubsection{\texorpdfstring{Radio\+Message()}{RadioMessage()}}
+{\footnotesize\ttfamily it.\+polito.\+elite.\+enocean.\+protocol.\+serial.\+v3.\+network.\+packet.\+radiomessage.\+Radio\+Message.\+Radio\+Message (\begin{DoxyParamCaption}\item[{byte}]{message\+Rorg,  }\item[{byte}]{mex\+Data\mbox{[}$\,$\mbox{]},  }\item[{byte \mbox{[}$\,$\mbox{]}}]{destination\+Id,  }\item[{byte \mbox{[}$\,$\mbox{]}}]{source\+Id,  }\item[{byte}]{d\+Bm }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em message\+Rorg} & \+: R\+O\+RG \\
+\hline
+{\em mex\+Data} & \+: Message Data Content \\
+\hline
+{\em destination\+Id} & \+: Destination ID Broadcast ID\+: FF FF FF FF \\
+\hline
+{\em source\+Id} & \+: Receive case\+: Source ID of the sender Send case\+: 0x00000000 \\
+\hline
+{\em d\+Bm} & \+: Send case\+: 0x\+FF Receive case\+: Best R\+S\+SI value of all received sub telegrams (value decimal without minus) \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/it/polito/elite/enocean/protocol/serial/v3/network/packet/radiomessage/\hyperlink{it_2polito_2elite_2enocean_2protocol_2serial_2v3_2network_2packet_2radiomessage_2_radio_message_8java}{Radio\+Message.\+java}\end{DoxyCompactItemize}

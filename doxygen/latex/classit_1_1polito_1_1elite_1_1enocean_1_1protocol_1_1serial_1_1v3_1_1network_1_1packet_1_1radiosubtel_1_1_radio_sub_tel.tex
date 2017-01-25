@@ -1,0 +1,57 @@
+\hypertarget{classit_1_1polito_1_1elite_1_1enocean_1_1protocol_1_1serial_1_1v3_1_1network_1_1packet_1_1radiosubtel_1_1_radio_sub_tel}{}\section{it.\+polito.\+elite.\+enocean.\+protocol.\+serial.\+v3.\+network.\+packet.\+radiosubtel.\+Radio\+Sub\+Tel Class Reference}
+\label{classit_1_1polito_1_1elite_1_1enocean_1_1protocol_1_1serial_1_1v3_1_1network_1_1packet_1_1radiosubtel_1_1_radio_sub_tel}\index{it.\+polito.\+elite.\+enocean.\+protocol.\+serial.\+v3.\+network.\+packet.\+radiosubtel.\+Radio\+Sub\+Tel@{it.\+polito.\+elite.\+enocean.\+protocol.\+serial.\+v3.\+network.\+packet.\+radiosubtel.\+Radio\+Sub\+Tel}}
+Inheritance diagram for it.\+polito.\+elite.\+enocean.\+protocol.\+serial.\+v3.\+network.\+packet.\+radiosubtel.\+Radio\+Sub\+Tel\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classit_1_1polito_1_1elite_1_1enocean_1_1protocol_1_1serial_1_1v3_1_1network_1_1packet_1_1radiosubtel_1_1_radio_sub_tel}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classit_1_1polito_1_1elite_1_1enocean_1_1protocol_1_1serial_1_1v3_1_1network_1_1packet_1_1radiosubtel_1_1_radio_sub_tel_a08883ebe700df5f64a8faa126876e5b7}{Radio\+Sub\+Tel} (byte \hyperlink{classit_1_1polito_1_1elite_1_1enocean_1_1protocol_1_1serial_1_1v3_1_1network_1_1packet_1_1_e_s_p3_packet_a3b52eafc90090190d976e3ddeae2b591}{data}\mbox{[}$\,$\mbox{]}, byte sub\+Tel\+Num, int destination\+Id, byte d\+Bm, byte security\+Level, byte time\+Stamp, byte tick\+Sub\+Tel, byte d\+Bm\+Sub\+Tel, byte status\+Sub\+Tel)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Packet type 3 \+: Radio802 Sub Tel
+
+\begin{DoxyAuthor}{Author}
+Andrea Biasi \href{mailto:biasiandrea04@gmail.com}{\tt biasiandrea04@gmail.\+com} 
+\end{DoxyAuthor}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classit_1_1polito_1_1elite_1_1enocean_1_1protocol_1_1serial_1_1v3_1_1network_1_1packet_1_1radiosubtel_1_1_radio_sub_tel_a08883ebe700df5f64a8faa126876e5b7}{}\label{classit_1_1polito_1_1elite_1_1enocean_1_1protocol_1_1serial_1_1v3_1_1network_1_1packet_1_1radiosubtel_1_1_radio_sub_tel_a08883ebe700df5f64a8faa126876e5b7} 
+\index{it\+::polito\+::elite\+::enocean\+::protocol\+::serial\+::v3\+::network\+::packet\+::radiosubtel\+::\+Radio\+Sub\+Tel@{it\+::polito\+::elite\+::enocean\+::protocol\+::serial\+::v3\+::network\+::packet\+::radiosubtel\+::\+Radio\+Sub\+Tel}!Radio\+Sub\+Tel@{Radio\+Sub\+Tel}}
+\index{Radio\+Sub\+Tel@{Radio\+Sub\+Tel}!it\+::polito\+::elite\+::enocean\+::protocol\+::serial\+::v3\+::network\+::packet\+::radiosubtel\+::\+Radio\+Sub\+Tel@{it\+::polito\+::elite\+::enocean\+::protocol\+::serial\+::v3\+::network\+::packet\+::radiosubtel\+::\+Radio\+Sub\+Tel}}
+\subsubsection{\texorpdfstring{Radio\+Sub\+Tel()}{RadioSubTel()}}
+{\footnotesize\ttfamily it.\+polito.\+elite.\+enocean.\+protocol.\+serial.\+v3.\+network.\+packet.\+radiosubtel.\+Radio\+Sub\+Tel.\+Radio\+Sub\+Tel (\begin{DoxyParamCaption}\item[{byte}]{data\mbox{[}$\,$\mbox{]},  }\item[{byte}]{sub\+Tel\+Num,  }\item[{int}]{destination\+Id,  }\item[{byte}]{d\+Bm,  }\item[{byte}]{security\+Level,  }\item[{byte}]{time\+Stamp,  }\item[{byte}]{tick\+Sub\+Tel,  }\item[{byte}]{d\+Bm\+Sub\+Tel,  }\item[{byte}]{status\+Sub\+Tel }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & \+: radio telegram without checksum \\
+\hline
+{\em sub\+Tel\+Num} & \+: actual sequence number of subtelegrams \\
+\hline
+{\em destination\+Id} & \+: Broadcast radio FF FF FF FF \\
+\hline
+{\em d\+Bm} & \+: Send case\+: FF Receive case \+: best R\+S\+SI value of all received subtelegrams (value decimal without minus) \\
+\hline
+{\em security\+Level} & \+: 0 = telegram unencrypted n = type of encryption (not supported any more) \\
+\hline
+{\em time\+Stamp} & \+: Timestamp of 1st subtelegram is the system timer tick \mbox{[}ms\mbox{]} (2 bytes lower address) \\
+\hline
+{\em tick\+Sub\+Tel} & \+: Relative time \mbox{[}ms\mbox{]} of each subtelegram \\
+\hline
+{\em d\+Bm\+Sub\+Tel} & \+: R\+S\+SI value of each subtelegram \\
+\hline
+{\em status\+Sub\+Tel} & \+: Telegram control bits of each subtelegram -\/ used in case of repeating, switch telegram encapsulation, checksum type identification \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/it/polito/elite/enocean/protocol/serial/v3/network/packet/radiosubtel/\hyperlink{it_2polito_2elite_2enocean_2protocol_2serial_2v3_2network_2packet_2radiosubtel_2_radio_sub_tel_8java}{Radio\+Sub\+Tel.\+java}\end{DoxyCompactItemize}

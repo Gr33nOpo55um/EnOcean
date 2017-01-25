@@ -1,0 +1,46 @@
+\hypertarget{classit_1_1polito_1_1elite_1_1enocean_1_1enj_1_1link_1_1serial_1_1_serial_port_factory}{}\section{it.\+polito.\+elite.\+enocean.\+enj.\+link.\+serial.\+Serial\+Port\+Factory Class Reference}
+\label{classit_1_1polito_1_1elite_1_1enocean_1_1enj_1_1link_1_1serial_1_1_serial_port_factory}\index{it.\+polito.\+elite.\+enocean.\+enj.\+link.\+serial.\+Serial\+Port\+Factory@{it.\+polito.\+elite.\+enocean.\+enj.\+link.\+serial.\+Serial\+Port\+Factory}}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static Serial\+Port \hyperlink{classit_1_1polito_1_1elite_1_1enocean_1_1enj_1_1link_1_1serial_1_1_serial_port_factory_a1401b4b89998c201a2b3b424c6b7efad}{get\+Port} (String port\+Name, int timeout)  throws Exception 	
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A utility factory for getting a reference to the serial port used for communicating with the physical En\+Ocean transceiver, initialized with the correct parameters.
+
+\begin{DoxyAuthor}{Author}
+\href{mailto:dario.bonino@gmail.com}{\tt Dario Bonino}  \href{mailto:biasiandrea04@gmail.com}{\tt Andrea Biasi } 
+\end{DoxyAuthor}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classit_1_1polito_1_1elite_1_1enocean_1_1enj_1_1link_1_1serial_1_1_serial_port_factory_a1401b4b89998c201a2b3b424c6b7efad}{}\label{classit_1_1polito_1_1elite_1_1enocean_1_1enj_1_1link_1_1serial_1_1_serial_port_factory_a1401b4b89998c201a2b3b424c6b7efad} 
+\index{it\+::polito\+::elite\+::enocean\+::enj\+::link\+::serial\+::\+Serial\+Port\+Factory@{it\+::polito\+::elite\+::enocean\+::enj\+::link\+::serial\+::\+Serial\+Port\+Factory}!get\+Port@{get\+Port}}
+\index{get\+Port@{get\+Port}!it\+::polito\+::elite\+::enocean\+::enj\+::link\+::serial\+::\+Serial\+Port\+Factory@{it\+::polito\+::elite\+::enocean\+::enj\+::link\+::serial\+::\+Serial\+Port\+Factory}}
+\subsubsection{\texorpdfstring{get\+Port()}{getPort()}}
+{\footnotesize\ttfamily static Serial\+Port it.\+polito.\+elite.\+enocean.\+enj.\+link.\+serial.\+Serial\+Port\+Factory.\+get\+Port (\begin{DoxyParamCaption}\item[{String}]{port\+Name,  }\item[{int}]{timeout }\end{DoxyParamCaption}) throws Exception\hspace{0.3cm}{\ttfamily [static]}}
+
+Provides a correctly configured serial port connection, given a port identifier and a transmission timeout.
+
+
+\begin{DoxyParams}{Parameters}
+{\em port\+Name} & The name of the port to connect to (e.\+g., C\+O\+M1, /dev/tty0, ...) \\
+\hline
+{\em timeout} & The connection timeout \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a \hyperlink{}{Serial\+Port} instance representing the port identified by the given data, if existing, or null otherwise. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Exception} & \\
+\hline
+\end{DoxyExceptions}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/it/polito/elite/enocean/enj/link/serial/\hyperlink{_serial_port_factory_8java}{Serial\+Port\+Factory.\+java}\end{DoxyCompactItemize}
