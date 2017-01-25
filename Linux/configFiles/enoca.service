@@ -1,8 +1,8 @@
 [Unit]
 Description=EnocaLogger
 [Service]
-ExecStart=/home/prus/dev/Blah-4.1/Server/runServer.sh
+ExecStart=/opt/enoca/enoca.sh
 Type=simple
-User=prus
+User=alarm
 [Install]
 WantedBy=multi-user.target
