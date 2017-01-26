@@ -6,12 +6,12 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 /**
- * All Telegramm which cannot parsed into other tables.
+ * All telegram which cannot parsed into other tables.
  *
  * @author silas & louis
  */
 @Entity
-public class Dumy extends TelegramHeader {
+public class Dummy extends TelegramHeader {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)

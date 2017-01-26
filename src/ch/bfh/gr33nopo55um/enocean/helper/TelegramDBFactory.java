@@ -84,7 +84,7 @@ public class TelegramDBFactory {
                     break;
 
                 default:
-                    telegram = new Dumy();
+                    telegram = new Dummy();
                     break;
             }
 
@@ -97,7 +97,7 @@ public class TelegramDBFactory {
         } else {
             //No known telegram type found.
             System.err.println("Wrong Telegram Sync byte! Taking dumy instead");
-            telegram = new Dumy();
+            telegram = new Dummy();
 
             return telegram;
         }
