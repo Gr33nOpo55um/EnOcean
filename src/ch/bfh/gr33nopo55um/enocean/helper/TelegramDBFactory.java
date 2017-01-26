@@ -1,6 +1,8 @@
 package ch.bfh.gr33nopo55um.enocean.helper;
 
 import ch.bfh.gr33nopo55um.enocean.telegram.*;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 /**
  * Logic to determine which packettype should be persisted.
@@ -8,6 +10,8 @@ import ch.bfh.gr33nopo55um.enocean.telegram.*;
  * @author silas
  **/
 public class TelegramDBFactory {
+
+    private static Logger logger = LogManager.getLogger();
 
     /**
      * @param hexTelegram in hex String
@@ -92,6 +96,7 @@ public class TelegramDBFactory {
             telegram.decodeTelegramData(hexTelegram);
             telegram.persist();
 
+            logger.info("EnOcean Telegram: HEX=" + hexTelegram + telegram.toString());
 
             return telegram;
         } else {
