@@ -39,8 +39,6 @@ public class Tester {
             e.printStackTrace();
         }
 
-        logger.info("EnOcean Telegram: HEX=0x55000a0701eba50000000c019134fc0001ffffffff3d002f DATA=...");
-
         //Log current time for performance measurement
         long stopTime = System.currentTimeMillis();
         long elapsedTime = stopTime - startTime;
