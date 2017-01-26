@@ -41,18 +41,8 @@ public class Tester {
             e.printStackTrace();
         }
 
-<<<<<<< HEAD
-        //Log current time for performance measurement
-        long stopTime = System.currentTimeMillis();
-        long elapsedTime = stopTime - startTime;
-        logger.info("Script run in: " + elapsedTime + " miliseconds.");
-=======
+
         timeLogger.endLogTime();
-
-        logger.info("EnOcean Telegram: HEX=0x55000a0701eba50000000c019134fc0001ffffffff3d002f DATA=...");
-
-
->>>>>>> ea46b20cf997ab1bbaa1f2f00c8c77647d80171f
     }
 
 

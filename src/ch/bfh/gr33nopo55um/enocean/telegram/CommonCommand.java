@@ -1,7 +1,9 @@
 package ch.bfh.gr33nopo55um.enocean.telegram;
 
-import javax.persistence.Cacheable;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 
 /**
  * Serveral Commands, for further informations check EnoceanSerialProtocol v3
@@ -11,6 +13,12 @@ import javax.persistence.Entity;
 
 @Entity
 public class CommonCommand extends TelegramHeader {
+
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Long id;
+
 
     private int ccCode;
     private int ccData;
@@ -44,7 +52,7 @@ public class CommonCommand extends TelegramHeader {
         return ccCode;
     }
 
-    public void setCcCode(int ccCode) {
+    private void setCcCode(int ccCode) {
         this.ccCode = ccCode;
     }
 
@@ -52,7 +60,7 @@ public class CommonCommand extends TelegramHeader {
         return ccData;
     }
 
-    public void setCcData(int ccData) {
+    private void setCcData(int ccData) {
         this.ccData = ccData;
     }
 
