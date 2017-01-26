@@ -6,7 +6,7 @@ import it.polito.elite.enocean.enj.link.EnJLink;
 import it.polito.elite.enocean.examples.SimpleDeviceListener;
 
 /**
- * Created by silas on 23.01.17.
+ * @Author silas
  */
 public class EnoceaListener {
 
