@@ -28,6 +28,10 @@
             <property name="javax.persistence.jdbc.url" value="jdbc:sqlite:enocean.db"/>
             <property name="eclipselink.ddl-generation" value="create-tables"/>
             <property name="eclipselink.ddl-generation.output-mode" value="database"/>
+            <property name="eclipselink.jdbc.batch-writing" value="Oracle-JDBC"/>
+            <property name="eclipselink.cache.shared.default" value="false"/>
+            <property name="eclipselink.logging.level" value="off"/>
+           <property name="eclipselink.persistence-context.close-on-commit" value="true"/>
         </properties>
 
         <!--Properties for production:

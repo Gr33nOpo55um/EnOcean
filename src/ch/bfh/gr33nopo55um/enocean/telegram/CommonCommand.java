@@ -1,11 +1,15 @@
 package ch.bfh.gr33nopo55um.enocean.telegram;
 
+import javax.persistence.Cacheable;
+import javax.persistence.Entity;
+
 /**
  * Serveral Commands, for further informations check EnoceanSerialProtocol v3
  *
  * @author silas & louis
  */
-@SuppressWarnings("ALL")
+
+@Entity
 public class CommonCommand extends TelegramHeader {
 
     private int ccCode;
