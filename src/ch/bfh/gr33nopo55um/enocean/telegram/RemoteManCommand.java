@@ -78,12 +78,11 @@ public class RemoteManCommand extends TelegramHeader {
 
     @Override
     public String toString() {
-        return "RemoteManCommand{" +
-                "destinationID='" + destinationID + '\'' +
-                ", sourceID='" + sourceID + '\'' +
-                ", dbm=" + dbm +
-                ", sendDelay=" + sendDelay +
-                '}';
+        return "PacketType=RemoteManCommand" +
+                " DestinationID=" + destinationID +
+                " SourceID=" + sourceID +
+                " dBm=" + dbm +
+                " SendWithDelay=" + sendDelay;
     }
 
     public String getDestinationID() {

@@ -88,9 +88,8 @@ public class CommonCommand extends TelegramHeader {
 
     @Override
     public String toString() {
-        return "CommonCommand{" +
-                "ccCode=" + ccCode +
-                ", ccData=" + ccData +
-                '}';
+        return "type=CommonCommand" +
+                " CommonCommandCode=" + ccCode +
+                " CommonCommandData=" + ccData;
     }
 }

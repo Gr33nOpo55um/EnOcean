@@ -92,11 +92,10 @@ public class RadioERP2 extends TelegramHeader {
 
     @Override
     public String toString() {
-        return "RadioERP2{" +
-                "subTelNum=" + subTelNum +
-                ", dbm=" + dbm +
-                ", rawData='" + rawData + '\'' +
-                '}';
+        return "PacketType=RadioERP2" +
+                " SubTelNum=" + subTelNum +
+                " dBm=" + dbm +
+                " RawData=" + rawData;
     }
 
     public Long getId() {

@@ -71,10 +71,9 @@ public class SmartAckCommand extends TelegramHeader {
 
     @Override
     public String toString() {
-        return "SmartAckCommand{" +
-                "smartAckCommandNr=" + smartAckCommandNr +
-                ", smartAckCommandData=" + smartAckCommandData +
-                '}';
+        return "PacketType=SmartAckCommand" +
+                " SmartAckCommandNr=" + smartAckCommandNr +
+                " SmartAckData=" + smartAckCommandData;
     }
 
     public int getSmartAckCommandNr() {

@@ -32,16 +32,15 @@ public class RadioSubTel extends TelegramHeader {
 
     @Override
     public String toString() {
-        return "RadioSubTel{" +
-                "subTelNum=" + subTelNum +
-                ", destinationID='" + destinationID + '\'' +
-                ", dbm=" + dbm +
-                ", securityLevel=" + securityLevel +
-                ", timeStamp='" + timeStamp + '\'' +
-                ", tickSubTel='" + tickSubTel + '\'' +
-                ", dbmSubTel='" + dbmSubTel + '\'' +
-                ", statusSubTel='" + statusSubTel + '\'' +
-                '}';
+        return "PacketType=RadioSubTel" +
+                " SubTelNum=" + subTelNum +
+                " DestinationID=" + destinationID +
+                " dBm=" + dbm +
+                " SecurityLevel=" + securityLevel +
+                " TimeStamp=" + timeStamp +
+                " TickSubTel=" + tickSubTel +
+                " dBmSubTel=" + dbmSubTel +
+                " StatusSubTel='" + statusSubTel;
     }
 
     public int getSubTelNum() {

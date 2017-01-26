@@ -67,9 +67,8 @@ public class Response extends TelegramHeader {
 
     @Override
     public String toString() {
-        return "Response{" +
-                "returnCode=" + returnCode +
-                '}';
+        return "PacketType=Response" +
+                " ReturnCode=" + returnCode;
     }
 
     public int getReturnCode() {

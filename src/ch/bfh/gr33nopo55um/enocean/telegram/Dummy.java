@@ -43,5 +43,8 @@ public class Dummy extends TelegramHeader {
 
     }
 
-
+    @Override
+    public String toString() {
+        return "PacketType=Dummy";
+    }
 }

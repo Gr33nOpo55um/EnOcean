@@ -99,10 +99,9 @@ public class RadioMessage extends TelegramHeader {
 
     @Override
     public String toString() {
-        return "RadioMessage{" +
-                "destinationID='" + destinationID + '\'' +
-                ", sourceID='" + sourceID + '\'' +
-                ", dbm=" + dbm +
-                '}';
+        return "PacketType=RadioMessage" +
+                " DestinationID=" + destinationID +
+                " SourceID=" + sourceID +
+                " dBm=" + dbm;
     }
 }

@@ -125,12 +125,11 @@ public class Radio802 extends TelegramHeader {
 
     @Override
     public String toString() {
-        return "Radio802{" +
-                "messageRorg=" + messageRorg +
-                ", messageData=" + messageData +
-                ", destinationId=" + destinationId +
-                ", sourceId=" + sourceId +
-                ", dbm=" + dbm +
-                '}';
+        return "PacketType=Radio802" +
+                " messageRorg=" + messageRorg +
+                " messageData=" + messageData +
+                " destinationId=" + destinationId +
+                " sourceId=" + sourceId +
+                " dbm=" + dbm;
     }
 }

@@ -94,9 +94,8 @@ public class Event extends TelegramHeader {
 
     @Override
     public String toString() {
-        return "Event{" +
-                "eventCode=" + eventCode +
-                ", EventData=" + EventData +
-                '}';
+        return "PacketType=Event" +
+                " EventCode=" + eventCode +
+                " EventData=" + EventData;
     }
 }
