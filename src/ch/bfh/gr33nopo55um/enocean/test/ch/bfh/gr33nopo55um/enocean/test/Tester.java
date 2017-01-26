@@ -3,8 +3,6 @@ package ch.bfh.gr33nopo55um.enocean.test;
 import ch.bfh.gr33nopo55um.enocean.helper.ReadConfig;
 import ch.bfh.gr33nopo55um.enocean.helper.TelegramDBFactory;
 import ch.bfh.gr33nopo55um.enocean.helper.TimeLogger;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 
 import java.io.IOException;
 
@@ -14,8 +12,6 @@ import java.io.IOException;
  * @author silas
  */
 public class Tester {
-
-    private static Logger logger = LogManager.getLogger();
 
     public static void main(String args[]) {
 
