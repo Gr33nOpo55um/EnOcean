@@ -1,0 +1,12 @@
+[Unit]
+Description=EnocaLogger
+[Service]
+WorkingDirectory=/opt/enoca
+
+ExecStart=/usr/bin/java -Xmx256m -jar EnOcean.jar
+SuccessExitStatus=143
+
+Type=simple
+User=root
+[Install]
+WantedBy=multi-user.target
