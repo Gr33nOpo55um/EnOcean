@@ -5,6 +5,9 @@ import ch.bfh.gr33nopo55um.enocean.helper.TelegramDBFactory;
 
 import java.io.IOException;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 /**
  * Used for Testing telegrams
  *
@@ -12,6 +15,7 @@ import java.io.IOException;
  */
 public class Tester {
 
+    private static Logger logger = LogManager.getLogger();
 
     public static void main(String args[]) {
 
@@ -23,13 +27,14 @@ public class Tester {
 
         telegramDBFactory.telegramRouter("0x55000a0701eba50000000c019134fc0001ffffffff3d002f");
 
-
         ReadConfig readConfig = new ReadConfig();
         try {
             System.out.println( readConfig.readPropertyValue("serialPort"));
         } catch (IOException e) {
             e.printStackTrace();
         }
+
+        logger.info("EnOcean Telegram: HEX=0x55000a0701eba50000000c019134fc0001ffffffff3d002f DATA=...");
 
 
 
