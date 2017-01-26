@@ -47,7 +47,7 @@ public class RadioERP2 extends TelegramHeader {
     /**
      * decodeTelegramData splits telegram in parts
      *
-     * @param hexTelegram
+     * @param hexTelegram in hex String
      */
     @Override
     public void decodeTelegramData(String hexTelegram) {
@@ -63,7 +63,7 @@ public class RadioERP2 extends TelegramHeader {
         return subTelNum;
     }
 
-    public void setSubTelNum(int subTelNum) {
+    private void setSubTelNum(int subTelNum) {
         this.subTelNum = subTelNum;
     }
 
@@ -71,7 +71,7 @@ public class RadioERP2 extends TelegramHeader {
         return dbm;
     }
 
-    public void setDbm(int dbm) {
+    private void setDbm(int dbm) {
         this.dbm = dbm;
     }
 
@@ -79,7 +79,7 @@ public class RadioERP2 extends TelegramHeader {
         return rawData;
     }
 
-    public void setRawData(String rawData) {
+    private void setRawData(String rawData) {
         this.rawData = rawData;
     }
 

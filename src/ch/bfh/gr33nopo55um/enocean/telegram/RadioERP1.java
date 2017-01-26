@@ -1,16 +1,16 @@
 package ch.bfh.gr33nopo55um.enocean.telegram;
 
-/**
- * ERP1 radio telegram, for further informations check EnoceanSerialProtocol v3
- *
- * @author silas
- **/
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
+/**
+ * ERP1 radio telegram, for further informations check EnoceanSerialProtocol v3
+ *
+ * @author silas
+ **/
 @Entity
 public class RadioERP1 extends TelegramHeader {
 
@@ -48,7 +48,7 @@ public class RadioERP1 extends TelegramHeader {
         return subTelNum;
     }
 
-    public void setSubTelNum(int subTelNum) {
+    private void setSubTelNum(int subTelNum) {
         this.subTelNum = subTelNum;
     }
 
@@ -56,7 +56,7 @@ public class RadioERP1 extends TelegramHeader {
         return destinationID;
     }
 
-    public void setDestinationID(String destinationID) {
+    private void setDestinationID(String destinationID) {
         this.destinationID = destinationID;
     }
 
@@ -64,7 +64,7 @@ public class RadioERP1 extends TelegramHeader {
         return dbm;
     }
 
-    public void setDbm(int dbm) {
+    private void setDbm(int dbm) {
         this.dbm = dbm;
     }
 
@@ -72,14 +72,14 @@ public class RadioERP1 extends TelegramHeader {
         return securityLevel;
     }
 
-    public void setSecurityLevel(int securityLevel) {
+    private void setSecurityLevel(int securityLevel) {
         this.securityLevel = securityLevel;
     }
 
     /**
      * decodeTelegramData splits telegram in parts
      *
-     * @param hexTelegram
+     * @param hexTelegram in hex String
      */
     @Override
     public void decodeTelegramData(String hexTelegram) {

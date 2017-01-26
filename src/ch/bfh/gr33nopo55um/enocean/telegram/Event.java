@@ -45,7 +45,7 @@ public class Event extends TelegramHeader {
     /**
      * decodeTelegramData splits telegram in parts
      *
-     * @param hexTelegram
+     * @param hexTelegram in hex String
      */
     @Override
     public void decodeTelegramData(String hexTelegram) {
@@ -61,7 +61,7 @@ public class Event extends TelegramHeader {
         return eventCode;
     }
 
-    public void setEventCode(int eventCode) {
+    private void setEventCode(int eventCode) {
         this.eventCode = eventCode;
     }
 

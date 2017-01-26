@@ -43,7 +43,7 @@ public class RadioMessage extends TelegramHeader {
     /**
      * decodeTelegramData splits telegram in parts
      *
-     * @param hexTelegram
+     * @param hexTelegram in hex String
      */
     @Override
     public void decodeTelegramData(String hexTelegram) {
@@ -69,7 +69,7 @@ public class RadioMessage extends TelegramHeader {
         return destinationID;
     }
 
-    public void setDestinationID(String destinationID) {
+    private void setDestinationID(String destinationID) {
         this.destinationID = destinationID;
     }
 
@@ -77,7 +77,7 @@ public class RadioMessage extends TelegramHeader {
         return sourceID;
     }
 
-    public void setSourceID(String sourceID) {
+    private void setSourceID(String sourceID) {
         this.sourceID = sourceID;
     }
 
@@ -85,7 +85,7 @@ public class RadioMessage extends TelegramHeader {
         return dbm;
     }
 
-    public void setDbm(int dbm) {
+    private void setDbm(int dbm) {
         this.dbm = dbm;
     }
 

@@ -1,7 +1,9 @@
 package ch.bfh.gr33nopo55um.enocean.helper;
 
 /**
- * Created by stegmuellerp on 06.12.2016.
+ * Checksum hander
+ *
+ * @author silas
  */
 public class CRC {
 
@@ -41,8 +43,7 @@ public class CRC {
 
     public static byte calc(byte[] data) {
         byte crc = 0;
-        for (int i = 0; i < data.length; i++)
-            crc = crc8Table[(crc ^ data[i]) & 0xff];
+        for (byte aData : data) crc = crc8Table[(crc ^ aData) & 0xff];
         return crc;
     }
 }

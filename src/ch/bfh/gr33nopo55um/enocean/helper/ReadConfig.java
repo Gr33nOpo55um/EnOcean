@@ -7,10 +7,12 @@ import java.sql.Date;
 import java.util.Properties;
 
 /**
- * Created by stegmuellerp on 24.01.2017.
+ * Class for reading the config file
+ *
+ * @author silas
  */
 public class ReadConfig {
-    InputStream inputStream;
+    private InputStream inputStream;
 
     public String readPropertyValue(String value) throws IOException {
         String result = null;
@@ -36,6 +38,7 @@ public class ReadConfig {
         } catch (Exception e) {
             System.out.println("Exception: " + e);
         } finally {
+            assert inputStream != null;
             inputStream.close();
         }
         return result;

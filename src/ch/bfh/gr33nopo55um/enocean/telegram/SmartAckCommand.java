@@ -45,7 +45,7 @@ public class SmartAckCommand extends TelegramHeader {
     /**
      * decodeTelegramData splits telegram in parts
      *
-     * @param hexTelegram
+     * @param hexTelegram in hex String
      */
     @Override
     public void decodeTelegramData(String hexTelegram) {

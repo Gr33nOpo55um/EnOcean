@@ -16,9 +16,9 @@ public abstract class TelegramHeader implements EncodeDecode {
 
 
     //some data could be longer than int
-    Long data;
+    private Long data;
 
-    int syncByte;
+    private int syncByte;
     int dataLength;
     int crcData;
     private int optionalLenght;
@@ -68,16 +68,16 @@ public abstract class TelegramHeader implements EncodeDecode {
     }
 
     /**
-     * @param fullTelegram
+     * @param fullTelegram in hex String
      */
 
-    public void setFullTelegram(String fullTelegram) {
+    private void setFullTelegram(String fullTelegram) {
         this.fullTelegram = fullTelegram;
     }
 
 
     /**
-     * @return Telegram data
+     * @return Telegram data Data of the Telegram
      */
     public Long getData() {
         return data;
@@ -85,23 +85,23 @@ public abstract class TelegramHeader implements EncodeDecode {
 
 
     /**
-     * @param data
+     * @param data Data of the Telegram
      */
-    public void setData(Long data) {
+    void setData(Long data) {
         this.data = data;
     }
 
     /**
-     * @return
+     * @return syncByte is used to determine that the String recieved by Serial is an enocean Telegram
      */
     public int getSyncByte() {
         return syncByte;
     }
 
     /**
-     * @param syncByte
+     * @param syncByte is used to determine that the String recieved by Serial is an enocean Telegram
      */
-    public void setSyncByte(int syncByte) {
+    void setSyncByte(int syncByte) {
         this.syncByte = syncByte;
     }
 
@@ -115,9 +115,9 @@ public abstract class TelegramHeader implements EncodeDecode {
 
 
     /**
-     * @param dataLength
+     * @param dataLength is used for mandatory data length
      */
-    public void setDataLength(int dataLength) {
+    void setDataLength(int dataLength) {
         this.dataLength = dataLength;
     }
 
@@ -130,9 +130,9 @@ public abstract class TelegramHeader implements EncodeDecode {
 
 
     /**
-     * @param optionalLenght
+     * @param optionalLenght is used for additional data
      */
-    public void setOptionalLenght(int optionalLenght) {
+    void setOptionalLenght(int optionalLenght) {
         this.optionalLenght = optionalLenght;
     }
 
@@ -146,9 +146,9 @@ public abstract class TelegramHeader implements EncodeDecode {
 
 
     /**
-     * @param crcHeader
+     * @param crcHeader checksum for header
      */
-    public void setCrcHeader(int crcHeader) {
+    private void setCrcHeader(int crcHeader) {
         this.crcHeader = crcHeader;
     }
 
@@ -161,9 +161,9 @@ public abstract class TelegramHeader implements EncodeDecode {
     }
 
     /**
-     * @param crcData
+     * @param crcData checksum for data
      */
-    public void setCrcData(int crcData) {
+    void setCrcData(int crcData) {
         this.crcData = crcData;
     }
 

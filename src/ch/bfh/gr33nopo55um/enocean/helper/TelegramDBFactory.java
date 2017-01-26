@@ -10,13 +10,13 @@ import ch.bfh.gr33nopo55um.enocean.telegram.*;
 public class TelegramDBFactory {
 
     /**
-     * @param hexTelegram
+     * @param hexTelegram in hex String
      * @return TelegramObject
      */
     public TelegramHeader telegramRouter(String hexTelegram) {
 
 
-        /**
+        /*
          0           Reserved
          1           RADIO_ERP1 Radio802 telegram
          2           Response to any packet
@@ -33,10 +33,11 @@ public class TelegramDBFactory {
          17          2.4 GHz Command
          18 - 127    Reserved for EnOcean
          128...255   available MSC and messages
-         **/
+         */
 
+//        TelegramHeader telegram = null;
 
-        TelegramHeader telegram = null;
+        TelegramHeader telegram;
 
         if (Integer.parseInt(hexTelegram.substring(2, 4), 16) == 85) {
 
@@ -87,7 +88,6 @@ public class TelegramDBFactory {
                     break;
             }
 
-            assert telegram != null;
             telegram.decodeTelegramHeader(hexTelegram);
             telegram.decodeTelegramData(hexTelegram);
             telegram.persist();

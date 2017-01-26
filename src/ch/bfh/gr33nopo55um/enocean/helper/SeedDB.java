@@ -1,10 +1,10 @@
 package ch.bfh.gr33nopo55um.enocean.helper;
 
 /**
- * Created by silas on 25.11.16.
+ * DB seed and inital gnerating
+ *
+ * @author silas
  */
-
-
 public class SeedDB {
 
     private static SeedDB instance;

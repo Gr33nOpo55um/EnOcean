@@ -64,7 +64,7 @@ interface EncodeDecode {
     void dumpData();
 
     /**
-     * ToDo description
+     * run both, the dumpHeader and the dumpData
      */
     void dump();
 

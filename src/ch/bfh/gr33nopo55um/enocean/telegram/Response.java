@@ -44,7 +44,7 @@ public class Response extends TelegramHeader {
     /**
      * decodeTelegramData splits telegram in parts
      *
-     * @param hexTelegram
+     * @param hexTelegram in hex String
      */
     @Override
     public void decodeTelegramData(String hexTelegram) {
@@ -76,7 +76,7 @@ public class Response extends TelegramHeader {
         return returnCode;
     }
 
-    public void setReturnCode(int returnCode) {
+    private void setReturnCode(int returnCode) {
         this.returnCode = returnCode;
     }
 }
