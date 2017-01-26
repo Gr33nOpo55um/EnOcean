@@ -107,12 +107,11 @@ public class RadioERP1 extends TelegramHeader {
 
     @Override
     public String toString() {
-        return "RadioERP1{" +
-                "subTelNum=" + subTelNum +
-                ", destinationID='" + destinationID + '\'' +
-                ", dbm=" + dbm +
-                ", securityLevel=" + securityLevel +
-                '}';
+        return "type=RadioERP1" +
+                " subTelNum=" + subTelNum +
+                " destinationID=" + destinationID +
+                " dbm=" + dbm +
+                " securityLevel=" + securityLevel;
     }
 
     @Id

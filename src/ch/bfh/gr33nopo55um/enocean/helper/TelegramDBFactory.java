@@ -96,12 +96,12 @@ public class TelegramDBFactory {
             telegram.decodeTelegramData(hexTelegram);
             telegram.persist();
 
-            logger.info("EnOcean Telegram: HEX=" + hexTelegram + telegram.toString());
+            logger.info("EnOcean Telegram: HEX=" + hexTelegram + " " + telegram.toString());
 
             return telegram;
         } else {
             //No known telegram type found.
-            System.err.println("Wrong Telegram Sync byte! Taking dumy instead");
+            System.err.println("Wrong Telegram Sync byte! Taking dummy instead");
             telegram = new Dummy();
 
             return telegram;
