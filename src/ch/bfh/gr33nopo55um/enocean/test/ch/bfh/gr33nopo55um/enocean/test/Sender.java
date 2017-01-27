@@ -42,6 +42,11 @@ public class Sender {
             ESP3Packet esp3Packet = new ESP3Packet(packetType, data, optData);
             esp3Packet.buildPacket();
             linkLayer.send(esp3Packet);
+            try {
+                Thread.sleep(200);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
         }
 
         /*
@@ -55,6 +60,11 @@ public class Sender {
             ESP3Packet esp3Packet = new ESP3Packet(packetType, data, optData);
             esp3Packet.buildPacket();
             linkLayer.send(esp3Packet);
+            try {
+                Thread.sleep(200);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
         }
     }
 }
