@@ -1,15 +1,5 @@
 # Projektdokumentation
 
-Aufraggeber     | Enoca AG
---------------- | ----------------
-Projektleiter   | Louis Siegrist
-Autor           | Louis Siegrist
-Klassifizierung | Intern
-Status          | In Arbeit
-
-Inhaltsverzeichnis
-...
-
 ## Kurzbeschreibung
 In diesem Projekt haben wir mit der Entwiklung einer Auswertungsumgebung für EnOcean Telegramme gestartet. Die Umgebung basiert auf Systemen. Das Kernstück bildet ein RaspberryPi Model 3 mit Arch Linux. Als zweitets System ist ein Dockercontainer mit Splunk im einsatz.
 
