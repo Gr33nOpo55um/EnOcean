@@ -1,8 +1,0 @@
-var searchData=
-[
-  ['max_5fretransmission',['MAX_RETRANSMISSION',['../classit_1_1polito_1_1elite_1_1enocean_1_1enj_1_1link_1_1_packet_queue_item.html#ad213f916f09ec73b7165e227e9674100',1,'it::polito::elite::enocean::enj::link::PacketQueueItem']]],
-  ['max_5fvalid_5fraw',['MAX_VALID_RAW',['../classit_1_1polito_1_1elite_1_1enocean_1_1enj_1_1eep_1_1eep26_1_1attributes_1_1_e_e_p26_humidity_linear.html#ae938658231b3ada871622ffaedbf7b8c',1,'it.polito.elite.enocean.enj.eep.eep26.attributes.EEP26HumidityLinear.MAX_VALID_RAW()'],['../classit_1_1polito_1_1elite_1_1enocean_1_1enj_1_1eep_1_1eep26_1_1attributes_1_1_e_e_p26_temperature_inverse_linear.html#a2f2c10de158b324898245f35e61e6e42',1,'it.polito.elite.enocean.enj.eep.eep26.attributes.EEP26TemperatureInverseLinear.MAX_VALID_RAW()'],['../classit_1_1polito_1_1elite_1_1enocean_1_1enj_1_1eep_1_1eep26_1_1attributes_1_1_e_e_p26_temperature_linear.html#aa7cd99638156a4510c979de1121fb218',1,'it.polito.elite.enocean.enj.eep.eep26.attributes.EEP26TemperatureLinear.MAX_VALID_RAW()']]],
-  ['min_5ftx_5ftime',['MIN_TX_TIME',['../classit_1_1polito_1_1elite_1_1enocean_1_1enj_1_1link_1_1_packet_transmitter.html#ac6003ffc335863e2566a99792eb0f698',1,'it::polito::elite::enocean::enj::link::PacketTransmitter']]],
-  ['modified',['MODIFIED',['../enumit_1_1polito_1_1elite_1_1enocean_1_1enj_1_1communication_1_1_en_j_device_change_type.html#aca5687c5e46e00a17c6807d47d19ae24',1,'it::polito::elite::enocean::enj::communication::EnJDeviceChangeType']]],
-  ['msc',['MSC',['../classit_1_1polito_1_1elite_1_1enocean_1_1enj_1_1eep_1_1_rorg.html#ab316f3e8c60b475c4dd25b05e853d82c',1,'it::polito::elite::enocean::enj::eep::Rorg']]]
-];
