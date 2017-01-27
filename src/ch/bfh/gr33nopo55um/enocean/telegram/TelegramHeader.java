@@ -7,20 +7,18 @@ import javax.persistence.MappedSuperclass;
 import java.sql.Timestamp;
 
 /**
- * TelegramHeader is used for all common fields of the telegrams. It also implements the Store procedure.
- *
  * @author silas & louis
+ * @class TelegramHeader is used for all common fields of the telegrams. It also implements the Store procedure.
  */
 @MappedSuperclass
 public abstract class TelegramHeader implements EncodeDecode {
 
 
-    //some data could be longer than int
-    private Long data;
-
-    private int syncByte;
     int dataLength;
     int crcData;
+    //some data could be longer than int
+    private Long data;
+    private int syncByte;
     private int optionalLenght;
     private int crcHeader;
 
@@ -28,27 +26,48 @@ public abstract class TelegramHeader implements EncodeDecode {
     private Timestamp creationDate;
     private String fullTelegram;
 
+
+    /**
+     * @return creationDate
+     */
     public Timestamp getCreationDate() {
         return creationDate;
     }
 
+
+    /**
+     * @param creationDate
+     */
     private void setCreationDate(Timestamp creationDate) {
         this.creationDate = creationDate;
     }
 
+    /**
+     * @return full telegram, header and data
+     */
     public String encodeTelegram() {
         return encodeTelegramHeader() + encodeTelegramData();
     }
 
+
+    /**
+     * @return null, telegram header does not contain any data
+     */
     public String encodeTelegramHeader() {
         return null;
     }
 
+    /**
+     * @param hexTelegram EnOcean Telegram
+     */
     public void decodeTelegram(String hexTelegram) {
         decodeTelegramHeader(hexTelegram);
         decodeTelegramData(hexTelegram);
     }
 
+    /**
+     * @param hexTelegram EnOcean Telegram
+     */
     public void decodeTelegramHeader(String hexTelegram) {
         Timestamp timestamp = new Timestamp(System.currentTimeMillis());
         this.setCreationDate(timestamp);
@@ -168,7 +187,7 @@ public abstract class TelegramHeader implements EncodeDecode {
     }
 
     /**
-     *
+     * @brief print Header in pretty print
      */
     public void dumpHeader() {
 
@@ -185,7 +204,7 @@ public abstract class TelegramHeader implements EncodeDecode {
     }
 
     /**
-     * Create an entity manager and persist the current object.
+     * @brief Create an entity manager and persist the current object.
      */
     public void persist() {
 
@@ -198,7 +217,7 @@ public abstract class TelegramHeader implements EncodeDecode {
 
 
     /**
-     * Used for debugging purposes
+     * @brief Used for debugging purposes
      */
     public void dump() {
 

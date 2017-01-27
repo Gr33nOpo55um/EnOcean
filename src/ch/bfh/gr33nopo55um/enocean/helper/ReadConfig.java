@@ -7,9 +7,8 @@ import java.sql.Date;
 import java.util.Properties;
 
 /**
- * Class for reading the config file
- *
  * @author silas
+ * @class Class for reading the config file
  */
 public class ReadConfig {
     private InputStream inputStream;
@@ -31,10 +30,16 @@ public class ReadConfig {
 
             Date time = new Date(System.currentTimeMillis());
 
-            // get the property value and print it out
+            /**
+             * @brief get the property value and print it out
+
+             */
             result = prop.getProperty(value);
 
 
+            /**
+             * @brief throws error if no prop file is available
+             */
         } catch (Exception e) {
             System.out.println("Exception: " + e);
         } finally {

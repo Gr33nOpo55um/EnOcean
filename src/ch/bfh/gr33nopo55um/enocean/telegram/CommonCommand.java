@@ -6,9 +6,8 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 /**
- * Serveral Commands, for further informations check EnoceanSerialProtocol v3
- *
  * @author silas & louis
+ * @class Serveral Commands, for further informations check EnoceanSerialProtocol v3
  */
 
 @Entity
@@ -29,9 +28,8 @@ public class CommonCommand extends TelegramHeader {
     }
 
     /**
-     * encodeTelegramData provides an example data hex for this packet type.
-     *
      * @return String hexTelegramData EnOcean Telegram
+     * @brief encodeTelegramData provides an example data hex for this packet type.
      */
     @Override
     public String encodeTelegramData() {
@@ -75,9 +73,7 @@ public class CommonCommand extends TelegramHeader {
     }
 
     /**
-     * dumpData Print Data, useful for logs and testing
-     * <p>
-     * EnOcean Telegram
+     * @brief dumpData Print Data, useful for logs and testing EnOcean Telegram
      */
     @Override
     public void dumpData() {

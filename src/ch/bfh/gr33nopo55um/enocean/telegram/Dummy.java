@@ -6,9 +6,8 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 /**
- * All telegram which cannot parsed into other tables.
- *
  * @author silas & louis
+ * @class All telegram which cannot parsed into other tables.
  */
 @Entity
 public class Dummy extends TelegramHeader {
@@ -33,16 +32,26 @@ public class Dummy extends TelegramHeader {
         return null;
     }
 
+
+    /**
+     * @param hexTelegram EnOcean Telegram
+     */
     @Override
     public void decodeTelegramData(String hexTelegram) {
 
     }
 
+    /**
+     * @brief usally a dummy package does not have any data
+     */
     @Override
     public void dumpData() {
-
     }
 
+
+    /**
+     * @return PacketType=Dummy
+     */
     @Override
     public String toString() {
         return "PacketType=Dummy";

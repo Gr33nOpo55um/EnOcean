@@ -4,7 +4,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 /**
- * Time logger for performance measurement
+ * @class Time logger for performance measurement
  *
  * @author silas
  */

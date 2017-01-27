@@ -1,8 +1,8 @@
 package ch.bfh.gr33nopo55um.enocean.test;
 
 import ch.bfh.gr33nopo55um.enocean.helper.ReadConfig;
-import ch.bfh.gr33nopo55um.enocean.persistence.TelegramDBFactory;
 import ch.bfh.gr33nopo55um.enocean.helper.TimeLogger;
+import ch.bfh.gr33nopo55um.enocean.persistence.TelegramDBFactory;
 
 import java.io.IOException;
 
@@ -24,7 +24,7 @@ public class Tester {
         TelegramDBFactory telegramDBFactory = new TelegramDBFactory();
 
         /*
-        * Loop for masstesting
+        * @brief Loop for masstesting
         */
         for (int i = 0; i < 20; i++) {
             telegramDBFactory.telegramRouter("0x55000707017af6000022a1342001ffffffff3a0035");

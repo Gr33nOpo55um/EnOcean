@@ -6,11 +6,8 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 /**
- * diagnosis or statistics. The packet design corresponds to the type RADIO_ERP1.
- * The content of the OPTIONAL_DATA is altered slightly,
- * for further informations check EnoceanSerialProtocol v3
- *
  * @author silas & louis
+ * @class diagnosis or statistics. The packet design corresponds to the type RADIO_ERP1. The content of the OPTIONAL_DATA is altered slightly, for further informations check EnoceanSerialProtocol v3
  */
 @SuppressWarnings("ALL")
 @Entity
@@ -108,9 +105,8 @@ public class RadioSubTel extends TelegramHeader {
     }
 
     /**
-     * encodeTelegram provides an example telegram hex for this packet type.
-     *
      * @return telegram hex
+     * @brief encodeTelegram provides an example telegram hex for this packet type.
      */
     @Override
     public String encodeTelegram() {
@@ -118,9 +114,8 @@ public class RadioSubTel extends TelegramHeader {
     }
 
     /**
-     * encodeTelegramData provides an example data hex for this packet type.
-     *
      * @return String hexTelegramData EnOcean Telegram
+     * @brief encodeTelegramData provides an example data hex for this packet type.
      */
     @Override
     public String encodeTelegramData() {
@@ -129,9 +124,8 @@ public class RadioSubTel extends TelegramHeader {
 
 
     /**
-     * decodeTelegramData splits telegram in parts
-     *
      * @param hexTelegram
+     * @brief decodeTelegramData splits telegram in parts
      */
     @Override
     public void decodeTelegramData(String hexTelegram) {
@@ -160,9 +154,7 @@ public class RadioSubTel extends TelegramHeader {
     }
 
     /**
-     * dumpData Print Data, useful for logs and testiing
-     * <p>
-     * EnOcean Telegram
+     * @brief dumpData Print Data, useful for logs and testiing
      */
     @Override
     public void dumpData() {

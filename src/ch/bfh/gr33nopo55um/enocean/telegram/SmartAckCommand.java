@@ -6,10 +6,8 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 /**
- * SMART_ACK_COMMAND (carries no
- * Optional Data), for further informations check EnoceanSerialProtocol v3
- *
  * @author silas & louis
+ * @class SMART_ACK_COMMAND (carries no Optional Data), for further informations check EnoceanSerialProtocol v3
  */
 @Entity
 public class SmartAckCommand extends TelegramHeader {
@@ -23,9 +21,8 @@ public class SmartAckCommand extends TelegramHeader {
     private int smartAckCommandData;
 
     /**
-     * encodeTelegram provides an example telegram hex for this packet type.
-     *
      * @return telegram hex
+     * @brief encodeTelegram provides an example telegram hex for this packet type.
      */
     @Override
     public String encodeTelegram() {
@@ -33,9 +30,8 @@ public class SmartAckCommand extends TelegramHeader {
     }
 
     /**
-     * encodeTelegramData provides an example data hex for this packet type.
-     *
      * @return String hexTelegramData EnOcean Telegram
+     * @brief encodeTelegramData provides an example data hex for this packet type.
      */
     @Override
     public String encodeTelegramData() {
@@ -43,9 +39,8 @@ public class SmartAckCommand extends TelegramHeader {
     }
 
     /**
-     * decodeTelegramData splits telegram in parts
-     *
      * @param hexTelegram in hex String
+     * @brief decodeTelegramData splits telegram in parts
      */
     @Override
     public void decodeTelegramData(String hexTelegram) {
@@ -60,9 +55,7 @@ public class SmartAckCommand extends TelegramHeader {
     }
 
     /**
-     * dumpData Print Data, useful for logs and testing
-     * <p>
-     * EnOcean Telegram
+     * @brief dumpData Print Data, useful for logs and testing
      */
     @Override
     public void dumpData() {

@@ -4,22 +4,44 @@ import ch.bfh.gr33nopo55um.enocean.helper.ReadConfig;
 import it.polito.elite.enocean.enj.communication.EnJConnection;
 import it.polito.elite.enocean.enj.link.EnJLink;
 import it.polito.elite.enocean.examples.SimpleDeviceListener;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
+import java.io.IOException;
 
 /**
- * @Author silas
+ * @author silas
+ * @class Class which implements the Enj lib functions
  */
 public class EnoceaListener {
 
+    private static Logger logger = LogManager.getLogger();
+
+
     /**
-     * Logger for Serial port
+     * @brief Logger for Serial port
      */
     public void logger() {
 
 
         ReadConfig readConfig = new ReadConfig();
+        String serialPort;
 
-        /*
-         * The EnJ link layer, uses the identifier of the serial port on which the gateway is connected
+        /**
+         * @brief try to read config file, if something hapend unexptected, take default port.
+         */
+        try {
+            serialPort = readConfig.readPropertyValue("serialPort");
+        } catch (IOException e) {
+            serialPort = "/dev/ttyUSB0";
+            logger.warn("No config found, taking default Port instead: " + serialPort);
+
+        }
+
+
+        /**
+         @brief
+          * The EnJ link layer, uses the identifier of the serial port on which the gateway is connected
          */
         EnJLink linkLayer = null;
         try {
@@ -30,27 +52,28 @@ public class EnoceaListener {
         }
 
 
-        /*
-         * build the connection layer, which abstracts network peculiarities and provides an event-based access to connected devices
+        /**
+         @brief
+          * build the connection layer, which abstracts network peculiarities and provides an event-based access to connected devices
          */
         EnJConnection connection = new EnJConnection(linkLayer, null); //null persistent storage
 
 
-        /*
-         * build a simple device listener to "listen" to device notifications
+        /**
+         @brief
+          * build a simple device listener to "listen" to device notifications
          */
         SimpleDeviceListener listener = new SimpleDeviceListener();
 
 
-
-        /*
-          add the listener to the connection layer
-
+        /**
+         * @brief add the listener to the connection layer
+         *
          */
         connection.addEnJDeviceListener(listener);
 
-        /*
-        connect the link to the physical network
+        /**
+         @brief connect the link to the physical network
          */
         linkLayer.connect();
 
