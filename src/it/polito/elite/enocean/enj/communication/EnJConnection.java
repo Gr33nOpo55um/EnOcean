@@ -443,6 +443,9 @@ public class EnJConnection implements PacketListener {
         // network or a response
         try {
 
+            /**
+             * @brief integrate our telegram stuff into enjConnection, routing + store
+             */
             System.out.println(ByteUtils.toHexString(pkt.getPacketAsBytes()));
 
             TelegramDBFactory telegramDBFactory = new TelegramDBFactory();
@@ -452,7 +455,6 @@ public class EnJConnection implements PacketListener {
 
             if (pkt.isRadio()) {
                 this.handleRadioPacket(new Radio(pkt));
-                System.out.println("test");
             } else if (pkt.isResponse()) {
                 this.handleResponse(new Response(pkt));
             } else if (pkt.isEvent()) {

@@ -7,9 +7,8 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 /**
- * ERP1 radio telegram, for further informations check EnoceanSerialProtocol v3
- *
  * @author silas
+ * @class ERP1 radio telegram, for further informations check EnoceanSerialProtocol v3. This is usually the default telegram type.
  **/
 @Entity
 public class RadioERP1 extends TelegramHeader {
@@ -25,9 +24,8 @@ public class RadioERP1 extends TelegramHeader {
 
 
     /**
-     * encodeTelegram provides an example telegram hex for this packet type.
-     *
      * @return telegram hex
+     * @brief encodeTelegram provides an example telegram hex for this packet type.
      */
     @Override
     public String encodeTelegram() {
@@ -35,9 +33,8 @@ public class RadioERP1 extends TelegramHeader {
     }
 
     /**
-     * encodeTelegramData provides an example data hex for this packet type.
-     *
      * @return String hexTelegramData EnOcean Telegram
+     * @brief encodeTelegramData provides an example data hex for this packet type.
      */
     @Override
     public String encodeTelegramData() {
@@ -77,9 +74,8 @@ public class RadioERP1 extends TelegramHeader {
     }
 
     /**
-     * decodeTelegramData splits telegram in parts
-     *
      * @param hexTelegram in hex String
+     * @brief decodeTelegramData splits telegram in parts
      */
     @Override
     public void decodeTelegramData(String hexTelegram) {

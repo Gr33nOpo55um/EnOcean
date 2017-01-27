@@ -6,9 +6,8 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 /**
- * remote management command structure. This structure is applied for the send as well as the receive case, for further informations check EnoceanSerialProtocol v3
- *
  * @author silas & louis
+ * @class remote management command structure. This structure is applied for the send as well as the receive case, for further informations check EnoceanSerialProtocol v3
  */
 @Entity
 public class RemoteManCommand extends TelegramHeader {
@@ -24,9 +23,8 @@ public class RemoteManCommand extends TelegramHeader {
     private int sendDelay;
 
     /**
-     * encodeTelegram provides an example telegram hex for this packet type.
-     *
      * @return telegram hex
+     * @brief encodeTelegram provides an example telegram hex for this packet type.
      */
     @Override
     public String encodeTelegram() {
@@ -34,9 +32,8 @@ public class RemoteManCommand extends TelegramHeader {
     }
 
     /**
-     * encodeTelegramData provides an example data hex for this packet type.
-     *
      * @return String hexTelegramData EnOcean Telegram
+     * @brief encodeTelegramData provides an example data hex for this packet type.
      */
     @Override
     public String encodeTelegramData() {
@@ -44,9 +41,8 @@ public class RemoteManCommand extends TelegramHeader {
     }
 
     /**
-     * decodeTelegramData splits telegram in parts
-     *
      * @param hexTelegram in hex String
+     * @brief decodeTelegramData splits telegram in parts
      */
     @Override
     public void decodeTelegramData(String hexTelegram) {
@@ -66,9 +62,7 @@ public class RemoteManCommand extends TelegramHeader {
     }
 
     /**
-     * dumpData Print Data, useful for logs and testiing
-     * <p>
-     * EnOcean Telegram
+     * @brief dumpData Print Data, useful for logs and testiing
      */
     @Override
     public void dumpData() {

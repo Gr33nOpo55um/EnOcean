@@ -6,7 +6,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 /**
- * When sending a telegram, a RESPOND has to be expected. In this case, the following RESPONSE message gives the return codes: 00 RET_OK 02 RET_NOT_SUPPORTED 03 RET_WRONG_PARAM, for further informations check EnoceanSerialProtocol v3
+ * @class When sending a telegram, a RESPOND has to be expected. In this case, the following RESPONSE message gives the return codes: 00 RET_OK 02 RET_NOT_SUPPORTED 03 RET_WRONG_PARAM, for further informations check EnoceanSerialProtocol v3
  *
  * @author silas & louis
  */
@@ -22,7 +22,7 @@ public class Response extends TelegramHeader {
     private int returnCode;
 
     /**
-     * encodeTelegram provides an example telegram hex for this packet type.
+     * @brief encodeTelegram provides an example telegram hex for this packet type.
      *
      * @return telegram hex
      */
@@ -32,7 +32,7 @@ public class Response extends TelegramHeader {
     }
 
     /**
-     * encodeTelegramData provides an example data hex for this packet type.
+     * @brief encodeTelegramData provides an example data hex for this packet type.
      *
      * @return String hexTelegramData EnOcean Telegram
      */
@@ -42,7 +42,7 @@ public class Response extends TelegramHeader {
     }
 
     /**
-     * decodeTelegramData splits telegram in parts
+     * @brief decodeTelegramData splits telegram in parts
      *
      * @param hexTelegram in hex String
      */
@@ -55,8 +55,7 @@ public class Response extends TelegramHeader {
     }
 
     /**
-     * dumpData Print Data, useful for logs and testiing
-     * <p>
+     * @brief dumpData Print Data, useful for logs and testiing
      * EnOcean Telegram
      */
     @Override

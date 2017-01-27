@@ -6,7 +6,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 /**
- * ERP2 radio protocol telegram, for further informations check EnoceanSerialProtocol v3
+ * @class ERP2 radio protocol telegram, for further informations check EnoceanSerialProtocol v3
  *
  * @author silas & louis
  */
@@ -25,7 +25,7 @@ public class RadioERP2 extends TelegramHeader {
 
 
     /**
-     * encodeTelegram provides an example telegram hex for this packet type.
+     * @brief encodeTelegram provides an example telegram hex for this packet type.
      *
      * @return telegram hex
      */
@@ -35,7 +35,7 @@ public class RadioERP2 extends TelegramHeader {
     }
 
     /**
-     * encodeTelegramData provides an example data hex for this packet type.
+     * @brief encodeTelegramData provides an example data hex for this packet type.
      *
      * @return String hexTelegramData EnOcean Telegram
      */
@@ -45,7 +45,7 @@ public class RadioERP2 extends TelegramHeader {
     }
 
     /**
-     * decodeTelegramData splits telegram in parts
+     * @brief decodeTelegramData splits telegram in parts
      *
      * @param hexTelegram in hex String
      */
@@ -59,6 +59,10 @@ public class RadioERP2 extends TelegramHeader {
 
     }
 
+    /**
+     *
+     * @return subTelNum
+     */
     public int getSubTelNum() {
         return subTelNum;
     }
@@ -82,6 +86,7 @@ public class RadioERP2 extends TelegramHeader {
     private void setRawData(String rawData) {
         this.rawData = rawData;
     }
+
 
     @Override
     public void dumpData() {

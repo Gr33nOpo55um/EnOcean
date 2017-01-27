@@ -1,7 +1,7 @@
 package ch.bfh.gr33nopo55um.enocean.helper;
 
 /**
- * Checksum handler
+ * @class Checksum handler
  *
  * @author silas
  */

@@ -6,9 +6,8 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 /**
- * Physical Raw Packet, for further informations check EnoceanSerialProtocol v3
- *
  * @author silas & louis
+ * @class Physical Raw Packet, for further informations check EnoceanSerialProtocol v3
  */
 @Entity
 public class Radio802 extends TelegramHeader {
@@ -26,9 +25,8 @@ public class Radio802 extends TelegramHeader {
 
 
     /**
-     * encodeTelegram provides an example telegram hex for this packet type.
-     *
      * @return telegram hex
+     * @brief encodeTelegram provides an example telegram hex for this packet type.
      */
     @Override
     public String encodeTelegram() {
@@ -36,9 +34,8 @@ public class Radio802 extends TelegramHeader {
     }
 
     /**
-     * encodeTelegramData provides an example data hex for this packet type.
-     *
      * @return String hexTelegramData EnOcean Telegram
+     * @brief encodeTelegramData provides an example data hex for this packet type.
      */
     @Override
     public String encodeTelegramData() {
@@ -46,9 +43,8 @@ public class Radio802 extends TelegramHeader {
     }
 
     /**
-     * decodeTelegramData splits telegram in parts
-     *
      * @param hexTelegram in hex String
+     * @brief decodeTelegramData splits telegram in parts
      */
     @Override
     public void decodeTelegramData(String hexTelegram) {
@@ -112,9 +108,7 @@ public class Radio802 extends TelegramHeader {
     }
 
     /**
-     * dumpData Print Data, useful for logs and testiing
-     * <p>
-     * EnOcean Telegram
+     * @brief dumpData Print Data, useful for logs and testiing
      */
     @Override
     public void dumpData() {
@@ -123,6 +117,9 @@ public class Radio802 extends TelegramHeader {
 
     }
 
+    /*
+    @brief pretty print
+     */
     @Override
     public String toString() {
         return "PacketType=Radio802" +

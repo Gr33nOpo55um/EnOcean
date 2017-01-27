@@ -1,75 +1,64 @@
 package ch.bfh.gr33nopo55um.enocean.telegram;
 
 /**
- * This interface provides basic encodeTelegram and decodeTelegramData methods for EnOcean telegrams.
- *
  * @author silas & louis
+ * @class This interface provides basic encodeTelegram and decodeTelegramData methods for EnOcean telegrams.
  */
 interface EncodeDecode {
 
     /**
-     * encodeTelegram provides an example telegram hex for this packet type.
-     *
      * @return String hexTelegram EnOcean Telegram
+     * @brief encodeTelegram provides an example telegram hex for this packet type.
      */
     String encodeTelegram();
 
     /**
-     * encodeTelegramHeader provides an example header hex for this packet type.
-     *
      * @return String hexTelegramHeader EnOcean Telegram
+     * @brief encodeTelegramHeader provides an example header hex for this packet type.
      */
     String encodeTelegramHeader();
 
     /**
-     * encodeTelegramData provides an example data hex for this packet type.
-     *
      * @return String hexTelegramData EnOcean Telegram
+     * @brief encodeTelegramData provides an example data hex for this packet type.
      */
     String encodeTelegramData();
 
     /**
-     * decodeTelegram splits telegram in parts
-     *
      * @param hexTelegram EnOcean Telegram
+     * @brief decodeTelegram splits telegram in parts
      */
     void decodeTelegram(String hexTelegram);
 
     /**
-     * decodeHeaderTelegram splits telegram header in parts
-     *
      * @param hexTelegram EnOcean Telegram
+     * @brief decodeHeaderTelegram splits telegram header in parts
      */
     void decodeTelegramHeader(String hexTelegram);
 
     /**
-     * decodeTelegramData splits telegram data in parts
-     *
      * @param hexTelegram EnOcean Telegram
+     * @brief decodeTelegramData splits telegram data in parts
      */
     void decodeTelegramData(String hexTelegram);
 
     /**
-     * dumpHeader Print Header, useful for logs and testing
-     * <p>
-     * EnOcean Telegram
+     * @brief dumpHeader Print Header, useful for logs and testing
      */
     void dumpHeader();
 
     /**
-     * dumpData Print Data, useful for logs and testing
-     * <p>
-     * EnOcean Telegram
+     * @brief dumpData Print Data, useful for logs and testing EnOcean Telegram
      */
     void dumpData();
 
     /**
-     * run both, the dumpHeader and the dumpData
+     * @brief run both, the dumpHeader and the dumpData
      */
     void dump();
 
     /**
-     * persist saves object to database
+     * @brief persist saves object to database
      */
     void persist();
 

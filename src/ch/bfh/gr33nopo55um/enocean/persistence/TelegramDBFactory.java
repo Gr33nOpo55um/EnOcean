@@ -5,9 +5,8 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 /**
- * Logic to determine which packettype should be persisted.
- *
  * @author silas
+ * @class Logic to determine which packettype should be persisted.
  **/
 public class TelegramDBFactory {
 
@@ -20,29 +19,32 @@ public class TelegramDBFactory {
     public TelegramHeader telegramRouter(String hexTelegram) {
 
 
-        /*
-         0           Reserved
-         1           RADIO_ERP1 Radio802 telegram
-         2           Response to any packet
-         3           Radio802 subtelegram
-         4           Event message
-         5           Common command
-         6           Smart Ack command
-         7           Remote management command
-         8           Reserved for EnOcean
-         9           Radio802 message
-         10          ERP2 protocol radio telegram
-         11-15       Reserved for EnOcean
-         16          802_15_4_RAW Packet
-         17          2.4 GHz Command
-         18 - 127    Reserved for EnOcean
-         128...255   available MSC and messages
+        /** @brief
+         * 0           Reserved
+         * 1           RADIO_ERP1 Radio802 telegram
+         * 2           Response to any packet
+         * 3           Radio802 subtelegram
+         * 4           Event message
+         * 5           Common command
+         * 6           Smart Ack command
+         * 7           Remote management command
+         * 8           Reserved for EnOcean
+         * 9           Radio802 message
+         * 10          ERP2 protocol radio telegram
+         * 11-15       Reserved for EnOcean
+         * 16          802_15_4_RAW Packet
+         * 17          2.4 GHz Command
+         * 18 - 127    Reserved for EnOcean
+         * 128...255   available MSC and messages
          */
 
-//        TelegramHeader telegram = null;
 
         TelegramHeader telegram;
 
+
+        /**
+         * @brief Logic to determine further persistance way.
+         */
         if (Integer.parseInt(hexTelegram.substring(2, 4), 16) == 85) {
 
 
@@ -100,8 +102,12 @@ public class TelegramDBFactory {
 
             return telegram;
         } else {
-            //No known telegram type found.
-            System.err.println("Wrong Telegram Sync byte! Taking dummy instead");
+            /**
+             * @brief No known telegram type found.
+
+             */
+
+            logger.warn("Wrong Telegram Sync byte! Taking dummy instead");
             telegram = new Dummy();
 
             return telegram;

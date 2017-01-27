@@ -6,7 +6,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 /**
- * Radio message (payload data without any radio telegram contents, for further informations check EnoceanSerialProtocol v3
+ * @class Radio message (payload data without any radio telegram contents, for further informations check EnoceanSerialProtocol v3
  *
  * @author silas & louis
  */

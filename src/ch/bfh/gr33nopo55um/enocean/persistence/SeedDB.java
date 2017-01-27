@@ -1,7 +1,7 @@
 package ch.bfh.gr33nopo55um.enocean.persistence;
 
 /**
- * DB seed and inital gnerating
+ * @class DB seed and inital gnerating
  *
  * @author silas
  */
@@ -25,7 +25,7 @@ public class SeedDB {
     }
 
     /**
-     * Is used to store core data in Database, e.g User, etc.
+     * @brief Is used to store core data in Database, e.g User, etc.
      */
     public void insertCoreData() {
         //not neccessary yet
