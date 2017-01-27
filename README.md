@@ -33,7 +33,7 @@ Alle Informationen zu diesem Thema finden sich unter [linux](/linux/). Die Insta
 ### Splunk (Docker Container)
 Alle Informationen zu diesem Thema finden sich unter [splunk](/splunk/). Die Instalationsanleitung ist im File [installnRun.sh]( /splunk/installnRun.sh).
 
-### ToDo für MacOS
+### Projekt Setup unter MacOS
 Um das Projekt unter MacOS (z.B. mit IntelliJ) zu Starten und Telegramme zu Senden / Empfangen sind zwei Anpassungen nötig:
 * Gnu RXTX Serial Driver http://jlog.org/v4/macosx/mac-10.5/librxtxSerial.jnilib herunterladen in das Projektverzeichnis (im Rootfolder) legen.
 * Pfad zum USB300 Dongle suchen (z.B. mit "find /dev/tty.*") und im /resources/config.properties  (z.B. serialPort=/dev/tty.usbserial-FTZ9SGXC).
