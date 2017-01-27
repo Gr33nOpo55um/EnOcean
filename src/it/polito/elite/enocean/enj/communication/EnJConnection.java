@@ -17,7 +17,7 @@
  */
 package it.polito.elite.enocean.enj.communication;
 
-import ch.bfh.gr33nopo55um.enocean.helper.TelegramDBFactory;
+import ch.bfh.gr33nopo55um.enocean.persistence.TelegramDBFactory;
 import it.polito.elite.enocean.enj.application.devices.EnJPersistentDeviceSet;
 import it.polito.elite.enocean.enj.communication.timing.tasks.CancelTeachInTask;
 import it.polito.elite.enocean.enj.communication.timing.tasks.EnJDeviceChangeDeliveryTask;

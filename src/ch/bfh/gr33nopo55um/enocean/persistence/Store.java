@@ -1,7 +1,5 @@
 package ch.bfh.gr33nopo55um.enocean.persistence;
 
-import ch.bfh.gr33nopo55um.enocean.helper.SeedDB;
-
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;

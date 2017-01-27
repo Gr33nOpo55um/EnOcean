@@ -1,4 +1,4 @@
-package ch.bfh.gr33nopo55um.enocean.helper;
+package ch.bfh.gr33nopo55um.enocean.persistence;
 
 /**
  * DB seed and inital gnerating

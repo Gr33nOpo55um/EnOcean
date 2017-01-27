@@ -1,4 +1,4 @@
-package ch.bfh.gr33nopo55um.enocean.helper;
+package ch.bfh.gr33nopo55um.enocean.persistence;
 
 import ch.bfh.gr33nopo55um.enocean.telegram.*;
 import org.apache.logging.log4j.LogManager;
