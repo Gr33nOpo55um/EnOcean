@@ -16,7 +16,7 @@ else
 
 timedatectl set-timezone Europe/Zurich
 
- pacman -Syu --noconfirm htop base-devel java-rxtx yajl jre8-openjdk vim wget sudo
+ pacman -Syu --noconfirm htop base-devel java-rxtx yajl jre8-openjdk vim wget sudo rsync
 
   echo '%wheel      ALL=(ALL) ALL' >> /etc/sudoers
   echo 'Defaults:alarm      !authenticate' >> /etc/sudoers
