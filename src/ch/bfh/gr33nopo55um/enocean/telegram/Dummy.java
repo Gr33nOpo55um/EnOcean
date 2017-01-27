@@ -46,7 +46,6 @@ public class Dummy extends TelegramHeader {
      */
     @Override
     public void dumpData() {
-        return;
     }
 
 
