@@ -1,0 +1,94 @@
+\section{Radio\+E\+R\+P2.\+java}
+\label{RadioERP2_8java_source}\index{/home/silas/\+Idea\+Projects/\+En\+Ocean/src/ch/bfh/gr33nopo55um/enocean/telegram/\+Radio\+E\+R\+P2.\+java@{/home/silas/\+Idea\+Projects/\+En\+Ocean/src/ch/bfh/gr33nopo55um/enocean/telegram/\+Radio\+E\+R\+P2.\+java}}
+
+\begin{DoxyCode}
+00001 \textcolor{keyword}{package }ch.bfh.gr33nopo55um.enocean.telegram;
+00002 
+00003 \textcolor{keyword}{import} javax.persistence.Entity;
+00004 \textcolor{keyword}{import} javax.persistence.GeneratedValue;
+00005 \textcolor{keyword}{import} javax.persistence.GenerationType;
+00006 \textcolor{keyword}{import} javax.persistence.Id;
+00007 
+00013 @Entity
+00014 \textcolor{keyword}{public} \textcolor{keyword}{class }RadioERP2 \textcolor{keyword}{extends} TelegramHeader \{
+00015 
+00016 
+00017     @Id
+00018     @GeneratedValue(strategy = GenerationType.AUTO)
+00019     private Long \textcolor{keywordtype}{id};
+00020 
+00021 
+00022     private \textcolor{keywordtype}{int} subTelNum;
+00023     private \textcolor{keywordtype}{int} dbm;
+00024     private String rawData;
+00025 
+00026 
+00032     @Override
+00033     public String encodeTelegram() \{
+00034         \textcolor{keywordflow}{return} null;
+00035     \}
+00036 
+00042     @Override
+00043     \textcolor{keyword}{public} String encodeTelegramData() \{
+00044         \textcolor{keywordflow}{return} null;
+00045     \}
+00046 
+00052     @Override
+00053     \textcolor{keyword}{public} \textcolor{keywordtype}{void} decodeTelegramData(String hexTelegram) \{
+00054 
+00055         this.setRawData(hexTelegram.substring(14, 26));
+00056         this.setSubTelNum(Integer.parseInt(hexTelegram.substring(26, 28), 16));
+00057         this.setDbm(Integer.parseInt(hexTelegram.substring(28, 30), 16));
+00058         this.setCrcData(Integer.parseInt(hexTelegram.substring(30, 32), 16));
+00059 
+00060     \}
+00061 
+00066     \textcolor{keyword}{public} \textcolor{keywordtype}{int} getSubTelNum() \{
+00067         \textcolor{keywordflow}{return} subTelNum;
+00068     \}
+00069 
+00070     \textcolor{keyword}{private} \textcolor{keywordtype}{void} setSubTelNum(\textcolor{keywordtype}{int} subTelNum) \{
+00071         this.subTelNum = subTelNum;
+00072     \}
+00073 
+00074     \textcolor{keyword}{public} \textcolor{keywordtype}{int} getDbm() \{
+00075         \textcolor{keywordflow}{return} dbm;
+00076     \}
+00077 
+00078     \textcolor{keyword}{private} \textcolor{keywordtype}{void} setDbm(\textcolor{keywordtype}{int} dbm) \{
+00079         this.dbm = dbm;
+00080     \}
+00081 
+00082     \textcolor{keyword}{public} String getRawData() \{
+00083         \textcolor{keywordflow}{return} rawData;
+00084     \}
+00085 
+00086     \textcolor{keyword}{private} \textcolor{keywordtype}{void} setRawData(String rawData) \{
+00087         this.rawData = rawData;
+00088     \}
+00089 
+00090 
+00091     @Override
+00092     \textcolor{keyword}{public} \textcolor{keywordtype}{void} dumpData() \{
+00093         System.out.println(this.toString());
+00094 
+00095 
+00096     \}
+00097 
+00098     @Override
+00099     \textcolor{keyword}{public} String toString() \{
+00100         \textcolor{keywordflow}{return} \textcolor{stringliteral}{"PacketType=RadioERP2"} +
+00101                 \textcolor{stringliteral}{" SubTelNum="} + subTelNum +
+00102                 \textcolor{stringliteral}{" dBm="} + dbm +
+00103                 \textcolor{stringliteral}{" RawData="} + rawData;
+00104     \}
+00105 
+00106     \textcolor{keyword}{public} Long getId() \{
+00107         \textcolor{keywordflow}{return} id;
+00108     \}
+00109 
+00110     \textcolor{keyword}{public} \textcolor{keywordtype}{void} setId(Long \textcolor{keywordtype}{id}) \{
+00111         this.\textcolor{keywordtype}{id} = id;
+00112     \}
+00113 \}
+\end{DoxyCode}

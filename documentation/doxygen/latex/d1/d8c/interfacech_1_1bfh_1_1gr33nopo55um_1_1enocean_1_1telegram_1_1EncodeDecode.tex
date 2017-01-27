@@ -1,0 +1,243 @@
+\section{Encode\+Decode}
+\label{interfacech_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1EncodeDecode}\index{Encode\+Decode@{Encode\+Decode}}
+
+
+Inheritance diagram for Encode\+Decode\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dd/d04/interfacech_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1EncodeDecode__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Encode\+Decode\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=226pt]{d8/d0b/interfacech_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1EncodeDecode__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+String {\bf encode\+Telegram} ()
+\begin{DoxyCompactList}\small\item\em encode\+Telegram provides an example telegram hex for this packet type. \end{DoxyCompactList}\item 
+String {\bf encode\+Telegram\+Header} ()
+\begin{DoxyCompactList}\small\item\em encode\+Telegram\+Header provides an example header hex for this packet type. \end{DoxyCompactList}\item 
+String {\bf encode\+Telegram\+Data} ()
+\begin{DoxyCompactList}\small\item\em encode\+Telegram\+Data provides an example data hex for this packet type. \end{DoxyCompactList}\item 
+void {\bf decode\+Telegram} (String hex\+Telegram)
+\begin{DoxyCompactList}\small\item\em decode\+Telegram splits telegram in parts \end{DoxyCompactList}\item 
+void {\bf decode\+Telegram\+Header} (String hex\+Telegram)
+\begin{DoxyCompactList}\small\item\em decode\+Header\+Telegram splits telegram header in parts \end{DoxyCompactList}\item 
+void {\bf decode\+Telegram\+Data} (String hex\+Telegram)
+\begin{DoxyCompactList}\small\item\em decode\+Telegram\+Data splits telegram data in parts \end{DoxyCompactList}\item 
+void {\bf dump\+Header} ()
+\begin{DoxyCompactList}\small\item\em dump\+Header Print Header, useful for logs and testing \end{DoxyCompactList}\item 
+void {\bf dump\+Data} ()
+\begin{DoxyCompactList}\small\item\em dump\+Data Print Data, useful for logs and testing En\+Ocean Telegram \end{DoxyCompactList}\item 
+void {\bf dump} ()
+\begin{DoxyCompactList}\small\item\em run both, the dump\+Header and the dump\+Data \end{DoxyCompactList}\item 
+void {\bf persist} ()
+\begin{DoxyCompactList}\small\item\em persist saves object to database \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line {\bf 7} of file {\bf Encode\+Decode.\+java}.
+
+
+
+\subsection{Member Function Documentation}
+\label{interfacech_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1EncodeDecode_ab5f2f0710af7330ab5f67d64983528cb} 
+\index{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Encode\+Decode@{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Encode\+Decode}!decode\+Telegram@{decode\+Telegram}}
+\index{decode\+Telegram@{decode\+Telegram}!ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Encode\+Decode@{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Encode\+Decode}}
+\subsubsection{decode\+Telegram()}
+{\footnotesize\ttfamily void decode\+Telegram (\begin{DoxyParamCaption}\item[{String}]{hex\+Telegram }\end{DoxyParamCaption})}
+
+
+
+decode\+Telegram splits telegram in parts 
+
+
+\begin{DoxyParams}{Parameters}
+{\em hex\+Telegram} & En\+Ocean Telegram \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in {\bf Telegram\+Header} \doxyref{}{p.}{d2/d3d/classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1TelegramHeader_ab5f2f0710af7330ab5f67d64983528cb}.
+
+\label{interfacech_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1EncodeDecode_aa581cac5c3efd3142ffa8482079031e9} 
+\index{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Encode\+Decode@{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Encode\+Decode}!decode\+Telegram\+Data@{decode\+Telegram\+Data}}
+\index{decode\+Telegram\+Data@{decode\+Telegram\+Data}!ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Encode\+Decode@{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Encode\+Decode}}
+\subsubsection{decode\+Telegram\+Data()}
+{\footnotesize\ttfamily void decode\+Telegram\+Data (\begin{DoxyParamCaption}\item[{String}]{hex\+Telegram }\end{DoxyParamCaption})}
+
+
+
+decode\+Telegram\+Data splits telegram data in parts 
+
+
+\begin{DoxyParams}{Parameters}
+{\em hex\+Telegram} & En\+Ocean Telegram \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in {\bf Radio\+Sub\+Tel} \doxyref{}{p.}{d7/d08/classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1RadioSubTel_aa581cac5c3efd3142ffa8482079031e9}, {\bf Radio\+E\+R\+P1} \doxyref{}{p.}{d0/d7e/classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1RadioERP1_aa581cac5c3efd3142ffa8482079031e9}, {\bf Radio\+E\+R\+P2} \doxyref{}{p.}{d6/d05/classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1RadioERP2_aa581cac5c3efd3142ffa8482079031e9}, {\bf Radio802} \doxyref{}{p.}{da/d16/classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1Radio802_aa581cac5c3efd3142ffa8482079031e9}, {\bf Response} \doxyref{}{p.}{d9/dd5/classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1Response_aa581cac5c3efd3142ffa8482079031e9}, {\bf Radio\+Message} \doxyref{}{p.}{d5/dbf/classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1RadioMessage_aa581cac5c3efd3142ffa8482079031e9}, {\bf Remote\+Man\+Command} \doxyref{}{p.}{da/d94/classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1RemoteManCommand_aa581cac5c3efd3142ffa8482079031e9}, {\bf Event} \doxyref{}{p.}{d6/d3e/classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1Event_aa581cac5c3efd3142ffa8482079031e9}, {\bf Smart\+Ack\+Command} \doxyref{}{p.}{d1/dd3/classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1SmartAckCommand_aa581cac5c3efd3142ffa8482079031e9}, {\bf Common\+Command} \doxyref{}{p.}{d6/d3b/classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1CommonCommand_aa581cac5c3efd3142ffa8482079031e9}, and {\bf Dummy} \doxyref{}{p.}{d1/df6/classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1Dummy_aa581cac5c3efd3142ffa8482079031e9}.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d1/d8c/interfacech_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1EncodeDecode_aa581cac5c3efd3142ffa8482079031e9_icgraph}
+\end{center}
+\end{figure}
+\label{interfacech_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1EncodeDecode_a5e4622b1b692320953715a4f2dc064aa} 
+\index{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Encode\+Decode@{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Encode\+Decode}!decode\+Telegram\+Header@{decode\+Telegram\+Header}}
+\index{decode\+Telegram\+Header@{decode\+Telegram\+Header}!ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Encode\+Decode@{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Encode\+Decode}}
+\subsubsection{decode\+Telegram\+Header()}
+{\footnotesize\ttfamily void decode\+Telegram\+Header (\begin{DoxyParamCaption}\item[{String}]{hex\+Telegram }\end{DoxyParamCaption})}
+
+
+
+decode\+Header\+Telegram splits telegram header in parts 
+
+
+\begin{DoxyParams}{Parameters}
+{\em hex\+Telegram} & En\+Ocean Telegram \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in {\bf Common\+Command} \doxyref{}{p.}{d6/d3b/classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1CommonCommand_a5e4622b1b692320953715a4f2dc064aa}, and {\bf Telegram\+Header} \doxyref{}{p.}{d2/d3d/classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1TelegramHeader_a5e4622b1b692320953715a4f2dc064aa}.
+
+\label{interfacech_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1EncodeDecode_accd2600060dbaee3a3b41aed4034c63c} 
+\index{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Encode\+Decode@{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Encode\+Decode}!dump@{dump}}
+\index{dump@{dump}!ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Encode\+Decode@{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Encode\+Decode}}
+\subsubsection{dump()}
+{\footnotesize\ttfamily void dump (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+run both, the dump\+Header and the dump\+Data 
+
+
+
+Implemented in {\bf Telegram\+Header} \doxyref{}{p.}{d2/d3d/classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1TelegramHeader_accd2600060dbaee3a3b41aed4034c63c}.
+
+\label{interfacech_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1EncodeDecode_aff152c0c0c3d5e7011bfff0b9c08032b} 
+\index{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Encode\+Decode@{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Encode\+Decode}!dump\+Data@{dump\+Data}}
+\index{dump\+Data@{dump\+Data}!ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Encode\+Decode@{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Encode\+Decode}}
+\subsubsection{dump\+Data()}
+{\footnotesize\ttfamily void dump\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+dump\+Data Print Data, useful for logs and testing En\+Ocean Telegram 
+
+
+
+Implemented in {\bf Radio\+Sub\+Tel} \doxyref{}{p.}{d7/d08/classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1RadioSubTel_aff152c0c0c3d5e7011bfff0b9c08032b}, {\bf Radio802} \doxyref{}{p.}{da/d16/classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1Radio802_aff152c0c0c3d5e7011bfff0b9c08032b}, {\bf Radio\+E\+R\+P1} \doxyref{}{p.}{d0/d7e/classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1RadioERP1_aff152c0c0c3d5e7011bfff0b9c08032b}, {\bf Radio\+E\+R\+P2} \doxyref{}{p.}{d6/d05/classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1RadioERP2_aff152c0c0c3d5e7011bfff0b9c08032b}, {\bf Event} \doxyref{}{p.}{d6/d3e/classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1Event_aff152c0c0c3d5e7011bfff0b9c08032b}, {\bf Common\+Command} \doxyref{}{p.}{d6/d3b/classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1CommonCommand_aff152c0c0c3d5e7011bfff0b9c08032b}, {\bf Remote\+Man\+Command} \doxyref{}{p.}{da/d94/classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1RemoteManCommand_aff152c0c0c3d5e7011bfff0b9c08032b}, {\bf Radio\+Message} \doxyref{}{p.}{d5/dbf/classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1RadioMessage_aff152c0c0c3d5e7011bfff0b9c08032b}, {\bf Response} \doxyref{}{p.}{d9/dd5/classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1Response_aff152c0c0c3d5e7011bfff0b9c08032b}, {\bf Smart\+Ack\+Command} \doxyref{}{p.}{d1/dd3/classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1SmartAckCommand_aff152c0c0c3d5e7011bfff0b9c08032b}, and {\bf Dummy} \doxyref{}{p.}{d1/df6/classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1Dummy_aff152c0c0c3d5e7011bfff0b9c08032b}.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d1/d8c/interfacech_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1EncodeDecode_aff152c0c0c3d5e7011bfff0b9c08032b_icgraph}
+\end{center}
+\end{figure}
+\label{interfacech_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1EncodeDecode_af74dcc31853ed58e41323c6a6f51ebf0} 
+\index{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Encode\+Decode@{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Encode\+Decode}!dump\+Header@{dump\+Header}}
+\index{dump\+Header@{dump\+Header}!ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Encode\+Decode@{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Encode\+Decode}}
+\subsubsection{dump\+Header()}
+{\footnotesize\ttfamily void dump\+Header (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+dump\+Header Print Header, useful for logs and testing 
+
+
+
+Implemented in {\bf Telegram\+Header} \doxyref{}{p.}{d2/d3d/classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1TelegramHeader_af74dcc31853ed58e41323c6a6f51ebf0}.
+
+\label{interfacech_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1EncodeDecode_a00e3ee3b777334ef3bd46bd4105f9603} 
+\index{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Encode\+Decode@{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Encode\+Decode}!encode\+Telegram@{encode\+Telegram}}
+\index{encode\+Telegram@{encode\+Telegram}!ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Encode\+Decode@{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Encode\+Decode}}
+\subsubsection{encode\+Telegram()}
+{\footnotesize\ttfamily String encode\+Telegram (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+encode\+Telegram provides an example telegram hex for this packet type. 
+
+\begin{DoxyReturn}{Returns}
+String hex\+Telegram En\+Ocean Telegram 
+\end{DoxyReturn}
+
+
+Implemented in {\bf Radio\+Sub\+Tel} \doxyref{}{p.}{d7/d08/classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1RadioSubTel_a00e3ee3b777334ef3bd46bd4105f9603}, {\bf Telegram\+Header} \doxyref{}{p.}{d2/d3d/classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1TelegramHeader_a00e3ee3b777334ef3bd46bd4105f9603}, {\bf Radio\+E\+R\+P2} \doxyref{}{p.}{d6/d05/classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1RadioERP2_a00e3ee3b777334ef3bd46bd4105f9603}, {\bf Radio802} \doxyref{}{p.}{da/d16/classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1Radio802_a00e3ee3b777334ef3bd46bd4105f9603}, {\bf Radio\+E\+R\+P1} \doxyref{}{p.}{d0/d7e/classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1RadioERP1_a00e3ee3b777334ef3bd46bd4105f9603}, {\bf Remote\+Man\+Command} \doxyref{}{p.}{da/d94/classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1RemoteManCommand_a00e3ee3b777334ef3bd46bd4105f9603}, {\bf Response} \doxyref{}{p.}{d9/dd5/classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1Response_a00e3ee3b777334ef3bd46bd4105f9603}, {\bf Radio\+Message} \doxyref{}{p.}{d5/dbf/classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1RadioMessage_a00e3ee3b777334ef3bd46bd4105f9603}, {\bf Event} \doxyref{}{p.}{d6/d3e/classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1Event_a00e3ee3b777334ef3bd46bd4105f9603}, {\bf Smart\+Ack\+Command} \doxyref{}{p.}{d1/dd3/classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1SmartAckCommand_a00e3ee3b777334ef3bd46bd4105f9603}, {\bf Common\+Command} \doxyref{}{p.}{d6/d3b/classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1CommonCommand_a00e3ee3b777334ef3bd46bd4105f9603}, and {\bf Dummy} \doxyref{}{p.}{d1/df6/classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1Dummy_a00e3ee3b777334ef3bd46bd4105f9603}.
+
+\label{interfacech_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1EncodeDecode_a8a67618ab0362f3d0b60bba6ca93d883} 
+\index{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Encode\+Decode@{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Encode\+Decode}!encode\+Telegram\+Data@{encode\+Telegram\+Data}}
+\index{encode\+Telegram\+Data@{encode\+Telegram\+Data}!ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Encode\+Decode@{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Encode\+Decode}}
+\subsubsection{encode\+Telegram\+Data()}
+{\footnotesize\ttfamily String encode\+Telegram\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+encode\+Telegram\+Data provides an example data hex for this packet type. 
+
+\begin{DoxyReturn}{Returns}
+String hex\+Telegram\+Data En\+Ocean Telegram 
+\end{DoxyReturn}
+
+
+Implemented in {\bf Radio\+Sub\+Tel} \doxyref{}{p.}{d7/d08/classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1RadioSubTel_a8a67618ab0362f3d0b60bba6ca93d883}, {\bf Radio\+E\+R\+P2} \doxyref{}{p.}{d6/d05/classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1RadioERP2_a8a67618ab0362f3d0b60bba6ca93d883}, {\bf Radio802} \doxyref{}{p.}{da/d16/classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1Radio802_a8a67618ab0362f3d0b60bba6ca93d883}, {\bf Radio\+E\+R\+P1} \doxyref{}{p.}{d0/d7e/classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1RadioERP1_a8a67618ab0362f3d0b60bba6ca93d883}, {\bf Response} \doxyref{}{p.}{d9/dd5/classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1Response_a8a67618ab0362f3d0b60bba6ca93d883}, {\bf Radio\+Message} \doxyref{}{p.}{d5/dbf/classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1RadioMessage_a8a67618ab0362f3d0b60bba6ca93d883}, {\bf Remote\+Man\+Command} \doxyref{}{p.}{da/d94/classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1RemoteManCommand_a8a67618ab0362f3d0b60bba6ca93d883}, {\bf Event} \doxyref{}{p.}{d6/d3e/classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1Event_a8a67618ab0362f3d0b60bba6ca93d883}, {\bf Smart\+Ack\+Command} \doxyref{}{p.}{d1/dd3/classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1SmartAckCommand_a8a67618ab0362f3d0b60bba6ca93d883}, {\bf Common\+Command} \doxyref{}{p.}{d6/d3b/classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1CommonCommand_a8a67618ab0362f3d0b60bba6ca93d883}, and {\bf Dummy} \doxyref{}{p.}{d1/df6/classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1Dummy_a8a67618ab0362f3d0b60bba6ca93d883}.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d1/d8c/interfacech_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1EncodeDecode_a8a67618ab0362f3d0b60bba6ca93d883_icgraph}
+\end{center}
+\end{figure}
+\label{interfacech_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1EncodeDecode_a83697e9f527af0a6d017df13ee5e8ad7} 
+\index{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Encode\+Decode@{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Encode\+Decode}!encode\+Telegram\+Header@{encode\+Telegram\+Header}}
+\index{encode\+Telegram\+Header@{encode\+Telegram\+Header}!ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Encode\+Decode@{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Encode\+Decode}}
+\subsubsection{encode\+Telegram\+Header()}
+{\footnotesize\ttfamily String encode\+Telegram\+Header (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+encode\+Telegram\+Header provides an example header hex for this packet type. 
+
+\begin{DoxyReturn}{Returns}
+String hex\+Telegram\+Header En\+Ocean Telegram 
+\end{DoxyReturn}
+
+
+Implemented in {\bf Telegram\+Header} \doxyref{}{p.}{d2/d3d/classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1TelegramHeader_a83697e9f527af0a6d017df13ee5e8ad7}.
+
+\label{interfacech_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1EncodeDecode_a0551c1ea33ccc5de1fe8a6b2745d7adf} 
+\index{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Encode\+Decode@{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Encode\+Decode}!persist@{persist}}
+\index{persist@{persist}!ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Encode\+Decode@{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Encode\+Decode}}
+\subsubsection{persist()}
+{\footnotesize\ttfamily void persist (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+persist saves object to database 
+
+
+
+Implemented in {\bf Telegram\+Header} \doxyref{}{p.}{d2/d3d/classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1TelegramHeader_a0551c1ea33ccc5de1fe8a6b2745d7adf}.
+
+
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/silas/\+Idea\+Projects/\+En\+Ocean/src/ch/bfh/gr33nopo55um/enocean/telegram/{\bf Encode\+Decode.\+java}\end{DoxyCompactItemize}

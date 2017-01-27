@@ -1,0 +1,80 @@
+\section{Event.\+java}
+\label{Event_8java_source}\index{/home/silas/\+Idea\+Projects/\+En\+Ocean/src/ch/bfh/gr33nopo55um/enocean/telegram/\+Event.\+java@{/home/silas/\+Idea\+Projects/\+En\+Ocean/src/ch/bfh/gr33nopo55um/enocean/telegram/\+Event.\+java}}
+
+\begin{DoxyCode}
+00001 \textcolor{keyword}{package }ch.bfh.gr33nopo55um.enocean.telegram;
+00002 
+00003 \textcolor{keyword}{import} javax.persistence.Entity;
+00004 \textcolor{keyword}{import} javax.persistence.GeneratedValue;
+00005 \textcolor{keyword}{import} javax.persistence.GenerationType;
+00006 \textcolor{keyword}{import} javax.persistence.Id;
+00007 
+00012 @Entity
+00013 \textcolor{keyword}{public} \textcolor{keyword}{class }Event \textcolor{keyword}{extends} TelegramHeader \{
+00014 
+00015     \textcolor{keyword}{private} \textcolor{keywordtype}{int} eventCode;
+00016     \textcolor{keyword}{private} \textcolor{keywordtype}{int} EventData;
+00017 
+00018     @Id
+00019     @GeneratedValue(strategy = GenerationType.AUTO)
+00020     private Long \textcolor{keywordtype}{id};
+00021 
+00022 
+00027     @Override
+00028     public String encodeTelegram() \{
+00029         \textcolor{keywordflow}{return} null;
+00030     \}
+00031 
+00036     @Override
+00037     \textcolor{keyword}{public} String encodeTelegramData() \{
+00038         \textcolor{keywordflow}{return} null;
+00039     \}
+00040 
+00045     @Override
+00046     \textcolor{keyword}{public} \textcolor{keywordtype}{void} decodeTelegramData(String hexTelegram) \{
+00047 
+00048         this.setEventCode(Integer.parseInt(hexTelegram.substring(14, 16), 16));
+00049         this.setCrcData(Integer.parseInt(hexTelegram.substring(16, 18), 16));
+00050 
+00051 
+00052     \}
+00053 
+00054 
+00055     \textcolor{keyword}{public} \textcolor{keywordtype}{int} getEventCode() \{
+00056         \textcolor{keywordflow}{return} eventCode;
+00057     \}
+00058 
+00059     \textcolor{keyword}{private} \textcolor{keywordtype}{void} setEventCode(\textcolor{keywordtype}{int} eventCode) \{
+00060         this.eventCode = eventCode;
+00061     \}
+00062 
+00063     \textcolor{keyword}{public} \textcolor{keywordtype}{int} getEventData() \{
+00064         \textcolor{keywordflow}{return} EventData;
+00065     \}
+00066 
+00067     \textcolor{keyword}{public} \textcolor{keywordtype}{void} setEventData(\textcolor{keywordtype}{int} eventData) \{
+00068         EventData = eventData;
+00069     \}
+00070 
+00071     \textcolor{keyword}{public} Long getId() \{
+00072         \textcolor{keywordflow}{return} id;
+00073     \}
+00074 
+00075     \textcolor{keyword}{public} \textcolor{keywordtype}{void} setId(Long \textcolor{keywordtype}{id}) \{
+00076         this.\textcolor{keywordtype}{id} = id;
+00077     \}
+00078 
+00082     @Override
+00083     \textcolor{keyword}{public} \textcolor{keywordtype}{void} dumpData() \{
+00084         System.out.println(this.toString());
+00085 
+00086     \}
+00087 
+00088     @Override
+00089     \textcolor{keyword}{public} String toString() \{
+00090         \textcolor{keywordflow}{return} \textcolor{stringliteral}{"PacketType=Event"} +
+00091                 \textcolor{stringliteral}{" EventCode="} + eventCode +
+00092                 \textcolor{stringliteral}{" EventData="} + EventData;
+00093     \}
+00094 \}
+\end{DoxyCode}

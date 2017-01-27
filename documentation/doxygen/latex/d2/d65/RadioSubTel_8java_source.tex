@@ -1,0 +1,157 @@
+\section{Radio\+Sub\+Tel.\+java}
+\label{RadioSubTel_8java_source}\index{/home/silas/\+Idea\+Projects/\+En\+Ocean/src/ch/bfh/gr33nopo55um/enocean/telegram/\+Radio\+Sub\+Tel.\+java@{/home/silas/\+Idea\+Projects/\+En\+Ocean/src/ch/bfh/gr33nopo55um/enocean/telegram/\+Radio\+Sub\+Tel.\+java}}
+
+\begin{DoxyCode}
+00001 \textcolor{keyword}{package }ch.bfh.gr33nopo55um.enocean.telegram;
+00002 
+00003 \textcolor{keyword}{import} javax.persistence.Entity;
+00004 \textcolor{keyword}{import} javax.persistence.GeneratedValue;
+00005 \textcolor{keyword}{import} javax.persistence.GenerationType;
+00006 \textcolor{keyword}{import} javax.persistence.Id;
+00007 
+00012 @SuppressWarnings(\textcolor{stringliteral}{"ALL"})
+00013 @Entity
+00014 \textcolor{keyword}{public} \textcolor{keyword}{class }RadioSubTel \textcolor{keyword}{extends} TelegramHeader \{
+00015 
+00016 
+00017     @Id
+00018 
+00019     @GeneratedValue(strategy = GenerationType.AUTO)
+00020     private Long \textcolor{keywordtype}{id};
+00021     private \textcolor{keywordtype}{int} subTelNum;
+00022     private String destinationID;
+00023     private \textcolor{keywordtype}{int} dbm;
+00024     private \textcolor{keywordtype}{int} securityLevel;
+00025     private String timeStamp;
+00026     private String tickSubTel;
+00027     private String dbmSubTel;
+00028     private String statusSubTel;
+00029 
+00030     @Override
+00031     public String toString() \{
+00032         \textcolor{keywordflow}{return} \textcolor{stringliteral}{"PacketType=RadioSubTel"} +
+00033                 \textcolor{stringliteral}{" SubTelNum="} + subTelNum +
+00034                 \textcolor{stringliteral}{" DestinationID="} + destinationID +
+00035                 \textcolor{stringliteral}{" dBm="} + dbm +
+00036                 \textcolor{stringliteral}{" SecurityLevel="} + securityLevel +
+00037                 \textcolor{stringliteral}{" TimeStamp="} + timeStamp +
+00038                 \textcolor{stringliteral}{" TickSubTel="} + tickSubTel +
+00039                 \textcolor{stringliteral}{" dBmSubTel="} + dbmSubTel +
+00040                 \textcolor{stringliteral}{" StatusSubTel='"} + statusSubTel;
+00041     \}
+00042 
+00043     \textcolor{keyword}{public} \textcolor{keywordtype}{int} getSubTelNum() \{
+00044         \textcolor{keywordflow}{return} subTelNum;
+00045     \}
+00046 
+00047     \textcolor{keyword}{public} \textcolor{keywordtype}{void} setSubTelNum(\textcolor{keywordtype}{int} subTelNum) \{
+00048         this.subTelNum = subTelNum;
+00049     \}
+00050 
+00051     \textcolor{keyword}{public} String getDestinationID() \{
+00052         \textcolor{keywordflow}{return} destinationID;
+00053     \}
+00054 
+00055     \textcolor{keyword}{public} \textcolor{keywordtype}{void} setDestinationID(String destinationID) \{
+00056         this.destinationID = destinationID;
+00057     \}
+00058 
+00059     \textcolor{keyword}{public} \textcolor{keywordtype}{int} getDbm() \{
+00060         \textcolor{keywordflow}{return} dbm;
+00061     \}
+00062 
+00063     \textcolor{keyword}{public} \textcolor{keywordtype}{void} setDbm(\textcolor{keywordtype}{int} dbm) \{
+00064         this.dbm = dbm;
+00065     \}
+00066 
+00067     \textcolor{keyword}{public} \textcolor{keywordtype}{int} getSecurityLevel() \{
+00068         \textcolor{keywordflow}{return} securityLevel;
+00069     \}
+00070 
+00071     \textcolor{keyword}{public} \textcolor{keywordtype}{void} setSecurityLevel(\textcolor{keywordtype}{int} securityLevel) \{
+00072         this.securityLevel = securityLevel;
+00073     \}
+00074 
+00075     \textcolor{keyword}{public} String getTimeStamp() \{
+00076         \textcolor{keywordflow}{return} timeStamp;
+00077     \}
+00078 
+00079     \textcolor{keyword}{public} \textcolor{keywordtype}{void} setTimeStamp(String timeStamp) \{
+00080         this.timeStamp = timeStamp;
+00081     \}
+00082 
+00083     \textcolor{keyword}{public} String getTickSubTel() \{
+00084         \textcolor{keywordflow}{return} tickSubTel;
+00085     \}
+00086 
+00087     \textcolor{keyword}{public} \textcolor{keywordtype}{void} setTickSubTel(String tickSubTel) \{
+00088         this.tickSubTel = tickSubTel;
+00089     \}
+00090 
+00091     \textcolor{keyword}{public} String getDbmSubTel() \{
+00092         \textcolor{keywordflow}{return} dbmSubTel;
+00093     \}
+00094 
+00095     \textcolor{keyword}{public} \textcolor{keywordtype}{void} setDbmSubTel(String dbmSubTel) \{
+00096         this.dbmSubTel = dbmSubTel;
+00097     \}
+00098 
+00099     \textcolor{keyword}{public} String getStatusSubTel() \{
+00100         \textcolor{keywordflow}{return} statusSubTel;
+00101     \}
+00102 
+00103     \textcolor{keyword}{public} \textcolor{keywordtype}{void} setStatusSubTel(String statusSubTel) \{
+00104         this.statusSubTel = statusSubTel;
+00105     \}
+00106 
+00111     @Override
+00112     \textcolor{keyword}{public} String encodeTelegram() \{
+00113         \textcolor{keywordflow}{return} null;
+00114     \}
+00115 
+00120     @Override
+00121     \textcolor{keyword}{public} String encodeTelegramData() \{
+00122         \textcolor{keywordflow}{return} null;
+00123     \}
+00124 
+00125 
+00130     @Override
+00131     \textcolor{keyword}{public} \textcolor{keywordtype}{void} decodeTelegramData(String hexTelegram) \{
+00132 
+00133 
+00134         this.setData(Long.parseLong(hexTelegram.substring(14, 14 + dataLength), 16));
+00135 
+00136         this.setSubTelNum(Integer.parseInt(hexTelegram.substring(dataLength + 14, 
+      dataLength + 16), 16));
+00137 
+00138         this.setDestinationID(hexTelegram.substring(dataLength + 16, dataLength + 24));
+00139 
+00140         this.setDbm(Integer.parseInt(hexTelegram.substring(dataLength + 24, 
+      dataLength + 26), 16));
+00141 
+00142         this.setSecurityLevel(securityLevel = Integer.parseInt(hexTelegram.substring(
+      dataLength + 26, dataLength + 28), 16));
+00143 
+00144         this.setTimeStamp(timeStamp = hexTelegram.substring(dataLength + 28, 
+      dataLength + 32));
+00145 
+00146         this.setTickSubTel(tickSubTel = hexTelegram.substring(dataLength + 32, 
+      dataLength + 34));
+00147 
+00148         this.setDbmSubTel(dbmSubTel = hexTelegram.substring(dataLength + 34, 
+      dataLength + 36));
+00149 
+00150         this.setStatusSubTel(statusSubTel = hexTelegram.substring(dataLength + 36, 
+      dataLength + 38));
+00151 
+00152         this.setCrcData(crcData = Integer.parseInt(hexTelegram.substring(
+      dataLength + 38, dataLength + 40), 16));
+00153 
+00154     \}
+00155 
+00159     @Override
+00160     \textcolor{keyword}{public} \textcolor{keywordtype}{void} dumpData() \{
+00161         System.out.println(this.toString());
+00162     \}
+00163 \}
+\end{DoxyCode}

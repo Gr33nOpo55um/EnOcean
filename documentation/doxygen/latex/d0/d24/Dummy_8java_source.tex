@@ -1,0 +1,46 @@
+\section{Dummy.\+java}
+\label{Dummy_8java_source}\index{/home/silas/\+Idea\+Projects/\+En\+Ocean/src/ch/bfh/gr33nopo55um/enocean/telegram/\+Dummy.\+java@{/home/silas/\+Idea\+Projects/\+En\+Ocean/src/ch/bfh/gr33nopo55um/enocean/telegram/\+Dummy.\+java}}
+
+\begin{DoxyCode}
+00001 \textcolor{keyword}{package }ch.bfh.gr33nopo55um.enocean.telegram;
+00002 
+00003 \textcolor{keyword}{import} javax.persistence.Entity;
+00004 \textcolor{keyword}{import} javax.persistence.GeneratedValue;
+00005 \textcolor{keyword}{import} javax.persistence.GenerationType;
+00006 \textcolor{keyword}{import} javax.persistence.Id;
+00007 
+00012 @Entity
+00013 \textcolor{keyword}{public} \textcolor{keyword}{class }Dummy \textcolor{keyword}{extends} TelegramHeader \{
+00014 
+00015     @Id
+00016     @GeneratedValue(strategy = GenerationType.AUTO)
+00017     private Long \textcolor{keywordtype}{id};
+00018 
+00019 
+00020     @Override
+00021     public String encodeTelegram() \{
+00022         \textcolor{keywordflow}{return} null;
+00023     \}
+00024 
+00030     @Override
+00031     \textcolor{keyword}{public} String encodeTelegramData() \{
+00032         \textcolor{keywordflow}{return} null;
+00033     \}
+00034 
+00035 
+00039     @Override
+00040     \textcolor{keyword}{public} \textcolor{keywordtype}{void} decodeTelegramData(String hexTelegram) \{
+00041 
+00042     \}
+00043 
+00047     @Override
+00048     \textcolor{keyword}{public} \textcolor{keywordtype}{void} dumpData() \{
+00049     \}
+00050 
+00051 
+00055     @Override
+00056     \textcolor{keyword}{public} String toString() \{
+00057         \textcolor{keywordflow}{return} \textcolor{stringliteral}{"PacketType=Dummy"};
+00058     \}
+00059 \}
+\end{DoxyCode}

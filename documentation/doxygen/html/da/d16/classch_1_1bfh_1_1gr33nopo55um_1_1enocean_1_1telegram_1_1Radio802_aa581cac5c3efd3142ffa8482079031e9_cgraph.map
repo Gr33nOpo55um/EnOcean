@@ -1,0 +1,8 @@
+<map id="decodeTelegramData" name="decodeTelegramData">
+<area shape="rect" id="node2" href="$da/d16/classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1Radio802.html#a40322aaf1ca2711dfb46776d54f6f52e" title="setMessageRorg" alt="" coords="281,5,407,32"/>
+<area shape="rect" id="node3" href="$da/d16/classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1Radio802.html#a5792cf031e0d1bcc26b13e2fcdd0aedc" title="setMessageData" alt="" coords="281,56,407,83"/>
+<area shape="rect" id="node4" href="$da/d16/classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1Radio802.html#a4bace731194d509223670a425b26649c" title="setDestinationId" alt="" coords="285,107,403,133"/>
+<area shape="rect" id="node5" href="$da/d16/classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1Radio802.html#a3b719e8e4102c3ae97b662648e3046fd" title="setSourceId" alt="" coords="297,157,391,184"/>
+<area shape="rect" id="node6" href="$da/d16/classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1Radio802.html#a17374793c87ff1a128532736cc1bb082" title="setDbm" alt="" coords="309,208,379,235"/>
+<area shape="rect" id="node7" href="$d2/d3d/classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1TelegramHeader.html#ab332d1599c41193aa0f27c998fbfc8a2" title="ch.bfh.gr33nopo55um.enocean.telegram.\lTelegramHeader.setCrcData" alt="" coords="211,259,477,301"/>
+</map>

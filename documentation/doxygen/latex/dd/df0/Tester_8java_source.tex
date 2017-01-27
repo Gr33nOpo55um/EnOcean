@@ -1,0 +1,45 @@
+\section{Tester.\+java}
+\label{Tester_8java_source}\index{/home/silas/\+Idea\+Projects/\+En\+Ocean/src/ch/bfh/gr33nopo55um/enocean/test/ch/bfh/gr33nopo55um/enocean/test/\+Tester.\+java@{/home/silas/\+Idea\+Projects/\+En\+Ocean/src/ch/bfh/gr33nopo55um/enocean/test/ch/bfh/gr33nopo55um/enocean/test/\+Tester.\+java}}
+
+\begin{DoxyCode}
+00001 \textcolor{keyword}{package }ch.bfh.gr33nopo55um.enocean.test;
+00002 
+00003 \textcolor{keyword}{import} ch.bfh.gr33nopo55um.enocean.helper.ReadConfig;
+00004 \textcolor{keyword}{import} ch.bfh.gr33nopo55um.enocean.helper.TimeLogger;
+00005 \textcolor{keyword}{import} ch.bfh.gr33nopo55um.enocean.persistence.TelegramDBFactory;
+00006 
+00007 \textcolor{keyword}{import} java.io.IOException;
+00008 
+00014 \textcolor{keyword}{public} \textcolor{keyword}{class }Tester \{
+00015 
+00016     \textcolor{keyword}{public} \textcolor{keyword}{static} \textcolor{keywordtype}{void} main(String args[]) \{
+00017 
+00018 
+00019         TimeLogger timeLogger = \textcolor{keyword}{new} TimeLogger();
+00020 
+00021         timeLogger.startLogTime();
+00022         timeLogger.setOperationName(\textcolor{stringliteral}{"Application"});
+00023 
+00024         TelegramDBFactory telegramDBFactory = \textcolor{keyword}{new} TelegramDBFactory();
+00025 
+00026         \textcolor{comment}{/*}
+00027 \textcolor{comment}{        * @brief Loop for masstesting}
+00028 \textcolor{comment}{        */}
+00029         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < 20; i++) \{
+00030             telegramDBFactory.telegramRouter(\textcolor{stringliteral}{"0x55000707017af6000022a1342001ffffffff3a0035"});
+00031             telegramDBFactory.telegramRouter(\textcolor{stringliteral}{"0x55000a0701eba50000000c019134fc0001ffffffff3d002f"});
+00032         \}
+00033         ReadConfig readConfig = \textcolor{keyword}{new} ReadConfig();
+00034         \textcolor{keywordflow}{try} \{
+00035             System.out.println(readConfig.readPropertyValue(\textcolor{stringliteral}{"serialPort"}));
+00036         \} \textcolor{keywordflow}{catch} (IOException e) \{
+00037             e.printStackTrace();
+00038         \}
+00039 
+00040 
+00041         timeLogger.endLogTime();
+00042     \}
+00043 
+00044 
+00045 \}
+\end{DoxyCode}

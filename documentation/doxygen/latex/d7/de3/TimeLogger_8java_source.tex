@@ -1,0 +1,56 @@
+\section{Time\+Logger.\+java}
+\label{TimeLogger_8java_source}\index{/home/silas/\+Idea\+Projects/\+En\+Ocean/src/ch/bfh/gr33nopo55um/enocean/helper/\+Time\+Logger.\+java@{/home/silas/\+Idea\+Projects/\+En\+Ocean/src/ch/bfh/gr33nopo55um/enocean/helper/\+Time\+Logger.\+java}}
+
+\begin{DoxyCode}
+00001 \textcolor{keyword}{package }ch.bfh.gr33nopo55um.enocean.helper;
+00002 
+00003 \textcolor{keyword}{import} org.apache.logging.log4j.LogManager;
+00004 \textcolor{keyword}{import} org.apache.logging.log4j.Logger;
+00005 
+00011 \textcolor{keyword}{public} \textcolor{keyword}{class }TimeLogger \{
+00012 
+00013     \textcolor{keyword}{private} \textcolor{keyword}{static} Logger logger = LogManager.getLogger();
+00014     \textcolor{keyword}{private} \textcolor{keywordtype}{long} startTime = 0;
+00015     \textcolor{keyword}{private} String operationName = \textcolor{stringliteral}{""};
+00016     \textcolor{keyword}{private} \textcolor{keywordtype}{long} stopTime = 0;
+00017 
+00018     \textcolor{keyword}{private} \textcolor{keywordtype}{long} getStopTime() \{
+00019         \textcolor{keywordflow}{return} stopTime;
+00020     \}
+00021 
+00022     \textcolor{keyword}{private} \textcolor{keywordtype}{void} setStopTime() \{
+00023         this.stopTime = System.currentTimeMillis();
+00024     \}
+00025 
+00026     \textcolor{keyword}{private} \textcolor{keywordtype}{long} getStartTime() \{
+00027         \textcolor{keywordflow}{return} startTime;
+00028     \}
+00029 
+00030     \textcolor{keyword}{public} \textcolor{keywordtype}{void} setStartTime(\textcolor{keywordtype}{long} startTime) \{
+00031         this.startTime = startTime;
+00032     \}
+00033 
+00034     \textcolor{keyword}{private} String getOperationName() \{
+00035         \textcolor{keywordflow}{return} operationName;
+00036     \}
+00037 
+00038     \textcolor{keyword}{public} \textcolor{keywordtype}{void} setOperationName(String operationName) \{
+00039         this.operationName = operationName;
+00040     \}
+00041 
+00042     \textcolor{keyword}{public} \textcolor{keywordtype}{void} startLogTime() \{
+00043         \textcolor{comment}{//Log current time for performance measurement}
+00044         this.startTime = System.currentTimeMillis();
+00045     \}
+00046 
+00047     \textcolor{keyword}{public} \textcolor{keywordtype}{void} endLogTime() \{
+00048 
+00049         \textcolor{comment}{//Log current time for performance measurement}
+00050 
+00051         this.setStopTime();
+00052 
+00053         \textcolor{keywordtype}{long} elapsedTime = this.getStopTime() - this.getStartTime();
+00054         logger.info(this.getOperationName() + \textcolor{stringliteral}{" in: "} + elapsedTime + \textcolor{stringliteral}{" miliseconds."});
+00055     \}
+00056 \}
+\end{DoxyCode}

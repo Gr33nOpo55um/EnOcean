@@ -1,0 +1,47 @@
+\section{Read\+Config.\+java}
+\label{ReadConfig_8java_source}\index{/home/silas/\+Idea\+Projects/\+En\+Ocean/src/ch/bfh/gr33nopo55um/enocean/helper/\+Read\+Config.\+java@{/home/silas/\+Idea\+Projects/\+En\+Ocean/src/ch/bfh/gr33nopo55um/enocean/helper/\+Read\+Config.\+java}}
+
+\begin{DoxyCode}
+00001 \textcolor{keyword}{package }ch.bfh.gr33nopo55um.enocean.helper;
+00002 
+00003 \textcolor{keyword}{import} java.io.FileNotFoundException;
+00004 \textcolor{keyword}{import} java.io.IOException;
+00005 \textcolor{keyword}{import} java.io.InputStream;
+00006 \textcolor{keyword}{import} java.sql.Date;
+00007 \textcolor{keyword}{import} java.util.Properties;
+00008 
+00013 \textcolor{keyword}{public} \textcolor{keyword}{class }ReadConfig \{
+00014     \textcolor{keyword}{private} InputStream inputStream;
+00015 
+00016     \textcolor{keyword}{public} String readPropertyValue(String value) \textcolor{keywordflow}{throws} IOException \{
+00017         String result = null;
+00018 
+00019         \textcolor{keywordflow}{try} \{
+00020             Properties prop = \textcolor{keyword}{new} Properties();
+00021             String propFileName = \textcolor{stringliteral}{"config.properties"};
+00022 
+00023             inputStream = getClass().getClassLoader().getResourceAsStream(propFileName);
+00024 
+00025             \textcolor{keywordflow}{if} (inputStream != null) \{
+00026                 prop.load(inputStream);
+00027             \} \textcolor{keywordflow}{else} \{
+00028                 \textcolor{keywordflow}{throw} \textcolor{keyword}{new} FileNotFoundException(\textcolor{stringliteral}{"property file '"} + propFileName + \textcolor{stringliteral}{"' not found in the
+       classpath"});
+00029             \}
+00030 
+00031             Date time = \textcolor{keyword}{new} Date(System.currentTimeMillis());
+00032 
+00037             result = prop.getProperty(value);
+00038 
+00039 
+00043         \} \textcolor{keywordflow}{catch} (Exception e) \{
+00044             System.out.println(\textcolor{stringliteral}{"Exception: "} + e);
+00045         \} \textcolor{keywordflow}{finally} \{
+00046             assert inputStream != null;
+00047             inputStream.close();
+00048         \}
+00049         \textcolor{keywordflow}{return} result;
+00050     \}
+00051 \}
+00052 
+\end{DoxyCode}

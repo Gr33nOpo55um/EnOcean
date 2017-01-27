@@ -1,0 +1,6 @@
+<map id="decodeTelegramData" name="decodeTelegramData">
+<area shape="rect" id="node2" href="$d2/d3d/classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1TelegramHeader.html#aefb362619756b649f77f5a09ea1d1d4f" title="ch.bfh.gr33nopo55um.enocean.telegram.\lTelegramHeader.setSyncByte" alt="" coords="211,5,477,47"/>
+<area shape="rect" id="node3" href="$d2/d3d/classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1TelegramHeader.html#a98c5298c4aa8f5b7611dfdfd4e662962" title="ch.bfh.gr33nopo55um.enocean.telegram.\lTelegramHeader.setDataLength" alt="" coords="211,71,477,112"/>
+<area shape="rect" id="node4" href="$d2/d3d/classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1TelegramHeader.html#a3e90d714f885a15123cff63b7feb235e" title="ch.bfh.gr33nopo55um.enocean.telegram.\lTelegramHeader.setOptionalLenght" alt="" coords="211,136,477,177"/>
+<area shape="rect" id="node5" href="$d2/d3d/classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1TelegramHeader.html#ab332d1599c41193aa0f27c998fbfc8a2" title="ch.bfh.gr33nopo55um.enocean.telegram.\lTelegramHeader.setCrcData" alt="" coords="211,201,477,243"/>
+</map>

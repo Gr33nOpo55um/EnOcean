@@ -1,0 +1,99 @@
+\section{Remote\+Man\+Command.\+java}
+\label{RemoteManCommand_8java_source}\index{/home/silas/\+Idea\+Projects/\+En\+Ocean/src/ch/bfh/gr33nopo55um/enocean/telegram/\+Remote\+Man\+Command.\+java@{/home/silas/\+Idea\+Projects/\+En\+Ocean/src/ch/bfh/gr33nopo55um/enocean/telegram/\+Remote\+Man\+Command.\+java}}
+
+\begin{DoxyCode}
+00001 \textcolor{keyword}{package }ch.bfh.gr33nopo55um.enocean.telegram;
+00002 
+00003 \textcolor{keyword}{import} javax.persistence.Entity;
+00004 \textcolor{keyword}{import} javax.persistence.GeneratedValue;
+00005 \textcolor{keyword}{import} javax.persistence.GenerationType;
+00006 \textcolor{keyword}{import} javax.persistence.Id;
+00007 
+00012 @Entity
+00013 \textcolor{keyword}{public} \textcolor{keyword}{class }RemoteManCommand \textcolor{keyword}{extends} TelegramHeader \{
+00014 
+00015 
+00016     @Id
+00017     @GeneratedValue(strategy = GenerationType.AUTO)
+00018     private Long \textcolor{keywordtype}{id};
+00019 
+00020     private String destinationID;
+00021     private String sourceID;
+00022     private \textcolor{keywordtype}{int} dbm;
+00023     private \textcolor{keywordtype}{int} sendDelay;
+00024 
+00029     @Override
+00030     public String encodeTelegram() \{
+00031         \textcolor{keywordflow}{return} null;
+00032     \}
+00033 
+00038     @Override
+00039     \textcolor{keyword}{public} String encodeTelegramData() \{
+00040         \textcolor{keywordflow}{return} null;
+00041     \}
+00042 
+00047     @Override
+00048     \textcolor{keyword}{public} \textcolor{keywordtype}{void} decodeTelegramData(String hexTelegram) \{
+00049 
+00050 
+00051         this.setDestinationID(hexTelegram.substring(14, 22));
+00052 
+00053         this.setSourceID(hexTelegram.substring(22, 30));
+00054 
+00055         this.setDbm(Integer.parseInt(hexTelegram.substring(30, 32), 16));
+00056 
+00057         this.setSendDelay(Integer.parseInt(hexTelegram.substring(32, 34), 16));
+00058 
+00059         this.setCrcData(Integer.parseInt(hexTelegram.substring(34, 36), 16));
+00060 
+00061 
+00062     \}
+00063 
+00067     @Override
+00068     \textcolor{keyword}{public} \textcolor{keywordtype}{void} dumpData() \{
+00069         System.out.println(this.toString());
+00070 
+00071     \}
+00072 
+00073     @Override
+00074     \textcolor{keyword}{public} String toString() \{
+00075         \textcolor{keywordflow}{return} \textcolor{stringliteral}{"PacketType=RemoteManCommand"} +
+00076                 \textcolor{stringliteral}{" DestinationID="} + destinationID +
+00077                 \textcolor{stringliteral}{" SourceID="} + sourceID +
+00078                 \textcolor{stringliteral}{" dBm="} + dbm +
+00079                 \textcolor{stringliteral}{" SendWithDelay="} + sendDelay;
+00080     \}
+00081 
+00082     \textcolor{keyword}{public} String getDestinationID() \{
+00083         \textcolor{keywordflow}{return} destinationID;
+00084     \}
+00085 
+00086     \textcolor{keyword}{private} \textcolor{keywordtype}{void} setDestinationID(String destinationID) \{
+00087         this.destinationID = destinationID;
+00088     \}
+00089 
+00090     \textcolor{keyword}{public} String getSourceID() \{
+00091         \textcolor{keywordflow}{return} sourceID;
+00092     \}
+00093 
+00094     \textcolor{keyword}{private} \textcolor{keywordtype}{void} setSourceID(String sourceID) \{
+00095         this.sourceID = sourceID;
+00096     \}
+00097 
+00098     \textcolor{keyword}{public} \textcolor{keywordtype}{int} getDbm() \{
+00099         \textcolor{keywordflow}{return} dbm;
+00100     \}
+00101 
+00102     \textcolor{keyword}{private} \textcolor{keywordtype}{void} setDbm(\textcolor{keywordtype}{int} dbm) \{
+00103         this.dbm = dbm;
+00104     \}
+00105 
+00106     \textcolor{keyword}{public} \textcolor{keywordtype}{int} getSendDelay() \{
+00107         \textcolor{keywordflow}{return} sendDelay;
+00108     \}
+00109 
+00110     \textcolor{keyword}{private} \textcolor{keywordtype}{void} setSendDelay(\textcolor{keywordtype}{int} sendDelay) \{
+00111         this.sendDelay = sendDelay;
+00112     \}
+00113 \}
+\end{DoxyCode}

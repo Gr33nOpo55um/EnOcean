@@ -1,0 +1,4 @@
+<map id="encodeTelegram" name="encodeTelegram">
+<area shape="rect" id="node2" href="$d2/d3d/classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1TelegramHeader.html#a83697e9f527af0a6d017df13ee5e8ad7" title="encodeTelegramHeader" alt="" coords="227,5,399,32"/>
+<area shape="rect" id="node3" href="$d1/d8c/interfacech_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1EncodeDecode.html#a8a67618ab0362f3d0b60bba6ca93d883" title="encodeTelegramData provides an example data hex for this packet type. " alt="" coords="180,57,447,98"/>
+</map>

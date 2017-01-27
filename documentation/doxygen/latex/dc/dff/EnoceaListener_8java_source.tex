@@ -1,0 +1,60 @@
+\section{Enocea\+Listener.\+java}
+\label{EnoceaListener_8java_source}\index{/home/silas/\+Idea\+Projects/\+En\+Ocean/src/ch/bfh/gr33nopo55um/enocean/application/\+Enocea\+Listener.\+java@{/home/silas/\+Idea\+Projects/\+En\+Ocean/src/ch/bfh/gr33nopo55um/enocean/application/\+Enocea\+Listener.\+java}}
+
+\begin{DoxyCode}
+00001 \textcolor{keyword}{package }ch.bfh.gr33nopo55um.enocean.application;
+00002 
+00003 \textcolor{keyword}{import} ch.bfh.gr33nopo55um.enocean.helper.ReadConfig;
+00004 \textcolor{keyword}{import} it.polito.elite.enocean.enj.communication.EnJConnection;
+00005 \textcolor{keyword}{import} it.polito.elite.enocean.enj.link.EnJLink;
+00006 \textcolor{keyword}{import} it.polito.elite.enocean.examples.SimpleDeviceListener;
+00007 \textcolor{keyword}{import} org.apache.logging.log4j.LogManager;
+00008 \textcolor{keyword}{import} org.apache.logging.log4j.Logger;
+00009 
+00010 \textcolor{keyword}{import} java.io.IOException;
+00011 
+00016 \textcolor{keyword}{public} \textcolor{keyword}{class }EnoceaListener \{
+00017 
+00018     \textcolor{keyword}{private} \textcolor{keyword}{static} Logger logger = LogManager.getLogger();
+00019 
+00020 
+00024     \textcolor{keyword}{public} \textcolor{keywordtype}{void} logger() \{
+00025 
+00026 
+00027         ReadConfig readConfig = \textcolor{keyword}{new} ReadConfig();
+00028         String serialPort;
+00029 
+00033         \textcolor{keywordflow}{try} \{
+00034             serialPort = readConfig.readPropertyValue(\textcolor{stringliteral}{"serialPort"});
+00035         \} \textcolor{keywordflow}{catch} (IOException e) \{
+00036             serialPort = \textcolor{stringliteral}{"/dev/ttyUSB0"};
+00037             logger.warn(\textcolor{stringliteral}{"No config found, taking default Port instead: "} + serialPort);
+00038 
+00039         \}
+00040 
+00041 
+00046         EnJLink linkLayer = null;
+00047         \textcolor{keywordflow}{try} \{
+00048             linkLayer = \textcolor{keyword}{new} EnJLink(readConfig.readPropertyValue(\textcolor{stringliteral}{"serialPort"})
+00049             );
+00050         \} \textcolor{keywordflow}{catch} (Exception e) \{
+00051             e.printStackTrace();
+00052         \}
+00053 
+00054 
+00059         EnJConnection connection = \textcolor{keyword}{new} EnJConnection(linkLayer, null); \textcolor{comment}{//null persistent storage}
+00060 
+00061 
+00066         SimpleDeviceListener listener = \textcolor{keyword}{new} SimpleDeviceListener();
+00067 
+00068 
+00073         connection.addEnJDeviceListener(listener);
+00074 
+00078         linkLayer.connect();
+00079 
+00080 
+00081     \}
+00082 
+00083 
+00084 \}
+\end{DoxyCode}

@@ -1,0 +1,85 @@
+\section{Telegram\+D\+B\+Factory.\+java}
+\label{TelegramDBFactory_8java_source}\index{/home/silas/\+Idea\+Projects/\+En\+Ocean/src/ch/bfh/gr33nopo55um/enocean/persistence/\+Telegram\+D\+B\+Factory.\+java@{/home/silas/\+Idea\+Projects/\+En\+Ocean/src/ch/bfh/gr33nopo55um/enocean/persistence/\+Telegram\+D\+B\+Factory.\+java}}
+
+\begin{DoxyCode}
+00001 \textcolor{keyword}{package }ch.bfh.gr33nopo55um.enocean.persistence;
+00002 
+00003 \textcolor{keyword}{import} ch.bfh.gr33nopo55um.enocean.telegram.*;
+00004 \textcolor{keyword}{import} org.apache.logging.log4j.LogManager;
+00005 \textcolor{keyword}{import} org.apache.logging.log4j.Logger;
+00006 
+00011 \textcolor{keyword}{public} \textcolor{keyword}{class }TelegramDBFactory \{
+00012 
+00013     \textcolor{keyword}{private} \textcolor{keyword}{static} Logger logger = LogManager.getLogger();
+00014 
+00019     \textcolor{keyword}{public} TelegramHeader telegramRouter(String hexTelegram) \{
+00020 
+00021 
+00042         TelegramHeader telegram;
+00043 
+00044 
+00048         \textcolor{keywordflow}{if} (Integer.parseInt(hexTelegram.substring(2, 4), 16) == 85) \{
+00049 
+00050 
+00051             \textcolor{keywordflow}{switch}
+00052                     (Integer.parseInt(hexTelegram.substring(10, 12), 16)) \{
+00053 
+00054 
+00055                 \textcolor{keywordflow}{case} 1:
+00056                     telegram = \textcolor{keyword}{new} RadioERP1();
+00057 
+00058                     \textcolor{keywordflow}{break};
+00059                 \textcolor{keywordflow}{case} 2:
+00060                     telegram = \textcolor{keyword}{new} Response();
+00061                     \textcolor{keywordflow}{break};
+00062 
+00063                 \textcolor{keywordflow}{case} 3:
+00064                     telegram = \textcolor{keyword}{new} Radio802();
+00065                     \textcolor{keywordflow}{break};
+00066 
+00067                 \textcolor{keywordflow}{case} 4:
+00068                     telegram = \textcolor{keyword}{new} Event();
+00069                     \textcolor{keywordflow}{break};
+00070 
+00071                 \textcolor{keywordflow}{case} 5:
+00072                     telegram = \textcolor{keyword}{new} CommonCommand();
+00073 
+00074                     \textcolor{keywordflow}{break};
+00075                 \textcolor{keywordflow}{case} 6:
+00076                     telegram = \textcolor{keyword}{new} SmartAckCommand();
+00077                     \textcolor{keywordflow}{break};
+00078 
+00079                 \textcolor{keywordflow}{case} 7:
+00080                     telegram = \textcolor{keyword}{new} SmartAckCommand();
+00081 
+00082                     \textcolor{keywordflow}{break};
+00083                 \textcolor{keywordflow}{case} 9:
+00084                     telegram = \textcolor{keyword}{new} Radio802();
+00085 
+00086                     \textcolor{keywordflow}{break};
+00087                 \textcolor{keywordflow}{case} 10:
+00088                     telegram = \textcolor{keyword}{new} RadioERP2();
+00089 
+00090                     \textcolor{keywordflow}{break};
+00091 
+00092                 \textcolor{keywordflow}{default}:
+00093                     telegram = \textcolor{keyword}{new} Dummy();
+00094                     \textcolor{keywordflow}{break};
+00095             \}
+00096 
+00097             telegram.decodeTelegramHeader(hexTelegram);
+00098             telegram.decodeTelegramData(hexTelegram);
+00099             telegram.persist();
+00100 
+00101             logger.info(\textcolor{stringliteral}{"EnOcean Telegram: HEX="} + hexTelegram + \textcolor{stringliteral}{" "} + telegram.toString());
+00102 
+00103             \textcolor{keywordflow}{return} telegram;
+00104         \} \textcolor{keywordflow}{else} \{
+00110             logger.warn(\textcolor{stringliteral}{"Wrong Telegram Sync byte! Taking dummy instead"});
+00111             telegram = \textcolor{keyword}{new} Dummy();
+00112 
+00113             \textcolor{keywordflow}{return} telegram;
+00114         \}
+00115     \}
+00116 \}
+\end{DoxyCode}

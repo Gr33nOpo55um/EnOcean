@@ -1,0 +1,161 @@
+\section{Telegram\+Header.\+java}
+\label{TelegramHeader_8java_source}\index{/home/silas/\+Idea\+Projects/\+En\+Ocean/src/ch/bfh/gr33nopo55um/enocean/telegram/\+Telegram\+Header.\+java@{/home/silas/\+Idea\+Projects/\+En\+Ocean/src/ch/bfh/gr33nopo55um/enocean/telegram/\+Telegram\+Header.\+java}}
+
+\begin{DoxyCode}
+00001 \textcolor{keyword}{package }ch.bfh.gr33nopo55um.enocean.telegram;
+00002 
+00003 \textcolor{keyword}{import} ch.bfh.gr33nopo55um.enocean.persistence.Store;
+00004 
+00005 \textcolor{keyword}{import} javax.persistence.Column;
+00006 \textcolor{keyword}{import} javax.persistence.MappedSuperclass;
+00007 \textcolor{keyword}{import} java.sql.Timestamp;
+00008 
+00013 @MappedSuperclass
+00014 \textcolor{keyword}{public} \textcolor{keyword}{abstract} \textcolor{keyword}{class }TelegramHeader \textcolor{keyword}{implements} EncodeDecode \{
+00015 
+00016 
+00017     \textcolor{keywordtype}{int} dataLength;
+00018     \textcolor{keywordtype}{int} crcData;
+00019     \textcolor{comment}{//some data could be longer than int}
+00020     \textcolor{keyword}{private} Long data;
+00021     \textcolor{keyword}{private} \textcolor{keywordtype}{int} syncByte;
+00022     \textcolor{keyword}{private} \textcolor{keywordtype}{int} optionalLenght;
+00023     \textcolor{keyword}{private} \textcolor{keywordtype}{int} crcHeader;
+00024 
+00025     @Column(name = \textcolor{stringliteral}{"creationDate"})
+00026     private Timestamp creationDate;
+00027     private String fullTelegram;
+00028 
+00029 
+00033     public Timestamp getCreationDate() \{
+00034         \textcolor{keywordflow}{return} creationDate;
+00035     \}
+00036 
+00037 
+00041     \textcolor{keyword}{private} \textcolor{keywordtype}{void} setCreationDate(Timestamp creationDate) \{
+00042         this.creationDate = creationDate;
+00043     \}
+00044 
+00048     \textcolor{keyword}{public} String encodeTelegram() \{
+00049         \textcolor{keywordflow}{return} encodeTelegramHeader() + encodeTelegramData();
+00050     \}
+00051 
+00052 
+00056     \textcolor{keyword}{public} String encodeTelegramHeader() \{
+00057         \textcolor{keywordflow}{return} null;
+00058     \}
+00059 
+00063     \textcolor{keyword}{public} \textcolor{keywordtype}{void} decodeTelegram(String hexTelegram) \{
+00064         decodeTelegramHeader(hexTelegram);
+00065         decodeTelegramData(hexTelegram);
+00066     \}
+00067 
+00071     \textcolor{keyword}{public} \textcolor{keywordtype}{void} decodeTelegramHeader(String hexTelegram) \{
+00072         Timestamp timestamp = \textcolor{keyword}{new} Timestamp(System.currentTimeMillis());
+00073         this.setCreationDate(timestamp);
+00074         this.setFullTelegram(hexTelegram);
+00075         this.setSyncByte(Integer.parseInt(hexTelegram.substring(2, 4), 16));
+00076         this.setDataLength(Integer.parseInt(hexTelegram.substring(4, 8), 16));
+00077         this.setOptionalLenght(Integer.parseInt(hexTelegram.substring(8, 10), 16));
+00078         this.setCrcHeader(Integer.parseInt(hexTelegram.substring(12, 14), 16));
+00079     \}
+00080 
+00081 
+00085     \textcolor{keyword}{public} String getFullTelegram() \{
+00086         \textcolor{keywordflow}{return} fullTelegram;
+00087     \}
+00088 
+00093     \textcolor{keyword}{private} \textcolor{keywordtype}{void} setFullTelegram(String fullTelegram) \{
+00094         this.fullTelegram = fullTelegram;
+00095     \}
+00096 
+00097 
+00101     \textcolor{keyword}{public} Long getData() \{
+00102         \textcolor{keywordflow}{return} data;
+00103     \}
+00104 
+00105 
+00109     \textcolor{keywordtype}{void} setData(Long data) \{
+00110         this.data = data;
+00111     \}
+00112 
+00116     \textcolor{keyword}{public} \textcolor{keywordtype}{int} getSyncByte() \{
+00117         \textcolor{keywordflow}{return} syncByte;
+00118     \}
+00119 
+00123     \textcolor{keywordtype}{void} setSyncByte(\textcolor{keywordtype}{int} syncByte) \{
+00124         this.syncByte = syncByte;
+00125     \}
+00126 
+00127 
+00131     \textcolor{keyword}{public} \textcolor{keywordtype}{int} getDataLength() \{
+00132         \textcolor{keywordflow}{return} dataLength;
+00133     \}
+00134 
+00135 
+00139     \textcolor{keywordtype}{void} setDataLength(\textcolor{keywordtype}{int} dataLength) \{
+00140         this.dataLength = dataLength;
+00141     \}
+00142 
+00146     \textcolor{keyword}{public} \textcolor{keywordtype}{int} getOptionalLenght() \{
+00147         \textcolor{keywordflow}{return} optionalLenght;
+00148     \}
+00149 
+00150 
+00154     \textcolor{keywordtype}{void} setOptionalLenght(\textcolor{keywordtype}{int} optionalLenght) \{
+00155         this.optionalLenght = optionalLenght;
+00156     \}
+00157 
+00158 
+00162     \textcolor{keyword}{public} \textcolor{keywordtype}{int} getCrcHeader() \{
+00163         \textcolor{keywordflow}{return} crcHeader;
+00164     \}
+00165 
+00166 
+00170     \textcolor{keyword}{private} \textcolor{keywordtype}{void} setCrcHeader(\textcolor{keywordtype}{int} crcHeader) \{
+00171         this.crcHeader = crcHeader;
+00172     \}
+00173 
+00174 
+00178     \textcolor{keyword}{public} \textcolor{keywordtype}{int} getCrcData() \{
+00179         \textcolor{keywordflow}{return} crcData;
+00180     \}
+00181 
+00185     \textcolor{keywordtype}{void} setCrcData(\textcolor{keywordtype}{int} crcData) \{
+00186         this.crcData = crcData;
+00187     \}
+00188 
+00192     \textcolor{keyword}{public} \textcolor{keywordtype}{void} dumpHeader() \{
+00193 
+00194         System.out.println(\textcolor{stringliteral}{"TelegramHeader\{"} +
+00195                 \textcolor{stringliteral}{"data="} + data +
+00196                 \textcolor{stringliteral}{", syncByte="} + syncByte +
+00197                 \textcolor{stringliteral}{", dataLength="} + dataLength +
+00198                 \textcolor{stringliteral}{", optionalLenght="} + optionalLenght +
+00199                 \textcolor{stringliteral}{", crcData="} + crcData +
+00200                 \textcolor{stringliteral}{", crcHeader="} + crcHeader +
+00201                 \textcolor{stringliteral}{", creationDate="} + creationDate +
+00202                 \textcolor{stringliteral}{", fullTelegram='"} + fullTelegram + \textcolor{charliteral}{'\(\backslash\)''} + \textcolor{charliteral}{'\}'} + \textcolor{charliteral}{'\}'});
+00203 
+00204     \}
+00205 
+00209     \textcolor{keyword}{public} \textcolor{keywordtype}{void} persist() \{
+00210 
+00211         Store.getInstance().getEntityManager().getTransaction().begin();
+00212         Store.getInstance().getEntityManager().persist(\textcolor{keyword}{this});
+00213         Store.getInstance().getEntityManager().getTransaction().commit();
+00214 
+00215 
+00216     \}
+00217 
+00218 
+00222     \textcolor{keyword}{public} \textcolor{keywordtype}{void} dump() \{
+00223 
+00224         System.out.println(\textcolor{stringliteral}{"Echo: "} + this.getClass().toString() + \textcolor{stringliteral}{"telegram"});
+00225 
+00226         dumpHeader();
+00227         dumpData();
+00228     \}
+00229 
+00230 \}
+\end{DoxyCode}

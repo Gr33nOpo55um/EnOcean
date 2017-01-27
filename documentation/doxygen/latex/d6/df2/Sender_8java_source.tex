@@ -1,0 +1,74 @@
+\section{Sender.\+java}
+\label{Sender_8java_source}\index{/home/silas/\+Idea\+Projects/\+En\+Ocean/src/ch/bfh/gr33nopo55um/enocean/test/ch/bfh/gr33nopo55um/enocean/test/\+Sender.\+java@{/home/silas/\+Idea\+Projects/\+En\+Ocean/src/ch/bfh/gr33nopo55um/enocean/test/ch/bfh/gr33nopo55um/enocean/test/\+Sender.\+java}}
+
+\begin{DoxyCode}
+00001 \textcolor{keyword}{package }ch.bfh.gr33nopo55um.enocean.test;
+00002 
+00003 \textcolor{keyword}{import} ch.bfh.gr33nopo55um.enocean.helper.ReadConfig;
+00004 \textcolor{keyword}{import} it.polito.elite.enocean.enj.link.EnJLink;
+00005 \textcolor{keyword}{import} it.polito.elite.enocean.protocol.serial.v3.network.packet.ESP3Packet;
+00006 
+00007 \textcolor{keyword}{import} java.io.IOException;
+00008 
+00014 \textcolor{keyword}{public} \textcolor{keyword}{class }Sender \{
+00015 
+00016     \textcolor{keyword}{public} \textcolor{keyword}{static} \textcolor{keywordtype}{void} main(String args[]) \{
+00017 
+00018         ReadConfig readConfig = \textcolor{keyword}{new} ReadConfig();
+00019         \textcolor{keywordflow}{try} \{
+00020             System.out.println(readConfig.readPropertyValue(\textcolor{stringliteral}{"serialPort"}));
+00021         \} \textcolor{keywordflow}{catch} (IOException e) \{
+00022             e.printStackTrace();
+00023         \}
+00024 
+00025         EnJLink linkLayer = null;
+00026         \textcolor{keywordflow}{try} \{
+00027             linkLayer = \textcolor{keyword}{new} EnJLink(readConfig.readPropertyValue(\textcolor{stringliteral}{"serialPort"})
+00028             );
+00029         \} \textcolor{keywordflow}{catch} (Exception e) \{
+00030             e.printStackTrace();
+00031         \}
+00032         linkLayer.connect();
+00033 
+00034         \textcolor{comment}{/*}
+00035 \textcolor{comment}{        * Loop for masssending 0x55 000a 07 01 eb a50000000c019134fc00 01 ffffffff 3d 00 2f}
+00036 \textcolor{comment}{        */}
+00037         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < 10; i++) \{
+00038             byte packetType = (byte)1;
+00039             byte[] data = \textcolor{keyword}{new} byte[] \{ (byte)0xa5, (byte)0x00, (byte)0x00, (byte)0x00, (byte)0x0c, (byte)
+      0x01, (byte)0x91, (byte)0x34, (byte)0xfc, (byte)0x00 \};
+00040             byte[] optData = \textcolor{keyword}{new} byte[] \{ (byte)0x01, (byte)0xff, (byte)0xff, (byte)0xff, (byte)0xff, (byte
+      )0x3d, (byte)0x00 \};
+00041 
+00042             ESP3Packet esp3Packet = \textcolor{keyword}{new} ESP3Packet(packetType, data, optData);
+00043             esp3Packet.buildPacket();
+00044             linkLayer.send(esp3Packet);
+00045             \textcolor{keywordflow}{try} \{
+00046                 Thread.sleep(200);
+00047             \} \textcolor{keywordflow}{catch} (InterruptedException e) \{
+00048                 e.printStackTrace();
+00049             \}
+00050         \}
+00051 
+00052         \textcolor{comment}{/*}
+00053 \textcolor{comment}{        * Loop for masssending 0x55 0007 07 01 7af6000022a13420 01 ffffffff 33 00 88}
+00054 \textcolor{comment}{        */}
+00055         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < 10; i++) \{
+00056             byte packetType = (byte)1;
+00057             byte[] data = \textcolor{keyword}{new} byte[] \{ (byte)0x7a, (byte)0xf6, (byte)0x00, (byte)0x00, (byte)0x22, (byte)
+      0xa1, (byte)0x34, (byte)0x20 \};
+00058             byte[] optData = \textcolor{keyword}{new} byte[] \{ (byte)0x01, (byte)0xff, (byte)0xff, (byte)0xff, (byte)0xff, (byte
+      )0x33, (byte)0x00 \};
+00059 
+00060             ESP3Packet esp3Packet = \textcolor{keyword}{new} ESP3Packet(packetType, data, optData);
+00061             esp3Packet.buildPacket();
+00062             linkLayer.send(esp3Packet);
+00063             \textcolor{keywordflow}{try} \{
+00064                 Thread.sleep(200);
+00065             \} \textcolor{keywordflow}{catch} (InterruptedException e) \{
+00066                 e.printStackTrace();
+00067             \}
+00068         \}
+00069     \}
+00070 \}
+\end{DoxyCode}

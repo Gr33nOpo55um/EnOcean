@@ -1,0 +1,62 @@
+\section{Response.\+java}
+\label{Response_8java_source}\index{/home/silas/\+Idea\+Projects/\+En\+Ocean/src/ch/bfh/gr33nopo55um/enocean/telegram/\+Response.\+java@{/home/silas/\+Idea\+Projects/\+En\+Ocean/src/ch/bfh/gr33nopo55um/enocean/telegram/\+Response.\+java}}
+
+\begin{DoxyCode}
+00001 \textcolor{keyword}{package }ch.bfh.gr33nopo55um.enocean.telegram;
+00002 
+00003 \textcolor{keyword}{import} javax.persistence.Entity;
+00004 \textcolor{keyword}{import} javax.persistence.GeneratedValue;
+00005 \textcolor{keyword}{import} javax.persistence.GenerationType;
+00006 \textcolor{keyword}{import} javax.persistence.Id;
+00007 
+00013 @Entity
+00014 \textcolor{keyword}{public} \textcolor{keyword}{class }Response \textcolor{keyword}{extends} TelegramHeader \{
+00015 
+00016 
+00017     @Id
+00018     @GeneratedValue(strategy = GenerationType.AUTO)
+00019     private Long \textcolor{keywordtype}{id};
+00020 
+00021 
+00022     private \textcolor{keywordtype}{int} returnCode;
+00023 
+00029     @Override
+00030     public String encodeTelegram() \{
+00031         \textcolor{keywordflow}{return} null;
+00032     \}
+00033 
+00039     @Override
+00040     \textcolor{keyword}{public} String encodeTelegramData() \{
+00041         \textcolor{keywordflow}{return} null;
+00042     \}
+00043 
+00049     @Override
+00050     \textcolor{keyword}{public} \textcolor{keywordtype}{void} decodeTelegramData(String hexTelegram) \{
+00051 
+00052         this.setReturnCode(Integer.parseInt(hexTelegram.substring(14, 4), 16));
+00053         this.setCrcData(Integer.parseInt(hexTelegram.substring(14, 16), 16));
+00054 
+00055     \}
+00056 
+00061     @Override
+00062     \textcolor{keyword}{public} \textcolor{keywordtype}{void} dumpData() \{
+00063         System.out.println(this.toString());
+00064     \}
+00065 
+00066 
+00067     @Override
+00068     \textcolor{keyword}{public} String toString() \{
+00069         \textcolor{keywordflow}{return} \textcolor{stringliteral}{"PacketType=Response"} +
+00070                 \textcolor{stringliteral}{" ReturnCode="} + returnCode;
+00071     \}
+00072 
+00073     \textcolor{keyword}{public} \textcolor{keywordtype}{int} getReturnCode() \{
+00074         \textcolor{keywordflow}{return} returnCode;
+00075     \}
+00076 
+00077     \textcolor{keyword}{private} \textcolor{keywordtype}{void} setReturnCode(\textcolor{keywordtype}{int} returnCode) \{
+00078         this.returnCode = returnCode;
+00079     \}
+00080 \}
+00081 
+\end{DoxyCode}

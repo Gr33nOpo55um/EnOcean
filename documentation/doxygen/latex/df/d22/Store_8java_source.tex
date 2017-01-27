@@ -1,0 +1,46 @@
+\section{Store.\+java}
+\label{Store_8java_source}\index{/home/silas/\+Idea\+Projects/\+En\+Ocean/src/ch/bfh/gr33nopo55um/enocean/persistence/\+Store.\+java@{/home/silas/\+Idea\+Projects/\+En\+Ocean/src/ch/bfh/gr33nopo55um/enocean/persistence/\+Store.\+java}}
+
+\begin{DoxyCode}
+00001 \textcolor{keyword}{package }ch.bfh.gr33nopo55um.enocean.persistence;
+00002 
+00003 \textcolor{keyword}{import} javax.persistence.EntityManager;
+00004 \textcolor{keyword}{import} javax.persistence.EntityManagerFactory;
+00005 \textcolor{keyword}{import} javax.persistence.Persistence;
+00006 \textcolor{keyword}{import} javax.persistence.Query;
+00007 
+00008 
+00013 @SuppressWarnings(\textcolor{stringliteral}{"ALL"})
+00014 public class Store \{
+00015 
+00016 
+00017     \textcolor{keyword}{private} \textcolor{keyword}{static} Store instance;
+00018     \textcolor{keyword}{private} EntityManager entityManager = null;
+00019     \textcolor{keyword}{private} String jpaStoreId = \textcolor{stringliteral}{"store"};
+00020 
+00021 
+00026     \textcolor{keyword}{public} \textcolor{keyword}{static} Store getInstance() \{
+00027         \textcolor{keywordflow}{if} (instance == null) \{
+00028             instance = \textcolor{keyword}{new} Store();
+00029 
+00030             SeedDB.getInstance().insertCoreData();
+00031         \}
+00032         \textcolor{keywordflow}{return} instance;
+00033     \}
+00034 
+00039     \textcolor{keyword}{public} Query createQuery(String query) \{
+00040         EntityManager manager = this.getEntityManager();
+00041         \textcolor{keywordflow}{return} manager.createQuery(query);
+00042     \}
+00043 
+00048     \textcolor{keyword}{public} EntityManager getEntityManager() \{
+00049         \textcolor{keywordflow}{if} (entityManager == null) \{
+00050             EntityManagerFactory emfactory = Persistence.createEntityManagerFactory(\textcolor{stringliteral}{"store"});
+00051             entityManager = emfactory.createEntityManager();
+00052         \}
+00053         \textcolor{keywordflow}{return} entityManager;
+00054     \}
+00055 
+00056 
+00057 \}
+\end{DoxyCode}

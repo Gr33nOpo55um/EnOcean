@@ -1,0 +1,30 @@
+\section{Encode\+Decode.\+java}
+\label{EncodeDecode_8java_source}\index{/home/silas/\+Idea\+Projects/\+En\+Ocean/src/ch/bfh/gr33nopo55um/enocean/telegram/\+Encode\+Decode.\+java@{/home/silas/\+Idea\+Projects/\+En\+Ocean/src/ch/bfh/gr33nopo55um/enocean/telegram/\+Encode\+Decode.\+java}}
+
+\begin{DoxyCode}
+00001 \textcolor{keyword}{package }ch.bfh.gr33nopo55um.enocean.telegram;
+00002 
+00007 \textcolor{keyword}{interface }EncodeDecode \{
+00008 
+00013     String encodeTelegram();
+00014 
+00019     String encodeTelegramHeader();
+00020 
+00025     String encodeTelegramData();
+00026 
+00031     \textcolor{keywordtype}{void} decodeTelegram(String hexTelegram);
+00032 
+00037     \textcolor{keywordtype}{void} decodeTelegramHeader(String hexTelegram);
+00038 
+00043     \textcolor{keywordtype}{void} decodeTelegramData(String hexTelegram);
+00044 
+00048     \textcolor{keywordtype}{void} dumpHeader();
+00049 
+00053     \textcolor{keywordtype}{void} dumpData();
+00054 
+00058     \textcolor{keywordtype}{void} dump();
+00059 
+00063     \textcolor{keywordtype}{void} persist();
+00064 
+00065 \}
+\end{DoxyCode}

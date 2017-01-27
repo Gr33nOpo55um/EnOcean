@@ -1,0 +1,73 @@
+\section{Smart\+Ack\+Command.\+java}
+\label{SmartAckCommand_8java_source}\index{/home/silas/\+Idea\+Projects/\+En\+Ocean/src/ch/bfh/gr33nopo55um/enocean/telegram/\+Smart\+Ack\+Command.\+java@{/home/silas/\+Idea\+Projects/\+En\+Ocean/src/ch/bfh/gr33nopo55um/enocean/telegram/\+Smart\+Ack\+Command.\+java}}
+
+\begin{DoxyCode}
+00001 \textcolor{keyword}{package }ch.bfh.gr33nopo55um.enocean.telegram;
+00002 
+00003 \textcolor{keyword}{import} javax.persistence.Entity;
+00004 \textcolor{keyword}{import} javax.persistence.GeneratedValue;
+00005 \textcolor{keyword}{import} javax.persistence.GenerationType;
+00006 \textcolor{keyword}{import} javax.persistence.Id;
+00007 
+00012 @Entity
+00013 \textcolor{keyword}{public} \textcolor{keyword}{class }SmartAckCommand \textcolor{keyword}{extends} TelegramHeader \{
+00014 
+00015 
+00016     @Id
+00017     @GeneratedValue(strategy = GenerationType.AUTO)
+00018     private Long \textcolor{keywordtype}{id};
+00019 
+00020     private \textcolor{keywordtype}{int} smartAckCommandNr;
+00021     private \textcolor{keywordtype}{int} smartAckCommandData;
+00022 
+00027     @Override
+00028     public String encodeTelegram() \{
+00029         \textcolor{keywordflow}{return} null;
+00030     \}
+00031 
+00036     @Override
+00037     \textcolor{keyword}{public} String encodeTelegramData() \{
+00038         \textcolor{keywordflow}{return} null;
+00039     \}
+00040 
+00045     @Override
+00046     \textcolor{keyword}{public} \textcolor{keywordtype}{void} decodeTelegramData(String hexTelegram) \{
+00047 
+00048         this.setSyncByte(Integer.parseInt(hexTelegram.substring(2, 4), 16));
+00049         this.setDataLength(Integer.parseInt(hexTelegram.substring(4, 8), 16));
+00050 
+00051         this.setOptionalLenght(Integer.parseInt(hexTelegram.substring(8, 10), 16));
+00052         this.setCrcData(Integer.parseInt(hexTelegram.substring(12, 14), 16));
+00053 
+00054 
+00055     \}
+00056 
+00060     @Override
+00061     \textcolor{keyword}{public} \textcolor{keywordtype}{void} dumpData() \{
+00062         System.out.println(this.toString());
+00063     \}
+00064 
+00065     @Override
+00066     \textcolor{keyword}{public} String toString() \{
+00067         \textcolor{keywordflow}{return} \textcolor{stringliteral}{"PacketType=SmartAckCommand"} +
+00068                 \textcolor{stringliteral}{" SmartAckCommandNr="} + smartAckCommandNr +
+00069                 \textcolor{stringliteral}{" SmartAckData="} + smartAckCommandData;
+00070     \}
+00071 
+00072     \textcolor{keyword}{public} \textcolor{keywordtype}{int} getSmartAckCommandNr() \{
+00073         \textcolor{keywordflow}{return} smartAckCommandNr;
+00074     \}
+00075 
+00076     \textcolor{keyword}{public} \textcolor{keywordtype}{void} setSmartAckCommandNr(\textcolor{keywordtype}{int} smartAckCommandNr) \{
+00077         this.smartAckCommandNr = smartAckCommandNr;
+00078     \}
+00079 
+00080     \textcolor{keyword}{public} \textcolor{keywordtype}{int} getSmartAckCommandData() \{
+00081         \textcolor{keywordflow}{return} smartAckCommandData;
+00082     \}
+00083 
+00084     \textcolor{keyword}{public} \textcolor{keywordtype}{void} setSmartAckCommandData(\textcolor{keywordtype}{int} smartAckCommandData) \{
+00085         this.smartAckCommandData = smartAckCommandData;
+00086     \}
+00087 \}
+\end{DoxyCode}

@@ -1,0 +1,667 @@
+\section{Telegram\+Header}
+\label{classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1TelegramHeader}\index{Telegram\+Header@{Telegram\+Header}}
+
+
+Inheritance diagram for Telegram\+Header\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d6/dc9/classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1TelegramHeader__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Telegram\+Header\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{d4/dcc/classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1TelegramHeader__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+Timestamp {\bf get\+Creation\+Date} ()
+\item 
+String {\bf encode\+Telegram} ()
+\item 
+String {\bf encode\+Telegram\+Header} ()
+\item 
+void {\bf decode\+Telegram} (String hex\+Telegram)
+\item 
+void {\bf decode\+Telegram\+Header} (String hex\+Telegram)
+\item 
+String {\bf get\+Full\+Telegram} ()
+\item 
+Long {\bf get\+Data} ()
+\item 
+int {\bf get\+Sync\+Byte} ()
+\item 
+int {\bf get\+Data\+Length} ()
+\item 
+int {\bf get\+Optional\+Lenght} ()
+\item 
+int {\bf get\+Crc\+Header} ()
+\item 
+int {\bf get\+Crc\+Data} ()
+\item 
+void {\bf dump\+Header} ()
+\begin{DoxyCompactList}\small\item\em print Header in pretty print \end{DoxyCompactList}\item 
+void {\bf persist} ()
+\begin{DoxyCompactList}\small\item\em Create an entity manager and persist the current object. \end{DoxyCompactList}\item 
+void {\bf dump} ()
+\begin{DoxyCompactList}\small\item\em \doxyref{Used}{p.}{db/dd3/classUsed} for debugging purposes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Package Functions}
+\begin{DoxyCompactItemize}
+\item 
+void {\bf set\+Data} (Long {\bf data})
+\item 
+void {\bf set\+Sync\+Byte} (int {\bf sync\+Byte})
+\item 
+void {\bf set\+Data\+Length} (int {\bf data\+Length})
+\item 
+void {\bf set\+Optional\+Lenght} (int {\bf optional\+Lenght})
+\item 
+void {\bf set\+Crc\+Data} (int {\bf crc\+Data})
+\end{DoxyCompactItemize}
+\subsection*{Package Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int {\bf data\+Length}
+\item 
+int {\bf crc\+Data}
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void {\bf set\+Creation\+Date} (Timestamp {\bf creation\+Date})
+\item 
+void {\bf set\+Full\+Telegram} (String {\bf full\+Telegram})
+\item 
+void {\bf set\+Crc\+Header} (int {\bf crc\+Header})
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Long {\bf data}
+\item 
+int {\bf sync\+Byte}
+\item 
+int {\bf optional\+Lenght}
+\item 
+int {\bf crc\+Header}
+\item 
+Timestamp {\bf creation\+Date}
+\item 
+String {\bf full\+Telegram}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyAuthor}{Author}
+silas \& louis for all common fields of the telegrams. It also implements the Store procedure. 
+\end{DoxyAuthor}
+
+
+Definition at line {\bf 14} of file {\bf Telegram\+Header.\+java}.
+
+
+
+\subsection{Member Function Documentation}
+\label{classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1TelegramHeader_ab5f2f0710af7330ab5f67d64983528cb} 
+\index{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Telegram\+Header@{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Telegram\+Header}!decode\+Telegram@{decode\+Telegram}}
+\index{decode\+Telegram@{decode\+Telegram}!ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Telegram\+Header@{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Telegram\+Header}}
+\subsubsection{decode\+Telegram()}
+{\footnotesize\ttfamily void decode\+Telegram (\begin{DoxyParamCaption}\item[{String}]{hex\+Telegram }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em hex\+Telegram} & En\+Ocean Telegram \\
+\hline
+\end{DoxyParams}
+
+
+Implements {\bf Encode\+Decode} \doxyref{}{p.}{d1/d8c/interfacech_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1EncodeDecode_ab5f2f0710af7330ab5f67d64983528cb}.
+
+
+
+Definition at line {\bf 63} of file {\bf Telegram\+Header.\+java}.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d2/d3d/classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1TelegramHeader_ab5f2f0710af7330ab5f67d64983528cb_cgraph}
+\end{center}
+\end{figure}
+\label{classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1TelegramHeader_a5e4622b1b692320953715a4f2dc064aa} 
+\index{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Telegram\+Header@{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Telegram\+Header}!decode\+Telegram\+Header@{decode\+Telegram\+Header}}
+\index{decode\+Telegram\+Header@{decode\+Telegram\+Header}!ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Telegram\+Header@{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Telegram\+Header}}
+\subsubsection{decode\+Telegram\+Header()}
+{\footnotesize\ttfamily void decode\+Telegram\+Header (\begin{DoxyParamCaption}\item[{String}]{hex\+Telegram }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em hex\+Telegram} & En\+Ocean Telegram \\
+\hline
+\end{DoxyParams}
+
+
+Implements {\bf Encode\+Decode} \doxyref{}{p.}{d1/d8c/interfacech_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1EncodeDecode_a5e4622b1b692320953715a4f2dc064aa}.
+
+
+
+Definition at line {\bf 71} of file {\bf Telegram\+Header.\+java}.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=344pt]{d2/d3d/classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1TelegramHeader_a5e4622b1b692320953715a4f2dc064aa_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d2/d3d/classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1TelegramHeader_a5e4622b1b692320953715a4f2dc064aa_icgraph}
+\end{center}
+\end{figure}
+\label{classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1TelegramHeader_accd2600060dbaee3a3b41aed4034c63c} 
+\index{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Telegram\+Header@{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Telegram\+Header}!dump@{dump}}
+\index{dump@{dump}!ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Telegram\+Header@{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Telegram\+Header}}
+\subsubsection{dump()}
+{\footnotesize\ttfamily void dump (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxyref{Used}{p.}{db/dd3/classUsed} for debugging purposes. 
+
+
+
+Implements {\bf Encode\+Decode} \doxyref{}{p.}{d1/d8c/interfacech_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1EncodeDecode_accd2600060dbaee3a3b41aed4034c63c}.
+
+
+
+Definition at line {\bf 222} of file {\bf Telegram\+Header.\+java}.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d2/d3d/classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1TelegramHeader_accd2600060dbaee3a3b41aed4034c63c_cgraph}
+\end{center}
+\end{figure}
+\label{classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1TelegramHeader_af74dcc31853ed58e41323c6a6f51ebf0} 
+\index{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Telegram\+Header@{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Telegram\+Header}!dump\+Header@{dump\+Header}}
+\index{dump\+Header@{dump\+Header}!ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Telegram\+Header@{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Telegram\+Header}}
+\subsubsection{dump\+Header()}
+{\footnotesize\ttfamily void dump\+Header (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+print Header in pretty print 
+
+
+
+Implements {\bf Encode\+Decode} \doxyref{}{p.}{d1/d8c/interfacech_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1EncodeDecode_af74dcc31853ed58e41323c6a6f51ebf0}.
+
+
+
+Definition at line {\bf 192} of file {\bf Telegram\+Header.\+java}.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=234pt]{d2/d3d/classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1TelegramHeader_af74dcc31853ed58e41323c6a6f51ebf0_icgraph}
+\end{center}
+\end{figure}
+\label{classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1TelegramHeader_a00e3ee3b777334ef3bd46bd4105f9603} 
+\index{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Telegram\+Header@{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Telegram\+Header}!encode\+Telegram@{encode\+Telegram}}
+\index{encode\+Telegram@{encode\+Telegram}!ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Telegram\+Header@{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Telegram\+Header}}
+\subsubsection{encode\+Telegram()}
+{\footnotesize\ttfamily String encode\+Telegram (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+full telegram, header and data 
+\end{DoxyReturn}
+
+
+Implements {\bf Encode\+Decode} \doxyref{}{p.}{d1/d8c/interfacech_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1EncodeDecode_a00e3ee3b777334ef3bd46bd4105f9603}.
+
+
+
+Definition at line {\bf 48} of file {\bf Telegram\+Header.\+java}.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d2/d3d/classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1TelegramHeader_a00e3ee3b777334ef3bd46bd4105f9603_cgraph}
+\end{center}
+\end{figure}
+\label{classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1TelegramHeader_a83697e9f527af0a6d017df13ee5e8ad7} 
+\index{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Telegram\+Header@{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Telegram\+Header}!encode\+Telegram\+Header@{encode\+Telegram\+Header}}
+\index{encode\+Telegram\+Header@{encode\+Telegram\+Header}!ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Telegram\+Header@{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Telegram\+Header}}
+\subsubsection{encode\+Telegram\+Header()}
+{\footnotesize\ttfamily String encode\+Telegram\+Header (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+null, telegram header does not contain any data 
+\end{DoxyReturn}
+
+
+Implements {\bf Encode\+Decode} \doxyref{}{p.}{d1/d8c/interfacech_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1EncodeDecode_a83697e9f527af0a6d017df13ee5e8ad7}.
+
+
+
+Definition at line {\bf 56} of file {\bf Telegram\+Header.\+java}.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=340pt]{d2/d3d/classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1TelegramHeader_a83697e9f527af0a6d017df13ee5e8ad7_icgraph}
+\end{center}
+\end{figure}
+\label{classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1TelegramHeader_a4ca8057e923f20e9ac24f838cc140f4f} 
+\index{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Telegram\+Header@{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Telegram\+Header}!get\+Crc\+Data@{get\+Crc\+Data}}
+\index{get\+Crc\+Data@{get\+Crc\+Data}!ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Telegram\+Header@{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Telegram\+Header}}
+\subsubsection{get\+Crc\+Data()}
+{\footnotesize\ttfamily int get\+Crc\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+data checksum 
+\end{DoxyReturn}
+
+
+Definition at line {\bf 178} of file {\bf Telegram\+Header.\+java}.
+
+\label{classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1TelegramHeader_ad7ce354ab090b18ea5042877e750fcc3} 
+\index{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Telegram\+Header@{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Telegram\+Header}!get\+Crc\+Header@{get\+Crc\+Header}}
+\index{get\+Crc\+Header@{get\+Crc\+Header}!ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Telegram\+Header@{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Telegram\+Header}}
+\subsubsection{get\+Crc\+Header()}
+{\footnotesize\ttfamily int get\+Crc\+Header (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+header checksum 
+\end{DoxyReturn}
+
+
+Definition at line {\bf 162} of file {\bf Telegram\+Header.\+java}.
+
+\label{classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1TelegramHeader_a9110a93cbc034ae4563e6921948af9fb} 
+\index{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Telegram\+Header@{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Telegram\+Header}!get\+Creation\+Date@{get\+Creation\+Date}}
+\index{get\+Creation\+Date@{get\+Creation\+Date}!ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Telegram\+Header@{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Telegram\+Header}}
+\subsubsection{get\+Creation\+Date()}
+{\footnotesize\ttfamily Timestamp get\+Creation\+Date (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+creation\+Date 
+\end{DoxyReturn}
+
+
+Definition at line {\bf 33} of file {\bf Telegram\+Header.\+java}.
+
+\label{classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1TelegramHeader_a77ffdd96b737ec272cb7ac9f6f603daf} 
+\index{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Telegram\+Header@{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Telegram\+Header}!get\+Data@{get\+Data}}
+\index{get\+Data@{get\+Data}!ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Telegram\+Header@{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Telegram\+Header}}
+\subsubsection{get\+Data()}
+{\footnotesize\ttfamily Long get\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+Telegram data Data of the Telegram 
+\end{DoxyReturn}
+
+
+Definition at line {\bf 101} of file {\bf Telegram\+Header.\+java}.
+
+\label{classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1TelegramHeader_aa1b442d6ff76887252e1e4f87313735b} 
+\index{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Telegram\+Header@{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Telegram\+Header}!get\+Data\+Length@{get\+Data\+Length}}
+\index{get\+Data\+Length@{get\+Data\+Length}!ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Telegram\+Header@{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Telegram\+Header}}
+\subsubsection{get\+Data\+Length()}
+{\footnotesize\ttfamily int get\+Data\+Length (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+data Length, also used to determine package length 
+\end{DoxyReturn}
+
+
+Definition at line {\bf 131} of file {\bf Telegram\+Header.\+java}.
+
+\label{classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1TelegramHeader_a1de92bbda5fc4c67d105c1fe669b76d3} 
+\index{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Telegram\+Header@{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Telegram\+Header}!get\+Full\+Telegram@{get\+Full\+Telegram}}
+\index{get\+Full\+Telegram@{get\+Full\+Telegram}!ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Telegram\+Header@{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Telegram\+Header}}
+\subsubsection{get\+Full\+Telegram()}
+{\footnotesize\ttfamily String get\+Full\+Telegram (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+full Telegram, helpful for finding persistence issues 
+\end{DoxyReturn}
+
+
+Definition at line {\bf 85} of file {\bf Telegram\+Header.\+java}.
+
+\label{classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1TelegramHeader_adf4fc8a6bb7b75246cd8e758bdb64046} 
+\index{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Telegram\+Header@{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Telegram\+Header}!get\+Optional\+Lenght@{get\+Optional\+Lenght}}
+\index{get\+Optional\+Lenght@{get\+Optional\+Lenght}!ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Telegram\+Header@{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Telegram\+Header}}
+\subsubsection{get\+Optional\+Lenght()}
+{\footnotesize\ttfamily int get\+Optional\+Lenght (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+optional Length, used for additional package information 
+\end{DoxyReturn}
+
+
+Definition at line {\bf 146} of file {\bf Telegram\+Header.\+java}.
+
+\label{classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1TelegramHeader_ac7b8c263d333cdcef36d5f66fb40157d} 
+\index{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Telegram\+Header@{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Telegram\+Header}!get\+Sync\+Byte@{get\+Sync\+Byte}}
+\index{get\+Sync\+Byte@{get\+Sync\+Byte}!ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Telegram\+Header@{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Telegram\+Header}}
+\subsubsection{get\+Sync\+Byte()}
+{\footnotesize\ttfamily int get\+Sync\+Byte (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+sync\+Byte is used to determine that the String recieved by Serial is an enocean Telegram 
+\end{DoxyReturn}
+
+
+Definition at line {\bf 116} of file {\bf Telegram\+Header.\+java}.
+
+\label{classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1TelegramHeader_a0551c1ea33ccc5de1fe8a6b2745d7adf} 
+\index{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Telegram\+Header@{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Telegram\+Header}!persist@{persist}}
+\index{persist@{persist}!ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Telegram\+Header@{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Telegram\+Header}}
+\subsubsection{persist()}
+{\footnotesize\ttfamily void persist (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Create an entity manager and persist the current object. 
+
+
+
+Implements {\bf Encode\+Decode} \doxyref{}{p.}{d1/d8c/interfacech_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1EncodeDecode_a0551c1ea33ccc5de1fe8a6b2745d7adf}.
+
+
+
+Definition at line {\bf 209} of file {\bf Telegram\+Header.\+java}.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d2/d3d/classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1TelegramHeader_a0551c1ea33ccc5de1fe8a6b2745d7adf_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d2/d3d/classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1TelegramHeader_a0551c1ea33ccc5de1fe8a6b2745d7adf_icgraph}
+\end{center}
+\end{figure}
+\label{classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1TelegramHeader_ab332d1599c41193aa0f27c998fbfc8a2} 
+\index{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Telegram\+Header@{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Telegram\+Header}!set\+Crc\+Data@{set\+Crc\+Data}}
+\index{set\+Crc\+Data@{set\+Crc\+Data}!ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Telegram\+Header@{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Telegram\+Header}}
+\subsubsection{set\+Crc\+Data()}
+{\footnotesize\ttfamily void set\+Crc\+Data (\begin{DoxyParamCaption}\item[{int}]{crc\+Data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [package]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em crc\+Data} & checksum for data \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line {\bf 185} of file {\bf Telegram\+Header.\+java}.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d2/d3d/classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1TelegramHeader_ab332d1599c41193aa0f27c998fbfc8a2_icgraph}
+\end{center}
+\end{figure}
+\label{classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1TelegramHeader_a5267fb07b92262869e3987d342c61368} 
+\index{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Telegram\+Header@{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Telegram\+Header}!set\+Crc\+Header@{set\+Crc\+Header}}
+\index{set\+Crc\+Header@{set\+Crc\+Header}!ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Telegram\+Header@{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Telegram\+Header}}
+\subsubsection{set\+Crc\+Header()}
+{\footnotesize\ttfamily void set\+Crc\+Header (\begin{DoxyParamCaption}\item[{int}]{crc\+Header }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em crc\+Header} & checksum for header \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line {\bf 170} of file {\bf Telegram\+Header.\+java}.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d2/d3d/classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1TelegramHeader_a5267fb07b92262869e3987d342c61368_icgraph}
+\end{center}
+\end{figure}
+\label{classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1TelegramHeader_abaf4fb24adb5b488d3d22dba59949f1a} 
+\index{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Telegram\+Header@{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Telegram\+Header}!set\+Creation\+Date@{set\+Creation\+Date}}
+\index{set\+Creation\+Date@{set\+Creation\+Date}!ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Telegram\+Header@{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Telegram\+Header}}
+\subsubsection{set\+Creation\+Date()}
+{\footnotesize\ttfamily void set\+Creation\+Date (\begin{DoxyParamCaption}\item[{Timestamp}]{creation\+Date }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em creation\+Date} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line {\bf 41} of file {\bf Telegram\+Header.\+java}.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d2/d3d/classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1TelegramHeader_abaf4fb24adb5b488d3d22dba59949f1a_icgraph}
+\end{center}
+\end{figure}
+\label{classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1TelegramHeader_a5af4fb0bafdf9c4c2a3c632dcddb2647} 
+\index{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Telegram\+Header@{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Telegram\+Header}!set\+Data@{set\+Data}}
+\index{set\+Data@{set\+Data}!ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Telegram\+Header@{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Telegram\+Header}}
+\subsubsection{set\+Data()}
+{\footnotesize\ttfamily void set\+Data (\begin{DoxyParamCaption}\item[{Long}]{data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [package]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & Data of the Telegram \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line {\bf 109} of file {\bf Telegram\+Header.\+java}.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d2/d3d/classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1TelegramHeader_a5af4fb0bafdf9c4c2a3c632dcddb2647_icgraph}
+\end{center}
+\end{figure}
+\label{classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1TelegramHeader_a98c5298c4aa8f5b7611dfdfd4e662962} 
+\index{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Telegram\+Header@{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Telegram\+Header}!set\+Data\+Length@{set\+Data\+Length}}
+\index{set\+Data\+Length@{set\+Data\+Length}!ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Telegram\+Header@{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Telegram\+Header}}
+\subsubsection{set\+Data\+Length()}
+{\footnotesize\ttfamily void set\+Data\+Length (\begin{DoxyParamCaption}\item[{int}]{data\+Length }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [package]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em data\+Length} & is used for mandatory data length \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line {\bf 139} of file {\bf Telegram\+Header.\+java}.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d2/d3d/classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1TelegramHeader_a98c5298c4aa8f5b7611dfdfd4e662962_icgraph}
+\end{center}
+\end{figure}
+\label{classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1TelegramHeader_a7752d6cea218a43334c91fecac9daead} 
+\index{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Telegram\+Header@{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Telegram\+Header}!set\+Full\+Telegram@{set\+Full\+Telegram}}
+\index{set\+Full\+Telegram@{set\+Full\+Telegram}!ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Telegram\+Header@{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Telegram\+Header}}
+\subsubsection{set\+Full\+Telegram()}
+{\footnotesize\ttfamily void set\+Full\+Telegram (\begin{DoxyParamCaption}\item[{String}]{full\+Telegram }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em full\+Telegram} & in hex String \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line {\bf 93} of file {\bf Telegram\+Header.\+java}.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d2/d3d/classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1TelegramHeader_a7752d6cea218a43334c91fecac9daead_icgraph}
+\end{center}
+\end{figure}
+\label{classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1TelegramHeader_a3e90d714f885a15123cff63b7feb235e} 
+\index{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Telegram\+Header@{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Telegram\+Header}!set\+Optional\+Lenght@{set\+Optional\+Lenght}}
+\index{set\+Optional\+Lenght@{set\+Optional\+Lenght}!ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Telegram\+Header@{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Telegram\+Header}}
+\subsubsection{set\+Optional\+Lenght()}
+{\footnotesize\ttfamily void set\+Optional\+Lenght (\begin{DoxyParamCaption}\item[{int}]{optional\+Lenght }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [package]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em optional\+Lenght} & is used for additional data \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line {\bf 154} of file {\bf Telegram\+Header.\+java}.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d2/d3d/classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1TelegramHeader_a3e90d714f885a15123cff63b7feb235e_icgraph}
+\end{center}
+\end{figure}
+\label{classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1TelegramHeader_aefb362619756b649f77f5a09ea1d1d4f} 
+\index{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Telegram\+Header@{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Telegram\+Header}!set\+Sync\+Byte@{set\+Sync\+Byte}}
+\index{set\+Sync\+Byte@{set\+Sync\+Byte}!ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Telegram\+Header@{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Telegram\+Header}}
+\subsubsection{set\+Sync\+Byte()}
+{\footnotesize\ttfamily void set\+Sync\+Byte (\begin{DoxyParamCaption}\item[{int}]{sync\+Byte }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [package]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em sync\+Byte} & is used to determine that the String recieved by Serial is an enocean Telegram \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line {\bf 123} of file {\bf Telegram\+Header.\+java}.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d2/d3d/classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1TelegramHeader_aefb362619756b649f77f5a09ea1d1d4f_icgraph}
+\end{center}
+\end{figure}
+
+
+\subsection{Member Data Documentation}
+\label{classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1TelegramHeader_ad1ee9d4c6020604a53cc455307c3278a} 
+\index{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Telegram\+Header@{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Telegram\+Header}!crc\+Data@{crc\+Data}}
+\index{crc\+Data@{crc\+Data}!ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Telegram\+Header@{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Telegram\+Header}}
+\subsubsection{crc\+Data}
+{\footnotesize\ttfamily int crc\+Data\hspace{0.3cm}{\ttfamily [package]}}
+
+
+
+Definition at line {\bf 18} of file {\bf Telegram\+Header.\+java}.
+
+\label{classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1TelegramHeader_a5fe41e7f9a9f140b5ccc8bb27c3eeed4} 
+\index{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Telegram\+Header@{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Telegram\+Header}!crc\+Header@{crc\+Header}}
+\index{crc\+Header@{crc\+Header}!ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Telegram\+Header@{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Telegram\+Header}}
+\subsubsection{crc\+Header}
+{\footnotesize\ttfamily int crc\+Header\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line {\bf 23} of file {\bf Telegram\+Header.\+java}.
+
+\label{classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1TelegramHeader_a11efec52730296a00886280dd6a36bda} 
+\index{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Telegram\+Header@{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Telegram\+Header}!creation\+Date@{creation\+Date}}
+\index{creation\+Date@{creation\+Date}!ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Telegram\+Header@{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Telegram\+Header}}
+\subsubsection{creation\+Date}
+{\footnotesize\ttfamily Timestamp creation\+Date\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line {\bf 26} of file {\bf Telegram\+Header.\+java}.
+
+\label{classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1TelegramHeader_af30cbba28b3b30a8c873406b4f702648} 
+\index{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Telegram\+Header@{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Telegram\+Header}!data@{data}}
+\index{data@{data}!ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Telegram\+Header@{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Telegram\+Header}}
+\subsubsection{data}
+{\footnotesize\ttfamily Long data\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line {\bf 20} of file {\bf Telegram\+Header.\+java}.
+
+\label{classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1TelegramHeader_ac50394778872f72e8f5ac69718956b3c} 
+\index{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Telegram\+Header@{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Telegram\+Header}!data\+Length@{data\+Length}}
+\index{data\+Length@{data\+Length}!ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Telegram\+Header@{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Telegram\+Header}}
+\subsubsection{data\+Length}
+{\footnotesize\ttfamily int data\+Length\hspace{0.3cm}{\ttfamily [package]}}
+
+
+
+Definition at line {\bf 17} of file {\bf Telegram\+Header.\+java}.
+
+\label{classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1TelegramHeader_a53c105fe3628fae7bdc5bccfb22787c6} 
+\index{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Telegram\+Header@{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Telegram\+Header}!full\+Telegram@{full\+Telegram}}
+\index{full\+Telegram@{full\+Telegram}!ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Telegram\+Header@{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Telegram\+Header}}
+\subsubsection{full\+Telegram}
+{\footnotesize\ttfamily String full\+Telegram\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line {\bf 27} of file {\bf Telegram\+Header.\+java}.
+
+\label{classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1TelegramHeader_a4e945a3f212ae4ff3335e0da07ce6685} 
+\index{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Telegram\+Header@{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Telegram\+Header}!optional\+Lenght@{optional\+Lenght}}
+\index{optional\+Lenght@{optional\+Lenght}!ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Telegram\+Header@{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Telegram\+Header}}
+\subsubsection{optional\+Lenght}
+{\footnotesize\ttfamily int optional\+Lenght\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line {\bf 22} of file {\bf Telegram\+Header.\+java}.
+
+\label{classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1TelegramHeader_a72c624ece8ca2ef790546ee34753c5a7} 
+\index{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Telegram\+Header@{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Telegram\+Header}!sync\+Byte@{sync\+Byte}}
+\index{sync\+Byte@{sync\+Byte}!ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Telegram\+Header@{ch\+::bfh\+::gr33nopo55um\+::enocean\+::telegram\+::\+Telegram\+Header}}
+\subsubsection{sync\+Byte}
+{\footnotesize\ttfamily int sync\+Byte\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line {\bf 21} of file {\bf Telegram\+Header.\+java}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/silas/\+Idea\+Projects/\+En\+Ocean/src/ch/bfh/gr33nopo55um/enocean/telegram/{\bf Telegram\+Header.\+java}\end{DoxyCompactItemize}

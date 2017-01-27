@@ -1,0 +1,29 @@
+\section{Seed\+D\+B.\+java}
+\label{SeedDB_8java_source}\index{/home/silas/\+Idea\+Projects/\+En\+Ocean/src/ch/bfh/gr33nopo55um/enocean/persistence/\+Seed\+D\+B.\+java@{/home/silas/\+Idea\+Projects/\+En\+Ocean/src/ch/bfh/gr33nopo55um/enocean/persistence/\+Seed\+D\+B.\+java}}
+
+\begin{DoxyCode}
+00001 \textcolor{keyword}{package }ch.bfh.gr33nopo55um.enocean.persistence;
+00002 
+00008 \textcolor{keyword}{public} \textcolor{keyword}{class }SeedDB \{
+00009 
+00010     \textcolor{keyword}{private} \textcolor{keyword}{static} SeedDB instance;
+00011 
+00012     \textcolor{keyword}{private} SeedDB() \{
+00013         \textcolor{comment}{// singelton}
+00014         insertCoreData();
+00015     \}
+00016 
+00020     \textcolor{keyword}{public} \textcolor{keyword}{static} SeedDB getInstance() \{
+00021         \textcolor{keywordflow}{if} (instance == null) \{
+00022             instance = \textcolor{keyword}{new} SeedDB();
+00023         \}
+00024         \textcolor{keywordflow}{return} instance;
+00025     \}
+00026 
+00030     \textcolor{keyword}{public} \textcolor{keywordtype}{void} insertCoreData() \{
+00031         \textcolor{comment}{//not neccessary yet}
+00032     \}
+00033 
+00034 
+00035 \}
+\end{DoxyCode}

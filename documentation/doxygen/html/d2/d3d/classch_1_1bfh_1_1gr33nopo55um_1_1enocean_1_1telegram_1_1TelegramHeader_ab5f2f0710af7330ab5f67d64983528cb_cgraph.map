@@ -1,0 +1,10 @@
+<map id="decodeTelegram" name="decodeTelegram">
+<area shape="rect" id="node2" href="$d2/d3d/classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1TelegramHeader.html#a5e4622b1b692320953715a4f2dc064aa" title="decodeTelegramHeader" alt="" coords="228,132,401,159"/>
+<area shape="rect" id="node9" href="$d1/d8c/interfacech_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1EncodeDecode.html#aa581cac5c3efd3142ffa8482079031e9" title="decodeTelegramData splits telegram data in parts " alt="" coords="181,183,448,225"/>
+<area shape="rect" id="node3" href="$d2/d3d/classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1TelegramHeader.html#abaf4fb24adb5b488d3d22dba59949f1a" title="setCreationDate" alt="" coords="501,5,621,32"/>
+<area shape="rect" id="node4" href="$d2/d3d/classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1TelegramHeader.html#a7752d6cea218a43334c91fecac9daead" title="setFullTelegram" alt="" coords="501,56,621,83"/>
+<area shape="rect" id="node5" href="$d2/d3d/classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1TelegramHeader.html#aefb362619756b649f77f5a09ea1d1d4f" title="setSyncByte" alt="" coords="513,107,610,133"/>
+<area shape="rect" id="node6" href="$d2/d3d/classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1TelegramHeader.html#a98c5298c4aa8f5b7611dfdfd4e662962" title="setDataLength" alt="" coords="507,157,616,184"/>
+<area shape="rect" id="node7" href="$d2/d3d/classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1TelegramHeader.html#a3e90d714f885a15123cff63b7feb235e" title="setOptionalLenght" alt="" coords="496,208,627,235"/>
+<area shape="rect" id="node8" href="$d2/d3d/classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1TelegramHeader.html#a5267fb07b92262869e3987d342c61368" title="setCrcHeader" alt="" coords="508,259,615,285"/>
+</map>

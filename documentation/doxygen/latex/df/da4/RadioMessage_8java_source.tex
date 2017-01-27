@@ -1,0 +1,87 @@
+\section{Radio\+Message.\+java}
+\label{RadioMessage_8java_source}\index{/home/silas/\+Idea\+Projects/\+En\+Ocean/src/ch/bfh/gr33nopo55um/enocean/telegram/\+Radio\+Message.\+java@{/home/silas/\+Idea\+Projects/\+En\+Ocean/src/ch/bfh/gr33nopo55um/enocean/telegram/\+Radio\+Message.\+java}}
+
+\begin{DoxyCode}
+00001 \textcolor{keyword}{package }ch.bfh.gr33nopo55um.enocean.telegram;
+00002 
+00003 \textcolor{keyword}{import} javax.persistence.Entity;
+00004 \textcolor{keyword}{import} javax.persistence.GeneratedValue;
+00005 \textcolor{keyword}{import} javax.persistence.GenerationType;
+00006 \textcolor{keyword}{import} javax.persistence.Id;
+00007 
+00013 @Entity
+00014 \textcolor{keyword}{public} \textcolor{keyword}{class }RadioMessage \textcolor{keyword}{extends} TelegramHeader \{
+00015     \textcolor{keyword}{private} String destinationID;
+00016     \textcolor{keyword}{private} String sourceID;
+00017     \textcolor{keyword}{private} \textcolor{keywordtype}{int} dbm;
+00018 
+00019     @Id
+00020     @GeneratedValue(strategy = GenerationType.AUTO)
+00021     private Long \textcolor{keywordtype}{id};
+00022 
+00028     @Override
+00029     public String encodeTelegram() \{
+00030         \textcolor{keywordflow}{return} null;
+00031     \}
+00032 
+00038     @Override
+00039     \textcolor{keyword}{public} String encodeTelegramData() \{
+00040         \textcolor{keywordflow}{return} null;
+00041     \}
+00042 
+00048     @Override
+00049     \textcolor{keyword}{public} \textcolor{keywordtype}{void} decodeTelegramData(String hexTelegram) \{
+00050 
+00051         this.setDestinationID(hexTelegram.substring(14, 22));
+00052         this.setSourceID(hexTelegram.substring(22, 30));
+00053         this.setDbm(Integer.parseInt(hexTelegram.substring(30, 32), 16));
+00054         this.setCrcData(Integer.parseInt(hexTelegram.substring(32, 34), 16));
+00055     \}
+00056 
+00062     @Override
+00063     \textcolor{keyword}{public} \textcolor{keywordtype}{void} dumpData() \{
+00064         System.out.println(this.toString()
+00065         );
+00066     \}
+00067 
+00068     \textcolor{keyword}{public} String getDestinationID() \{
+00069         \textcolor{keywordflow}{return} destinationID;
+00070     \}
+00071 
+00072     \textcolor{keyword}{private} \textcolor{keywordtype}{void} setDestinationID(String destinationID) \{
+00073         this.destinationID = destinationID;
+00074     \}
+00075 
+00076     \textcolor{keyword}{public} String getSourceID() \{
+00077         \textcolor{keywordflow}{return} sourceID;
+00078     \}
+00079 
+00080     \textcolor{keyword}{private} \textcolor{keywordtype}{void} setSourceID(String sourceID) \{
+00081         this.sourceID = sourceID;
+00082     \}
+00083 
+00084     \textcolor{keyword}{public} \textcolor{keywordtype}{int} getDbm() \{
+00085         \textcolor{keywordflow}{return} dbm;
+00086     \}
+00087 
+00088     \textcolor{keyword}{private} \textcolor{keywordtype}{void} setDbm(\textcolor{keywordtype}{int} dbm) \{
+00089         this.dbm = dbm;
+00090     \}
+00091 
+00092     \textcolor{keyword}{public} Long getId() \{
+00093         \textcolor{keywordflow}{return} id;
+00094     \}
+00095 
+00096     \textcolor{keyword}{public} \textcolor{keywordtype}{void} setId(Long \textcolor{keywordtype}{id}) \{
+00097         this.\textcolor{keywordtype}{id} = id;
+00098     \}
+00099 
+00100     @Override
+00101     \textcolor{keyword}{public} String toString() \{
+00102         \textcolor{keywordflow}{return} \textcolor{stringliteral}{"PacketType=RadioMessage"} +
+00103                 \textcolor{stringliteral}{" DestinationID="} + destinationID +
+00104                 \textcolor{stringliteral}{" SourceID="} + sourceID +
+00105                 \textcolor{stringliteral}{" dBm="} + dbm;
+00106     \}
+00107 \}
+\end{DoxyCode}

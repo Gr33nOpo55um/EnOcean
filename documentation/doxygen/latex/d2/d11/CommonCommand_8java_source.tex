@@ -1,0 +1,79 @@
+\section{Common\+Command.\+java}
+\label{CommonCommand_8java_source}\index{/home/silas/\+Idea\+Projects/\+En\+Ocean/src/ch/bfh/gr33nopo55um/enocean/telegram/\+Common\+Command.\+java@{/home/silas/\+Idea\+Projects/\+En\+Ocean/src/ch/bfh/gr33nopo55um/enocean/telegram/\+Common\+Command.\+java}}
+
+\begin{DoxyCode}
+00001 \textcolor{keyword}{package }ch.bfh.gr33nopo55um.enocean.telegram;
+00002 
+00003 \textcolor{keyword}{import} javax.persistence.Entity;
+00004 \textcolor{keyword}{import} javax.persistence.GeneratedValue;
+00005 \textcolor{keyword}{import} javax.persistence.GenerationType;
+00006 \textcolor{keyword}{import} javax.persistence.Id;
+00007 
+00013 @Entity
+00014 \textcolor{keyword}{public} \textcolor{keyword}{class }CommonCommand \textcolor{keyword}{extends} TelegramHeader \{
+00015 
+00016 
+00017     @Id
+00018     @GeneratedValue(strategy = GenerationType.AUTO)
+00019     private Long \textcolor{keywordtype}{id};
+00020 
+00021 
+00022     private \textcolor{keywordtype}{int} ccCode;
+00023     private \textcolor{keywordtype}{int} ccData;
+00024 
+00025     @Override
+00026     public String encodeTelegram() \{
+00027         \textcolor{keywordflow}{return} null;
+00028     \}
+00029 
+00034     @Override
+00035     \textcolor{keyword}{public} String encodeTelegramData() \{
+00036         \textcolor{keywordflow}{return} null;
+00037     \}
+00038 
+00039     @Override
+00040     \textcolor{keyword}{public} \textcolor{keywordtype}{void} decodeTelegramData(String hexTelegram) \{
+00041 
+00042         this.setCcCode(Integer.parseInt(hexTelegram.substring(14, 16), 16));
+00043         this.setCcData(Integer.parseInt(hexTelegram.substring(16, 24), 16));
+00044         this.setCrcData(crcData = Integer.parseInt(hexTelegram.substring(24, 26), 16));
+00045 
+00046     \}
+00047 
+00048 
+00049     \textcolor{keyword}{public} \textcolor{keywordtype}{int} getCcCode() \{
+00050         \textcolor{keywordflow}{return} ccCode;
+00051     \}
+00052 
+00053     \textcolor{keyword}{private} \textcolor{keywordtype}{void} setCcCode(\textcolor{keywordtype}{int} ccCode) \{
+00054         this.ccCode = ccCode;
+00055     \}
+00056 
+00057     \textcolor{keyword}{public} \textcolor{keywordtype}{int} getCcData() \{
+00058         \textcolor{keywordflow}{return} ccData;
+00059     \}
+00060 
+00061     \textcolor{keyword}{private} \textcolor{keywordtype}{void} setCcData(\textcolor{keywordtype}{int} ccData) \{
+00062         this.ccData = ccData;
+00063     \}
+00064 
+00070     @Override
+00071     \textcolor{keyword}{public} \textcolor{keywordtype}{void} decodeTelegramHeader(String hexTelegram) \{
+00072 
+00073     \}
+00074 
+00078     @Override
+00079     \textcolor{keyword}{public} \textcolor{keywordtype}{void} dumpData() \{
+00080         System.out.println(this.toString());
+00081 
+00082     \}
+00083 
+00084 
+00085     @Override
+00086     \textcolor{keyword}{public} String toString() \{
+00087         \textcolor{keywordflow}{return} \textcolor{stringliteral}{"type=CommonCommand"} +
+00088                 \textcolor{stringliteral}{" CommonCommandCode="} + ccCode +
+00089                 \textcolor{stringliteral}{" CommonCommandData="} + ccData;
+00090     \}
+00091 \}
+\end{DoxyCode}

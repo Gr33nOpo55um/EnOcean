@@ -1,0 +1,12 @@
+<map id="decodeTelegramData" name="decodeTelegramData">
+<area shape="rect" id="node2" href="$d2/d3d/classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1TelegramHeader.html#a5af4fb0bafdf9c4c2a3c632dcddb2647" title="ch.bfh.gr33nopo55um.enocean.telegram.\lTelegramHeader.setData" alt="" coords="211,5,477,47"/>
+<area shape="rect" id="node3" href="$d7/d08/classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1RadioSubTel.html#a5bfc8ac914e36e7e37b467fdcd90dbda" title="setSubTelNum" alt="" coords="289,71,399,98"/>
+<area shape="rect" id="node4" href="$d7/d08/classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1RadioSubTel.html#a0adf8d36cde20c0aa200903cd150803d" title="setDestinationID" alt="" coords="284,122,404,149"/>
+<area shape="rect" id="node5" href="$d7/d08/classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1RadioSubTel.html#a17374793c87ff1a128532736cc1bb082" title="setDbm" alt="" coords="309,173,379,199"/>
+<area shape="rect" id="node6" href="$d7/d08/classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1RadioSubTel.html#acf57a842678a18a5a9fdcb089b4efee2" title="setSecurityLevel" alt="" coords="283,223,405,250"/>
+<area shape="rect" id="node7" href="$d7/d08/classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1RadioSubTel.html#af3f77cd13b7e10022358df60d7daf82e" title="setTimeStamp" alt="" coords="289,274,399,301"/>
+<area shape="rect" id="node8" href="$d7/d08/classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1RadioSubTel.html#af0e0c29dec945a39ea5f601b04882de1" title="setTickSubTel" alt="" coords="289,325,399,351"/>
+<area shape="rect" id="node9" href="$d7/d08/classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1RadioSubTel.html#a0848782c2a0d7fd9574e0954532cd448" title="setDbmSubTel" alt="" coords="287,375,401,402"/>
+<area shape="rect" id="node10" href="$d7/d08/classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1RadioSubTel.html#a6d1b04040d3e170cd11cba1e6a67d7e8" title="setStatusSubTel" alt="" coords="283,426,405,453"/>
+<area shape="rect" id="node11" href="$d2/d3d/classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1telegram_1_1TelegramHeader.html#ab332d1599c41193aa0f27c998fbfc8a2" title="ch.bfh.gr33nopo55um.enocean.telegram.\lTelegramHeader.setCrcData" alt="" coords="211,477,477,519"/>
+</map>

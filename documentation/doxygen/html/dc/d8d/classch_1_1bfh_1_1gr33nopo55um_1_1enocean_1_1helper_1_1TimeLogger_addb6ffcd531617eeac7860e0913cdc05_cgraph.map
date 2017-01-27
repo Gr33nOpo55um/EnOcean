@@ -1,0 +1,6 @@
+<map id="endLogTime" name="endLogTime">
+<area shape="rect" id="node2" href="$dc/d8d/classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1helper_1_1TimeLogger.html#acc699ee9843a90ddd38933dbaf478dbb" title="setStopTime" alt="" coords="171,5,270,32"/>
+<area shape="rect" id="node3" href="$dc/d8d/classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1helper_1_1TimeLogger.html#af812cd2642dad59eb9d33ca75d9b590f" title="getStopTime" alt="" coords="171,56,271,83"/>
+<area shape="rect" id="node4" href="$dc/d8d/classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1helper_1_1TimeLogger.html#a63209df1204fc1c5d7689ead94483df0" title="getStartTime" alt="" coords="171,107,270,133"/>
+<area shape="rect" id="node5" href="$dc/d8d/classch_1_1bfh_1_1gr33nopo55um_1_1enocean_1_1helper_1_1TimeLogger.html#a9e8e5afa9d6290cdd84017c44eaabcac" title="getOperationName" alt="" coords="152,157,289,184"/>
+</map>
