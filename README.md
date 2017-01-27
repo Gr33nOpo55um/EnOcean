@@ -28,10 +28,10 @@ Für die Installation notwendige Schritte.
 Alle Dokumente werden in Markdown erfasst. Für das Betrachten der Dokumente empfielt sich der Atom Editor mit folgendem Plugin: https://atom.io/packages/markdown-preview-enhanced.
 
 ### RaspberryPi 3
-ToDo
+Alle Informationen zu diesem Thema finden sich unter [linux](/linux/). Die Instalationsanleitung ist im File [install.sh]( /linux/install.sh)
 
 ### Splunk (Docker Container)
-ToDo
+Alle Informationen zu diesem Thema finden sich unter [splunk](/splunk/). Die Instalationsanleitung ist im File [installnRun.sh]( /splunk/installnRun.sh)
 
 ### ToDo für MacOS
 
