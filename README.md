@@ -16,7 +16,7 @@ Für das Modul BTI7082 (Projektmanagement) wurde ein Leistungsnachweis im Zusamm
 Zum Dokument: [PDF](/documentation/abgabe_projektmanagement.pdf)
 
 ### Statediagram
-ToDo: Statediagram
+![Statediagram](/documentation/6_state_diagram.png)
 
 ### Sourcecode
 ToDo: Doxygen
