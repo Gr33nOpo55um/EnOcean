@@ -28,13 +28,13 @@ Für die Installation notwendige Schritte.
 Alle Dokumente werden in Markdown erfasst. Für das Betrachten der Dokumente empfielt sich der Atom Editor mit folgendem Plugin: https://atom.io/packages/markdown-preview-enhanced.
 
 ### RaspberryPi 3
-Alle Informationen zu diesem Thema finden sich unter [linux](/linux/). Die Instalationsanleitung ist im File [install.sh]( /linux/install.sh)
+Alle Informationen zu diesem Thema finden sich unter [linux](/linux/). Die Instalationsanleitung ist im File [install.sh]( /linux/install.sh).
 
 ### Splunk (Docker Container)
-Alle Informationen zu diesem Thema finden sich unter [splunk](/splunk/). Die Instalationsanleitung ist im File [installnRun.sh]( /splunk/installnRun.sh)
+Alle Informationen zu diesem Thema finden sich unter [splunk](/splunk/). Die Instalationsanleitung ist im File [installnRun.sh]( /splunk/installnRun.sh).
 
 ### ToDo für MacOS
-
-Gnu RXTX Serial Driver http://jlog.org/v4/macosx/mac-10.5/librxtxSerial.jnilib in das Projektverzeichnis legen.
-Pfad zum USB300 anpassen im config.properties (/dev/tty.usbserial-FTZ9SGXC).
+Um das Projekt unter MacOS (z.B. mit IntelliJ) zu Starten und Telegramme zu Senden / Empfangen sind zwei Anpassungen nötig:
+* Gnu RXTX Serial Driver http://jlog.org/v4/macosx/mac-10.5/librxtxSerial.jnilib herunterladen in das Projektverzeichnis (im Rootfolder) legen.
+* Pfad zum USB300 Dongle suchen (z.B. mit "find /dev/tty.*") und im /resources/config.properties  (z.B. serialPort=/dev/tty.usbserial-FTZ9SGXC).
 
